@@ -1,17 +1,17 @@
-Key,Subkey,Type,example Value,Comment,Condition
-,,,,,
-ID,,ID / URI,123e4567-e89b-12d3-a456-426614174000,Unique identifier for the DMA Tuple,AUTO
-Created at,,ISO 8601,2021-05-01T00:00:00Z,Date of creation,AUTO
-Version,,Integer,21,Version number of the DMA Tuple,
-Author,,ID / URI,person_123e4567-e89b-12d3 (auto),Identifier of the Author of the MA Pair (NB: Entity for author is referenced),AUTO
-Licensor,,ID / URI,legal_entity_123e4567-e89b-12d3 (auto),Identifier of the Legal Entity licensing the the MA Pair (NB: Entity for Licensor is referenced),AUTO
-Derivation,,IDs / URIs,dma_tuple_123e4567-e89b-12d3 (auto),"In case of derivation, references to parent / child (optional)",AUTO
-Name,,Text,Pressure drop for the injection in hall 3,Short name to identify the DMA Tuple,
-Scope,,Text,Effectiveness of the mold closing process,Short description of the scope of the DMA Tuple (human readable),
-IP Instance,,ID / URI,ip_instance_123e4567-e89b-12d3,Identifier of the IP Instance the DMA Tuple is valid for (NB: Entity for IP Instance is referenced),
-Namespace,,ID / URI?,namespace_123e4567-e89b-12d3,Context to interpret the associated information (optional?),
-MA Pair,,ID / URI,ma_pair_123e4567-e89b-12d3,Identifier of the MA Pair associated to the DMA Tuple,
-D Assets,,IDs / URIs,data_123e4567-e89b-12d3,Identifiers of the Data Assets associated to the DMA Tuple,
-Deployments,,"See ""Deployments""",deployments_123e4567-e89b-12d3,Characteristics of the Deployment for every Microservice associated to the DMA Tuple (NB: Entities for the available deployment infrastructures to be provided by DB Solution and selected for DMA Tuple. No deployment entity metadata structure currently exists),
-Schedule,,Dates,R90/2021-05-01T00:00:00Z/PT48H,Days and hours the DMA Tuple will be active (optional),
-Payload,,String,{‘injectionMold’: ‘Circuit Case’},User-defined key-value pairs: JSON string with additional information (optional),
+Concept,Key,Subkey,Type,example Value,Comment,Condition
+,,,,,,
+,ID,,ID / URI,123e4567-e89b-12d3-a456-426614174000,Unique identifier for the DMA Tuple,AUTO
+,Created at,,ISO 8601,2021-05-01T00:00:00Z,Date of creation,AUTO
+,Version,,Integer,21,Version number of the DMA Tuple,
+,Author,,ID / URI,person_123e4567-e89b-12d3 (auto),Identifier of the Author of the MA Pair (NB: Entity for author is referenced),AUTO
+,Licensor,,ID / URI,legal_entity_123e4567-e89b-12d3 (auto),Identifier of the Legal Entity licensing the the MA Pair (NB: Entity for Licensor is referenced),AUTO
+,Derivation,,IDs / URIs,dma_tuple_123e4567-e89b-12d3 (auto),"In case of derivation, references to parent / child (optional)",AUTO
+,Name,,Text,Pressure drop for the injection in hall 3,Short name to identify the DMA Tuple,
+,Scope,,Text,Effectiveness of the mold closing process,Short description of the scope of the DMA Tuple (human readable),
+,IP Instance,,ID / URI,ip_instance_123e4567-e89b-12d3,Identifier of the IP Instance the DMA Tuple is valid for (NB: Entity for IP Instance is referenced),
+,Namespace,,ID / URI?,namespace_123e4567-e89b-12d3,Context to interpret the associated information (optional?),
+,MA Pair,,ID / URI,ma_pair_123e4567-e89b-12d3,Identifier of the MA Pair associated to the DMA Tuple,
+,D Assets,,IDs / URIs,data_123e4567-e89b-12d3,Identifiers of the Data Assets associated to the DMA Tuple,
+,Deployments,,"See ""Deployments""",deployments_123e4567-e89b-12d3,Characteristics of the Deployment for every Microservice associated to the DMA Tuple (NB: Entities for the available deployment infrastructures to be provided by DB Solution and selected for DMA Tuple. No deployment entity metadata structure currently exists),
+,Schedule,,Dates,R90/2021-05-01T00:00:00Z/PT48H,Days and hours the DMA Tuple will be active (optional),
+,Payload,,String,{‘injectionMold’: ‘Circuit Case’},User-defined key-value pairs: JSON string with additional information (optional),

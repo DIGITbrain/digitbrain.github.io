@@ -1,36 +1,36 @@
-Key,Subkey,Type,example Value,Comment,Condition
-,,,,,
-ID,,UUID,,Internal DigitBrain reference (automatically generated),
-Name,,string,,Name of the model,
-Version,,"semver (if model only has revisions, use semver prerelease 0.1, 0.2, etc.)",,Version of the model,
-License,,enum tbd in SAD group,,License of the model,
-Provider,,string,,Provider name: Institution or Person,
-Provider_contacts,,obj,,"OPTIONAL: Dictionary with keys being phone, email, address - Type takes into account co-simulation models, for which solver info is mandatory (next slide)",
-AuthTool,,enum,,Authoring Tool used to create the model,
-Type,,enum,,"ML, LCA, 3D FEM and CFD, System simulation, discrete event simulation, co-simulation (it couples a model with specific algorithms) - The original term Path was proposed to be changed (SAD)",
-Fidelity,,number,,OPTIONAL: Error of the model’s prediction,
-Model_URI,,URI,,"Where the model file is stored  Where the model file is stored DigitBrain certified external model repository - We could keep these fields into minimum and add further enums if needed, e.g. Linear_equations", 
-Model_FILENAME,,string,,Name of the model file (if necessary) for example when MODEL_URI points to a repository and not a single file,optional
-State_depend,,bool,,"stateful -> 1, stateless -> 0",
-,,,,,
-In-slots,,"array of obj  (key (group.key), name, dimensions (e.g. 2, 3, etc.), units (human-readable-name, exponents, offset, scale), default value, ranges, description)",,"Values on which the model is evaluated (or parameters that might set before or during the evaluation) - Inputs and parameters together, although if needed we can still differentiate them internally in key field for each specific model.",
-Outputs,,,,Values that the model approximates,
-CosimSolverInfo,,**,,OPTIONAL (for co-simulation Type only),
-,,,,,
-Dependencies,,array of URI,,Dependant FMUs for co-simulation,
-,,,,,
-osArch,,enum,,OS architecture type (e.g. x86_64),
-osType,,enum,,"OS type (e.g. Windows, Linux)",
-osDistribution,,enum,,"OS distributun (e.g. Ubuntu, Fedora)",
-,,,,,
-recommendedNumberOfGPUCores,,number,,Recommended number of GPU cores,optional
-minimumNumberOfGPUCores,,number,,Minimum required number of GPU cores,optional
-recommendedGPURAM,,number,,Recommended GPU memory,optional
-minimumGPURAM,,number,,Minimum required GPU memory,optional
-recommendedRAM,,number,,Recommended Memory,optional
-minimumRAM,,number,,Minimum required memory,optional
-recommendedCPUs,,number,,Recommended number of CPU cores,optional
-minimumCPUs,,number,,Minimum required number of CPU cores,optional
-requiredDiskSpace,,number,,Required amount of disk space in GB,optional
-,,,,,
-Description,,string,,"Model tag description Additional info about model files (e.g. versioning, scope, i.e. what is the model used for, e.g. simulation, control, etc.) - Human readable marketplace description",
+Concept,Key,Subkey,Type,example Value,Comment,Condition
+DEFINE,,,,,,
+,ID,,UUID,,Internal DigitBrain reference (automatically generated),
+,Name,,string,,Name of the model,
+,Version,,"semver (if model only has revisions, use semver prerelease 0.1, 0.2, etc.)",,Version of the model,
+,License,,enum tbd in SAD group,,License of the model,
+,Provider,,string,,Provider name: Institution or Person,
+,Provider_contacts,,obj,,"OPTIONAL: Dictionary with keys being phone, email, address - Type takes into account co-simulation models, for which solver info is mandatory (next slide)",
+,AuthTool,,enum,,Authoring Tool used to create the model,
+,Type,,enum,,"ML, LCA, 3D FEM and CFD, System simulation, discrete event simulation, co-simulation (it couples a model with specific algorithms) - The original term Path was proposed to be changed (SAD)",
+,Fidelity,,number,,OPTIONAL: Error of the model’s prediction,
+,Model_URI,,URI,,"Where the model file is stored  Where the model file is stored DigitBrain certified external model repository - We could keep these fields into minimum and add further enums if needed, e.g. Linear_equations", 
+,Model_FILENAME,,string,,Name of the model file (if necessary) for example when MODEL_URI points to a repository and not a single file,optional
+,State_depend,,bool,,"stateful -> 1, stateless -> 0",
+PARAMETRIZE,,,,,,
+,In-slots,,"array of obj  (key (group.key), name, dimensions (e.g. 2, 3, etc.), units (human-readable-name, exponents, offset, scale), default value, ranges, description)",,"Values on which the model is evaluated (or parameters that might set before or during the evaluation) - Inputs and parameters together, although if needed we can still differentiate them internally in key field for each specific model.",
+,Outputs,,,,Values that the model approximates,
+,CosimSolverInfo,,**,,OPTIONAL (for co-simulation Type only),
+Dependant FMUs,,,,,,
+,Dependencies,,array of URI,,Dependant FMUs for co-simulation,
+OS Requirements,,,,,,
+,osArch,,enum,,OS architecture type (e.g. x86_64),
+,osType,,enum,,"OS type (e.g. Windows, Linux)",
+,osDistribution,,enum,,"OS distributun (e.g. Ubuntu, Fedora)",
+Hardware Requirements ,,,,,,
+,recommendedNumberOfGPUCores,,number,,Recommended number of GPU cores,optional
+,minimumNumberOfGPUCores,,number,,Minimum required number of GPU cores,optional
+,recommendedGPURAM,,number,,Recommended GPU memory,optional
+,minimumGPURAM,,number,,Minimum required GPU memory,optional
+,recommendedRAM,,number,,Recommended Memory,optional
+,minimumRAM,,number,,Minimum required memory,optional
+,recommendedCPUs,,number,,Recommended number of CPU cores,optional
+,minimumCPUs,,number,,Minimum required number of CPU cores,optional
+,requiredDiskSpace,,number,,Required amount of disk space in GB,optional
+PUBLISH,,,,,,
+,Description,,string,,"Model tag description Additional info about model files (e.g. versioning, scope, i.e. what is the model used for, e.g. simulation, control, etc.) - Human readable marketplace description",

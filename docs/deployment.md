@@ -5,6 +5,22 @@
 A deployment in DIGITbrain specifies the infrastructure that a desired DMA
 Tuple will be deployed across.
 
+## Pre-requisites
+
+For most DMA Tuples in DIGITbrain, a common set of Deployments will be suitable.
+Required IDs that describe that common set are available in the documentation
+that follows below.
+
+For some workloads with very specific hardware or software requirements, or
+for those who require direct access to underlying virtual machines, it may
+be necessary to raise a ticket with the administrator of your CloudBroker Platform.
+
+Where bring-your-own edges are used, DIGITbrain currently supports the following
+
+- ARM or x86 Architectures
+- Common Linux Distributions
+- Minimum 1 CPU, 1GB RAM and 5GB free disk space
+
 ## Metadata describing Deployment
 
 The [metadata specification](assets/deployment.md) for a DIGITbrain Deployment

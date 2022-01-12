@@ -3,9 +3,11 @@ theme:
   name: material
   features:
     - navigation.instant
+    - navigation.tabs
 nav:
   - Home: index.md
-  - Assets:
+  - Getting Started: start.md
+  - Publishing Assets:
     - Microservice: microservice.md
     - Algorithm: algorithm.md
     - Model: model.md

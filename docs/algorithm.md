@@ -7,13 +7,15 @@ functionality and realise some goal.
 
 ## Metadata describing Algorithms
 
-The [metadata specification](assets/algorithm.md) for a DIGITbrain Algorithm
-comprises two sections: [Description](#description) and [Service](#service).
+The [metadata specification](assets/algorithm.md) for a DIGITbrain Algorithm comprises two sections:
+
+- [Description](#description)
+- [Service](#algorithm).
 
 ### Description
 
 Here is description
 
-### Service
+### Algorithm
 
-Here is service
+Here is algorithm

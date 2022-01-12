@@ -10,12 +10,14 @@ the functionality of potentially multiple Microservices to realise some goal.
 ## Metadata describing Microservices
 
 The [metadata specification](assets/microservice.md) for DIGITbrain microservices
-comprises two sections: [Description](#description) and [Service](#service).
+comprises several sections:
 
-### Description
-
-Here is description
-
-### Service
-
-Here is service
+- Description
+- Service
+- Hardware Requirements
+- OS Requirements
+- Input Data
+- Output Data
+- Model
+- Parameters
+- Metrics

@@ -7,12 +7,9 @@ Supporting metadata supports the DMA Tuple.
 ## Supporting Metadata
 
 The [metadata specification](assets/supporting_metadata.md) for additional DMA metadata
-comprises two sections: [Description](#description) and [Service](#service).
+comprises four sections:
 
-### Description
-
-Here is description
-
-### Service
-
-Here is service
+- Person
+- Legal Entity (Organisation)
+- IP Family
+- IP Instance

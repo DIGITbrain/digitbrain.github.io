@@ -1,0 +1,35 @@
+site_name: DIGITbrain 
+theme:
+  name: material
+  features:
+    - navigation.instant
+nav:
+  - Home: index.md
+  - Assets:
+    - Microservice: microservice.md
+    - Algorithm: algorithm.md
+    - Model: model.md
+    - Data: data.md
+    - MA Pair: ma_pair.md
+    - DMA Tuple: dma_tuple.md
+    - Deployment: deployment.md
+    - Supporting Metadata: supporting_metadata.md
+    - Metadata Tables:
+      - assets/microservice.md
+      - assets/algorithm.md
+      - assets/model.md
+      - MA Pair: assets/ma_pair.md
+      - assets/data.md
+      - assets/deployment.md
+      - DMA Tuple: assets/dma_tuple.md
+      - Supporting Metadata: assets/supporting_metadata.md
+
+markdown_extensions:
+  - def_list
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true

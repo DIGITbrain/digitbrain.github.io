@@ -1,4 +1,4 @@
-| Concept             | Key                 | sub key            | Type                              | Example Value | Comment                                          | condition |
+| Concept             | Key                 | Subkey             | Type                              | Example Value | Comment                                          | Condition |
 | ------------------- | ------------------- | ------------------ | --------------------------------- | ------------- | ------------------------------------------------ | --------- |
 | Description         |                     |                    |                                   |               |                                                  |           |
 |                     | id                  |                    | UUID                              |               | DIGITbrain reference                             | auto      |

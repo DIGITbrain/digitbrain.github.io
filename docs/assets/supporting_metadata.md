@@ -1,4 +1,4 @@
-| Concept                     | Key         | Subkey | Type      | example Value | Comment                                                  | Condition |
+| Concept                     | Key         | Subkey | Type      | Example Value | Comment                                                  | Condition |
 | --------------------------- | ----------- | ------ | --------- | ------------- | -------------------------------------------------------- | --------- |
 | Person                      |             |        |           |               |                                                          |           |
 |                             | ID          |        | ID / URI  |               | Unique identifier for the Person                         |           |

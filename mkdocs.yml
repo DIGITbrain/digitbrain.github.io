@@ -12,7 +12,7 @@ theme:
 nav:
   - Home: index.md
   - Getting Started: start.md
-  - Publishing Assets:
+  - Assets Overview:
       - Microservice: microservice.md
       - Algorithm: algorithm.md
       - Model: model.md
@@ -21,15 +21,24 @@ nav:
       - DMA Tuple: dma_tuple.md
       - Deployment: deployment.md
       - Supporting Metadata: supporting_metadata.md
-      - Metadata Tables:
-          - tables/microservice.md
-          - tables/algorithm.md
-          - tables/model.md
-          - MA Pair: tables/ma_pair.md
-          - tables/data.md
-          - tables/deployment.md
-          - DMA Tuple: tables/dma_tuple.md
-          - Supporting Metadata: tables/supporting_metadata.md
+  - Metadata Fields:
+      - Microservice: attributes/microservice.md
+      - Algorithm: attributes/algorithm.md
+      - Model: attributes/model.md
+      - MA Pair: attributes/ma_pair.md
+      - Data: attributes/data.md
+      - Deployment: attributes/deployment.md
+      - DMA Tuple: attributes/dma_tuple.md
+      - Supporting Metadata: attributes/supporting_metadata.md
+  - Metadata Tables:
+      - tables/microservice.md
+      - tables/algorithm.md
+      - tables/model.md
+      - MA Pair: tables/ma_pair.md
+      - tables/data.md
+      - tables/deployment.md
+      - DMA Tuple: tables/dma_tuple.md
+      - Supporting Metadata: tables/supporting_metadata.md
 
 markdown_extensions:
   - admonition

@@ -19,12 +19,16 @@ for sheet_name in sheets.keys():
             sheet_dictionary[sheet["Concept"][i]] = None
             continue
 
+        # Discard NaN in example values
+        example = sheet["Example Value"][i]
+        example = example if example == example else None
+
         # Store fields data
         sheet_dictionary[field] = (
             sheet["Condition"][i],
             sheet["Comment"][i],
             sheet["Type"][i],
-            sheet["Example Value"][i],
+            example,
         )
 
     # Fill the template

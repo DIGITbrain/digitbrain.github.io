@@ -6,8 +6,8 @@ print (file_name)
 workbook = xlrd.open_workbook(file_name)
 sheet = workbook.sheet_by_index(1)
 
-col_a = sheet.col_values(1,1)
-col_b = sheet.col_values(0,4)
+col_a = sheet.col_values(1)
+col_b = sheet.col_values(4)
 
 my_dict = {a : b for a, b in zip(col_a, col_b)}
 

@@ -6,7 +6,7 @@ name: Generate csv files
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,18 +26,18 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8'
-          
+          python-version: "3.8"
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install wheel pandas openpyxl mdtable
-          
+
       - name: Run xls2csv
         run: python tools/xls2md.py
-        
+
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4.12.0
         with:
           commit_message: ${{ github.event.head_commit.message }} [AUTO]
-          file_pattern: docs/assets/*
+          file_pattern: docs/tables/*

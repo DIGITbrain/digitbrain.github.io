@@ -18,7 +18,7 @@ for sheet_name in sheets.keys():
     print(f"Generated {sheet_name}.csv...")
     markdown = MDTable(f"csv/{sheet_name}.csv")
     markdown_table = markdown.get_table()
-    markdown.save_table(f"docs/assets/{sheet_name}.md")
+    markdown.save_table(f"docs/tables/{sheet_name}.md")
     print(f"Converted to {sheet_name}.md...")
 
 shutil.rmtree("csv")

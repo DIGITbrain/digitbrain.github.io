@@ -30,10 +30,10 @@ The pairing of an MA Pair with Data. The deployable unit in DIGITbrain
 Additional metadata not related to any one asset.
 
 
-[Algorithm]: https://github.com/DIGITbrain/metadata/blob/main/docs/assets/algorithm.md
-[Microservice]: https://github.com/DIGITbrain/metadata/blob/main/docs/assets/microservice.md
-[Data]: https://github.com/DIGITbrain/metadata/blob/main/docs/assets/data.md
-[Model]: https://github.com/DIGITbrain/metadata/blob/main/docs/assets/model.md
-[MA Pair]: https://github.com/DIGITbrain/metadata/blob/main/docs/assets/ma_pair.md
-[DMA Tuple]: https://github.com/DIGITbrain/metadata/blob/main/docs/assets/dma_tuple.md
-[Supporting Metadata]: https://github.com/DIGITbrain/metadata/blob/main/docs/assets/supporting_metadata.md
+[Algorithm]: https://github.com/DIGITbrain/metadata/blob/main/docs/tables/algorithm.md
+[Microservice]: https://github.com/DIGITbrain/metadata/blob/main/docs/tables/microservice.md
+[Data]: https://github.com/DIGITbrain/metadata/blob/main/docs/tables/data.md
+[Model]: https://github.com/DIGITbrain/metadata/blob/main/docs/tables/model.md
+[MA Pair]: https://github.com/DIGITbrain/metadata/blob/main/docs/tables/ma_pair.md
+[DMA Tuple]: https://github.com/DIGITbrain/metadata/blob/main/docs/tables/dma_tuple.md
+[Supporting Metadata]: https://github.com/DIGITbrain/metadata/blob/main/docs/tables/supporting_metadata.md

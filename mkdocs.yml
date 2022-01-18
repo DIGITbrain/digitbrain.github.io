@@ -5,7 +5,7 @@ theme:
   favicon: img/db-logo.png
   palette:
     primary: teal
-    accent: cyan 
+    accent: cyan
   features:
     - navigation.instant
     - navigation.tabs
@@ -13,23 +13,23 @@ nav:
   - Home: index.md
   - Getting Started: start.md
   - Publishing Assets:
-    - Microservice: microservice.md
-    - Algorithm: algorithm.md
-    - Model: model.md
-    - Data: data.md
-    - MA Pair: ma_pair.md
-    - DMA Tuple: dma_tuple.md
-    - Deployment: deployment.md
-    - Supporting Metadata: supporting_metadata.md
-    - Metadata Tables:
-      - assets/microservice.md
-      - assets/algorithm.md
-      - assets/model.md
-      - MA Pair: assets/ma_pair.md
-      - assets/data.md
-      - assets/deployment.md
-      - DMA Tuple: assets/dma_tuple.md
-      - Supporting Metadata: assets/supporting_metadata.md
+      - Microservice: microservice.md
+      - Algorithm: algorithm.md
+      - Model: model.md
+      - Data: data.md
+      - MA Pair: ma_pair.md
+      - DMA Tuple: dma_tuple.md
+      - Deployment: deployment.md
+      - Supporting Metadata: supporting_metadata.md
+      - Metadata Tables:
+          - tables/microservice.md
+          - tables/algorithm.md
+          - tables/model.md
+          - MA Pair: tables/ma_pair.md
+          - tables/data.md
+          - tables/deployment.md
+          - DMA Tuple: tables/dma_tuple.md
+          - Supporting Metadata: tables/supporting_metadata.md
 
 markdown_extensions:
   - admonition

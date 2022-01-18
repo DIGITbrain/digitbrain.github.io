@@ -13,7 +13,7 @@ Information on any requirements imposed on this asset.
 For a closer look at this metadata, use the following resources:
 
 - [Attribute Listing](attributes/ma_pair.md) for an itemised listing of fields
-- [Metadata Table](assets/ma_pair.md) for a table-formatted overview
+- [Metadata Table](tables/ma_pair.md) for a table-formatted overview
 - Feel free to extend this list as desired
 
 ## Further reading...

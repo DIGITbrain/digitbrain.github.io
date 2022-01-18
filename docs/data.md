@@ -13,7 +13,7 @@ Information on any requirements imposed on this asset.
 For a closer look at this metadata, use the following resources:
 
 - [Attribute Listing](attributes/data.md) for an itemised listing of fields
-- [Metadata Table](assets/data.md) for a table-formatted overview
+- [Metadata Table](tables/data.md) for a table-formatted overview
 - Feel free to extend this list as desired
 
 ## Further reading...

@@ -31,13 +31,16 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install wheel pandas openpyxl mdtable
+          pip install wheel pandas openpyxl mdtable jinja2
 
       - name: Run xls2csv
         run: python tools/xls2md.py
+
+      - name: Run xls2mkdocs
+        run: python tools/xls2mkdocs.py
 
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4.12.0
         with:
           commit_message: ${{ github.event.head_commit.message }} [AUTO]
-          file_pattern: docs/tables/*
+          file_pattern: docs/*/*.md

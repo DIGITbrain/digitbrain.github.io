@@ -1,4 +1,4 @@
-# Supporting Metadata Metadata Specification
+# Supporting Metadata Metadata Fields
 
 ## Available Fields 
 

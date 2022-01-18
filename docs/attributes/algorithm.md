@@ -1,4 +1,4 @@
-# Algorithm Metadata Specification
+# Algorithm Metadata Fields
 
 ## Available Fields 
 

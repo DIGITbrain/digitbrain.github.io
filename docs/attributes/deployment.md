@@ -1,4 +1,4 @@
-# Deployment Metadata Specification
+# Deployment Metadata Fields
 
 ## Available Fields 
 

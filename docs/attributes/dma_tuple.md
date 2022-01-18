@@ -1,4 +1,4 @@
-# DMA Tuple Metadata Specification
+# DMA Tuple Metadata Fields
 
 ## Available Fields 
 

@@ -1,4 +1,4 @@
-# Microservice Metadata Specification
+# Microservice Metadata Fields
 
 ## Available Fields 
 

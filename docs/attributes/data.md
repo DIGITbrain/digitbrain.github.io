@@ -1,4 +1,4 @@
-# Data Metadata Specification
+# Data Metadata Fields
 
 ## Available Fields 
 

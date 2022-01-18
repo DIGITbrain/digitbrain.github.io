@@ -1,4 +1,4 @@
-# Model Metadata Specification
+# Model Metadata Fields
 
 ## Available Fields 
 

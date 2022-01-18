@@ -1,4 +1,4 @@
-# MA Pair Metadata Specification
+# MA Pair Metadata Fields
 
 ## Available Fields 
 

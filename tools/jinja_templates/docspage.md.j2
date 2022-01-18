@@ -1,0 +1,35 @@
+# {{ sheet_name }} Metadata Specification
+
+## Available Fields 
+
+The metadata specification for a DIGITbrain {{ sheet_name }}
+has these sections:
+
+{% for key, value in fields.items() -%}
+{% if not value -%}
+- [{{ key }}](#{{ key | lower | replace(" ", "-") }})
+{% endif %}
+{%- endfor -%}
+{% for key, value in fields.items() -%}
+{% if not value %}
+
+### {{ key }}
+
+An optional description for the {{ key }} section may appear here. 
+{% else %}
+`{{ key }}`
+{% if value[0] == "optional" %}
+:   **Optional**-*{{ value[2] }}*- {{ value[1] }}
+{% elif value[0] == "mandatory" %}
+:   **Required**-*{{ value[2] }}*- {{ value[1] }}
+{% else %}
+:   **Auto-generated**-*{{ value[2] }}*- {{ value[1] }}
+{%- endif %}
+{%- if value[2] %}
+    === "Example"
+        ``` yaml     
+        {{ key }}: {{ value[3] }}
+        ```
+{% endif %}
+{%- endif -%}
+{%- endfor %}

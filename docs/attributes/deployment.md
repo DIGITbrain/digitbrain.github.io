@@ -44,7 +44,7 @@ has these sections:
 
 `cloudbroker`
 
-:   **Optional**-*Map of…*- nan
+:   **Optional**-*Map of…*- No description available.
 
 `deployment_id`
 
@@ -68,7 +68,7 @@ has these sections:
 
 `edge`
 
-:   **Optional**-*Map of…*- nan
+:   **Optional**-*Map of…*- No description available.
 
 
 ### Data Source Mapping
@@ -76,7 +76,7 @@ has these sections:
 
 `data_source_mapping`
 
-:   **Optional**-*Map of…*- nan
+:   **Optional**-*Map of…*- No description available.
 
 `microserviceA_data`
 

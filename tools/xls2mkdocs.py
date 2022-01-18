@@ -19,14 +19,19 @@ for sheet_name in sheets.keys():
             sheet_dictionary[sheet["Concept"][i]] = None
             continue
 
-        # Discard NaN in example values
+        # Discard NaN in example values and comments
         example = sheet["Example Value"][i]
         example = example if example == example else None
+
+        comment = sheet["Comment"][i]
+        comment = (
+            comment if comment == comment else "No description available."
+        )
 
         # Store fields data
         sheet_dictionary[field] = (
             sheet["Condition"][i],
-            sheet["Comment"][i],
+            comment,
             sheet["Type"][i],
             example,
         )

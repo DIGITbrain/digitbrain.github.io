@@ -23,15 +23,12 @@ Contact an administrator for access to the DIGITbrain private registry.
 
 ## Metadata describing Microservices
 
-The [metadata specification](assets/microservice.md) for DIGITbrain microservices
-comprises several sections:
+For a closer look at this metadata, use the following resources:
 
-- Description
-- Service
-- Hardware Requirements
-- OS Requirements
-- Input Data
-- Output Data
-- Model
-- Parameters
-- Metrics
+- [Attribute Listing](attributes/microservice.md) for an itemised listing of fields
+- [Metadata Table](assets/microservice.md) for a table-formatted overview
+- Feel free to extend this list as desired
+
+## Further reading...
+
+This space is for any other required documentation on this asset.

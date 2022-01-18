@@ -2,16 +2,20 @@
 
 ## Introduction
 
-A model is used by an algorithm for some specific use case.
+Here is an introduction to Models in Db.
+
+## Pre-requisites
+
+Information on any requirements imposed on this asset.
 
 ## Metadata describing Models
 
-The [metadata specification](assets/model.md) for DIGITbrain models
-comprises several sections:
+For a closer look at this metadata, use the following resources:
 
-- Define
-- Parameterize
-- Dependant FMUs
-- OS Requirements
-- Hardware Requirements
-- Publish
+- [Attribute Listing](attributes/model.md) for an itemised listing of fields
+- [Metadata Table](assets/model.md) for a table-formatted overview
+- Feel free to extend this list as desired
+
+## Further reading...
+
+This space is for any other required documentation on this asset.

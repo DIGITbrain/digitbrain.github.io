@@ -2,20 +2,20 @@
 
 ## Introduction
 
-Algorithms are composed of one or more Microservices to provide some specific
-functionality and realise some goal.
+Here is an introduction to Algorithms in Db.
+
+## Pre-requisites
+
+Information on any requirements imposed on this asset.
 
 ## Metadata describing Algorithms
 
-The [metadata specification](assets/algorithm.md) for a DIGITbrain Algorithm comprises two sections:
+For a closer look at this metadata, use the following resources:
 
-- [Description](#description)
-- [Service](#algorithm).
+- [Attribute Listing](attributes/algorithm.md) for an itemised listing of fields
+- [Metadata Table](assets/algorithm.md) for a table-formatted overview
+- Feel free to extend this list as desired
 
-### Description
+## Further reading...
 
-Here is description
-
-### Algorithm
-
-Here is algorithm
+This space is for any other required documentation on this asset.

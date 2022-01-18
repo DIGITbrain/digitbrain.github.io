@@ -1,9 +1,21 @@
-# MA Pairs in DIGITbrain
+# Model-Algorithm Pairs in DIGITbrain
 
 ## Introduction
 
-The Model-Algorithm (MA) Pair is the pairing of model and algorithm.
+Here is an introduction to MA Pairs in Db.
+
+## Pre-requisites
+
+Information on any requirements imposed on this asset.
 
 ## Metadata describing MA Pairs
 
-The [metadata specification](assets/ma_pair.md) for DIGITbrain MA Pairs contains the following fields:
+For a closer look at this metadata, use the following resources:
+
+- [Attribute Listing](attributes/ma_pair.md) for an itemised listing of fields
+- [Metadata Table](assets/ma_pair.md) for a table-formatted overview
+- Feel free to extend this list as desired
+
+## Further reading...
+
+This space is for any other required documentation on this asset.

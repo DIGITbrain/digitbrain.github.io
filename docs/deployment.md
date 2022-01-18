@@ -3,7 +3,9 @@
 ## Introduction
 
 A deployment in DIGITbrain specifies the infrastructure that a desired DMA
-Tuple will be deployed across.
+Tuple will be deployed across. Here it is necessary to provide details on the
+type of infrastructure that this deployment will define, along with all the
+configuration details required by that infrastructure type.
 
 ## Pre-requisites
 
@@ -23,39 +25,16 @@ Where bring-your-own edges are used, DIGITbrain currently supports the following
 
 ## Metadata describing Deployment
 
-The [metadata specification](assets/deployment.md) for a DIGITbrain Deployment
-has three sections:
+For a closer look at this metadata, use the following resources:
 
-- [Description](#description)
-- [Deployments](#deployments)
-- [Data Source Mapping](#data-source-mapping)
+- [Attribute Listing](attributes/deployment.md) for an itemised listing of fields
+- [Metadata Table](assets/deployment.md) for a table-formatted overview
+- The **Further Reading** section below
 
-### Description
+## Further reading...
 
-This section provides high-level descriptive metadata for the deployment being defined.
-
-`name`
-
-:   **Required**– A memorable name for this deployment.
-
-`author`
-
-:   **Required**– The author of this deployment metadata.
-
-`date`
-
-:   **Auto-generated**– Today's date.
-
-`id`
-
-:   **Auto-generated**– A DIGITbrain ID.
-
-### Deployments
-
-Here it is necessary to provide details on the type of infrastructure that this deployment
-will define, along with all the configuration details of that infrastructure.
-
-The following fields are available:
+This section takes an in-depth look at some of the more complex fields
+required to describe this asset:
 
 `type`
 
@@ -196,20 +175,4 @@ provides this Deployment.
         ``` yaml     
         edge:
           endpoint: https://192.168.1.1
-        ```
-
-### Data Source Mapping
-
-This section of the metadata maps Microservices to Data assets.
-
-`data_source_mapping`
-
-:   **Required**– Map Microservices (by their ID) to the Data assets
-required by each Microservice.
-
-    === "Example"
-        ``` yaml     
-        data_source_mapping:
-          <microservice-A-id>: [<data-A-id>, <data-B-id>]
-          <microservice-B-id>: [<data-A-id>]
         ```

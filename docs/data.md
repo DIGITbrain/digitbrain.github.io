@@ -2,18 +2,20 @@
 
 ## Introduction
 
-Data are collected or generated in real-time, often at the shop floor.
+Here is an introduction to Data in Db.
+
+## Pre-requisites
+
+Information on any requirements imposed on this asset.
 
 ## Metadata describing Data
 
-The [metadata specification](assets/data.md) for DIGITbrain Data
-comprises several sections
+For a closer look at this metadata, use the following resources:
 
-- Administrative Data
-- Descriptive/Identification Data
-- Search Support
-- Datakind specification
-- Data access specification
-- Open Parameters
-- Further Access Clauses
-- Data Content Semantics
+- [Attribute Listing](attributes/data.md) for an itemised listing of fields
+- [Metadata Table](assets/data.md) for a table-formatted overview
+- Feel free to extend this list as desired
+
+## Further reading...
+
+This space is for any other required documentation on this asset.

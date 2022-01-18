@@ -9,6 +9,14 @@ excel = "metadata.xlsx"
 sheets = pd.read_excel(excel, sheet_name=None)
 os.makedirs("csv", exist_ok=True)
 
+prepend = """
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+</style>"""
+
 for sheet_name in sheets.keys():
     sheet = pd.read_excel(
         excel, sheet_name=sheet_name, skiprows=[0], usecols="A:G"
@@ -20,6 +28,10 @@ for sheet_name in sheets.keys():
     markdown_table = markdown.get_table()
     markdown.save_table(f"docs/tables/{sheet_name}.md")
     print(f"Converted to {sheet_name}.md...")
+    with open(f"docs/tables/{sheet_name}.md", "r+") as file:
+        content = file.read()
+        file.seek(0, 0)
+        file.write(prepend + "\n" + content)
 
 shutil.rmtree("csv")
 print(f"Cleaned up csv files...")

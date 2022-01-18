@@ -1,3 +1,8 @@
+<style>
+  .md-content__button {
+    display: none;
+  }
+</style>
 # MA Pair Metadata Fields
 
 ## Available Fields 

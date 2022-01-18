@@ -1,3 +1,8 @@
+<style>
+  .md-content__button {
+    display: none;
+  }
+</style>
 # Deployment Metadata Fields
 
 ## Available Fields 

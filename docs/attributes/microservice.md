@@ -1,3 +1,8 @@
+<style>
+  .md-content__button {
+    display: none;
+  }
+</style>
 # Microservice Metadata Fields
 
 ## Available Fields 

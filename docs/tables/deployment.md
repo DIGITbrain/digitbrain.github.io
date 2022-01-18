@@ -1,3 +1,9 @@
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+</style>
 | Concept             | Key                 | Subkey             | Type                              | Example Value | Comment                                                             | Condition |
 | ------------------- | ------------------- | ------------------ | --------------------------------- | ------------- | ------------------------------------------------------------------- | --------- |
 | Description         |                     |                    |                                   |               |                                                                     |           |

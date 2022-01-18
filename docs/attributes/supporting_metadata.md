@@ -1,3 +1,8 @@
+<style>
+  .md-content__button {
+    display: none;
+  }
+</style>
 # Supporting Metadata Metadata Fields
 
 ## Available Fields 

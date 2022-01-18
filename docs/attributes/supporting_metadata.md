@@ -12,206 +12,107 @@ has these sections:
 
 ### Person
 
-An optional description for the Person section may appear here. 
 
 `ID`
 
-:   **Auto-generated**-*ID / URI*- Unique identifier for the IP Inst.
-    === "Example"
-        ``` yaml     
-        ID: nan
-        ```
+:   **Optional**-*ID / URI*- Unique identifier for the IP Inst.
 
 `Created at`
 
-:   **Auto-generated**-*ISO 8601*- Date of creation
-    === "Example"
-        ``` yaml     
-        Created at: nan
-        ```
+:   **Optional**-*ISO 8601*- Date of creation
 
 `Version`
 
-:   **Auto-generated**-*Integer*- Version number of the IP Instance
-    === "Example"
-        ``` yaml     
-        Version: nan
-        ```
+:   **Optional**-*Integer*- Version number of the IP Instance
 
 `First name`
 
-:   **Auto-generated**-*Text*- First name of the Person
-    === "Example"
-        ``` yaml     
-        First name: nan
-        ```
+:   **Optional**-*Text*- First name of the Person
 
 `Last name`
 
-:   **Auto-generated**-*Text*- Last name of the Person
-    === "Example"
-        ``` yaml     
-        Last name: nan
-        ```
+:   **Optional**-*Text*- Last name of the Person
 
 `Email`
 
-:   **Auto-generated**-*Email*- Email address of the Person
-    === "Example"
-        ``` yaml     
-        Email: nan
-        ```
+:   **Optional**-*Email*- Email address of the Person
 
 `CV`
 
-:   **Auto-generated**-*Text*- Short description of the Person
-    === "Example"
-        ``` yaml     
-        CV: nan
-        ```
+:   **Optional**-*Text*- Short description of the Person
 
 `Image`
 
-:   **Auto-generated**-*Image*- Picture of the IP Instance
-    === "Example"
-        ``` yaml     
-        Image: nan
-        ```
+:   **Optional**-*Image*- Picture of the IP Instance
 
 `Affiliation`
 
-:   **Auto-generated**-*ID / URI*- Legal Entity the Person is affiliated with
-    === "Example"
-        ``` yaml     
-        Affiliation: nan
-        ```
+:   **Optional**-*ID / URI*- Legal Entity the Person is affiliated with
 
 
 ### Legal Entity (Organization)
 
-An optional description for the Legal Entity (Organization) section may appear here. 
 
 `Author`
 
-:   **Auto-generated**-*ID / URI*- Identifier of the Author of the IP Instance
-    === "Example"
-        ``` yaml     
-        Author: nan
-        ```
+:   **Optional**-*ID / URI*- Identifier of the Author of the IP Instance
 
 `Name`
 
-:   **Auto-generated**-*Text*- Name of the IP Instance
-    === "Example"
-        ``` yaml     
-        Name: nan
-        ```
+:   **Optional**-*Text*- Name of the IP Instance
 
 `Description`
 
-:   **Auto-generated**-*Text*- Description of the IP Instance
-    === "Example"
-        ``` yaml     
-        Description: nan
-        ```
+:   **Optional**-*Text*- Description of the IP Instance
 
 `Logo`
 
-:   **Auto-generated**-*Image*- Logo of the Legal Entity
-    === "Example"
-        ``` yaml     
-        Logo: nan
-        ```
+:   **Optional**-*Image*- Logo of the Legal Entity
 
 `URL`
 
-:   **Auto-generated**-*URL*- Website of the Legal Entity
-    === "Example"
-        ``` yaml     
-        URL: nan
-        ```
+:   **Optional**-*URL*- Website of the Legal Entity
 
 `Location`
 
-:   **Auto-generated**-*ID / URI?*- Physical location of the IP Instance
-    === "Example"
-        ``` yaml     
-        Location: nan
-        ```
+:   **Optional**-*ID / URI?*- Physical location of the IP Instance
 
 `Phone`
 
-:   **Auto-generated**-*String*- Phone Number of the Legal Entity
-    === "Example"
-        ``` yaml     
-        Phone: nan
-        ```
+:   **Optional**-*String*- Phone Number of the Legal Entity
 
 `VAT ID No.`
 
-:   **Auto-generated**-*String*- VAT ID Number of the Legal Entity
-    === "Example"
-        ``` yaml     
-        VAT ID No.: nan
-        ```
+:   **Optional**-*String*- VAT ID Number of the Legal Entity
 
 `IP Family`
 
-:   **Auto-generated**-*ID / URI*- Reference to the IP Family
-    === "Example"
-        ``` yaml     
-        IP Family: nan
-        ```
+:   **Optional**-*ID / URI*- Reference to the IP Family
 
 `Manager`
 
-:   **Auto-generated**-*ID / URI*- Identifier of the Legal Entity managing the IP Family
-    === "Example"
-        ``` yaml     
-        Manager: nan
-        ```
+:   **Optional**-*ID / URI*- Identifier of the Legal Entity managing the IP Family
 
 `Model No.`
 
-:   **Auto-generated**-*Text*- Number defined by the IP Man.
-    === "Example"
-        ``` yaml     
-        Model No.: nan
-        ```
+:   **Optional**-*Text*- Number defined by the IP Man.
 
 `Capacity`
 
-:   **Auto-generated**-*Text*- Capacity of the IP Family
-    === "Example"
-        ``` yaml     
-        Capacity: nan
-        ```
+:   **Optional**-*Text*- Capacity of the IP Family
 
 `IP Man.`
 
-:   **Auto-generated**-*ID / URI*- Identifier of the IP Manufacturer (Legal Entity)
-    === "Example"
-        ``` yaml     
-        IP Man.: nan
-        ```
+:   **Optional**-*ID / URI*- Identifier of the IP Manufacturer (Legal Entity)
 
 
 ### IP Instance
 
-An optional description for the IP Instance section may appear here. 
 
 `Operator`
 
-:   **Auto-generated**-*ID / URI*- Identifier of the Legal Entity operating the IP Instance
-    === "Example"
-        ``` yaml     
-        Operator: nan
-        ```
+:   **Optional**-*ID / URI*- Identifier of the Legal Entity operating the IP Instance
 
 `Serial No.`
 
-:   **Auto-generated**-*Text*- Number defined by the IP Man.
-    === "Example"
-        ``` yaml     
-        Serial No.: nan
-        ```
+:   **Optional**-*Text*- Number defined by the IP Man.

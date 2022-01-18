@@ -10,11 +10,11 @@ has these sections:
 
 ### Definition
 
-An optional description for the Definition section may appear here. 
 
 `ID`
 
 :   **Auto-generated**-*UUID*- Unique identifier for the MA Pair
+
     === "Example"
         ``` yaml     
         ID: 123e4567-e89b-12d3-a456-426614174000
@@ -23,6 +23,7 @@ An optional description for the Definition section may appear here.
 `Created at`
 
 :   **Auto-generated**-*ISO 8601*- Date of creation
+
     === "Example"
         ``` yaml     
         Created at: 2021-05-01T00:00:00Z
@@ -30,7 +31,7 @@ An optional description for the Definition section may appear here.
 
 `Version`
 
-:   **Auto-generated**-*Integer*- Version number of the MA Pair
+:   **Optional**-*Integer*- Version number of the MA Pair
     === "Example"
         ``` yaml     
         Version: 21
@@ -39,6 +40,7 @@ An optional description for the Definition section may appear here.
 `Author`
 
 :   **Auto-generated**-*UUID*- Identifier of the Author of the MA Pair (NB: Entity for author is referenced)
+
     === "Example"
         ``` yaml     
         Author: person_123e4567-e89b-12d3 (auto)
@@ -47,6 +49,7 @@ An optional description for the Definition section may appear here.
 `Licensor`
 
 :   **Auto-generated**-*UUID*- Identifier of the Legal Entity licensing the MA Pair (NB: Entity for Licensor is referenced)
+
     === "Example"
         ``` yaml     
         Licensor: legal_entity_123e4567-e89b-12d3 (auto)
@@ -55,6 +58,7 @@ An optional description for the Definition section may appear here.
 `Derivation`
 
 :   **Auto-generated**-*UUID*- In case of derivation, references to parent / child (optional)
+
     === "Example"
         ``` yaml     
         Derivation: ma_pair_123e4567-e89b-12d3 (auto)
@@ -62,7 +66,7 @@ An optional description for the Definition section may appear here.
 
 `Name`
 
-:   **Auto-generated**-*Text*- Short name to identify the MA Pair
+:   **Optional**-*Text*- Short name to identify the MA Pair
     === "Example"
         ``` yaml     
         Name: Pressure drop
@@ -70,7 +74,7 @@ An optional description for the Definition section may appear here.
 
 `Scope`
 
-:   **Auto-generated**-*Text*- Short description of the scope of the MA Pair (human readable)
+:   **Optional**-*Text*- Short description of the scope of the MA Pair (human readable)
     === "Example"
         ``` yaml     
         Scope: Effectiveness of the mold closing process
@@ -78,7 +82,7 @@ An optional description for the Definition section may appear here.
 
 `IP Family`
 
-:   **Auto-generated**-*UUID*- Identifier of the IP Family the MA Pair is valid for
+:   **Optional**-*UUID*- Identifier of the IP Family the MA Pair is valid for
     === "Example"
         ``` yaml     
         IP Family: ip_family_123e4567-e89b-12d3
@@ -86,7 +90,7 @@ An optional description for the Definition section may appear here.
 
 `Namespace`
 
-:   **Auto-generated**-*UUID?*- Context to interpret the associated information (optional?)
+:   **Optional**-*UUID?*- Context to interpret the associated information (optional?)
     === "Example"
         ``` yaml     
         Namespace: namespace_123e4567-e89b-12d3
@@ -94,7 +98,7 @@ An optional description for the Definition section may appear here.
 
 `M Asset`
 
-:   **Auto-generated**-*UUID*- Identifier of the Model Asset associated to the MA Pair (NB: The corresponding model file is indicated in Model metadata (first tab) as Model_URI and the corresponding zip file needs to be served to the Algorithm to evaluate the Model by the Microservice (MODEL_FILENAME))
+:   **Optional**-*UUID*- Identifier of the Model Asset associated to the MA Pair (NB: The corresponding model file is indicated in Model metadata (first tab) as Model_URI and the corresponding zip file needs to be served to the Algorithm to evaluate the Model by the Microservice (MODEL_FILENAME))
     === "Example"
         ``` yaml     
         M Asset: model_123e4567-e89b-12d3
@@ -102,7 +106,7 @@ An optional description for the Definition section may appear here.
 
 `A Asset`
 
-:   **Auto-generated**-*UUID*- Identifiers of the Algorithm Asset associated to the MA Pair
+:   **Optional**-*UUID*- Identifiers of the Algorithm Asset associated to the MA Pair
     === "Example"
         ``` yaml     
         A Asset: algorithm_123e4567-e89b-12d3
@@ -110,7 +114,7 @@ An optional description for the Definition section may appear here.
 
 `Rules`
 
-:   **Auto-generated**-*UUIDs*- References to recommended Rules to be verified per Evaluation of the MA Pair
+:   **Optional**-*UUIDs*- References to recommended Rules to be verified per Evaluation of the MA Pair
     === "Example"
         ``` yaml     
         Rules: rules_123e4567-e89b-12d3
@@ -118,7 +122,7 @@ An optional description for the Definition section may appear here.
 
 `Frequency`
 
-:   **Auto-generated**-*Integer*- Recommended number of evaluations conducted per hour for the MA Pair (optional)
+:   **Optional**-*Integer*- Recommended number of evaluations conducted per hour for the MA Pair (optional)
     === "Example"
         ``` yaml     
         Frequency: 12
@@ -126,7 +130,7 @@ An optional description for the Definition section may appear here.
 
 `Payload`
 
-:   **Auto-generated**-*String*- User-defined key-value pairs: JSON string with additional information (optional)
+:   **Optional**-*String*- User-defined key-value pairs: JSON string with additional information (optional)
     === "Example"
         ``` yaml     
         Payload: {‘minPressure’: 90, ‘maxPressure’: 120}

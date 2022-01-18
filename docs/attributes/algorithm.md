@@ -11,11 +11,11 @@ has these sections:
 
 ### Description
 
-An optional description for the Description section may appear here. 
 
 `id`
 
 :   **Auto-generated**-*String*- a unique id to identify this asset
+
     === "Example"
         ``` yaml     
         id: algorithm_10824912410291
@@ -69,6 +69,7 @@ An optional description for the Description section may appear here.
 `date`
 
 :   **Auto-generated**-*Date*- the creation data
+
     === "Example"
         ``` yaml     
         date: 06.04.2021
@@ -86,7 +87,6 @@ An optional description for the Description section may appear here.
 
 ### Algorithm
 
-An optional description for the Algorithm section may appear here. 
 
 `listOfMicroservices`
 

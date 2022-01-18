@@ -18,11 +18,11 @@ has these sections:
 
 ### Description
 
-An optional description for the Description section may appear here. 
 
 `id`
 
 :   **Auto-generated**-*String*- unique DIGITbrain reference
+
     === "Example"
         ``` yaml     
         id: microservice_12312124
@@ -49,6 +49,7 @@ An optional description for the Description section may appear here.
 `date`
 
 :   **Auto-generated**-*Date*- creation date
+
     === "Example"
         ``` yaml     
         date: 06.04.2021
@@ -93,7 +94,6 @@ An optional description for the Description section may appear here.
 
 ### Service
 
-An optional description for the Service section may appear here. 
 
 `deploymentFormat`
 
@@ -116,7 +116,6 @@ An optional description for the Service section may appear here.
 `configurationData`
 
 :   **Optional**-*Map(Files)*- configuration file(s) required by the service
-
     === "Example"
         ``` yaml     
         configurationData: filename: <file.yml>, other_filename: <other_file.cfg>
@@ -125,7 +124,6 @@ An optional description for the Service section may appear here.
 `mountedInputDirectories`
 
 :   **Optional**-*List(String)*- directories shared on the host where this microservice can find required inputs
-
     === "Example"
         ``` yaml     
         mountedInputDirectories: /data
@@ -134,7 +132,6 @@ An optional description for the Service section may appear here.
 `mountedOutputDirectories`
 
 :   **Optional**-*List(String)*- directories shared on the host where this microservice can find required outputs
-
     === "Example"
         ``` yaml     
         mountedOutputDirectories: /data_out
@@ -143,12 +140,10 @@ An optional description for the Service section may appear here.
 
 ### Hardware Requirements
 
-An optional description for the Hardware Requirements section may appear here. 
 
 `recommendedNumberOfGPUs`
 
 :   **Optional**-*Int*- recommended number of GPUs
-
     === "Example"
         ``` yaml     
         recommendedNumberOfGPUs: 2
@@ -157,7 +152,6 @@ An optional description for the Hardware Requirements section may appear here.
 `minimumNumberOfGPUs`
 
 :   **Optional**-*Int*- minimum required number of GPUs
-
     === "Example"
         ``` yaml     
         minimumNumberOfGPUs: 1
@@ -166,7 +160,6 @@ An optional description for the Hardware Requirements section may appear here.
 `recommendedGPURAM`
 
 :   **Optional**-*Int*- recommended amount of GPU memory in GB
-
     === "Example"
         ``` yaml     
         recommendedGPURAM: 6
@@ -175,7 +168,6 @@ An optional description for the Hardware Requirements section may appear here.
 `minimumGPURAM`
 
 :   **Optional**-*Int*- minimum required amount of GPU memory in GB
-
     === "Example"
         ``` yaml     
         minimumGPURAM: 1
@@ -184,7 +176,6 @@ An optional description for the Hardware Requirements section may appear here.
 `gpuType`
 
 :   **Optional**-*String*- a description of the type of GPUs, and further specifications, to allow the execution of the Microservice
-
     === "Example"
         ``` yaml     
         gpuType: NVidia (compute capability >= 7.0)
@@ -193,7 +184,6 @@ An optional description for the Hardware Requirements section may appear here.
 `hpcRequired`
 
 :   **Optional**-*Bool*- whether this Microservice requires an HPC environment to be executed efficiently
-
     === "Example"
         ``` yaml     
         hpcRequired: true
@@ -202,7 +192,6 @@ An optional description for the Hardware Requirements section may appear here.
 `edgeType`
 
 :   **Optional**-*Enumeration {TPU (Google), NPU (Qualcomm), FPGA, NVIDIA Jetson AGX}*- required type of edge device to allow the execution of the Microservice
-
     === "Example"
         ``` yaml     
         edgeType: NVIDIA Jetson AGX
@@ -211,7 +200,6 @@ An optional description for the Hardware Requirements section may appear here.
 `recommendedRAM`
 
 :   **Optional**-*String*- recommended amount of memory in GB
-
     === "Example"
         ``` yaml     
         recommendedRAM: 16
@@ -220,7 +208,6 @@ An optional description for the Hardware Requirements section may appear here.
 `minimumRAM`
 
 :   **Optional**-*String*- minimum required amount memory in GB
-
     === "Example"
         ``` yaml     
         minimumRAM: 2
@@ -229,7 +216,6 @@ An optional description for the Hardware Requirements section may appear here.
 `recommendedCPUs`
 
 :   **Optional**-*Int*- recommended number of CPU cores
-
     === "Example"
         ``` yaml     
         recommendedCPUs: 4
@@ -238,7 +224,6 @@ An optional description for the Hardware Requirements section may appear here.
 `minimumCPUs`
 
 :   **Optional**-*Int*- minimum required number of CPU cores
-
     === "Example"
         ``` yaml     
         minimumCPUs: 2
@@ -247,7 +232,6 @@ An optional description for the Hardware Requirements section may appear here.
 `requiredDiskSpace`
 
 :   **Optional**-*Int*- required amount of disk space in GB
-
     === "Example"
         ``` yaml     
         requiredDiskSpace: 42
@@ -256,7 +240,6 @@ An optional description for the Hardware Requirements section may appear here.
 
 ### OS Requirements
 
-An optional description for the OS Requirements section may appear here. 
 
 `osArch`
 
@@ -270,7 +253,6 @@ An optional description for the OS Requirements section may appear here.
 `osType`
 
 :   **Optional**-*String*- supported os type
-
     === "Example"
         ``` yaml     
         osType: linux
@@ -279,7 +261,6 @@ An optional description for the OS Requirements section may appear here.
 `osDistribution`
 
 :   **Optional**-*String*- supported os distribution
-
     === "Example"
         ``` yaml     
         osDistribution: ubuntu
@@ -288,7 +269,6 @@ An optional description for the OS Requirements section may appear here.
 `osVersion`
 
 :   **Optional**-*String*- description of supported os version
-
     === "Example"
         ``` yaml     
         osVersion: 20.04
@@ -297,12 +277,10 @@ An optional description for the OS Requirements section may appear here.
 
 ### Input Data(WP4)
 
-An optional description for the Input Data(WP4) section may appear here. 
 
 `inputData`
 
 :   **Optional**-*List( Data Objects)*- list of Data objects for each required input, specified using the "DATA" fields listed below
-
     === "Example"
         ``` yaml     
         inputData: {{DATA_KIND = {FILE, STREAM}, DATA_DIRECTION = {SOURCE}} 
@@ -338,7 +316,6 @@ An optional description for the Input Data(WP4) section may appear here.
 `DATA_FORMAT`
 
 :   **Optional**-*List( DATA_FORMAT)*- supported format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files)
-
     === "Example"
         ``` yaml     
         DATA_FORMAT: {application/zip, image/jpg}
@@ -347,7 +324,6 @@ An optional description for the Input Data(WP4) section may appear here.
 `DATA_SOURCE_TYPE`
 
 :   **Optional**-*List( DATA_SOURCE_TYPE)*- supported exact type of the data resource. Typically corresponds to the scheme part (protocol://) of DATA_URI.
-
     === "Example"
         ``` yaml     
         DATA_SOURCE_TYPE: {MYSQL, KAFKA}
@@ -356,7 +332,6 @@ An optional description for the Input Data(WP4) section may appear here.
 `DATA_PROTOCOL`
 
 :   **Optional**-*List( DATA_PROTOCOL)*- supported protocols
-
     === "Example"
         ``` yaml     
         DATA_PROTOCOL: {HTTP}
@@ -365,7 +340,6 @@ An optional description for the Input Data(WP4) section may appear here.
 `DATA_AUTH_TYPE`
 
 :   **Optional**-*List( DATA_AUTH_TYPE)*- supported authentication type
-
     === "Example"
         ``` yaml     
         DATA_AUTH_TYPE: {tls_mutual, userpass}
@@ -374,7 +348,6 @@ An optional description for the Input Data(WP4) section may appear here.
 `DATA_MYSQL_DIALECT`
 
 :   **Optional**-*List( DATA_MYSQL_DIALECT)*- supported MYSQL dialect, for each generated output
-
     === "Example"
         ``` yaml     
         DATA_MYSQL_DIALECT: {mariadbdialect}
@@ -383,7 +356,6 @@ An optional description for the Input Data(WP4) section may appear here.
 `DATA_MQTT_PROTOCOL_VERSION`
 
 :   **Optional**-*List( DATA_MQTT_PROTOCOL_VERSION)*- supported MQTT protocol version
-
     === "Example"
         ``` yaml     
         DATA_MQTT_PROTOCOL_VERSION: {2.3.1}
@@ -392,7 +364,6 @@ An optional description for the Input Data(WP4) section may appear here.
 `DATA_KAFKA_BROKER_VERSION`
 
 :   **Optional**-*List( DATA_KAFKA_BROKER_VERSION)*- supported Kafka broker version
-
     === "Example"
         ``` yaml     
         DATA_KAFKA_BROKER_VERSION: {2.7.1, 2.5}
@@ -401,7 +372,6 @@ An optional description for the Input Data(WP4) section may appear here.
 `DATA_S3_REGION`
 
 :   **Optional**-*List( DATA_S3_REGION)*- supported S3 region
-
     === "Example"
         ``` yaml     
         DATA_S3_REGION: {eu-central-1}
@@ -410,7 +380,6 @@ An optional description for the Input Data(WP4) section may appear here.
 `DATA_SCHEMA`
 
 :   **Optional**-*List( DATA_SCHEMA)*- supported internal message structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, …
-
     === "Example"
         ``` yaml     
         DATA_SCHEMA: {jpg}
@@ -419,12 +388,10 @@ An optional description for the Input Data(WP4) section may appear here.
 
 ### Output Data (WP4)
 
-An optional description for the Output Data (WP4) section may appear here. 
 
 `outputData`
 
 :   **Optional**-*List( Data Objects)*- list of Data objects for each generated output, specified using the "DATA" fields listed below
-
     === "Example"
         ``` yaml     
         outputData: {{DATA_KIND = {FILE, STREAM}, DATA_DIRECTION = {SINK}} 
@@ -442,12 +409,10 @@ An optional description for the Output Data (WP4) section may appear here.
 
 ### Model(WP5)
 
-An optional description for the Model(WP5) section may appear here. 
 
 `model_types`
 
 :   **Optional**-*List( ModelTypes)*- list of supported Model types
-
     === "Example"
         ``` yaml     
         model_types: {SavedModel (Tensorflow)}
@@ -456,7 +421,6 @@ An optional description for the Model(WP5) section may appear here.
 `model_recommendedAuthTools`
 
 :   **Optional**-*List (AuthTools)*- list of recommended AuthoringTools used to generate the Model
-
     === "Example"
         ``` yaml     
         model_recommendedAuthTools: {PreSTRA}
@@ -465,16 +429,10 @@ An optional description for the Model(WP5) section may appear here.
 
 ### Parameters
 
-An optional description for the Parameters section may appear here. 
 
 `parameters`
 
 :   **Optional**-*List( Parameter)*- list of Parameter objects for each possible parameters, to be specified before deployment
-
-    === "Example"
-        ``` yaml     
-        parameters: nan
-        ```
 
 `name`
 
@@ -488,7 +446,6 @@ An optional description for the Parameters section may appear here.
 `mandatory`
 
 :   **Optional**-*Boolean*- whether this parameter is mandatory (default: false)
-
     === "Example"
         ``` yaml     
         mandatory: true
@@ -497,7 +454,6 @@ An optional description for the Parameters section may appear here.
 `defaultValue`
 
 :   **Optional**-*has to match "type"*- a default value, if the parameter is required but not provided
-
     === "Example"
         ``` yaml     
         defaultValue: 42
@@ -506,16 +462,10 @@ An optional description for the Parameters section may appear here.
 
 ### Metrics
 
-An optional description for the Metrics section may appear here. 
 
 `metrics`
 
 :   **Optional**-*List( Metrics)*- list of Metric objects for each metric collected by the Microservice
-
-    === "Example"
-        ``` yaml     
-        metrics: nan
-        ```
 
 `correspondingMeasurement`
 

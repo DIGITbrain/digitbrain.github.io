@@ -15,21 +15,20 @@ has these sections:
 
 ### {{ key }}
 
-An optional description for the {{ key }} section may appear here. 
 {% else %}
 `{{ key }}`
-{% if value[0] == "optional" %}
-:   **Optional**-*{{ value[2] }}*- {{ value[1] }}
-{% elif value[0] == "mandatory" %}
+{% if value[0] == "mandatory" %}
 :   **Required**-*{{ value[2] }}*- {{ value[1] }}
-{% else %}
+{% elif value[0] == "auto" %}
 :   **Auto-generated**-*{{ value[2] }}*- {{ value[1] }}
+{% else %}
+:   **Optional**-*{{ value[2] }}*- {{ value[1] }}
 {%- endif %}
-{%- if value[2] %}
+{%- if value[3] %}
     === "Example"
         ``` yaml     
         {{ key }}: {{ value[3] }}
         ```
-{% endif %}
-{%- endif -%}
+{%- endif %}
+{% endif -%}
 {%- endfor %}

@@ -1,4 +1,6 @@
 site_name: DIGITbrain Documentation
+repo_url: https://github.com/digitbrain/metadata
+edit_uri: edit/main/docs
 theme:
   name: material
   logo: img/db-logo.png

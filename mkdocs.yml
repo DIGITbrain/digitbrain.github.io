@@ -27,19 +27,19 @@ nav:
       - Microservice: attributes/microservice.md
       - Algorithm: attributes/algorithm.md
       - Model: attributes/model.md
-      - MA Pair: attributes/ma_pair.md
       - Data: attributes/data.md
-      - Deployment: attributes/deployment.md
+      - MA Pair: attributes/ma_pair.md
       - DMA Tuple: attributes/dma_tuple.md
+      - Deployment: attributes/deployment.md
       - Supporting Metadata: attributes/supporting_metadata.md
   - Metadata Tables:
       - tables/microservice.md
       - tables/algorithm.md
       - tables/model.md
-      - MA Pair: tables/ma_pair.md
       - tables/data.md
-      - tables/deployment.md
+      - MA Pair: tables/ma_pair.md
       - DMA Tuple: tables/dma_tuple.md
+      - tables/deployment.md
       - Supporting Metadata: tables/supporting_metadata.md
 
 markdown_extensions:

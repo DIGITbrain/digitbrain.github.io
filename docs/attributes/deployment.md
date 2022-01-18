@@ -44,7 +44,7 @@ has these sections:
 
 `cloudbroker`
 
-:   **Optional**-*Map of…*- No description available.
+:   **Optional**-*Map of…*- Configuration data for a CloudBroker instance
 
 `deployment_id`
 
@@ -68,7 +68,7 @@ has these sections:
 
 `edge`
 
-:   **Optional**-*Map of…*- No description available.
+:   **Optional**-*Map of…*- Connection data for a bring-your-own edge
 
 
 ### Data Source Mapping
@@ -76,7 +76,7 @@ has these sections:
 
 `data_source_mapping`
 
-:   **Optional**-*Map of…*- No description available.
+:   **Optional**-*Map of…*- Mapping Microservices to Data assets, as available in the DMA Tuple
 
 `microserviceA_data`
 

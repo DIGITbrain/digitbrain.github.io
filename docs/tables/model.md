@@ -1,8 +1,6 @@
 
 <style>
-  .md-typeset h1 { 
-	  font-size: 100px;
-   }
+  .md-typeset h1,
   .md-content__button {
     display: none;
   }

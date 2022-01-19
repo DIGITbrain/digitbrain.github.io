@@ -41,13 +41,13 @@ has these sections:
         AUTHOR: UUID
         ```
 
-`DATA_PROVIDER`
+`PROVIDER`
 
 :   **Auto-generated**-*id*- Legal entity who provides the data resource (owner). It is the affiliation of the author by default.
 
     === "Example"
         ``` yaml     
-        DATA_PROVIDER: UUID
+        PROVIDER: UUID
         ```
 
 `DATE`
@@ -58,15 +58,6 @@ has these sections:
         ``` yaml     
         DATE: 10:45:13 CET 21/03/2021
         ```
-
-`PARENT`
-
-:   **Optional**-*id*- Refercing a parent record. All fields of parent are inherited by this record, fields filled here will override parent field values (?).
-    === "Example"
-        ``` yaml     
-        PARENT: inherit legal entity, contact details from a parent record.
-        ```
-
 
 ### Description
 
@@ -80,29 +71,12 @@ has these sections:
         DATA_NAME: CNSPiezoBolt#1 (in directory: factory 1 , machine1 , piezobolts)
         ```
 
-`VERSION`
+`DATA_VERSION`
 
 :   **Optional**-*string*- Version of this data resource entry (major.minor.patch). Defaults to 1.0.0
     === "Example"
         ``` yaml     
-        VERSION: 2.3.4
-        ```
-
-`DATA_SIZE`
-
-:   **Optional**-*integer*- Estimated/exact size of data (e.g. file size, volume size, or message size); might be used to assess HW requirements (RAM, CPU) . In bytes (k - kilo, m - mega, t - tera, p - peta)
-    === "Example"
-        ``` yaml     
-        DATA_SIZE: 112m
-        ```
-
-`DATA_CONTACT`
-
-:   **Required**-*string*- Data provider contact point, e.g. email address, to get access to these data (ask permissions/credentials to use these data). Optional if it corresponds to DATA_PROVIDER (email) details.
-
-    === "Example"
-        ``` yaml     
-        DATA_CONTACT: info@company.com
+        DATA_VERSION: 2.3.4
         ```
 
 `DATA_DESC`
@@ -113,14 +87,21 @@ has these sections:
         DATA_DESC: This sensor measures temperature in Celsius, sends data via ConSenses edge device via an MQTT broker
         ```
 
-`DATA_SPECS_DOC`
+`DATA_DESC_URL`
 
 :   **Optional**-*URL*- More detailed specification of data source characteristics (doc, pdf, …)
     === "Example"
         ``` yaml     
-        DATA_SPECS_DOC: data-source-specification-sheet.pdf
+        DATA_DESC_URL: data-source-specification-sheet.pdf
         ```
 
+`DATA_SIZE`
+
+:   **Optional**-*integer*- Exact or estimated size of data (e.g. file size, volume size, or message size); might be used to assess HW requirements (RAM, CPU) . In bytes (k - kilo, m - mega, t - tera, p - peta)
+    === "Example"
+        ``` yaml     
+        DATA_SIZE: 112m
+        ```
 
 ### Search support
 
@@ -143,7 +124,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        DATA_KIND: FILE , DIRECTORY , DATABASE , STREAM
+        DATA_KIND: FILE , DATABASE , STREAM
         ```
 
 `DATA_DIRECTION`
@@ -183,12 +164,12 @@ has these sections:
         DATA_URI (pseudo vars: DATA_PROTOCOL, DATA_HOST, DATA_PORT, DATA_PATH, DATA_QUERY, DATA_FRAGMENT): s3://amazonaws/bucket/object , kafka://host/topic#1 , ...
         ```
 
-`DATA_AUTH_TYPE`
+`DATA_AUTH`
 
 :   **Optional**-*list of enums*- One or more authentication types that can be accepted by the storage resource.
     === "Example"
         ``` yaml     
-        DATA_AUTH_TYPE: [ { none , userpass , accesskey_secretkey , ssl_certificate , tls_mutual, access_token , rclone_config }+ ]
+        DATA_AUTH: [ { none , userpass , accesskey_secretkey , ssl_certificate , tls_mutual, access_token , rclone_config }+ ]
         ```
 
 

@@ -27,15 +27,15 @@ has these sections:
 
 `Name`
 
-:   **Optional**-*string*- Name of the model
+:   **Optional**-*string*- Human-readable name of the output
 
 `Version`
 
-:   **Optional**-*semver (if model only has revisions, use semver prerelease 0.1, 0.2, etc.)*- Version of the model
+:   **Optional**-*semver*- Version of the model. If model only has revisions, use semver prerelease 0.1, 0.2, etc.
 
 `License`
 
-:   **Optional**-*enum tbd in SAD group*- License of the model
+:   **Optional**-*enum*- License of the model.  Type tbd in SAD group
 
 `Provider`
 
@@ -43,7 +43,7 @@ has these sections:
 
 `Provider_contacts`
 
-:   **Optional**-*obj*- OPTIONAL: Dictionary with keys being phone, email, address - Type takes into account co-simulation models, for which solver info is mandatory (next slide)
+:   **Optional**-*obj*- Dictionary with keys being phone, email, address - Type takes into account co-simulation models, for which solver info is mandatory (next slide)
 
 `AuthTool`
 
@@ -55,7 +55,7 @@ has these sections:
 
 `Fidelity`
 
-:   **Optional**-*number*- OPTIONAL: Error of the model’s prediction
+:   **Optional**-*number*- Error of the model’s prediction
 
 `Model_URI`
 
@@ -75,15 +75,55 @@ has these sections:
 
 `In-slots`
 
-:   **Optional**-*array of obj  (key (group.key), name, dimensions (e.g. 2, 3, etc.), units (human-readable-name, exponents, offset, scale), default value, ranges, description)*- Values on which the model is evaluated (or parameters that might set before or during the evaluation) - Inputs and parameters together, although if needed we can still differentiate them internally in key field for each specific model.
+:   **Optional**-*array of obj*- Values on which the model is evaluated (or parameters that might set before or during the evaluation) - Inputs and parameters together, although if needed we can still differentiate them internally in key field for each specific model.
+
+`Key`
+
+:   **Optional**-*string*- Group key (eg. type and name) of the output
+
+`Dimensions`
+
+:   **Optional**-*number*- Number of dimensions of the output (i.e. scalar, vector field)
+
+`Is-continuous`
+
+:   **Optional**-*boolean*- Continuous or discreet output
+
+`Units`
+
+:   **Optional**-*obj (see subkeys below)*- Values related to the output measurement units
+
+`Units.Unit`
+
+:   **Optional**-*string*- Units of the output (e.g Pa, m/s, etc…)
+
+`Units.Exponent`
+
+:   **Optional**-*array of number*- eg. exponents for kg (SI) {1, -2, 0, 0, 0, 0, 1}
+
+`Units.Offset`
+
+:   **Optional**-*number*- scale offset if needed (e.g. K to C conversion)
+
+`Units.Scale`
+
+:   **Optional**-*number*- Order of magnitude of the measurement unit scale e.g. Scale is equal to 10^-3 for values expressed in mm
+
+`Default-value`
+
+:   **Optional**-*number*- Default value for the output
+
+`Ranges`
+
+:   **Optional**-*array of number*- Max and min value of the output
 
 `Outputs`
 
-:   **Optional**-*nan*- Values that the model approximates
+:   **Optional**-*array of obj*- Values that the model approximates
 
 `CosimSolverInfo`
 
-:   **Optional**-****- OPTIONAL (for co-simulation Type only)
+:   **Optional**-*obj*- For co-simulation Type only
 
 
 ### Dependant FMUs

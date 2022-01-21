@@ -158,12 +158,12 @@ has these sections:
         DATA_SOURCE_TYPE: S3 , MYSQL , MQTT , ... (WP6: DATA_SOURCE_TYPE=LOCAL, PATH=...")
         ```
 
-`DATA_URI (pseudo vars: DATA_PROTOCOL, DATA_HOST, DATA_PORT, DATA_PATH, DATA_QUERY, DATA_FRAGMENT)`
+`DATA_URI`
 
-:   **Optional**-*URI*- Accessibility of the data resource, including host, port information, protocol, and other fields (path is protocol dependent, can be a topic name). GUI may show host, port, path separately. Hidden at search. Format: protocol://host:port/path 
+:   **Optional**-*URI*- Accessibility of the data resource, including host, port information, protocol, and other fields (path is protocol dependent, can be a topic name). GUI may show host, port, path separately. Hidden at search. Format: protocol://host:port/path.  Pseudo vars: DATA_PROTOCOL, DATA_HOST, DATA_PORT, DATA_PATH, DATA_QUERY, DATA_FRAGMENT.
     === "Example"
         ``` yaml     
-        DATA_URI (pseudo vars: DATA_PROTOCOL, DATA_HOST, DATA_PORT, DATA_PATH, DATA_QUERY, DATA_FRAGMENT): s3://amazonaws/bucket/object , kafka://host/topic#1 , ...
+        DATA_URI: s3://amazonaws/bucket/object , kafka://host/topic#1 , ...
         ```
 
 `DATA_AUTH`
@@ -235,7 +235,15 @@ has these sections:
 :   **Optional**-*string*- Describes message internal structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, ...
     === "Example"
         ``` yaml     
-        DATA_SCHEMA: database schema file contents (or URL?)
+        DATA_SCHEMA: database schema description/contents 
+        ```
+
+`DATA_SCHEMA_URL`
+
+:   **Optional**-*URL*- No description available.
+    === "Example"
+        ``` yaml     
+        DATA_SCHEMA_URL: database schema URL
         ```
 
 `DATA_SCHEMA_ADDITIONAL_ATTRIBUTES`

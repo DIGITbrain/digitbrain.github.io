@@ -17,7 +17,6 @@ has these sections:
 
 
 `ID`
-
 :   **Auto-generated**-*UUID*- Unique identifier for the MA Pair
 
     === "Example"
@@ -26,7 +25,6 @@ has these sections:
         ```
 
 `Created at`
-
 :   **Auto-generated**-*ISO 8601*- Date of creation
 
     === "Example"
@@ -35,7 +33,6 @@ has these sections:
         ```
 
 `Version`
-
 :   **Optional**-*Integer*- Version number of the MA Pair
     === "Example"
         ``` yaml     
@@ -43,7 +40,6 @@ has these sections:
         ```
 
 `Author`
-
 :   **Auto-generated**-*UUID*- Identifier of the Author of the MA Pair (NB: Entity for author is referenced)
 
     === "Example"
@@ -52,7 +48,6 @@ has these sections:
         ```
 
 `Licensor`
-
 :   **Auto-generated**-*UUID*- Identifier of the Legal Entity licensing the MA Pair (NB: Entity for Licensor is referenced)
 
     === "Example"
@@ -61,7 +56,6 @@ has these sections:
         ```
 
 `Derivation`
-
 :   **Auto-generated**-*UUID*- In case of derivation, references to parent / child (optional)
 
     === "Example"
@@ -70,7 +64,6 @@ has these sections:
         ```
 
 `Name`
-
 :   **Optional**-*Text*- Short name to identify the MA Pair
     === "Example"
         ``` yaml     
@@ -78,7 +71,6 @@ has these sections:
         ```
 
 `Scope`
-
 :   **Optional**-*Text*- Short description of the scope of the MA Pair (human readable)
     === "Example"
         ``` yaml     
@@ -86,7 +78,6 @@ has these sections:
         ```
 
 `IP Family`
-
 :   **Optional**-*UUID*- Identifier of the IP Family the MA Pair is valid for
     === "Example"
         ``` yaml     
@@ -94,7 +85,6 @@ has these sections:
         ```
 
 `Namespace`
-
 :   **Optional**-*UUID?*- Context to interpret the associated information (optional?)
     === "Example"
         ``` yaml     
@@ -102,7 +92,6 @@ has these sections:
         ```
 
 `M Asset`
-
 :   **Optional**-*UUID*- Identifier of the Model Asset associated to the MA Pair (NB: The corresponding model file is indicated in Model metadata (first tab) as Model_URI and the corresponding zip file needs to be served to the Algorithm to evaluate the Model by the Microservice (MODEL_FILENAME))
     === "Example"
         ``` yaml     
@@ -110,7 +99,6 @@ has these sections:
         ```
 
 `A Asset`
-
 :   **Optional**-*UUID*- Identifiers of the Algorithm Asset associated to the MA Pair
     === "Example"
         ``` yaml     
@@ -118,7 +106,6 @@ has these sections:
         ```
 
 `Rules`
-
 :   **Optional**-*UUIDs*- References to recommended Rules to be verified per Evaluation of the MA Pair
     === "Example"
         ``` yaml     
@@ -126,7 +113,6 @@ has these sections:
         ```
 
 `Frequency`
-
 :   **Optional**-*Integer*- Recommended number of evaluations conducted per hour for the MA Pair (optional)
     === "Example"
         ``` yaml     
@@ -134,7 +120,6 @@ has these sections:
         ```
 
 `Payload`
-
 :   **Optional**-*String*- User-defined key-value pairs: JSON string with additional information (optional)
     === "Example"
         ``` yaml     

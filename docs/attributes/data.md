@@ -16,7 +16,7 @@ has these sections:
 - [Datakind specification](#datakind-specification)
 - [Data access specification](#data-access-specification)
 - [Open parameters](#open-parameters)
-- [Further access clauses (extensible)](#further-access-clauses-(extensible))
+- [Further access clauses (extensible)](#further-access-clauses-extensible)
 - [Data content semantics](#data-content-semantics)
 
 
@@ -24,7 +24,6 @@ has these sections:
 
 
 `ID`
-
 :   **Auto-generated**-*id*- Unique identifier of the data resource.
 
     === "Example"
@@ -33,7 +32,6 @@ has these sections:
         ```
 
 `AUTHOR`
-
 :   **Auto-generated**-*id*- Unique identifier of the user who created this record
 
     === "Example"
@@ -42,7 +40,6 @@ has these sections:
         ```
 
 `PROVIDER`
-
 :   **Auto-generated**-*id*- Legal entity who provides the data resource (owner). It is the affiliation of the author by default.
 
     === "Example"
@@ -51,7 +48,6 @@ has these sections:
         ```
 
 `DATE`
-
 :   **Auto-generated**-*timestamp*- Date of data resource registration.
 
     === "Example"
@@ -64,7 +60,6 @@ has these sections:
 
 
 `DATA_NAME`
-
 :   **Required**-*string*- Name of the data resource. (The directory hierarchy in Nexus provides a fully qualified (FQ) name, which is unique.)
 
     === "Example"
@@ -73,7 +68,6 @@ has these sections:
         ```
 
 `DATA_VERSION`
-
 :   **Optional**-*string*- Version of this data resource entry (major.minor.patch). Defaults to 1.0.0
     === "Example"
         ``` yaml     
@@ -81,7 +75,6 @@ has these sections:
         ```
 
 `DATA_DESC`
-
 :   **Optional**-*string*- Human readable description of the data resource.
     === "Example"
         ``` yaml     
@@ -89,7 +82,6 @@ has these sections:
         ```
 
 `DATA_DESC_URL`
-
 :   **Optional**-*URL*- More detailed specification of data source characteristics (doc, pdf, …)
     === "Example"
         ``` yaml     
@@ -97,7 +89,6 @@ has these sections:
         ```
 
 `DATA_SIZE`
-
 :   **Optional**-*integer*- Estimated/exact size of data (e.g. file size, volume size, or message size); might be used to assess HW requirements (RAM, CPU) . In bytes (k - kilo, m - mega, t - tera, p - peta)
     === "Example"
         ``` yaml     
@@ -109,7 +100,6 @@ has these sections:
 
 
 `DATA_TAGS`
-
 :   **Optional**-*list of strings*- A list of tags freely added to help in searching/indexing (not limited to a basic set of tags, keywords)
     === "Example"
         ``` yaml     
@@ -121,7 +111,6 @@ has these sections:
 
 
 `DATA_KIND`
-
 :   **Required**-*enum*- Type of the data resource (e.g. file/object storage, database management system, streaming broker). FILE can mean a single file or a folder.
 
     === "Example"
@@ -130,7 +119,6 @@ has these sections:
         ```
 
 `DATA_DIRECTION`
-
 :   **Required**-*enum*- Direction of data flow (source: data provider, sink: data consumer/storage)
 
     === "Example"
@@ -139,7 +127,6 @@ has these sections:
         ```
 
 `DATA_FORMAT`
-
 :   **Optional**-*list of strings*- Format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files).
     === "Example"
         ``` yaml     
@@ -151,7 +138,6 @@ has these sections:
 
 
 `DATA_SOURCE_TYPE`
-
 :   **Optional**-*string*- The exact type of the data resource. Typically corresponds to the scheme part (protocol://) of DATA_URI.
     === "Example"
         ``` yaml     
@@ -159,7 +145,6 @@ has these sections:
         ```
 
 `DATA_URI`
-
 :   **Optional**-*URI*- Accessibility of the data resource, including host, port information, protocol, and other fields (path is protocol dependent, can be a topic name). GUI may show host, port, path separately. Hidden at search. Format: protocol://host:port/path.  Pseudo vars: DATA_PROTOCOL, DATA_HOST, DATA_PORT, DATA_PATH, DATA_QUERY, DATA_FRAGMENT.
     === "Example"
         ``` yaml     
@@ -167,7 +152,6 @@ has these sections:
         ```
 
 `DATA_AUTH`
-
 :   **Optional**-*list of enums*- One or more authentication types that can be accepted by the storage resource.
     === "Example"
         ``` yaml     
@@ -179,7 +163,6 @@ has these sections:
 
 
 `DATA_CREDENTIALS`
-
 :   **Optional**-*OPEN*- Credentials (e.g. string/json, zip, config file)
 
 
@@ -187,7 +170,6 @@ has these sections:
 
 
 `DATA_PROTOCOL`
-
 :   **Optional**-*string*- Protocol to use in communication with the data source, only if DATA_TYPE does not imply it (e.g. S3 over HTTP). Moved from to Data access specification.
     === "Example"
         ``` yaml     
@@ -195,7 +177,6 @@ has these sections:
         ```
 
 `DATA_MYSQL_DIALECT`
-
 :   **Optional**-*string*- Protocol dialect to be used in communication with the database
     === "Example"
         ``` yaml     
@@ -203,7 +184,6 @@ has these sections:
         ```
 
 `DATA_MQTT_PROTOCOL_VERSION`
-
 :   **Optional**-*string*- MQTT protocol version must be used
     === "Example"
         ``` yaml     
@@ -211,7 +191,6 @@ has these sections:
         ```
 
 `DATA_KAFKA_BROKER_VERSION`
-
 :   **Optional**-*string*- Kafka broker version
     === "Example"
         ``` yaml     
@@ -219,7 +198,6 @@ has these sections:
         ```
 
 `DATA_S3_REGION`
-
 :   **Optional**-*string*- S3 region
     === "Example"
         ``` yaml     
@@ -231,7 +209,6 @@ has these sections:
 
 
 `DATA_SCHEMA`
-
 :   **Optional**-*string*- Describes message internal structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, ...
     === "Example"
         ``` yaml     
@@ -239,7 +216,6 @@ has these sections:
         ```
 
 `DATA_SCHEMA_URL`
-
 :   **Optional**-*URL*- No description available.
     === "Example"
         ``` yaml     
@@ -247,5 +223,4 @@ has these sections:
         ```
 
 `DATA_SCHEMA_ADDITIONAL_ATTRIBUTES`
-
 :   **Optional**-*string*- Further restriction/specialization of DATA_SCHEMA, “general” schema.

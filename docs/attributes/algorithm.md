@@ -18,7 +18,6 @@ has these sections:
 
 
 `id`
-
 :   **Auto-generated**-*String*- a unique id to identify this asset
 
     === "Example"
@@ -27,7 +26,6 @@ has these sections:
         ```
 
 `name `
-
 :   **Required**-*String*- a human-readable name to ease identification and discoverability for human users
 
     === "Example"
@@ -36,7 +34,6 @@ has these sections:
         ```
 
 `description`
-
 :   **Required**-*String*- a short, human-readable description of the Algorithm to aid a human user in analysing the Algorithm’s capabilities and its applicability to a certain problem
 
     === "Example"
@@ -45,7 +42,6 @@ has these sections:
         ```
 
 `classificationSchema`
-
 :   **Required**-*Enumeration { Simulation, ML, others }*- the classification of the Algorithm, to describe the specialization area
 
     === "Example"
@@ -54,7 +50,6 @@ has these sections:
         ```
 
 `type`
-
 :   **Required**-*List( String)*- a detailed list of attributes to describe the Algorithm’s field of application
 
     === "Example"
@@ -63,7 +58,6 @@ has these sections:
         ```
 
 `author `
-
 :   **Required**-*String*- the authoring entity
 
     === "Example"
@@ -72,7 +66,6 @@ has these sections:
         ```
 
 `date`
-
 :   **Auto-generated**-*Date*- the creation data
 
     === "Example"
@@ -81,7 +74,6 @@ has these sections:
         ```
 
 `version `
-
 :   **Required**-*String*- the version
 
     === "Example"
@@ -94,7 +86,6 @@ has these sections:
 
 
 `listOfMicroservices`
-
 :   **Required**-*List( String)*- a list of Microservice Asset IDs, which are contained in the algorithm
 
     === "Example"
@@ -103,7 +94,6 @@ has these sections:
         ```
 
 `deploymentMapping`
-
 :   **Required**-*Map( String: String)*- a mapping specifying which microservice should run on which host. By default each microservice is assigned a respective host, but this behaviour is not always ideal (eg. when two or more Microservices may need to run on the same host)
 
     === "Example"

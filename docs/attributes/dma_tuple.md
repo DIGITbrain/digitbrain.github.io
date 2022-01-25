@@ -17,7 +17,6 @@ has these sections:
 
 
 `ID`
-
 :   **Auto-generated**-*ID / URI*- Unique identifier for the DMA Tuple
 
     === "Example"
@@ -26,7 +25,6 @@ has these sections:
         ```
 
 `Created at`
-
 :   **Auto-generated**-*ISO 8601*- Date of creation
 
     === "Example"
@@ -35,7 +33,6 @@ has these sections:
         ```
 
 `Version`
-
 :   **Optional**-*Integer*- Version number of the DMA Tuple
     === "Example"
         ``` yaml     
@@ -43,7 +40,6 @@ has these sections:
         ```
 
 `Author`
-
 :   **Auto-generated**-*ID / URI*- Identifier of the Author of the MA Pair (NB: Entity for author is referenced)
 
     === "Example"
@@ -52,7 +48,6 @@ has these sections:
         ```
 
 `Licensor`
-
 :   **Auto-generated**-*ID / URI*- Identifier of the Legal Entity licensing the the MA Pair (NB: Entity for Licensor is referenced)
 
     === "Example"
@@ -61,7 +56,6 @@ has these sections:
         ```
 
 `Derivation`
-
 :   **Auto-generated**-*IDs / URIs*- In case of derivation, references to parent / child (optional)
 
     === "Example"
@@ -70,7 +64,6 @@ has these sections:
         ```
 
 `Name`
-
 :   **Optional**-*Text*- Short name to identify the DMA Tuple
     === "Example"
         ``` yaml     
@@ -78,7 +71,6 @@ has these sections:
         ```
 
 `Scope`
-
 :   **Optional**-*Text*- Short description of the scope of the DMA Tuple (human readable)
     === "Example"
         ``` yaml     
@@ -86,7 +78,6 @@ has these sections:
         ```
 
 `IP Instance`
-
 :   **Optional**-*ID / URI*- Identifier of the IP Instance the DMA Tuple is valid for (NB: Entity for IP Instance is referenced)
     === "Example"
         ``` yaml     
@@ -94,7 +85,6 @@ has these sections:
         ```
 
 `Namespace`
-
 :   **Optional**-*ID / URI?*- Context to interpret the associated information (optional?)
     === "Example"
         ``` yaml     
@@ -102,7 +92,6 @@ has these sections:
         ```
 
 `MA Pair`
-
 :   **Optional**-*ID / URI*- Identifier of the MA Pair associated to the DMA Tuple
     === "Example"
         ``` yaml     
@@ -110,7 +99,6 @@ has these sections:
         ```
 
 `D Assets`
-
 :   **Optional**-*IDs / URIs*- Identifiers of the Data Assets associated to the DMA Tuple
     === "Example"
         ``` yaml     
@@ -118,7 +106,6 @@ has these sections:
         ```
 
 `Deployments`
-
 :   **Optional**-*See "Deployments"*- Characteristics of the Deployment for every Microservice associated to the DMA Tuple (NB: Entities for the available deployment infrastructures to be provided by DB Solution and selected for DMA Tuple. No deployment entity metadata structure currently exists)
     === "Example"
         ``` yaml     
@@ -126,7 +113,6 @@ has these sections:
         ```
 
 `Schedule`
-
 :   **Optional**-*Dates*- Days and hours the DMA Tuple will be active (optional)
     === "Example"
         ``` yaml     
@@ -134,7 +120,6 @@ has these sections:
         ```
 
 `Payload`
-
 :   **Optional**-*String*- User-defined key-value pairs: JSON string with additional information (optional)
     === "Example"
         ``` yaml     

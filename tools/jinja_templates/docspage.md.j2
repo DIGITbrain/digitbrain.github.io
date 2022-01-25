@@ -21,11 +21,9 @@ has these sections:
 ### {{ value.concept }}
 
 {% else %}
-`{{ key }}`
-{% if value[0] == "mandatory" %}
-:   **Required**-*{{ value[2] }}*- {{ value[1] }}
-{% elif value[0] == "auto" %}
-:   **Auto-generated**-*{{ value[2] }}*- {{ value[1] }}
+{% if value.issubkey %}    {% endif -%}
+`{{ value.key }}`
+{%- if value.issubkey -%}    
     {%- endif -%}
 {% if value.required == "mandatory" %}
 :   **Required**-*{{ value.type }}*- {{ value.comment }}
@@ -34,7 +32,12 @@ has these sections:
 {% else %}
 :   **Optional**-*{{ value.type }}*- {{ value.comment }}
 {%- endif %}
-{%- if value.example %}
+{%- if value.example and value.issubkey %}
+        === "Example"
+            ``` yaml     
+            {{ value.key }}: {{ value.example }}
+            ```
+{%- elif value.example and not value.issubkey %}
     === "Example"
         ``` yaml     
         {{ value.key }}: {{ value.example }}

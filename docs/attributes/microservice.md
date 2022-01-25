@@ -14,9 +14,9 @@ has these sections:
 - [Service](#service)
 - [Hardware Requirements](#hardware-requirements)
 - [OS Requirements](#os-requirements)
-- [Input Data(WP4)](#input-data(wp4))
-- [Output Data (WP4)](#output-data-(wp4))
-- [Model(WP5)](#model(wp5))
+- [Input Data(WP4)](#input-datawp4)
+- [Output Data (WP4)](#output-data-wp4)
+- [Model(WP5)](#modelwp5)
 - [Parameters](#parameters)
 - [Metrics](#metrics)
 
@@ -25,7 +25,6 @@ has these sections:
 
 
 `id`
-
 :   **Auto-generated**-*String*- unique DIGITbrain reference
 
     === "Example"
@@ -34,7 +33,6 @@ has these sections:
         ```
 
 `name `
-
 :   **Required**-*String*- human readable short, yet descriptive name of the Microservice
 
     === "Example"
@@ -43,7 +41,6 @@ has these sections:
         ```
 
 `author `
-
 :   **Required**-*String*- name of the authoring entity
 
     === "Example"
@@ -52,7 +49,6 @@ has these sections:
         ```
 
 `date`
-
 :   **Auto-generated**-*Date*- creation date
 
     === "Example"
@@ -61,7 +57,6 @@ has these sections:
         ```
 
 `version `
-
 :   **Required**-*String*- version
 
     === "Example"
@@ -70,16 +65,14 @@ has these sections:
         ```
 
 `description`
-
-:   **Required**-*String*- short description of the metric measurement
+:   **Required**-*String*- human readable short description of the Microservice's capabilities
 
     === "Example"
         ``` yaml     
-        description: This metric describes the arithmetic mean of the approximated temperatures of the fabricated part when it leaves station 4.
+        description: This microservices solves a certain problem using very specific methods...
         ```
 
 `classificationSchema`
-
 :   **Required**-*Enumeration { Simulation, ML, others }*- fine-granular classification of the Microservice
 
     === "Example"
@@ -88,12 +81,11 @@ has these sections:
         ```
 
 `type`
-
-:   **Required**-*Enumeration (xsd datatypes)*- expected input type (may be used to verify the input)
+:   **Required**-*List( String)*- detailed type of the microservice, list of keywords
 
     === "Example"
         ``` yaml     
-        type: Integer
+        type: {neural network, deep learning, convolutional neural network, CNN}
         ```
 
 
@@ -101,7 +93,6 @@ has these sections:
 
 
 `deploymentFormat`
-
 :   **Required**-*Enumeration {docker-compose, kubernetes-manifest}*- identifier of the deployment environment required to deploy the Microservice's container
 
     === "Example"
@@ -110,7 +101,6 @@ has these sections:
         ```
 
 `deploymentData`
-
 :   **Required**-*JSON*- JSON of docker-compose or kubernetes manifest required to run the container
 
     === "Example"
@@ -119,7 +109,6 @@ has these sections:
         ```
 
 `configurationData`
-
 :   **Optional**-*Map(Files)*- configuration file(s) required by the service
     === "Example"
         ``` yaml     
@@ -127,7 +116,6 @@ has these sections:
         ```
 
 `mountedInputDirectories`
-
 :   **Optional**-*List(String)*- directories shared on the host where this microservice can find required inputs
     === "Example"
         ``` yaml     
@@ -135,7 +123,6 @@ has these sections:
         ```
 
 `mountedOutputDirectories`
-
 :   **Optional**-*List(String)*- directories shared on the host where this microservice can find required outputs
     === "Example"
         ``` yaml     
@@ -147,7 +134,6 @@ has these sections:
 
 
 `recommendedNumberOfGPUs`
-
 :   **Optional**-*Int*- recommended number of GPUs
     === "Example"
         ``` yaml     
@@ -155,7 +141,6 @@ has these sections:
         ```
 
 `minimumNumberOfGPUs`
-
 :   **Optional**-*Int*- minimum required number of GPUs
     === "Example"
         ``` yaml     
@@ -163,7 +148,6 @@ has these sections:
         ```
 
 `recommendedGPURAM`
-
 :   **Optional**-*Int*- recommended amount of GPU memory in GB
     === "Example"
         ``` yaml     
@@ -171,7 +155,6 @@ has these sections:
         ```
 
 `minimumGPURAM`
-
 :   **Optional**-*Int*- minimum required amount of GPU memory in GB
     === "Example"
         ``` yaml     
@@ -179,7 +162,6 @@ has these sections:
         ```
 
 `gpuType`
-
 :   **Optional**-*String*- a description of the type of GPUs, and further specifications, to allow the execution of the Microservice
     === "Example"
         ``` yaml     
@@ -187,7 +169,6 @@ has these sections:
         ```
 
 `hpcRequired`
-
 :   **Optional**-*Bool*- whether this Microservice requires an HPC environment to be executed efficiently
     === "Example"
         ``` yaml     
@@ -195,7 +176,6 @@ has these sections:
         ```
 
 `edgeType`
-
 :   **Optional**-*Enumeration {TPU (Google), NPU (Qualcomm), FPGA, NVIDIA Jetson AGX}*- required type of edge device to allow the execution of the Microservice
     === "Example"
         ``` yaml     
@@ -203,7 +183,6 @@ has these sections:
         ```
 
 `recommendedRAM`
-
 :   **Optional**-*String*- recommended amount of memory in GB
     === "Example"
         ``` yaml     
@@ -211,7 +190,6 @@ has these sections:
         ```
 
 `minimumRAM`
-
 :   **Optional**-*String*- minimum required amount memory in GB
     === "Example"
         ``` yaml     
@@ -219,7 +197,6 @@ has these sections:
         ```
 
 `recommendedCPUs`
-
 :   **Optional**-*Int*- recommended number of CPU cores
     === "Example"
         ``` yaml     
@@ -227,7 +204,6 @@ has these sections:
         ```
 
 `minimumCPUs`
-
 :   **Optional**-*Int*- minimum required number of CPU cores
     === "Example"
         ``` yaml     
@@ -235,7 +211,6 @@ has these sections:
         ```
 
 `requiredDiskSpace`
-
 :   **Optional**-*Int*- required amount of disk space in GB
     === "Example"
         ``` yaml     
@@ -247,7 +222,6 @@ has these sections:
 
 
 `osArch`
-
 :   **Required**-*String*- supported os architecture
 
     === "Example"
@@ -256,7 +230,6 @@ has these sections:
         ```
 
 `osType`
-
 :   **Optional**-*String*- supported os type
     === "Example"
         ``` yaml     
@@ -264,7 +237,6 @@ has these sections:
         ```
 
 `osDistribution`
-
 :   **Optional**-*String*- supported os distribution
     === "Example"
         ``` yaml     
@@ -272,7 +244,6 @@ has these sections:
         ```
 
 `osVersion`
-
 :   **Optional**-*String*- description of supported os version
     === "Example"
         ``` yaml     
@@ -284,139 +255,202 @@ has these sections:
 
 
 `inputData`
-
 :   **Optional**-*List( Data Objects)*- list of Data objects for each required input, specified using the "DATA" fields listed below
     === "Example"
         ``` yaml     
         inputData: {{DATA_KIND = {FILE, STREAM}, DATA_DIRECTION = {SOURCE}} 
         ```
 
-`input_id`
-
+    `input_id`
 :   **Required**-*String*- human-readable identifier, unique within a Microservice
 
-    === "Example"
-        ``` yaml     
-        input_id: file1
-        ```
+        === "Example"
+            ``` yaml     
+            input_id: file1
+            ```
 
-`DATA_KIND`
-
+    `DATA_KIND`
 :   **Required**-*List( DATA_KIND)*- supported types of the data resource (e.g. file/object storage, database management system, streaming broker). FILE can mean a single file or a folder.
 
-    === "Example"
-        ``` yaml     
-        DATA_KIND: {FILE, STREAM}
-        ```
+        === "Example"
+            ``` yaml     
+            DATA_KIND: {FILE, STREAM}
+            ```
 
-`DATA_DIRECTION`
-
+    `DATA_DIRECTION`
 :   **Required**-*List( DATA_DIRECTION)*- supported direction of data flow (source: data provider, sink: data consumer/storage)
 
-    === "Example"
-        ``` yaml     
-        DATA_DIRECTION: {SINK, BIDIRECTIONAL}
-        ```
+        === "Example"
+            ``` yaml     
+            DATA_DIRECTION: {SINK, BIDIRECTIONAL}
+            ```
 
-`DATA_FORMAT`
+    `DATA_FORMAT`
+:   **Optional**-*List( DATA_FORMAT)*- supported format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files).
+        === "Example"
+            ``` yaml     
+            DATA_FORMAT: {application/zip, image/jpg}
+            ```
 
-:   **Optional**-*List( DATA_FORMAT)*- supported format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files)
-    === "Example"
-        ``` yaml     
-        DATA_FORMAT: {application/zip, image/jpg}
-        ```
+    `DATA_SOURCE_TYPE`
+:   **Optional**-*List( DATA_SOURCE_TYPE)*- supported exact type of the data resource. Typically corresponds to the scheme part (protocol://) of DATA_URI
+        === "Example"
+            ``` yaml     
+            DATA_SOURCE_TYPE: {MYSQL, KAFKA}
+            ```
 
-`DATA_SOURCE_TYPE`
-
-:   **Optional**-*List( DATA_SOURCE_TYPE)*- supported exact type of the data resource. Typically corresponds to the scheme part (protocol://) of DATA_URI.
-    === "Example"
-        ``` yaml     
-        DATA_SOURCE_TYPE: {MYSQL, KAFKA}
-        ```
-
-`DATA_PROTOCOL`
-
+    `DATA_PROTOCOL`
 :   **Optional**-*List( DATA_PROTOCOL)*- supported protocols
-    === "Example"
-        ``` yaml     
-        DATA_PROTOCOL: {HTTP}
-        ```
+        === "Example"
+            ``` yaml     
+            DATA_PROTOCOL: {HTTP}
+            ```
 
-`DATA_AUTH_TYPE`
-
+    `DATA_AUTH_TYPE`
 :   **Optional**-*List( DATA_AUTH_TYPE)*- supported authentication type
-    === "Example"
-        ``` yaml     
-        DATA_AUTH_TYPE: {tls_mutual, userpass}
-        ```
+        === "Example"
+            ``` yaml     
+            DATA_AUTH_TYPE: {tls_mutual, userpass}
+            ```
 
-`DATA_MYSQL_DIALECT`
+    `DATA_MYSQL_DIALECT`
+:   **Optional**-*List( DATA_MYSQL_DIALECT)*- supported MYSQL dialect
+        === "Example"
+            ``` yaml     
+            DATA_MYSQL_DIALECT: {mariadbdialect}
+            ```
 
-:   **Optional**-*List( DATA_MYSQL_DIALECT)*- supported MYSQL dialect, for each generated output
-    === "Example"
-        ``` yaml     
-        DATA_MYSQL_DIALECT: {mariadbdialect}
-        ```
-
-`DATA_MQTT_PROTOCOL_VERSION`
-
+    `DATA_MQTT_PROTOCOL_VERSION`
 :   **Optional**-*List( DATA_MQTT_PROTOCOL_VERSION)*- supported MQTT protocol version
-    === "Example"
-        ``` yaml     
-        DATA_MQTT_PROTOCOL_VERSION: {2.3.1}
-        ```
+        === "Example"
+            ``` yaml     
+            DATA_MQTT_PROTOCOL_VERSION: {2.3.1}
+            ```
 
-`DATA_KAFKA_BROKER_VERSION`
-
+    `DATA_KAFKA_BROKER_VERSION`
 :   **Optional**-*List( DATA_KAFKA_BROKER_VERSION)*- supported Kafka broker version
-    === "Example"
-        ``` yaml     
-        DATA_KAFKA_BROKER_VERSION: {2.7.1, 2.5}
-        ```
+        === "Example"
+            ``` yaml     
+            DATA_KAFKA_BROKER_VERSION: {2.7.1, 2.5}
+            ```
 
-`DATA_S3_REGION`
-
+    `DATA_S3_REGION`
 :   **Optional**-*List( DATA_S3_REGION)*- supported S3 region
-    === "Example"
-        ``` yaml     
-        DATA_S3_REGION: {eu-central-1}
-        ```
+        === "Example"
+            ``` yaml     
+            DATA_S3_REGION: {eu-central-1}
+            ```
 
-`DATA_SCHEMA`
-
+    `DATA_SCHEMA`
 :   **Optional**-*List( DATA_SCHEMA)*- supported internal message structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, …
-    === "Example"
-        ``` yaml     
-        DATA_SCHEMA: {jpg}
-        ```
+        === "Example"
+            ``` yaml     
+            DATA_SCHEMA: {jpg}
+            ```
 
 
 ### Output Data (WP4)
 
 
 `outputData`
-
 :   **Optional**-*List( Data Objects)*- list of Data objects for each generated output, specified using the "DATA" fields listed below
     === "Example"
         ``` yaml     
         outputData: {{DATA_KIND = {FILE, STREAM}, DATA_DIRECTION = {SINK}} 
         ```
 
-`output_id`
-
+    `output_id`
 :   **Required**-*String*- human-readable identifier, unique within a Microservice
 
-    === "Example"
-        ``` yaml     
-        output_id: file1
-        ```
+        === "Example"
+            ``` yaml     
+            output_id: file1
+            ```
+
+    `DATA_KIND`
+:   **Required**-*List( DATA_KIND)*- supported types of the data resource (e.g. file/object storage, database management system, streaming broker). FILE can mean a single file or a folder.
+
+        === "Example"
+            ``` yaml     
+            DATA_KIND: {FILE, STREAM}
+            ```
+
+    `DATA_DIRECTION`
+:   **Required**-*List( DATA_DIRECTION)*- supported direction of data flow (source: data provider, sink: data consumer/storage)
+
+        === "Example"
+            ``` yaml     
+            DATA_DIRECTION: {SINK, BIDIRECTIONAL}
+            ```
+
+    `DATA_FORMAT`
+:   **Optional**-*List( DATA_FORMAT)*- supported format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files)
+        === "Example"
+            ``` yaml     
+            DATA_FORMAT: {application/zip, image/jpg}
+            ```
+
+    `DATA_SOURCE_TYPE`
+:   **Optional**-*List( DATA_SOURCE_TYPE)*- supported exact type of the data resource. Typically corresponds to the scheme part (protocol://) of DATA_URI.
+        === "Example"
+            ``` yaml     
+            DATA_SOURCE_TYPE: {MYSQL, KAFKA}
+            ```
+
+    `DATA_PROTOCOL`
+:   **Optional**-*List( DATA_PROTOCOL)*- supported protocols
+        === "Example"
+            ``` yaml     
+            DATA_PROTOCOL: {HTTP}
+            ```
+
+    `DATA_AUTH_TYPE`
+:   **Optional**-*List( DATA_AUTH_TYPE)*- supported authentication type
+        === "Example"
+            ``` yaml     
+            DATA_AUTH_TYPE: {tls_mutual, userpass}
+            ```
+
+    `DATA_MYSQL_DIALECT`
+:   **Optional**-*List( DATA_MYSQL_DIALECT)*- supported MYSQL dialect, for each generated output
+        === "Example"
+            ``` yaml     
+            DATA_MYSQL_DIALECT: {mariadbdialect}
+            ```
+
+    `DATA_MQTT_PROTOCOL_VERSION`
+:   **Optional**-*List( DATA_MQTT_PROTOCOL_VERSION)*- supported MQTT protocol version
+        === "Example"
+            ``` yaml     
+            DATA_MQTT_PROTOCOL_VERSION: {2.3.1}
+            ```
+
+    `DATA_KAFKA_BROKER_VERSION`
+:   **Optional**-*List( DATA_KAFKA_BROKER_VERSION)*- supported Kafka broker version
+        === "Example"
+            ``` yaml     
+            DATA_KAFKA_BROKER_VERSION: {2.7.1, 2.5}
+            ```
+
+    `DATA_S3_REGION`
+:   **Optional**-*List( DATA_S3_REGION)*- supported S3 region
+        === "Example"
+            ``` yaml     
+            DATA_S3_REGION: {eu-central-1}
+            ```
+
+    `DATA_SCHEMA`
+:   **Optional**-*List( DATA_SCHEMA)*- supported internal message structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, …
+        === "Example"
+            ``` yaml     
+            DATA_SCHEMA: {jpg}
+            ```
 
 
 ### Model(WP5)
 
 
 `model_types`
-
 :   **Optional**-*List( ModelTypes)*- list of supported Model types
     === "Example"
         ``` yaml     
@@ -424,7 +458,6 @@ has these sections:
         ```
 
 `model_recommendedAuthTools`
-
 :   **Optional**-*List (AuthTools)*- list of recommended AuthoringTools used to generate the Model
     === "Example"
         ``` yaml     
@@ -436,65 +469,89 @@ has these sections:
 
 
 `parameters`
-
 :   **Optional**-*List( Parameter)*- list of Parameter objects for each possible parameters, to be specified before deployment
 
-`name`
+    `name`
+:   **Required**-*String*- short name for this parameter (should be unique across the Microservice’s parameters)
 
-:   **Required**-*String*- short name (should be unique across the Microservice's metrics)
+        === "Example"
+            ``` yaml     
+            name: detection_threshold
+            ```
 
-    === "Example"
-        ``` yaml     
-        name: meanTemperature
-        ```
+    `type`
+:   **Required**-*Enumeration (xsd datatypes)*- expected input type (may be used to verify the input)
 
-`mandatory`
+        === "Example"
+            ``` yaml     
+            type: Integer
+            ```
 
+    `mandatory`
 :   **Optional**-*Boolean*- whether this parameter is mandatory (default: false)
-    === "Example"
-        ``` yaml     
-        mandatory: true
-        ```
+        === "Example"
+            ``` yaml     
+            mandatory: true
+            ```
 
-`defaultValue`
-
+    `defaultValue`
 :   **Optional**-*has to match "type"*- a default value, if the parameter is required but not provided
-    === "Example"
-        ``` yaml     
-        defaultValue: 42
-        ```
+        === "Example"
+            ``` yaml     
+            defaultValue: 42
+            ```
+
+    `description`
+:   **Required**-*String*- short description of the parameter and its possible values
+
+        === "Example"
+            ``` yaml     
+            description: This parameter can be used to configure the included algorithm in a certain way, possible values: "A", "B", "Z"
+            ```
 
 
 ### Metrics
 
 
 `metrics`
-
 :   **Optional**-*List( Metrics)*- list of Metric objects for each metric collected by the Microservice
 
-`correspondingMeasurement`
+    `name`
+:   **Required**-*String*- short name (should be unique across the Microservice's metrics)
 
+        === "Example"
+            ``` yaml     
+            name: meanTemperature
+            ```
+
+    `correspondingMeasurement`
 :   **Required**-*String*- identification of the corresponding measurement, i.e. output of the Model
 
-    === "Example"
-        ``` yaml     
-        correspondingMeasurement: temperature1
-        ```
+        === "Example"
+            ``` yaml     
+            correspondingMeasurement: temperature1
+            ```
 
-`function`
-
+    `function`
 :   **Required**-*String*- short description of the mathematical approach used to derive this value
 
-    === "Example"
-        ``` yaml     
-        function: arithmetic mean
-        ```
+        === "Example"
+            ``` yaml     
+            function: arithmetic mean
+            ```
 
-`unit`
-
+    `unit`
 :   **Required**-*String*- the unit of the metric measurement
 
-    === "Example"
-        ``` yaml     
-        unit: degree celsius
-        ```
+        === "Example"
+            ``` yaml     
+            unit: degree celsius
+            ```
+
+    `description`
+:   **Required**-*String*- short description of the metric measurement
+
+        === "Example"
+            ``` yaml     
+            description: This metric describes the arithmetic mean of the approximated temperatures of the fabricated part when it leaves station 4.
+            ```

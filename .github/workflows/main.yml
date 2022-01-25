@@ -38,6 +38,9 @@ jobs:
 
       - name: Run xls2mkdocs
         run: python tools/xls2mkdocs.py
+        
+      - name: Run exceltojson
+        run: python tools/exceltojson.py
 
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4.12.0

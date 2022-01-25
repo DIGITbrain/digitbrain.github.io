@@ -71,7 +71,7 @@ has these sections:
 
 
 `data_source_mapping`
-:   **Optional**-*Map of…*- Mapping Microservices to Data assets, as available in the DMA Tuple
+:   **Optional**-*Map of…*- Mapping the available Data assets in this DMA Tuple to available Microservices. One Microservice may require several Data assets, specified by their UUIDs.
 
     `microserviceA_data`
 :   **Optional**-*List of UUIDs*- UUIDs of required data sources for MicroserviceA

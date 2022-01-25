@@ -7,26 +7,35 @@ my_dict = {}
 
 for sheet_name in workbook:
     sheet = pandas.read_excel(
-        file_name, sheet_name=sheet_name, skiprows=[0], usecols="B,C,D,H"
+        file_name, sheet_name=sheet_name, skiprows=[0], usecols="B,C,D,G,H"
     )
 
     my_dict.setdefault(sheet_name, {})
     parent_key = ""
 
-    for i, (key, subkey, value, field_type) in enumerate(
-        zip(sheet["Key"], sheet["Subkey"], sheet["Values"], sheet["Type"])
+    for i, (key, subkey, value, field_type, required) in enumerate(
+        zip(
+            sheet["Key"],
+            sheet["Subkey"],
+            sheet["Values"],
+            sheet["Type"],
+            sheet["Condition"],
+        )
     ):
 
         # skip row if type cell is empty (assume rest of row is too)
         if isinstance(field_type, float):
             continue
 
-        # Get rid of NaN in key, subkey, value
+        # Eval / clean value and continue if not required
         try:
             value = ast.literal_eval(value)
         except (ValueError, SyntaxError):
             value = value if all([value, value == value]) else None
+
+        # Clean/assign required, subkey and key
         subkey = subkey if all([subkey, subkey == subkey]) else None
+        required = required if all([required, required == required]) else ""
         key = key if all([key, key == key, not subkey]) else parent_key
 
         # Get the next subkey along
@@ -37,6 +46,9 @@ for sheet_name in workbook:
         next_subkey = (
             next_subkey if all([next_subkey, next_subkey == next_subkey]) else None
         )
+        
+        if parent_key and not value and "mandatory" not in required.lower():
+            continue
 
         if not subkey and next_subkey is not None:
             parent_key = key
@@ -45,6 +57,7 @@ for sheet_name in workbook:
             elif "map" in field_type.lower():
                 my_dict[sheet_name].setdefault(key, {})
         elif not subkey:
+            parent_key = ""
             my_dict[sheet_name][key] = value
         else:
             try:

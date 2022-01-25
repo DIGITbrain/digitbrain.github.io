@@ -11,6 +11,7 @@ The metadata specification for a DIGITbrain DMA Tuple
 has these sections:
 
 - [Definition](#definition)
+- [Data Source Mapping](#data-source-mapping)
 
 
 ### Definition
@@ -125,3 +126,19 @@ has these sections:
         ``` yaml     
         Payload: {‘injectionMold’: ‘Circuit Case’}
         ```
+
+
+### Data Source Mapping
+
+
+`data_source_mapping`
+:   **Optional**-*Map of…*- Mapping the available Data assets in this DMA Tuple to available Microservices. One Microservice may require several Data assets, specified by their UUIDs.
+
+    `microserviceA_data`
+:   **Optional**-*List of UUIDs*- UUIDs of required Data asset(s) for MicroserviceA
+
+    `microserviceB_data`
+:   **Optional**-*List of UUIDs*- UUIDs of required Data asset(s) for  MicroserviceB
+
+    `microserviceC_data`
+:   **Optional**-*List of UUIDs*- UUIDs of required Data asset(s) for  MicroserviceC

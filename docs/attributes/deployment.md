@@ -12,7 +12,6 @@ has these sections:
 
 - [Description](#description)
 - [Deployments](#deployments)
-- [Data Source Mapping](#data-source-mapping)
 
 
 ### Description
@@ -65,19 +64,3 @@ has these sections:
 
     `endpoint`
 :   **Optional**-*URL*- accesible IP or FQDN of edge device
-
-
-### Data Source Mapping
-
-
-`data_source_mapping`
-:   **Optional**-*Map of…*- Mapping the available Data assets in this DMA Tuple to available Microservices. One Microservice may require several Data assets, specified by their UUIDs.
-
-    `microserviceA_data`
-:   **Optional**-*List of UUIDs*- UUIDs of required data sources for MicroserviceA
-
-    `microserviceB_data`
-:   **Optional**-*List of UUIDs*- UUIDs of required data sources for MicroserviceB
-
-    `microserviceC_data`
-:   **Optional**-*List of UUIDs*- UUIDs of required data sources for MicroserviceC

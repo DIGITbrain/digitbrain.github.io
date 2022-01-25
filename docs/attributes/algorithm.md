@@ -90,7 +90,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        listOfMicroservices: {microserviceAsset_id_121241241}
+        listOfMicroservices: [microservice.microservice_id_A, microservice.microservice_id_B]
         ```
 
 `deploymentMapping`
@@ -98,5 +98,5 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        deploymentMapping: {microserviceA:hostB, microserviceB:hostB, microserviceC:hostC}
+        deploymentMapping: {microservice.microservice_id_A: deployment.microservice_id_B, microservice.microservice_id_B: deployment.microservice_id_B}
         ```

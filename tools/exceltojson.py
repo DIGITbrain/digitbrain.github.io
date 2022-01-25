@@ -1,8 +1,7 @@
-import xlrd, json
+import pandas, json
 
 file_name = "metadata.xlsx"
-workbook = xlrd.open_workbook(file_name)
-sheet = workbook.sheet_by_index(1)
+workbook = pandas.read_excel(file_name, sheet_name=None)
 
 col_a = sheet.col_values(1)
 col_b = sheet.col_values(4)

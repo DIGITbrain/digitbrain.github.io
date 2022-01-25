@@ -10,15 +10,15 @@
 The metadata specification for a DIGITbrain {{ sheet_name }}
 has these sections:
 
-{% for key, value in fields.items() -%}
-{% if not value -%}
-- [{{ key }}](#{{ key | lower | replace(" ", "-") }})
+{% for value in fields -%}
+{% if value.concept -%}
+- [{{ value.concept }}](#{{ value.concept | lower | replace(" ", "-") | replace("(", "") | replace(")", "") }})
 {% endif %}
 {%- endfor -%}
-{% for key, value in fields.items() -%}
-{% if not value %}
+{% for value in fields -%}
+{% if value.concept %}
 
-### {{ key }}
+### {{ value.concept }}
 
 {% else %}
 `{{ key }}`
@@ -26,13 +26,18 @@ has these sections:
 :   **Required**-*{{ value[2] }}*- {{ value[1] }}
 {% elif value[0] == "auto" %}
 :   **Auto-generated**-*{{ value[2] }}*- {{ value[1] }}
+    {%- endif -%}
+{% if value.required == "mandatory" %}
+:   **Required**-*{{ value.type }}*- {{ value.comment }}
+{% elif value.required == "auto" %}
+:   **Auto-generated**-*{{ value.type }}*- {{ value.comment }}
 {% else %}
-:   **Optional**-*{{ value[2] }}*- {{ value[1] }}
+:   **Optional**-*{{ value.type }}*- {{ value.comment }}
 {%- endif %}
-{%- if value[3] %}
+{%- if value.example %}
     === "Example"
         ``` yaml     
-        {{ key }}: {{ value[3] }}
+        {{ value.key }}: {{ value.example }}
         ```
 {%- endif %}
 {% endif -%}

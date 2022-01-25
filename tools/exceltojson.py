@@ -1,4 +1,4 @@
-import pandas, json
+import pandas, json, ast
 
 file_name = "metadata.xlsx"
 workbook = pandas.read_excel(file_name, sheet_name=None)
@@ -22,7 +22,10 @@ for sheet_name in workbook:
             continue
 
         # Get rid of NaN in key, subkey, value
-        value = value if all([value, value == value]) else None
+        try:
+            value = ast.literal_eval(value)
+        except (ValueError, SyntaxError):
+            value = value if all([value, value == value]) else None
         subkey = subkey if all([subkey, subkey == subkey]) else None
         key = key if all([key, key == key, not subkey]) else parent_key
 
@@ -50,5 +53,5 @@ for sheet_name in workbook:
                 my_dict[sheet_name][key][0][subkey] = value
 
 app_json = json.dumps(my_dict, indent = 4)
-with open(r'output.json', 'w') as f:
+with open(r'tools/output/output.json', 'w') as f:
     f.write(app_json)

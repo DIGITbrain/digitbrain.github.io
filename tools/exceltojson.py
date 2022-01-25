@@ -6,13 +6,18 @@ workbook = pandas.read_excel(file_name, sheet_name=None)
 my_dict = {}
 
 for sheet_name in workbook:
+    # Load each sheet
     sheet = pandas.read_excel(
         file_name, sheet_name=sheet_name, skiprows=[0], usecols="B,C,D,G,H"
     )
 
+    # Top-level JSON key for each sheet
     my_dict.setdefault(sheet_name, {})
+
+    # Parent key for nested subkeys
     parent_key = ""
 
+    # Iterate over rows in required columns
     for i, (key, subkey, value, field_type, required) in enumerate(
         zip(
             sheet["Key"],
@@ -27,7 +32,7 @@ for sheet_name in workbook:
         if isinstance(field_type, float):
             continue
 
-        # Eval / clean value and continue if not required
+        # Eval / clean value
         try:
             value = ast.literal_eval(value)
         except (ValueError, SyntaxError):
@@ -46,25 +51,31 @@ for sheet_name in workbook:
         next_subkey = (
             next_subkey if all([next_subkey, next_subkey == next_subkey]) else None
         )
-        
-        if parent_key and not value and "mandatory" not in required.lower():
-            continue
 
+        # Creating objects
         if not subkey and next_subkey is not None:
             parent_key = key
             if "list" in field_type.lower() or "array" in field_type.lower():
                 my_dict[sheet_name].setdefault(key, []).append({})
             elif "map" in field_type.lower():
                 my_dict[sheet_name].setdefault(key, {})
+
+        # Normal behaviour - only keys
         elif not subkey:
-            parent_key = ""
+            if not value and "mandatory" not in required.lower():
+                continue
             my_dict[sheet_name][key] = value
+
+        # Nesting key-values pairs in objects
         else:
+            if not value and "mandatory" not in required.lower():
+                continue
             try:
                 my_dict[sheet_name][key].setdefault(subkey, value)
             except AttributeError:
                 my_dict[sheet_name][key][0][subkey] = value
 
-app_json = json.dumps(my_dict, indent = 4)
-with open(r'tools/output/output.json', 'w') as f:
+# dump the JSON
+app_json = json.dumps(my_dict, indent=4)
+with open(r"tools/output/output.json", "w") as f:
     f.write(app_json)

@@ -116,17 +116,17 @@ has these sections:
         ```
 
 `mountedInputDirectories`
-:   **Optional**-*List(String)*- directories shared on the host where this microservice can find required inputs
+:   **Optional**-*List(String)*- A note for developers of co-operating Microservices. A list of directories that should be shared to the host by where this microservice can find required inputs
     === "Example"
         ``` yaml     
-        mountedInputDirectories: /data
+        mountedInputDirectories: ["/data", "/cfg"]
         ```
 
 `mountedOutputDirectories`
-:   **Optional**-*List(String)*- directories shared on the host where this microservice can find required outputs
+:   **Optional**-*List(String)*- A note for developers of co-operating Microservices.  A list of directories that are shared on the host where this microservice will store its outputs
     === "Example"
         ``` yaml     
-        mountedOutputDirectories: /data_out
+        mountedOutputDirectories: ["/data_out", "/results"]
         ```
 
 

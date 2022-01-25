@@ -1,8 +1,6 @@
-import xlrd, json, urllib, requests
+import xlrd, json
 
-link = 'https://github.com/DIGITbrain/metadata/releases/download/v0.9.8/Metadata.v0.9.8.xlsx'
-file_name, headers = urllib.request.urlretrieve(link)
-print (file_name)
+file_name = "metadata.xlsx"
 workbook = xlrd.open_workbook(file_name)
 sheet = workbook.sheet_by_index(1)
 

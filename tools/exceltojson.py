@@ -1,6 +1,36 @@
 import pandas, json, ast, sys
 
 
+def is_not_empty(value):
+    return all([value, value == value])
+
+
+def to_list_or_dict(value):
+    try:
+        return ast.literal_eval(value)
+    except (ValueError, SyntaxError):
+        return value if is_not_empty(value) else None
+
+
+def get_subkey_at_index(column, row):
+    try:
+        subkey = column[row]
+    except KeyError:
+        subkey = None
+    return subkey if is_not_empty(subkey) else None
+
+
+def is_type(value, *args):
+    checks = []
+    for val_type in args:
+        checks.append(val_type in value.lower())
+    return any(checks)
+
+
+def is_optional_and_empty(value, required):
+    return not value and "mandatory" not in required.lower()
+
+
 def to_json(file_name):
     workbook = pandas.read_excel(file_name, sheet_name=None)
 
@@ -34,48 +64,44 @@ def to_json(file_name):
                 continue
 
             # Eval / clean value
-            try:
-                value = ast.literal_eval(value)
-            except (ValueError, SyntaxError):
-                value = value if all([value, value == value]) else None
+            value = to_list_or_dict(value)
 
-            # Clean/assign required, subkey and key
-            subkey = subkey if all([subkey, subkey == subkey]) else None
-            required = required if all([required, required == required]) else ""
-            key = key if all([key, key == key, not subkey]) else parent_key
+            # Clean/re-assign fields
+            subkey = subkey if is_not_empty(subkey) else None
+            key = key if is_not_empty(key) and not subkey else parent_key
+            required = required if is_not_empty(required) else ""
 
             # Get the next subkey along
-            try:
-                next_subkey = sheet["Subkey"][i + 1]
-            except KeyError:
-                next_subkey = None
-            next_subkey = (
-                next_subkey if all([next_subkey, next_subkey == next_subkey]) else None
-            )
+            next_subkey = get_subkey_at_index(sheet["Subkey"], i + 1)
 
-            # Creating objects
+            # Creating objects/lists of objects
             if not subkey and next_subkey is not None:
                 parent_key = key
-                if "list" in field_type.lower() or "array" in field_type.lower():
+                if is_type(field_type, "list", "array"):
                     my_dict[sheet_name].setdefault(key, []).append({})
-                elif "map" in field_type.lower():
+                elif is_type(field_type, "map"):
                     my_dict[sheet_name].setdefault(key, {})
 
-            # Normal behaviour - only keys
+            # Skip optional fields without provided values
+            elif is_optional_and_empty(value, required):
+                continue
+
+            # Normal behaviour - keys
             elif not subkey:
-                if not value and "mandatory" not in required.lower():
-                    continue
                 my_dict[sheet_name][key] = value
 
-            # Nesting key-values pairs in objects
+            # Nesting subkeys in objects/lists of objects
             else:
-                if not value and "mandatory" not in required.lower():
-                    continue
+                # Objects
                 try:
                     my_dict[sheet_name][key].setdefault(subkey, value)
+
+                # Lists
                 except AttributeError:
                     my_dict[sheet_name][key][0][subkey] = value
+
     return my_dict
+
 
 if __name__ == "__main__":
     # Quick filename as arg
@@ -90,7 +116,7 @@ if __name__ == "__main__":
         path = f"{file[-15:-5]}.json"
 
     metadata = to_json(file)
-    
+
     # dump the JSON
     app_json = json.dumps(metadata, indent=4)
     with open(path, "w") as f:

@@ -71,7 +71,7 @@ These fields have the same structure, detailed below. They include, as an array 
 `CosimSolverInfo`
 
 :   **Optional:** This object is made up of several fields that are optional and only needed in case of co-simulation `Type` (**Description** field) only. The additional fields needed in co-simulation are:
-* `Dependant FMUs` Contains array of URI for dependant FMU localisation
+* `Dependant FMUs` Contains a field with an array of URI for dependant FMU localisation
 * `OS Requirements` Contains a set of fields defining OS requirements for co-simulation
 * `Hardware Requirements` Contains a set of fields defining Hardware requirements for co-simulation
 

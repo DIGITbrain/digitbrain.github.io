@@ -1,5 +1,7 @@
 import pandas, json, ast, sys
 
+MS_SHEET_NAME = "Microservice"
+
 
 def is_not_empty(value):
     return all([value, value == value])
@@ -35,6 +37,7 @@ def to_json(file_name):
     workbook = pandas.read_excel(file_name, sheet_name=None)
 
     my_dict = {}
+    microservice_count = 0
 
     for sheet_name in workbook:
         # Load each sheet
@@ -42,8 +45,18 @@ def to_json(file_name):
             file_name, sheet_name=sheet_name, skiprows=[0], usecols="B,C,D,G,H"
         )
 
-        # Top-level JSON key for each sheet
-        sheet_key = my_dict.setdefault(sheet_name, {})
+        # Microservices should been appended to a list
+        if (
+            sheet_name.lower().startswith("microservice")
+            or "msid" in sheet_name.lower()
+        ):
+            my_dict.setdefault(MS_SHEET_NAME, []).append({})
+            sheet_key = my_dict[MS_SHEET_NAME][microservice_count]
+            microservice_count += 1
+
+        # All other assets are dictionaries
+        else:
+            sheet_key = my_dict.setdefault(sheet_name, {})
 
         # Parent key for nested subkeys
         parent_key = ""

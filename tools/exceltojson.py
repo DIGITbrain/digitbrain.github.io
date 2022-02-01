@@ -43,7 +43,7 @@ def to_json(file_name):
         )
 
         # Top-level JSON key for each sheet
-        my_dict.setdefault(sheet_name, {})
+        sheet_key = my_dict.setdefault(sheet_name, {})
 
         # Parent key for nested subkeys
         parent_key = ""
@@ -78,9 +78,9 @@ def to_json(file_name):
             if not subkey and next_subkey is not None:
                 parent_key = key
                 if is_type(field_type, "list", "array"):
-                    my_dict[sheet_name].setdefault(key, []).append({})
+                    sheet_key.setdefault(key, []).append({})
                 elif is_type(field_type, "map"):
-                    my_dict[sheet_name].setdefault(key, {})
+                    sheet_key.setdefault(key, {})
 
             # Skip optional fields without provided values
             elif is_optional_and_empty(value, required):
@@ -88,17 +88,17 @@ def to_json(file_name):
 
             # Normal behaviour - keys
             elif not subkey:
-                my_dict[sheet_name][key] = value
+                sheet_key[key] = value
 
             # Nesting subkeys in objects/lists of objects
             else:
                 # Objects
                 try:
-                    my_dict[sheet_name][key].setdefault(subkey, value)
+                    sheet_key[key].setdefault(subkey, value)
 
                 # Lists
                 except AttributeError:
-                    my_dict[sheet_name][key][0][subkey] = value
+                    sheet_key[key][0][subkey] = value
 
     return my_dict
 

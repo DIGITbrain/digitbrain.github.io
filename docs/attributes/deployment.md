@@ -59,6 +59,13 @@ has these sections:
     `endpoint`
 :   **Optional**-*URL*- Endpoint of the CB Platform
 
+    `cloud_config`
+:   **Optional**-*String*- cloud-init configuration for contextualisation of the VM
+        === "Example"
+            ``` yaml     
+            cloud_config: #cloud-config\nruncmd:\n- [ sh, -xc, \"echo 'hello world!'\" ]
+            ```
+
 `edge`
 :   **Optional**-*Map of…*- Connection data for a bring-your-own edge
 

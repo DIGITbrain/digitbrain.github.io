@@ -11,7 +11,6 @@ The metadata specification for a DIGITbrain DMA Tuple
 has these sections:
 
 - [Definition](#definition)
-- [Data Source Mapping](#data-source-mapping)
 
 
 ### Definition
@@ -99,12 +98,19 @@ has these sections:
         MA Pair: ma_pair_123e4567-e89b-12d3
         ```
 
-`D Assets`
-:   **Optional**-*IDs / URIs*- Identifiers of the Data Assets associated to the DMA Tuple
+`DataAssetsMapping`
+:   **Optional**-*Map*- Mapping the available Data assets in this DMA Tuple to available Microservices. Required if Data assets are required. Not all microservices need a Data asset.
     === "Example"
         ``` yaml     
-        D Assets: data_123e4567-e89b-12d3
+        DataAssetsMapping: { "microserviceA_ID": "data_123e4567-e89b-12d3", "microserviceB_ID": "data_234e4567-e89b-23d4"}
         ```
+
+    `microserviceA_ID`
+:   **Optional**-*nan*- 1:1 relationship between a Microservice and a Data asset, specified by their IDs
+        === "Example"
+            ``` yaml     
+            microserviceA_ID: data_123e4567-e89b-12d3
+            ```
 
 `Deployments`
 :   **Optional**-*See "Deployments"*- Characteristics of the Deployment for every Microservice associated to the DMA Tuple (NB: Entities for the available deployment infrastructures to be provided by DB Solution and selected for DMA Tuple. No deployment entity metadata structure currently exists)
@@ -126,19 +132,3 @@ has these sections:
         ``` yaml     
         Payload: {‘injectionMold’: ‘Circuit Case’}
         ```
-
-
-### Data Source Mapping
-
-
-`data_source_mapping`
-:   **Optional**-*Map of…*- Mapping the available Data assets in this DMA Tuple to available Microservices. One Microservice may require several Data assets, specified by their UUIDs.
-
-    `microserviceA_data`
-:   **Optional**-*List of UUIDs*- UUIDs of required Data asset(s) for MicroserviceA
-
-    `microserviceB_data`
-:   **Optional**-*List of UUIDs*- UUIDs of required Data asset(s) for  MicroserviceB
-
-    `microserviceC_data`
-:   **Optional**-*List of UUIDs*- UUIDs of required Data asset(s) for  MicroserviceC

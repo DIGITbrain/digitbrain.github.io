@@ -2,7 +2,7 @@
 
 ## Introduction
 
-MA Pairs (Model Algorithm Pairs) are each composed of one Model and one Algorithms to describe a certain behaviour of an IP Family. An MA Pair corresponds to one behaviour of the respective IP Family – a behaviour can serve more than one purpose.
+MA Pairs (i.e. Model-Algorithm Pairs) are each composed of one Model and one Algorithms to describe a certain behaviour of an IP Family. An MA Pair corresponds to one behaviour of the respective IP Family – a behaviour can serve more than one purpose.
 
 The metadata includes the references to already published Model (“M Asset”) and Algorithm (“A Asset”) within the Db Asset Metadata Registry. The configurable information related to the “Rules” (to determine when to trigger an action), “Frequency” (to determine how often an evaluation should be triggered), and “Payload” (to include any additional information that has not been homogenised nor standardised).
 
@@ -12,7 +12,7 @@ The processes of publishing an MA Pair relies on previously published and reused
 
 ## Pre-requisites
 
-The IP Family, the Model Asset, and the Algorithm Asset to be referenced by the MA Pair would need to be published beforehand, in order to facilitate the creation and publishing of the MA Pair.
+The IP Family (i.e. Industrial-Product Family), the Model Asset, and the Algorithm Asset to be referenced by the MA Pair would need to be published beforehand, in order to facilitate the creation and publishing of the MA Pair.
 
 ## Metadata describing MA Pairs
 

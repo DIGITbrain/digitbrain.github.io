@@ -18,6 +18,9 @@ jobs:
     # The type of runner that the job will run on
     name: Generate docs from Excel
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.auto_commit.outputs.changes_detected }}
+      commit: ${{ steps.auto_commit.outputs.commit_hash }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -44,6 +47,7 @@ jobs:
         run: python tools/exceltojson.py
 
       - name: Git Auto Commit
+        id: auto_commit
         uses: stefanzweifel/git-auto-commit-action@v4.12.0
         with:
           commit_message: ${{ github.event.head_commit.message }} [AUTO]
@@ -56,13 +60,13 @@ jobs:
 
     steps:
       - name: Checkout the new commit if an auto-commit was made
-        if: steps.auto-commit-action.outputs.changes_detected == 'true'
+        if: needs.build.outputs.changed == 'true'
         uses: actions/checkout@v2
         with:
-          ref: steps.auto-commit-action.outputs.commit_hash
+          ref: ${{ needs.build.outputs.commit }}
 
       - name: Otherwise checkout the commit that triggered the workflow
-        if: steps.auto-commit-action.outputs.changes_detected == 'false'
+        if: needs.build.outputs.changed == 'false'
         uses: actions/checkout@v2
 
       - name: Set up Python

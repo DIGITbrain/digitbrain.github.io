@@ -68,7 +68,7 @@ jobs:
       - name: Point to digitbrain.github.io
         run: |
           git remote rm origin
-          git remote add origin https://x-access-token:${PERSONAL_TOKEN}@github.com/digitbrain.github.io.git
+          git remote add origin https://x-access-token:${PERSONAL_TOKEN}@github.com/DIGITbrain/digitbrain.github.io.git
           git fetch
       
       - name: Run Mkdocs deploy

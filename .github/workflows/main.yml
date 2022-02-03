@@ -55,7 +55,15 @@ jobs:
     needs: build
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout the new commit if an auto-commit was made
+        if: steps.auto-commit-action.outputs.changes_detected == 'true'
+        uses: actions/checkout@v2
+        with:
+          ref: steps.auto-commit-action.outputs.commit_hash
+
+      - name: Otherwise checkout the commit that triggered the workflow
+        if: steps.auto-commit-action.outputs.changes_detected == 'false'
+        uses: actions/checkout@v2
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -64,12 +72,6 @@ jobs:
       
       - name: Install Mkdocs
         run: pip install mkdocs-material
-
-      - name: Point to digitbrain.github.io
-        run: |
-          git remote rm origin
-          git remote add origin https://x-access-token:${PERSONAL_TOKEN}@github.com/DIGITbrain/digitbrain.github.io.git
-          git fetch
       
       - name: Run Mkdocs deploy
         run: mkdocs gh-deploy

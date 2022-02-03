@@ -65,7 +65,7 @@ jobs:
         with:
           ref: ${{ needs.build.outputs.commit }}
 
-      - name: Otherwise checkout the commit that triggered the workflow
+      - name: Checkout the commit that triggered the workflow
         if: needs.build.outputs.changed == 'false'
         uses: actions/checkout@v2
 

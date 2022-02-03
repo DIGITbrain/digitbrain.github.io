@@ -16,6 +16,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
+    name: Generate docs from Excel
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -47,3 +48,28 @@ jobs:
         with:
           commit_message: ${{ github.event.head_commit.message }} [AUTO]
           file_pattern: docs/*/*.md
+
+  publish:
+    name: Publish the site
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+      
+      - name: Install Mkdocs
+        run: pip install mkdocs-material
+
+      - name: Point to digitbrain.github.io
+        run: |
+          git remote rm origin
+          git remote add origin https://x-access-token:${PERSONAL_TOKEN}@github.com/digitbrain.github.io.git
+          git fetch
+      
+      - name: Run Mkdocs deploy
+        run: mkdocs gh-deploy

@@ -49,11 +49,29 @@ has these sections:
 `Fidelity`
 :   **Optional**-*number*- Error of the model’s prediction
 
-`Model_URI`
-:   **Optional**-*URI*- Where the model file is stored  Where the model file is stored DigitBrain certified external model repository - We could keep these fields into minimum and add further enums if needed, e.g. Linear_equations
+`REPOSITORY_URI`
+:   **Required**-*URI*- Where the model file is stored (usually the DigitBrain certified external model repository). The path and model filename are not provided via this field.
 
-`Model_FILENAME`
-:   **Optional**-*string*- Name of the model file (if necessary) for example when MODEL_URI points to a repository and not a single file
+    === "Example"
+        ``` yaml     
+        REPOSITORY_URI: https://www.myrepo.com
+        ```
+
+`PATH`
+:   **Required**-*string*- Path to the model file in the specified repository, not including the filename itself.
+
+    === "Example"
+        ``` yaml     
+        PATH: input/models
+        ```
+
+`FILENAME`
+:   **Required**-*string*- Name of the model file at the given path within the given repo, with a file extension if it exists.
+
+    === "Example"
+        ``` yaml     
+        FILENAME: mymodel.pb
+        ```
 
 `State_depend`
 :   **Optional**-*bool*- stateful -> 1, stateless -> 0

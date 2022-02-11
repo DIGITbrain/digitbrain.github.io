@@ -1,10 +1,12 @@
 
 <style>
-  .md-typeset h1,
   .md-content__button {
     display: none;
   }
 </style>
+
+**This information is also available in** **[list format](/attributes/supporting_metadata/)**
+
 | Concept                     | Key         | Subkey   | Type      | Example Value   | Comment                                                  | Condition   |
 |:----------------------------|:------------|:---------|:----------|:----------------|:---------------------------------------------------------|:------------|
 | Person                      |             |          |           |                 |                                                          |             |

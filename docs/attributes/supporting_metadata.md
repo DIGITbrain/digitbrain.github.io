@@ -5,6 +5,9 @@
 </style>
 # Supporting Metadata Metadata Fields
 
+**This information is also available in [table format](/tables/supporting_metadata/)**
+
+
 ## Available Fields 
 
 The metadata specification for a DIGITbrain Supporting Metadata

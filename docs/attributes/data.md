@@ -5,6 +5,9 @@
 </style>
 # Data Metadata Fields
 
+**This information is also available in [table format](/tables/data/)**
+
+
 ## Available Fields 
 
 The metadata specification for a DIGITbrain Data

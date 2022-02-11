@@ -5,6 +5,9 @@
 </style>
 # MA Pair Metadata Fields
 
+**This information is also available in [table format](/tables/ma_pair/)**
+
+
 ## Available Fields 
 
 The metadata specification for a DIGITbrain MA Pair

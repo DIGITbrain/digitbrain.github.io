@@ -5,6 +5,9 @@
 </style>
 # Microservice Metadata Fields
 
+**This information is also available in [table format](/tables/microservice/)**
+
+
 ## Available Fields 
 
 The metadata specification for a DIGITbrain Microservice

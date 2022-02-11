@@ -5,6 +5,9 @@
 </style>
 # DMA Tuple Metadata Fields
 
+**This information is also available in [table format](/tables/dma_tuple/)**
+
+
 ## Available Fields 
 
 The metadata specification for a DIGITbrain DMA Tuple

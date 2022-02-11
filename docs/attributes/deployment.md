@@ -5,6 +5,9 @@
 </style>
 # Deployment Metadata Fields
 
+**This information is also available in [table format](/tables/deployment/)**
+
+
 ## Available Fields 
 
 The metadata specification for a DIGITbrain Deployment

@@ -5,6 +5,9 @@
 </style>
 # Algorithm Metadata Fields
 
+**This information is also available in [table format](/tables/algorithm/)**
+
+
 ## Available Fields 
 
 The metadata specification for a DIGITbrain Algorithm

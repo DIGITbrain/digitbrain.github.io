@@ -5,6 +5,9 @@
 </style>
 # Model Metadata Fields
 
+**This information is also available in [table format](/tables/model/)**
+
+
 ## Available Fields 
 
 The metadata specification for a DIGITbrain Model

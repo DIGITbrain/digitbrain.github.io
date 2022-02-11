@@ -3,7 +3,7 @@
     display: none;
   }
 </style>
-# Microservice Metadata Fields
+# Microservice Fields
 
 **This information is also available in [table format](/tables/microservice/)**
 

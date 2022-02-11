@@ -3,7 +3,7 @@
     display: none;
   }
 </style>
-# Deployment Metadata Fields
+# Deployment Fields
 
 **This information is also available in [table format](/tables/deployment/)**
 

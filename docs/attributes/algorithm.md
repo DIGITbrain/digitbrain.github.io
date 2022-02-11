@@ -3,7 +3,7 @@
     display: none;
   }
 </style>
-# Algorithm Metadata Fields
+# Algorithm Fields
 
 **This information is also available in [table format](/tables/algorithm/)**
 

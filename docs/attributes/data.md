@@ -3,7 +3,7 @@
     display: none;
   }
 </style>
-# Data Metadata Fields
+# Data Fields
 
 **This information is also available in [table format](/tables/data/)**
 

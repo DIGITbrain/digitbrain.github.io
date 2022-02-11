@@ -3,7 +3,7 @@
     display: none;
   }
 </style>
-# MA Pair Metadata Fields
+# MA Pair Fields
 
 **This information is also available in [table format](/tables/ma_pair/)**
 

@@ -3,7 +3,7 @@
     display: none;
   }
 </style>
-# DMA Tuple Metadata Fields
+# DMA Tuple Fields
 
 **This information is also available in [table format](/tables/dma_tuple/)**
 

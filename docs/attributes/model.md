@@ -3,7 +3,7 @@
     display: none;
   }
 </style>
-# Model Metadata Fields
+# Model Fields
 
 **This information is also available in [table format](/tables/model/)**
 

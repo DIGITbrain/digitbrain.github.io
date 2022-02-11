@@ -35,7 +35,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install wheel pandas openpyxl mdtable jinja2
+          pip install wheel pandas openpyxl tabulate jinja2
 
       - name: Run xls2csv
         run: python tools/xls2md.py

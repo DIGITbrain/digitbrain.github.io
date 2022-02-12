@@ -140,15 +140,15 @@ has these sections:
 ### Data access specification
 
 
-`DATA_SOURCE_TYPE`{ #data_source_type }
-:   **Optional**-*string*- The exact type of the data resource. Typically corresponds to the scheme part (protocol://) of DATA_URI.
+`DATA_STORE_TYPE`{ #data_store_type }
+:   **Optional**-*string*- The exact type of the data resource. Typically corresponds to the scheme part (scheme://) of DATA_URI.
     === "Example"
         ``` yaml     
         S3 , MYSQL , MQTT , ... (WP6: DATA_SOURCE_TYPE=LOCAL, PATH=...")
         ```
 
 `DATA_URI`{ #data_uri }
-:   **Optional**-*URI*- Accessibility of the data resource, including host, port information, protocol, and other fields (path is protocol dependent, can be a topic name). GUI may show host, port, path separately. Hidden at search. Format: protocol://host:port/path.  Pseudo vars: DATA_PROTOCOL, DATA_HOST, DATA_PORT, DATA_PATH, DATA_QUERY, DATA_FRAGMENT.
+:   **Optional**-*URI*- Accessibility of the data resource, including host, port information, protocol, and other fields (path is protocol dependent, can be a topic name). GUI may show host, port, path separately. Hidden at search. Format: scheme://host:port/path.  Pseudo vars: DATA_PROTOCOL, DATA_HOST, DATA_PORT, DATA_PATH, DATA_QUERY, DATA_FRAGMENT.
     === "Example"
         ``` yaml     
         s3://amazonaws/bucket/object , kafka://host/topic#1 , ...
@@ -173,7 +173,7 @@ has these sections:
 
 
 `DATA_PROTOCOL`{ #data_protocol }
-:   **Optional**-*string*- Protocol to use in communication with the data source, only if DATA_TYPE does not imply it (e.g. S3 over HTTP). Moved from to Data access specification.
+:   **Optional**-*string*- Protocol to use in communication with the data source, only if DATA_TYPE does not imply it (e.g. S3 over HTTP). Moved from to Data access specification. Note this is not necessarily the scheme part of the URI.
     === "Example"
         ``` yaml     
         HTTP, HTTPS, TCP, UDP

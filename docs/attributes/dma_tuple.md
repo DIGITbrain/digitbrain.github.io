@@ -102,18 +102,7 @@ has these sections:
         ```
 
 `DataAssetsMapping`{ #dataassetsmapping }
-:   **Optional**-*Map*- Mapping the available Data assets in this DMA Tuple to available Microservices. Required if Data assets are required. Not all microservices need a Data asset.
-    === "Example"
-        ``` yaml     
-        { "microserviceA_ID": "data_123e4567-e89b-12d3", "microserviceB_ID": "data_234e4567-e89b-23d4"}
-        ```
-
-    `microserviceA_ID`{ #microservicea_id }
-:   **Optional**-*nan*- 1:1 relationship between a Microservice and a Data asset, specified by their IDs
-        === "Example"
-            ``` yaml     
-            data_123e4567-e89b-12d3
-            ```
+:   **Optional**-*[DataAssetsMapping](dataassetsmapping.md)*- Mapping the available Data assets in this DMA Tuple to available Microservices. Required if Data assets are required. Not all microservices need a Data asset.
 
 `Deployments`{ #deployments }
 :   **Optional**-*[Deployment](deployment.md)*- Characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple

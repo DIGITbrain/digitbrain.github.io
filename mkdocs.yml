@@ -16,38 +16,35 @@ nav:
   - Home: index.md
   - Getting Started: start.md
   - Assets Overview:
-      - Metadata:
-          - Microservice: microservice.md
-          - Algorithm: algorithm.md
-          - Model: model.md
-          - Data: data.md
-          - MA Pair: ma_pair.md
-          - DMA Tuple: dma_tuple.md
-          - Supporting Metadata: supporting_metadata.md
+      - Microservice: microservice.md
+      - Algorithm: algorithm.md
+      - Model: model.md
+      - Data: data.md
+      - MA Pair: ma_pair.md
+      - DMA Tuple: dma_tuple.md
+      - Supporting Metadata: supporting_metadata.md
       - Substructures:
           - Data Assets Mapping: dataassetsmapping.md
           - Deployment: deployment.md
   - Asset Detail:
-      - Metadata:
-          - Microservice: attributes/microservice.md
-          - Algorithm: attributes/algorithm.md
-          - Model: attributes/model.md
-          - Data: attributes/data.md
-          - MA Pair: attributes/ma_pair.md
-          - DMA Tuple: attributes/dma_tuple.md
-          - Supporting Metadata: attributes/supporting_metadata.md
+      - Microservice: attributes/microservice.md
+      - Algorithm: attributes/algorithm.md
+      - Model: attributes/model.md
+      - Data: attributes/data.md
+      - MA Pair: attributes/ma_pair.md
+      - DMA Tuple: attributes/dma_tuple.md
+      - Supporting Metadata: attributes/supporting_metadata.md
       - Substructures:
           - Data Assets Mapping: attributes/dataassetsmapping.md
           - Deployment: attributes/deployment.md
   - Asset Tables:
-      - Metadata:
-          - tables/microservice.md
-          - tables/algorithm.md
-          - tables/model.md
-          - tables/data.md
-          - MA Pair: tables/ma_pair.md
-          - DMA Tuple: tables/dma_tuple.md
-          - Supporting Metadata: tables/supporting_metadata.md
+      - tables/microservice.md
+      - tables/algorithm.md
+      - tables/model.md
+      - tables/data.md
+      - MA Pair: tables/ma_pair.md
+      - DMA Tuple: tables/dma_tuple.md
+      - Supporting Metadata: tables/supporting_metadata.md
       - Substructures:
           - Data Assets Mapping: tables/dataassetsmapping.md
           - tables/deployment.md

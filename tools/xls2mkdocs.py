@@ -24,21 +24,29 @@ for sheet_name in sheets.keys():
         example = sheet["Example Value"][i]
         example = example if example == example else None
 
+        # Replace <br> tags in examples with line breaks
+        try:
+            example = example.replace("<br>", "\n            ")
+        except AttributeError:
+            pass
+
         comment = sheet["Comment"][i]
         comment = (
             comment if comment == comment else "No description available."
         )
 
         # Store fields data
-        sheet_list.append({
-            "concept": None,
-            "key": field,
-            "required": sheet["Condition"][i],
-            "comment": comment,
-            "type": sheet["Type"][i],
-            "example": example,
-            "issubkey": subkey,
-        })
+        sheet_list.append(
+            {
+                "concept": None,
+                "key": field,
+                "required": sheet["Condition"][i],
+                "comment": comment,
+                "type": sheet["Type"][i],
+                "example": example,
+                "issubkey": subkey,
+            }
+        )
 
     # Fill the template
     jinja_loader = jinja2.FileSystemLoader(searchpath="tools/jinja_templates")

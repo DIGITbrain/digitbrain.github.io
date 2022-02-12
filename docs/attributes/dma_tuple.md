@@ -116,11 +116,7 @@ has these sections:
             ```
 
 `Deployments`
-:   **Optional**-*See "Deployments"*- Characteristics of the Deployment for every Microservice associated to the DMA Tuple (NB: Entities for the available deployment infrastructures to be provided by DB Solution and selected for DMA Tuple. No deployment entity metadata structure currently exists)
-    === "Example"
-        ``` yaml     
-        deployments_123e4567-e89b-12d3
-        ```
+:   **Optional**-*[Deployment](deployment.md)*- Characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple
 
 `Schedule`
 :   **Optional**-*Dates*- Days and hours the DMA Tuple will be active (optional)

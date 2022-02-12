@@ -17,6 +17,10 @@ has these sections:
 - [Deployments](#deployments)
 
 
+### *This substructure is part of [DMA Tuple](dma_tuple.md)*
+
+
+
 ### Description
 
 

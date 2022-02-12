@@ -19,7 +19,7 @@ has these sections:
 ### Definition
 
 
-`ID`{ #ID }
+`ID`{ #id }
 :   **Auto-generated**-*ID / URI*- Unique identifier for the DMA Tuple
 
     === "Example"
@@ -27,7 +27,7 @@ has these sections:
         123e4567-e89b-12d3-a456-426614174000
         ```
 
-`Created at`{ #Created at }
+`Created at`{ #created-at }
 :   **Auto-generated**-*ISO 8601*- Date of creation
 
     === "Example"
@@ -35,14 +35,14 @@ has these sections:
         2021-05-01T00:00:00Z
         ```
 
-`Version`{ #Version }
+`Version`{ #version }
 :   **Optional**-*Integer*- Version number of the DMA Tuple
     === "Example"
         ``` yaml     
         21
         ```
 
-`Author`{ #Author }
+`Author`{ #author }
 :   **Auto-generated**-*ID / URI*- Identifier of the Author of the MA Pair (NB: Entity for author is referenced)
 
     === "Example"
@@ -50,7 +50,7 @@ has these sections:
         person_123e4567-e89b-12d3 (auto)
         ```
 
-`Licensor`{ #Licensor }
+`Licensor`{ #licensor }
 :   **Auto-generated**-*ID / URI*- Identifier of the Legal Entity licensing the the MA Pair (NB: Entity for Licensor is referenced)
 
     === "Example"
@@ -58,7 +58,7 @@ has these sections:
         legal_entity_123e4567-e89b-12d3 (auto)
         ```
 
-`Derivation`{ #Derivation }
+`Derivation`{ #derivation }
 :   **Auto-generated**-*IDs / URIs*- In case of derivation, references to parent / child (optional)
 
     === "Example"
@@ -66,66 +66,66 @@ has these sections:
         dma_tuple_123e4567-e89b-12d3 (auto)
         ```
 
-`Name`{ #Name }
+`Name`{ #name }
 :   **Optional**-*Text*- Short name to identify the DMA Tuple
     === "Example"
         ``` yaml     
         Pressure drop for the injection in hall 3
         ```
 
-`Scope`{ #Scope }
+`Scope`{ #scope }
 :   **Optional**-*Text*- Short description of the scope of the DMA Tuple (human readable)
     === "Example"
         ``` yaml     
         Effectiveness of the mold closing process
         ```
 
-`IP Instance`{ #IP Instance }
+`IP Instance`{ #ip-instance }
 :   **Optional**-*ID / URI*- Identifier of the IP Instance the DMA Tuple is valid for (NB: Entity for IP Instance is referenced)
     === "Example"
         ``` yaml     
         ip_instance_123e4567-e89b-12d3
         ```
 
-`Namespace`{ #Namespace }
+`Namespace`{ #namespace }
 :   **Optional**-*ID / URI?*- Context to interpret the associated information (optional?)
     === "Example"
         ``` yaml     
         namespace_123e4567-e89b-12d3
         ```
 
-`MA Pair`{ #MA Pair }
+`MA Pair`{ #ma-pair }
 :   **Optional**-*ID / URI*- Identifier of the MA Pair associated to the DMA Tuple
     === "Example"
         ``` yaml     
         ma_pair_123e4567-e89b-12d3
         ```
 
-`DataAssetsMapping`{ #DataAssetsMapping }
+`DataAssetsMapping`{ #dataassetsmapping }
 :   **Optional**-*Map*- Mapping the available Data assets in this DMA Tuple to available Microservices. Required if Data assets are required. Not all microservices need a Data asset.
     === "Example"
         ``` yaml     
         { "microserviceA_ID": "data_123e4567-e89b-12d3", "microserviceB_ID": "data_234e4567-e89b-23d4"}
         ```
 
-    `microserviceA_ID`{ #microserviceA_ID }
+    `microserviceA_ID`{ #microservicea_id }
 :   **Optional**-*nan*- 1:1 relationship between a Microservice and a Data asset, specified by their IDs
         === "Example"
             ``` yaml     
             data_123e4567-e89b-12d3
             ```
 
-`Deployments`{ #Deployments }
+`Deployments`{ #deployments }
 :   **Optional**-*[Deployment](deployment.md)*- Characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple
 
-`Schedule`{ #Schedule }
+`Schedule`{ #schedule }
 :   **Optional**-*Dates*- Days and hours the DMA Tuple will be active (optional)
     === "Example"
         ``` yaml     
         R90/2021-05-01T00:00:00Z/PT48H
         ```
 
-`Payload`{ #Payload }
+`Payload`{ #payload }
 :   **Optional**-*String*- User-defined key-value pairs: JSON string with additional information (optional)
     === "Example"
         ``` yaml     

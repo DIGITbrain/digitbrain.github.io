@@ -28,11 +28,11 @@ has these sections:
 :   **Auto-generated**-*UUID*- DIGITbrain reference
 
 
-`name `{ #name  }
+`name `{ #name- }
 :   **Required**-*String*- Short name for the node/device
 
 
-`author `{ #author  }
+`author `{ #author- }
 :   **Required**-*String*- Created by
 
 

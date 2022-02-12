@@ -28,7 +28,7 @@ has these sections:
         algorithm_10824912410291
         ```
 
-`name `{ #name  }
+`name `{ #name- }
 :   **Required**-*String*- a human-readable name to ease identification and discoverability for human users
 
     === "Example"
@@ -44,7 +44,7 @@ has these sections:
         This algorithm can be used to solve a specifc problem, and applies some fancy technologies.
         ```
 
-`classificationSchema`{ #classificationSchema }
+`classificationSchema`{ #classificationschema }
 :   **Required**-*Enumeration { Simulation, ML, others }*- the classification of the Algorithm, to describe the specialization area
 
     === "Example"
@@ -60,7 +60,7 @@ has these sections:
         {neural network, deep learning, convolutional neural network, CNN}
         ```
 
-`author `{ #author  }
+`author `{ #author- }
 :   **Required**-*String*- the authoring entity
 
     === "Example"
@@ -76,7 +76,7 @@ has these sections:
         06.04.2021
         ```
 
-`version `{ #version  }
+`version `{ #version- }
 :   **Required**-*String*- the version
 
     === "Example"
@@ -88,7 +88,7 @@ has these sections:
 ### Algorithm
 
 
-`listOfMicroservices`{ #listOfMicroservices }
+`listOfMicroservices`{ #listofmicroservices }
 :   **Required**-*List( String)*- a list of Microservice Asset IDs, which are contained in the algorithm
 
     === "Example"
@@ -96,7 +96,7 @@ has these sections:
         [microservice.microservice_id_A, microservice.microservice_id_B]
         ```
 
-`deploymentMapping`{ #deploymentMapping }
+`deploymentMapping`{ #deploymentmapping }
 :   **Required**-*Map( String: String)*- a mapping specifying which microservice should run on which host. By default each microservice is assigned a respective host, but this behaviour is not always ideal (eg. when two or more Microservices may need to run on the same host)
 
     === "Example"

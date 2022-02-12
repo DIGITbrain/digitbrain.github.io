@@ -22,140 +22,140 @@ has these sections:
 ### Person
 
 
-`ID`{ #ID }
+`ID`{ #id }
 :   **Optional**-*ID / URI*- Unique identifier for the Person
 
-`Created at`{ #Created at }
+`Created at`{ #created-at }
 :   **Optional**-*ISO 8601*- Date of creation
 
-`Version`{ #Version }
+`Version`{ #version }
 :   **Optional**-*Integer*- Version number of the Person
 
-`First name`{ #First name }
+`First name`{ #first-name }
 :   **Optional**-*Text*- First name of the Person
 
-`Last name`{ #Last name }
+`Last name`{ #last-name }
 :   **Optional**-*Text*- Last name of the Person
 
-`Email`{ #Email }
+`Email`{ #email }
 :   **Optional**-*Email*- Email address of the Person
 
-`CV`{ #CV }
+`CV`{ #cv }
 :   **Optional**-*Text*- Short description of the Person
 
-`Image`{ #Image }
+`Image`{ #image }
 :   **Optional**-*Image*- Profile picture of the Person
 
-`Affiliation`{ #Affiliation }
+`Affiliation`{ #affiliation }
 :   **Optional**-*ID / URI*- Legal Entity the Person is affiliated with
 
 
 ### Legal Entity (Organization)
 
 
-`ID`{ #ID }
+`ID`{ #id }
 :   **Optional**-*ID / URI*- Unique identifier for the Legal Entity
 
-`Created at`{ #Created at }
+`Created at`{ #created-at }
 :   **Optional**-*ISO 8601*- Date of creation
 
-`Version`{ #Version }
+`Version`{ #version }
 :   **Optional**-*Integer*- Version number of the Legal Entity
 
-`Author`{ #Author }
+`Author`{ #author }
 :   **Optional**-*ID / URI*- Identifier of the Author of the Legal Entity
 
-`Name`{ #Name }
+`Name`{ #name }
 :   **Optional**-*Text*- Name of the Legal Entity
 
-`Description`{ #Description }
+`Description`{ #description }
 :   **Optional**-*Text*- Description of the Legal Entity
 
-`Logo`{ #Logo }
+`Logo`{ #logo }
 :   **Optional**-*Image*- Logo of the Legal Entity
 
-`URL`{ #URL }
+`URL`{ #url }
 :   **Optional**-*URL*- Website of the Legal Entity
 
-`Location`{ #Location }
+`Location`{ #location }
 :   **Optional**-*ID / URI?*- Physical address of the Legal Entity
 
-`Phone`{ #Phone }
+`Phone`{ #phone }
 :   **Optional**-*String*- Phone Number of the Legal Entity
 
-`VAT ID No.`{ #VAT ID No. }
+`VAT ID No.`{ #vat-id-no. }
 :   **Optional**-*String*- VAT ID Number of the Legal Entity
 
 
 ### IP Family
 
 
-`ID`{ #ID }
+`ID`{ #id }
 :   **Optional**-*ID / URI*- Unique identifier for the IP Fam.
 
-`Created at`{ #Created at }
+`Created at`{ #created-at }
 :   **Optional**-*ISO 8601*- Date of creation
 
-`Version`{ #Version }
+`Version`{ #version }
 :   **Optional**-*Integer*- Version number of the IP Family
 
-`Author`{ #Author }
+`Author`{ #author }
 :   **Optional**-*ID / URI*- Identifier of the Author of the IP Family
 
-`Manager`{ #Manager }
+`Manager`{ #manager }
 :   **Optional**-*ID / URI*- Identifier of the Legal Entity managing the IP Family
 
-`Name`{ #Name }
+`Name`{ #name }
 :   **Optional**-*Text*- Technical Name of the IP Family
 
-`Image`{ #Image }
+`Image`{ #image }
 :   **Optional**-*Image*- Picture of the IP Family
 
-`Model No.`{ #Model No. }
+`Model No.`{ #model-no. }
 :   **Optional**-*Text*- Number defined by the IP Man.
 
-`Description`{ #Description }
+`Description`{ #description }
 :   **Optional**-*Text*- Description of the IP Family
 
-`Capacity`{ #Capacity }
+`Capacity`{ #capacity }
 :   **Optional**-*Text*- Capacity of the IP Family
 
-`IP Man.`{ #IP Man. }
+`IP Man.`{ #ip-man. }
 :   **Optional**-*ID / URI*- Identifier of the IP Manufacturer (Legal Entity)
 
 
 ### IP Instance
 
 
-`ID`{ #ID }
+`ID`{ #id }
 :   **Optional**-*ID / URI*- Unique identifier for the IP Inst.
 
-`Created at`{ #Created at }
+`Created at`{ #created-at }
 :   **Optional**-*ISO 8601*- Date of creation
 
-`Version`{ #Version }
+`Version`{ #version }
 :   **Optional**-*Integer*- Version number of the IP Instance
 
-`Author`{ #Author }
+`Author`{ #author }
 :   **Optional**-*ID / URI*- Identifier of the Author of the IP Instance
 
-`Operator`{ #Operator }
+`Operator`{ #operator }
 :   **Optional**-*ID / URI*- Identifier of the Legal Entity operating the IP Instance
 
-`IP Family`{ #IP Family }
+`IP Family`{ #ip-family }
 :   **Optional**-*ID / URI*- Reference to the IP Family
 
-`Name`{ #Name }
+`Name`{ #name }
 :   **Optional**-*Text*- Name of the IP Instance
 
-`Image`{ #Image }
+`Image`{ #image }
 :   **Optional**-*Image*- Picture of the IP Instance
 
-`Serial No.`{ #Serial No. }
+`Serial No.`{ #serial-no. }
 :   **Optional**-*Text*- Number defined by the IP Man.
 
-`Description`{ #Description }
+`Description`{ #description }
 :   **Optional**-*Text*- Description of the IP Instance
 
-`Location`{ #Location }
+`Location`{ #location }
 :   **Optional**-*ID / URI?*- Physical location of the IP Instance

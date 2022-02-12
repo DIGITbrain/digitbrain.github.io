@@ -26,7 +26,7 @@ has these sections:
 ### Administrative data
 
 
-`ID`{ #ID }
+`ID`{ #id }
 :   **Auto-generated**-*id*- Unique identifier of the data resource.
 
     === "Example"
@@ -34,7 +34,7 @@ has these sections:
         UUID
         ```
 
-`AUTHOR`{ #AUTHOR }
+`AUTHOR`{ #author }
 :   **Auto-generated**-*id*- Unique identifier of the user who created this record
 
     === "Example"
@@ -42,7 +42,7 @@ has these sections:
         UUID
         ```
 
-`PROVIDER`{ #PROVIDER }
+`PROVIDER`{ #provider }
 :   **Auto-generated**-*id*- Legal entity who provides the data resource (owner). It is the affiliation of the author by default.
 
     === "Example"
@@ -50,7 +50,7 @@ has these sections:
         UUID
         ```
 
-`DATE`{ #DATE }
+`DATE`{ #date }
 :   **Auto-generated**-*timestamp*- Date of data resource registration.
 
     === "Example"
@@ -62,7 +62,7 @@ has these sections:
 ### Description
 
 
-`DATA_NAME`{ #DATA_NAME }
+`DATA_NAME`{ #data_name }
 :   **Required**-*string*- Name of the data resource. (The directory hierarchy in Nexus provides a fully qualified (FQ) name, which is unique.)
 
     === "Example"
@@ -70,28 +70,28 @@ has these sections:
         CNSPiezoBolt#1 (in directory: factory 1 , machine1 , piezobolts)
         ```
 
-`DATA_VERSION`{ #DATA_VERSION }
+`DATA_VERSION`{ #data_version }
 :   **Optional**-*string*- Version of this data resource entry (major.minor.patch). Defaults to 1.0.0
     === "Example"
         ``` yaml     
         2.3.4
         ```
 
-`DATA_DESC`{ #DATA_DESC }
+`DATA_DESC`{ #data_desc }
 :   **Optional**-*string*- Human readable description of the data resource.
     === "Example"
         ``` yaml     
         This sensor measures temperature in Celsius, sends data via ConSenses edge device via an MQTT broker
         ```
 
-`DATA_DESC_URL`{ #DATA_DESC_URL }
+`DATA_DESC_URL`{ #data_desc_url }
 :   **Optional**-*URL*- More detailed specification of data source characteristics (doc, pdf, …)
     === "Example"
         ``` yaml     
         data-source-specification-sheet.pdf
         ```
 
-`DATA_SIZE`{ #DATA_SIZE }
+`DATA_SIZE`{ #data_size }
 :   **Optional**-*integer*- Estimated/exact size of data (e.g. file size, volume size, or message size); might be used to assess HW requirements (RAM, CPU) . In bytes (k - kilo, m - mega, t - tera, p - peta)
     === "Example"
         ``` yaml     
@@ -102,7 +102,7 @@ has these sections:
 ### Search support
 
 
-`DATA_TAGS`{ #DATA_TAGS }
+`DATA_TAGS`{ #data_tags }
 :   **Optional**-*list of strings*- A list of tags freely added to help in searching/indexing (not limited to a basic set of tags, keywords)
     === "Example"
         ``` yaml     
@@ -113,7 +113,7 @@ has these sections:
 ### Datakind specification
 
 
-`DATA_KIND`{ #DATA_KIND }
+`DATA_KIND`{ #data_kind }
 :   **Required**-*enum*- Type of the data resource (e.g. file/object storage, database management system, streaming broker). FILE can mean a single file or a folder.
 
     === "Example"
@@ -121,7 +121,7 @@ has these sections:
         FILE , DATABASE , STREAM
         ```
 
-`DATA_DIRECTION`{ #DATA_DIRECTION }
+`DATA_DIRECTION`{ #data_direction }
 :   **Required**-*enum*- Direction of data flow (source: data provider, sink: data consumer/storage)
 
     === "Example"
@@ -129,7 +129,7 @@ has these sections:
         SOURCE , SINK , BIDIRECTIONAL
         ```
 
-`DATA_FORMAT`{ #DATA_FORMAT }
+`DATA_FORMAT`{ #data_format }
 :   **Optional**-*list of strings*- Format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files).
     === "Example"
         ``` yaml     
@@ -140,21 +140,21 @@ has these sections:
 ### Data access specification
 
 
-`DATA_SOURCE_TYPE`{ #DATA_SOURCE_TYPE }
+`DATA_SOURCE_TYPE`{ #data_source_type }
 :   **Optional**-*string*- The exact type of the data resource. Typically corresponds to the scheme part (protocol://) of DATA_URI.
     === "Example"
         ``` yaml     
         S3 , MYSQL , MQTT , ... (WP6: DATA_SOURCE_TYPE=LOCAL, PATH=...")
         ```
 
-`DATA_URI`{ #DATA_URI }
+`DATA_URI`{ #data_uri }
 :   **Optional**-*URI*- Accessibility of the data resource, including host, port information, protocol, and other fields (path is protocol dependent, can be a topic name). GUI may show host, port, path separately. Hidden at search. Format: protocol://host:port/path.  Pseudo vars: DATA_PROTOCOL, DATA_HOST, DATA_PORT, DATA_PATH, DATA_QUERY, DATA_FRAGMENT.
     === "Example"
         ``` yaml     
         s3://amazonaws/bucket/object , kafka://host/topic#1 , ...
         ```
 
-`DATA_AUTH`{ #DATA_AUTH }
+`DATA_AUTH`{ #data_auth }
 :   **Optional**-*list of enums*- One or more authentication types that can be accepted by the storage resource.
     === "Example"
         ``` yaml     
@@ -165,42 +165,42 @@ has these sections:
 ### Open parameters
 
 
-`DATA_CREDENTIALS`{ #DATA_CREDENTIALS }
+`DATA_CREDENTIALS`{ #data_credentials }
 :   **Optional**-*OPEN*- Credentials (e.g. string/json, zip, config file)
 
 
 ### Further access clauses (extensible)
 
 
-`DATA_PROTOCOL`{ #DATA_PROTOCOL }
+`DATA_PROTOCOL`{ #data_protocol }
 :   **Optional**-*string*- Protocol to use in communication with the data source, only if DATA_TYPE does not imply it (e.g. S3 over HTTP). Moved from to Data access specification.
     === "Example"
         ``` yaml     
         HTTP, HTTPS, TCP, UDP
         ```
 
-`DATA_MYSQL_DIALECT`{ #DATA_MYSQL_DIALECT }
+`DATA_MYSQL_DIALECT`{ #data_mysql_dialect }
 :   **Optional**-*string*- Protocol dialect to be used in communication with the database
     === "Example"
         ``` yaml     
         mysqldialect , mariadbdialect
         ```
 
-`DATA_MQTT_PROTOCOL_VERSION`{ #DATA_MQTT_PROTOCOL_VERSION }
+`DATA_MQTT_PROTOCOL_VERSION`{ #data_mqtt_protocol_version }
 :   **Optional**-*string*- MQTT protocol version must be used
     === "Example"
         ``` yaml     
         3.1.1, 5.0
         ```
 
-`DATA_KAFKA_BROKER_VERSION`{ #DATA_KAFKA_BROKER_VERSION }
+`DATA_KAFKA_BROKER_VERSION`{ #data_kafka_broker_version }
 :   **Optional**-*string*- Kafka broker version
     === "Example"
         ``` yaml     
         2.7.0
         ```
 
-`DATA_S3_REGION`{ #DATA_S3_REGION }
+`DATA_S3_REGION`{ #data_s3_region }
 :   **Optional**-*string*- S3 region
     === "Example"
         ``` yaml     
@@ -211,19 +211,19 @@ has these sections:
 ### Data content semantics
 
 
-`DATA_SCHEMA`{ #DATA_SCHEMA }
+`DATA_SCHEMA`{ #data_schema }
 :   **Optional**-*string*- Describes message internal structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, ...
     === "Example"
         ``` yaml     
         database schema description/contents 
         ```
 
-`DATA_SCHEMA_URL`{ #DATA_SCHEMA_URL }
+`DATA_SCHEMA_URL`{ #data_schema_url }
 :   **Optional**-*URL*- No description available.
     === "Example"
         ``` yaml     
         database schema URL
         ```
 
-`DATA_SCHEMA_ADDITIONAL_ATTRIBUTES`{ #DATA_SCHEMA_ADDITIONAL_ATTRIBUTES }
+`DATA_SCHEMA_ADDITIONAL_ATTRIBUTES`{ #data_schema_additional_attributes }
 :   **Optional**-*string*- Further restriction/specialization of DATA_SCHEMA, “general” schema.

@@ -14,7 +14,7 @@ The metadata specification for a DIGITbrain {{ sheet_name }}
 has these sections:
 
 {% for value in fields -%}
-{% if value.concept -%}
+{% if (value.concept and value.concept | length < 40) -%}
 - [{{ value.concept }}](#{{ value.concept | lower | replace(" ", "-") | replace("(", "") | replace(")", "") }})
 {% endif %}
 {%- endfor -%}

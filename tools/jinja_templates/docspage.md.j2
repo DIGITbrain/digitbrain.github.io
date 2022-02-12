@@ -25,7 +25,7 @@ has these sections:
 
 {% else %}
 {% if value.issubkey %}    {% endif -%}
-`{{ value.key }}`{ #{{ value.key | lower | replace(" ", "-") }} }
+`{{ value.key }}`{ #{{ value.key | lower | replace(" ", "-") | replace("*", "") }} }
 {%- if value.issubkey -%}    
     {%- endif -%}
 {% if value.required == "mandatory" %}

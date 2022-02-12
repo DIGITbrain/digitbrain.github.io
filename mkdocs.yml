@@ -11,6 +11,7 @@ theme:
   features:
     - navigation.instant
     - navigation.tabs
+    - navigation.tabs.sticky
 nav:
   - Home: index.md
   - Getting Started: start.md

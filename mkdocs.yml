@@ -50,6 +50,7 @@ nav:
 
 markdown_extensions:
   - admonition
+  - attr_list
   - def_list
   - pymdownx.superfences:
       custom_fences:

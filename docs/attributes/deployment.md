@@ -66,7 +66,7 @@ has these sections:
 :   **Optional**-*String*- cloud-init configuration for contextualisation of the VM
         === "Example"
             ``` yaml     
-            cloud_config: #cloud-config\nruncmd:\n- [ sh, -xc, \"echo 'hello world!'\" ]
+            #cloud-config\nruncmd:\n- [ sh, -xc, \"echo 'hello world!'\" ]
             ```
 
 `edge`

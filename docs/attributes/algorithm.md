@@ -25,7 +25,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        id: algorithm_10824912410291
+        algorithm_10824912410291
         ```
 
 `name `
@@ -33,7 +33,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        name : Object Detection Algorithm for detection of faulty weld seams
+        Object Detection Algorithm for detection of faulty weld seams
         ```
 
 `description`
@@ -41,7 +41,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        description: This algorithm can be used to solve a specifc problem, and applies some fancy technologies.
+        This algorithm can be used to solve a specifc problem, and applies some fancy technologies.
         ```
 
 `classificationSchema`
@@ -49,7 +49,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        classificationSchema: ML
+        ML
         ```
 
 `type`
@@ -57,7 +57,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        type: {neural network, deep learning, convolutional neural network, CNN}
+        {neural network, deep learning, convolutional neural network, CNN}
         ```
 
 `author `
@@ -65,7 +65,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        author : DFKI
+        DFKI
         ```
 
 `date`
@@ -73,7 +73,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        date: 06.04.2021
+        06.04.2021
         ```
 
 `version `
@@ -81,7 +81,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        version : 1.0
+        1.0
         ```
 
 
@@ -93,7 +93,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        listOfMicroservices: [microservice.microservice_id_A, microservice.microservice_id_B]
+        [microservice.microservice_id_A, microservice.microservice_id_B]
         ```
 
 `deploymentMapping`
@@ -101,5 +101,5 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        deploymentMapping: {microservice.microservice_id_A: deployment.microservice_id_B, microservice.microservice_id_B: deployment.microservice_id_B}
+        {microservice.microservice_id_A: deployment.microservice_id_B, microservice.microservice_id_B: deployment.microservice_id_B}
         ```

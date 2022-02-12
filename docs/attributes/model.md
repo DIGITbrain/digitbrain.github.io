@@ -57,7 +57,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        REPOSITORY_URI: https://www.myrepo.com
+        https://www.myrepo.com
         ```
 
 `PATH`
@@ -65,7 +65,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        PATH: input/models
+        input/models
         ```
 
 `FILENAME`
@@ -73,7 +73,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        FILENAME: mymodel.pb
+        mymodel.pb
         ```
 
 `State_depend`

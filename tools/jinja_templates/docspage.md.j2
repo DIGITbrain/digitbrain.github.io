@@ -38,12 +38,12 @@ has these sections:
 {%- if value.example and value.issubkey %}
         === "Example"
             ``` yaml     
-            {{ value.key }}: {{ value.example }}
+            {{ value.example }}
             ```
 {%- elif value.example and not value.issubkey %}
     === "Example"
         ``` yaml     
-        {{ value.key }}: {{ value.example }}
+        {{ value.example }}
         ```
 {%- endif %}
 {% endif -%}

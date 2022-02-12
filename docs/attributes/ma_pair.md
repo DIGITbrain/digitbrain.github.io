@@ -19,7 +19,7 @@ has these sections:
 ### Definition
 
 
-`ID`
+`ID`{ #ID }
 :   **Auto-generated**-*UUID*- Unique identifier for the MA Pair
 
     === "Example"
@@ -27,7 +27,7 @@ has these sections:
         123e4567-e89b-12d3-a456-426614174000
         ```
 
-`Created at`
+`Created at`{ #Created at }
 :   **Auto-generated**-*ISO 8601*- Date of creation
 
     === "Example"
@@ -35,14 +35,14 @@ has these sections:
         2021-05-01T00:00:00Z
         ```
 
-`Version`
+`Version`{ #Version }
 :   **Optional**-*Integer*- Version number of the MA Pair
     === "Example"
         ``` yaml     
         21
         ```
 
-`Author`
+`Author`{ #Author }
 :   **Auto-generated**-*UUID*- Identifier of the Author of the MA Pair (NB: Entity for author is referenced)
 
     === "Example"
@@ -50,7 +50,7 @@ has these sections:
         person_123e4567-e89b-12d3 (auto)
         ```
 
-`Licensor`
+`Licensor`{ #Licensor }
 :   **Auto-generated**-*UUID*- Identifier of the Legal Entity licensing the MA Pair (NB: Entity for Licensor is referenced)
 
     === "Example"
@@ -58,7 +58,7 @@ has these sections:
         legal_entity_123e4567-e89b-12d3 (auto)
         ```
 
-`Derivation`
+`Derivation`{ #Derivation }
 :   **Auto-generated**-*UUID*- In case of derivation, references to parent / child (optional)
 
     === "Example"
@@ -66,63 +66,63 @@ has these sections:
         ma_pair_123e4567-e89b-12d3 (auto)
         ```
 
-`Name`
+`Name`{ #Name }
 :   **Optional**-*Text*- Short name to identify the MA Pair
     === "Example"
         ``` yaml     
         Pressure drop
         ```
 
-`Scope`
+`Scope`{ #Scope }
 :   **Optional**-*Text*- Short description of the scope of the MA Pair (human readable)
     === "Example"
         ``` yaml     
         Effectiveness of the mold closing process
         ```
 
-`IP Family`
+`IP Family`{ #IP Family }
 :   **Optional**-*UUID*- Identifier of the IP Family the MA Pair is valid for
     === "Example"
         ``` yaml     
         ip_family_123e4567-e89b-12d3
         ```
 
-`Namespace`
+`Namespace`{ #Namespace }
 :   **Optional**-*UUID?*- Context to interpret the associated information (optional?)
     === "Example"
         ``` yaml     
         namespace_123e4567-e89b-12d3
         ```
 
-`M Asset`
+`M Asset`{ #M Asset }
 :   **Optional**-*UUID*- Identifier of the Model Asset associated to the MA Pair (NB: The corresponding model file is indicated in Model metadata (first tab) as Model_URI and the corresponding zip file needs to be served to the Algorithm to evaluate the Model by the Microservice (MODEL_FILENAME))
     === "Example"
         ``` yaml     
         model_123e4567-e89b-12d3
         ```
 
-`A Asset`
+`A Asset`{ #A Asset }
 :   **Optional**-*UUID*- Identifiers of the Algorithm Asset associated to the MA Pair
     === "Example"
         ``` yaml     
         algorithm_123e4567-e89b-12d3
         ```
 
-`Rules`
+`Rules`{ #Rules }
 :   **Optional**-*UUIDs*- References to recommended Rules to be verified per Evaluation of the MA Pair
     === "Example"
         ``` yaml     
         rules_123e4567-e89b-12d3
         ```
 
-`Frequency`
+`Frequency`{ #Frequency }
 :   **Optional**-*Integer*- Recommended number of evaluations conducted per hour for the MA Pair (optional)
     === "Example"
         ``` yaml     
         12
         ```
 
-`Payload`
+`Payload`{ #Payload }
 :   **Optional**-*String*- User-defined key-value pairs: JSON string with additional information (optional)
     === "Example"
         ``` yaml     

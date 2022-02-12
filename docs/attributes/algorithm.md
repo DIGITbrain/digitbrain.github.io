@@ -20,7 +20,7 @@ has these sections:
 ### Description
 
 
-`id`
+`id`{ #id }
 :   **Auto-generated**-*String*- a unique id to identify this asset
 
     === "Example"
@@ -28,7 +28,7 @@ has these sections:
         algorithm_10824912410291
         ```
 
-`name `
+`name `{ #name  }
 :   **Required**-*String*- a human-readable name to ease identification and discoverability for human users
 
     === "Example"
@@ -36,7 +36,7 @@ has these sections:
         Object Detection Algorithm for detection of faulty weld seams
         ```
 
-`description`
+`description`{ #description }
 :   **Required**-*String*- a short, human-readable description of the Algorithm to aid a human user in analysing the Algorithm’s capabilities and its applicability to a certain problem
 
     === "Example"
@@ -44,7 +44,7 @@ has these sections:
         This algorithm can be used to solve a specifc problem, and applies some fancy technologies.
         ```
 
-`classificationSchema`
+`classificationSchema`{ #classificationSchema }
 :   **Required**-*Enumeration { Simulation, ML, others }*- the classification of the Algorithm, to describe the specialization area
 
     === "Example"
@@ -52,7 +52,7 @@ has these sections:
         ML
         ```
 
-`type`
+`type`{ #type }
 :   **Required**-*List( String)*- a detailed list of attributes to describe the Algorithm’s field of application
 
     === "Example"
@@ -60,7 +60,7 @@ has these sections:
         {neural network, deep learning, convolutional neural network, CNN}
         ```
 
-`author `
+`author `{ #author  }
 :   **Required**-*String*- the authoring entity
 
     === "Example"
@@ -68,7 +68,7 @@ has these sections:
         DFKI
         ```
 
-`date`
+`date`{ #date }
 :   **Auto-generated**-*Date*- the creation data
 
     === "Example"
@@ -76,7 +76,7 @@ has these sections:
         06.04.2021
         ```
 
-`version `
+`version `{ #version  }
 :   **Required**-*String*- the version
 
     === "Example"
@@ -88,7 +88,7 @@ has these sections:
 ### Algorithm
 
 
-`listOfMicroservices`
+`listOfMicroservices`{ #listOfMicroservices }
 :   **Required**-*List( String)*- a list of Microservice Asset IDs, which are contained in the algorithm
 
     === "Example"
@@ -96,7 +96,7 @@ has these sections:
         [microservice.microservice_id_A, microservice.microservice_id_B]
         ```
 
-`deploymentMapping`
+`deploymentMapping`{ #deploymentMapping }
 :   **Required**-*Map( String: String)*- a mapping specifying which microservice should run on which host. By default each microservice is assigned a respective host, but this behaviour is not always ideal (eg. when two or more Microservices may need to run on the same host)
 
     === "Example"

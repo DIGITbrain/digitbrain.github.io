@@ -35,7 +35,7 @@ See the below JSON for an example of how **Microservice**, **Data** and
     {
       "Microservices": [
         {
-          "id": "microservice_aaa",
+          "id": "microservice_aaa_uuid",
           "deploymentData": "docker run -e STREAM={{ my_kafka_out.DATA_URI }} dfki/img",
           "outputData": [
             {
@@ -51,7 +51,7 @@ See the below JSON for an example of how **Microservice**, **Data** and
           ],
         },
         {
-          "id": "microservice_bbb",
+          "id": "microservice_bbb_uuid",
           //etc...
           "inputData": [
             {
@@ -70,13 +70,13 @@ See the below JSON for an example of how **Microservice**, **Data** and
     ``` json
     "Data": [
       {
-        "id": "data_zzz",
+        "id": "data_zzz_uuid",
         "DATA_DESC": "This is some important data.",
         "DATA_URI": "kafka://host/topic#1",
         //etc...
       },
       {
-        "id": "data_yyy",
+        "id": "data_yyy_uuid",
         //etc...
       }
     ],
@@ -86,14 +86,14 @@ See the below JSON for an example of how **Microservice**, **Data** and
 
     ``` json
     "DMA Tuple": {
-      "id": "dma_tuple_ggg",
+      "id": "dma_tuple_ggg_uuid",
       "DataAssetsMapping": {
         "microservice_aaa": {
-          "my_kafka_out": "data_zzz",
-          "my_file_out": "data_yyy"
+          "my_kafka_out": "data_zzz_uuid",
+          "my_file_out": "data_yyy_uuid"
         }
-        "microservice_bbb": {
-          "my_stream_in": "data_zzz"
+        "microservice_bbb_uuid": {
+          "my_stream_in": "data_zzz_uuid"
         }
       }
       //etc...

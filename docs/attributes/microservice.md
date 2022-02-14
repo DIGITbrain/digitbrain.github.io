@@ -17,8 +17,7 @@ has these sections:
 - [Service](#service)
 - [Hardware Requirements](#hardware-requirements)
 - [OS Requirements](#os-requirements)
-- [Input Data(WP4)](#input-datawp4)
-- [Output Data (WP4)](#output-data-wp4)
+- [Data Resources](#data-resources)
 - [Model(WP5)](#modelwp5)
 - [Parameters](#parameters)
 - [Metrics](#metrics)
@@ -275,17 +274,17 @@ has these sections:
         ```
 
 
-### Input Data(WP4)
+### Data Resources
 
 
-`inputData`{ #inputdata }
-:   **Optional**-*List( Data Objects)*- list of Data objects for each required input, specified using the "DATA" fields listed below
+`dataResource`{ #dataresource }
+:   **Optional**-*List( Data Objects)*- list of Data objects for each required data resource, specified using the "DATA" fields listed below
     === "Example"
         ``` yaml     
         {{DATA_KIND = {FILE, STREAM}, DATA_DIRECTION = {SOURCE}} 
         ```
 
-    `input_id`{ #input_id }
+    `DATA_RESOURCE_ID`{ #data_resource_id }
 :   **Required**-*String*- human-readable identifier, unique within a Microservice
 
         === "Example"
@@ -306,7 +305,7 @@ has these sections:
 
         === "Example"
             ``` yaml     
-            {SINK, BIDIRECTIONAL}
+            {SOURCE, SINK, BIDIRECTIONAL}
             ```
 
     `DATA_FORMAT`{ #data_format }
@@ -370,25 +369,6 @@ has these sections:
         === "Example"
             ``` yaml     
             {jpg}
-            ```
-
-
-### Output Data (WP4)
-
-
-`outputData`{ #outputdata }
-:   **Optional**-*List( Data Objects)*- list of Data objects for each generated output, specified using the "DATA" fields listed below
-    === "Example"
-        ``` yaml     
-        {{DATA_KIND = {FILE, STREAM}, DATA_DIRECTION = {SINK}} 
-        ```
-
-    `output_id`{ #output_id }
-:   **Required**-*String*- human-readable identifier, unique within a Microservice
-
-        === "Example"
-            ``` yaml     
-            file1
             ```
 
     `DATA_KIND`{ #data_kind }

@@ -5,7 +5,9 @@ name: Generate docs and publish
 on:
   # Triggers the workflow on push events for main and any fix/* feat/* branches
   push:
-    branches: [main]
+    branches:
+      - main
+      - "*/*"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:

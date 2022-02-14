@@ -1,31 +1,28 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Generate csv files
+name: Generate docs and publish
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
+  # Triggers the workflow on push events for main and any fix/* feat/* branches
   push:
     branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  generate:
     name: Generate docs from Excel
     runs-on: ubuntu-latest
+
+    # Define outputs for the auto-commit step
     outputs:
       changed: ${{ steps.auto_commit.outputs.changes_detected }}
       commit: ${{ steps.auto_commit.outputs.commit_hash }}
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -37,16 +34,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install wheel pandas openpyxl tabulate jinja2
 
-      - name: Run xls2csv
+      - name: Run xls2md (generate Markdown tables)
         run: python tools/xls2md.py
 
-      - name: Run xls2mkdocs
+      - name: Run xls2mkdocs (generate fields listing)
         run: python tools/xls2mkdocs.py
-        
-      - name: Run exceltojson
+
+      - name: Run exceltojson (generate an empty JSON template)
         run: python tools/exceltojson.py
 
-      - name: Git Auto Commit
+      - name: Commit any changes made by xls2md/xls2mkdocs
         id: auto_commit
         uses: stefanzweifel/git-auto-commit-action@v4.12.0
         with:
@@ -56,26 +53,26 @@ jobs:
   publish:
     name: Publish the site
     runs-on: ubuntu-latest
-    needs: build
+    needs: generate
 
     steps:
-      - name: Checkout the new commit if an auto-commit was made
-        if: needs.build.outputs.changed == 'true'
+      - name: Checkout repository using auto-commit
+        if: needs.generate.outputs.changed == 'true'
         uses: actions/checkout@v2
         with:
-          ref: ${{ needs.build.outputs.commit }}
+          ref: ${{ needs.generate.outputs.commit }}
 
-      - name: Checkout the commit that triggered the workflow
-        if: needs.build.outputs.changed == 'false'
+      - name: Checkout repository normally
+        if: needs.generate.outputs.changed == 'false'
         uses: actions/checkout@v2
 
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: "3.8"
-      
+
       - name: Install Mkdocs
         run: pip install mkdocs-material
-      
+
       - name: Run Mkdocs deploy
         run: mkdocs gh-deploy --force

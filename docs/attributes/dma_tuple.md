@@ -14,6 +14,8 @@ The metadata specification for a DIGITbrain DMA Tuple
 has these sections:
 
 - [Definition](#definition)
+- [Data Assets Mapping](#data-assets-mapping)
+- [Deployments](#deployments)
 
 
 ### Definition
@@ -101,12 +103,6 @@ has these sections:
         ma_pair_123e4567-e89b-12d3
         ```
 
-`DataAssetsMapping`{ #dataassetsmapping }
-:   **Optional**-*[DataAssetsMapping](dataassetsmapping.md)*- Mapping the available Data assets in this DMA Tuple to available Microservices. Required if Data assets are required. Not all microservices need a Data asset.
-
-`Deployments`{ #deployments }
-:   **Optional**-*[Deployment](deployment.md)*- Characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple
-
 `Schedule`{ #schedule }
 :   **Optional**-*Dates*- Days and hours the DMA Tuple will be active (optional)
     === "Example"
@@ -120,3 +116,17 @@ has these sections:
         ``` yaml     
         {‘injectionMold’: ‘Circuit Case’}
         ```
+
+
+### Data Assets Mapping
+
+
+`DataAssetsMapping`{ #dataassetsmapping }
+:   **Optional**-*[DataAssetsMapping](dataassetsmapping.md)*- Mapping the available Data assets in this DMA Tuple to available Microservices. Required if Data assets are required. Not all microservices need a Data asset.
+
+
+### Deployments
+
+
+`Deployments`{ #deployments }
+:   **Optional**-*[Deployment](deployment.md)*- Characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple

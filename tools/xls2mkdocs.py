@@ -5,6 +5,8 @@ SPECS_DIR = "docs/attributes"
 excel = "metadata.xlsx"
 sheets = pd.read_excel(excel, sheet_name=None)
 
+ASSETS = ("microservice", "algorithm", "model", "data", "ma_pair", "dma_tuple")
+
 for sheet_name in sheets.keys():
     sheet = pd.read_excel(
         excel, sheet_name=sheet_name, skiprows=[0], usecols="A:G"
@@ -54,5 +56,11 @@ for sheet_name in sheets.keys():
     template = jinja_env.get_template("docspage.md.j2")
     rendered = template.render(sheet_name=sheet_name, fields=sheet_list)
     file_name = sheet_name.lower().replace(" ", "_")
-    with open(f"{SPECS_DIR}/{file_name}.md", "w") as file:
+
+    write_path = (
+        f"{SPECS_DIR}/{file_name}/index.md"
+        if file_name in ASSETS
+        else f"{SPECS_DIR}/{file_name}.md"
+    )
+    with open(write_path, "w") as file:
         file.write(rendered)

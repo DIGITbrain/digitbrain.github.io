@@ -38,8 +38,8 @@ On-premises Data resources must be accessible for Algorithms running in a cloud,
 
 For a closer look at this metadata, use the following resources:
 
-- [Attribute Listing](attributes/data.md) for an itemised listing of fields
-- [Metadata Table](tables/data.md) for a table-formatted overview
+- [Attribute Listing](/attributes/data) for an itemised listing of fields
+- [Metadata Table](/tables/data) for a table-formatted overview
 - Feel free to extend this list as desired
 
 ## Further reading...

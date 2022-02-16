@@ -27,8 +27,8 @@ Where bring-your-own edges are used, DIGITbrain currently supports the following
 
 For a closer look at this metadata, use the following resources:
 
-- [Attribute Listing](attributes/deployment.md) for an itemised listing of fields
-- [Metadata Table](tables/deployment.md) for a table-formatted overview
+- [Attribute Listing](/attributes/deployment) for an itemised listing of fields
+- [Metadata Table](/tables/deployment) for a table-formatted overview
 - The **Further Reading** section below
 
 ## Further reading...

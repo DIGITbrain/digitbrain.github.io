@@ -14,8 +14,8 @@ The IP Instance (i.e. Industrial-Product Instance), the MA Pair (i.e. Model-Algo
 
 For a closer look at this metadata, use the following resources:
 
-- [Attribute Listing](attributes/dma_tuple.md) for an itemised listing of fields
-- [Metadata Table](tables/dma_tuple.md) for a table-formatted overview
+- [Attribute Listing](/attributes/dma_tuple) for an itemised listing of fields
+- [Metadata Table](/tables/dma_tuple) for a table-formatted overview
 - Feel free to extend this list as desired
 
 ## Further reading...

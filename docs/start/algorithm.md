@@ -23,8 +23,8 @@ To integrate an Algorithm within the DIGITbrain Solution, the following steps ne
 
 For a closer look at this metadata, use the following resources:
 
-- [Attribute Listing](attributes/algorithm.md) for an itemised listing of fields
-- [Metadata Table](tables/algorithm.md) for a table-formatted overview
+- [Attribute Listing](/attributes/algorithm) for an itemised listing of fields
+- [Metadata Table](/tables/algorithm) for a table-formatted overview
 - Feel free to extend this list as desired
 
 ## Further reading...

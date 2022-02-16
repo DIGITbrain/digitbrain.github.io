@@ -21,8 +21,8 @@ The Data Assets must already be published on the DIGITbrain platform.
 
 For a closer look at this metadata, use the following resources:
 
-- [Attribute Listing](attributes/dataassetmapping.md) for an itemised listing of fields
-- [Metadata Table](tables/dataassetsmapping.md) for a table-formatted overview
+- [Attribute Listing](/attributes/dataassetmapping) for an itemised listing of fields
+- [Metadata Table](/tables/dataassetsmapping) for a table-formatted overview
 
 ## An example
 

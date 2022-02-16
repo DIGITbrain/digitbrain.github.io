@@ -6,9 +6,12 @@ with the DIGITbrain platform. The documentation for each asset describes
 necessary pre-requisities and more detail on required fields.
 See the list below:
 
-- [Microservice](microservice.md)
-- [Algorithm](algorithm.md)
-- [Model](model.md)
-- [Data](data.md)
-- [MA Pair](ma_pair.md)
-- [DMA Tuple](dma_tuple.md)
+- [Microservice](microservice)
+- [Algorithm](algorithm)
+- [Model](model)
+- [Data](data)
+- [MA Pair](ma_pair)
+- [DMA Tuple](dma_tuple)
+    - [Deployment](deployment)
+    - [Data Assets Mapping](dataassetsmapping)
+- [Supporting Metadata](supporting_metadata)

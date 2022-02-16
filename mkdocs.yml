@@ -9,45 +9,60 @@ theme:
     primary: teal
     accent: cyan
   features:
+    - navigation.expand
+    - navigation.indexes
     - navigation.instant
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.top
 nav:
   - Home: index.md
-  - Getting Started: start.md
-  - Assets Overview:
-      - Microservice: microservice.md
-      - Algorithm: algorithm.md
-      - Model: model.md
-      - Data: data.md
-      - MA Pair: ma_pair.md
-      - DMA Tuple: dma_tuple.md
-      - Substructures:
-          - Data Assets Mapping: dataassetsmapping.md
-          - Deployment: deployment.md
-          - Supporting Metadata: supporting_metadata.md
+  - Getting Started:
+      - Getting Started: start/index.md
+      - Microservice: start/microservice.md
+      - Algorithm: start/algorithm.md
+      - Model: start/model.md
+      - Data: start/data.md
+      - MA Pair: start/ma_pair.md
+      - DMA Tuple:
+        - DMA Tuple: start/dma_tuple/index.md
+        - Data Assets Mapping: start/dataassetsmapping.md
+        - Deployment: start/deployment.md
+      - Supporting Metadata: start/supporting_metadata.md
   - Asset Detail:
-      - Microservice: attributes/microservice.md
-      - Algorithm: attributes/algorithm.md
-      - Model: attributes/model.md
-      - Data: attributes/data.md
-      - MA Pair: attributes/ma_pair.md
-      - DMA Tuple: attributes/dma_tuple.md
-      - Substructures:
-          - Data Assets Mapping: attributes/dataassetsmapping.md
-          - Deployment: attributes/deployment.md
-          - Supporting Metadata: attributes/supporting_metadata.md
+      - Asset Detail: attributes/index.md
+      - Microservice:
+        - Microservice: attributes/microservice/index.md
+      - Algorithm:
+        - Algorithm: attributes/algorithm/index.md
+      - Model:
+        - Model: attributes/model/index.md
+      - Data:
+        - Data: attributes/data/index.md
+      - MA Pair:
+        - MA Pair: attributes/ma_pair/index.md
+      - DMA Tuple:
+        - DMA Tuple: attributes/dma_tuple/index.md
+        - Data Assets Mapping: attributes/dataassetsmapping.md
+        - Deployment: attributes/deployment.md
+      - Supporting Metadata: attributes/supporting_metadata.md
   - Asset Tables:
-      - Microservice: tables/microservice.md
-      - Algorithm: tables/algorithm.md
-      - Model: tables/model.md
-      - Data: tables/data.md
-      - MA Pair: tables/ma_pair.md
-      - DMA Tuple: tables/dma_tuple.md
-      - Substructures:
-          - Data Assets Mapping: tables/dataassetsmapping.md
-          - Deployment: tables/deployment.md
-          - Supporting Metadata: tables/supporting_metadata.md
+      - Asset Tables: tables/index.md
+      - Microservice:
+        - Microservice: tables/microservice/index.md
+      - Algorithm:
+        - Algorithm: tables/algorithm/index.md
+      - Model:
+        - Model: tables/model/index.md
+      - Data:
+        - Data: tables/data/index.md
+      - MA Pair:
+        - MA Pair: tables/ma_pair/index.md
+      - DMA Tuple:
+        - DMA Tuple: tables/dma_tuple/index.md
+        - Data Assets Mapping: tables/dataassetsmapping.md
+        - Deployment: tables/deployment.md
+      - Supporting Metadata: tables/supporting_metadata.md
 
 markdown_extensions:
   - admonition

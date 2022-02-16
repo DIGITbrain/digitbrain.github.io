@@ -25,8 +25,8 @@ Contact an administrator for access to the DIGITbrain private registry.
 
 For a closer look at this metadata, use the following resources:
 
-- [Attribute Listing](attributes/microservice.md) for an itemised listing of fields
-- [Metadata Table](tables/microservice.md) for a table-formatted overview
+- [Attribute Listing](/attributes/microservice) for an itemised listing of fields
+- [Metadata Table](/tables/microservice) for a table-formatted overview
 - Feel free to extend this list as desired
 
 ## Further reading...

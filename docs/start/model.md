@@ -12,8 +12,8 @@ Models must be accessible from Algorithms for evaluation, thus they must be loca
 
 For a closer look at this metadata, use the following resources:
 
-- [Attribute Listing](attributes/model.md) for an itemised listing of fields
-- [Metadata Table](tables/model.md) for a table-formatted overview
+- [Attribute Listing](/attributes/model) for an itemised listing of fields
+- [Metadata Table](/tables/model) for a table-formatted overview
 
 ## Further reading...
 

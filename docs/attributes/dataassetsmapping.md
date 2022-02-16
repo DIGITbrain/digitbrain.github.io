@@ -16,10 +16,6 @@ has these sections:
 - [DataAssetsMapping](#dataassetsmapping)
 
 
-### *This substructure is part of [DMA Tuple](dma_tuple.md)*
-
-
-
 ### DataAssetsMapping
 
 

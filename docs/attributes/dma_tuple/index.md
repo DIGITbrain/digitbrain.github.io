@@ -122,11 +122,11 @@ has these sections:
 
 
 `DataAssetsMapping`{ #dataassetsmapping }
-:   **Optional**-*[DataAssetsMapping](dataassetsmapping.md)*- Mapping the available Data assets in this DMA Tuple to available Microservices. Required if Data assets are required. Not all microservices need a Data asset.
+:   **Optional**-*[DataAssetsMapping](../dataassetsmapping.md)*- Mapping the available Data assets in this DMA Tuple to available Microservices. Required if Data assets are required. Not all microservices need a Data asset.
 
 
 ### Deployments
 
 
 `Deployments`{ #deployments }
-:   **Optional**-*[Deployment](deployment.md)*- Characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple
+:   **Optional**-*[Deployment](../deployment.md)*- Characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple

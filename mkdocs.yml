@@ -22,10 +22,10 @@ nav:
       - Data: data.md
       - MA Pair: ma_pair.md
       - DMA Tuple: dma_tuple.md
-      - Supporting Metadata: supporting_metadata.md
       - Substructures:
           - Data Assets Mapping: dataassetsmapping.md
           - Deployment: deployment.md
+          - Supporting Metadata: supporting_metadata.md
   - Asset Detail:
       - Microservice: attributes/microservice.md
       - Algorithm: attributes/algorithm.md
@@ -33,21 +33,21 @@ nav:
       - Data: attributes/data.md
       - MA Pair: attributes/ma_pair.md
       - DMA Tuple: attributes/dma_tuple.md
-      - Supporting Metadata: attributes/supporting_metadata.md
       - Substructures:
           - Data Assets Mapping: attributes/dataassetsmapping.md
           - Deployment: attributes/deployment.md
+          - Supporting Metadata: attributes/supporting_metadata.md
   - Asset Tables:
-      - tables/microservice.md
-      - tables/algorithm.md
-      - tables/model.md
-      - tables/data.md
+      - Microservice: tables/microservice.md
+      - Algorithm: tables/algorithm.md
+      - Model: tables/model.md
+      - Data: tables/data.md
       - MA Pair: tables/ma_pair.md
       - DMA Tuple: tables/dma_tuple.md
-      - Supporting Metadata: tables/supporting_metadata.md
       - Substructures:
           - Data Assets Mapping: tables/dataassetsmapping.md
-          - tables/deployment.md
+          - Deployment: tables/deployment.md
+          - Supporting Metadata: tables/supporting_metadata.md
 
 markdown_extensions:
   - admonition

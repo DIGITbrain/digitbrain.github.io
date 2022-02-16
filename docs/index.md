@@ -12,7 +12,7 @@ model, called Manufacturing-as-a-Service (MaaS), which will allow for on-demand
 production of much more specialised products, even in smaller quantities and still
 in an economically profitable way.
 
-##### For full project details visit [digitbrain.eu](https://digitbrain.eu/).
+**For full project details visit [digitbrain.eu](https://digitbrain.eu/).**
 
 ## About this documentation
 
@@ -33,4 +33,4 @@ Please navigate the site using the available navigation bars. Metadata informati
 is available in both a table and list views. The Asset Overview pages may contain
 extra helpful information for getting started.
 
-##### If you experience any issues using this site, or have any comments, please let us know by creating an [issue on Github](https://github.com/DIGITbrain/digitbrain.github.io/issues/new).
+**If you experience any issues using this site, or have any comments, please let us know by creating an [issue on Github](https://github.com/DIGITbrain/digitbrain.github.io/issues/new).**

@@ -12,4 +12,3 @@ See the list below:
 - [Data](data.md)
 - [MA Pair](ma_pair.md)
 - [DMA Tuple](dma_tuple.md)
-- [Deployment](deployment.md)

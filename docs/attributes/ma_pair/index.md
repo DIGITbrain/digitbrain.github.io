@@ -67,21 +67,24 @@ has these sections:
         ```
 
 `Name`{ #name }
-:   **Optional**-*Text*- Short name to identify the MA Pair
+:   **Required**-*Text*- Short name to identify the MA Pair
+
     === "Example"
         ``` yaml     
         Pressure drop
         ```
 
 `Scope`{ #scope }
-:   **Optional**-*Text*- Short description of the scope of the MA Pair (human readable)
+:   **Required**-*Text*- Short description of the scope of the MA Pair (human readable)
+
     === "Example"
         ``` yaml     
         Effectiveness of the mold closing process
         ```
 
 `IP Family`{ #ip-family }
-:   **Optional**-*UUID*- Identifier of the IP Family the MA Pair is valid for
+:   **Required**-*UUID*- Identifier of the IP Family the MA Pair is valid for
+
     === "Example"
         ``` yaml     
         ip_family_123e4567-e89b-12d3
@@ -95,14 +98,16 @@ has these sections:
         ```
 
 `M Asset`{ #m-asset }
-:   **Optional**-*UUID*- Identifier of the Model Asset associated to the MA Pair (NB: The corresponding model file is indicated in Model metadata (first tab) as Model_URI and the corresponding zip file needs to be served to the Algorithm to evaluate the Model by the Microservice (MODEL_FILENAME))
+:   **Required**-*UUID*- Identifier of the Model Asset associated to the MA Pair (NB: The corresponding model file is indicated in Model metadata (first tab) as Model_URI and the corresponding zip file needs to be served to the Algorithm to evaluate the Model by the Microservice (MODEL_FILENAME))
+
     === "Example"
         ``` yaml     
         model_123e4567-e89b-12d3
         ```
 
 `A Asset`{ #a-asset }
-:   **Optional**-*UUID*- Identifiers of the Algorithm Asset associated to the MA Pair
+:   **Required**-*UUID*- Identifiers of the Algorithm Asset associated to the MA Pair
+
     === "Example"
         ``` yaml     
         algorithm_123e4567-e89b-12d3

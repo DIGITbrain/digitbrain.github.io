@@ -23,22 +23,28 @@ has these sections:
 
 
 `ID`{ #id }
-:   **Optional**-*ID / URI*- Unique identifier for the Person
+:   **Auto-generated**-*ID / URI*- Unique identifier for the Person
+
 
 `Created at`{ #created-at }
-:   **Optional**-*ISO 8601*- Date of creation
+:   **Auto-generated**-*ISO 8601*- Date of creation
+
 
 `Version`{ #version }
-:   **Optional**-*Integer*- Version number of the Person
+:   **Auto-generated**-*Integer*- Version number of the Person
+
 
 `First name`{ #first-name }
-:   **Optional**-*Text*- First name of the Person
+:   **Required**-*Text*- First name of the Person
+
 
 `Last name`{ #last-name }
-:   **Optional**-*Text*- Last name of the Person
+:   **Required**-*Text*- Last name of the Person
+
 
 `Email`{ #email }
-:   **Optional**-*Email*- Email address of the Person
+:   **Required**-*Email*- Email address of the Person
+
 
 `CV`{ #cv }
 :   **Optional**-*Text*- Short description of the Person
@@ -54,22 +60,28 @@ has these sections:
 
 
 `ID`{ #id }
-:   **Optional**-*ID / URI*- Unique identifier for the Legal Entity
+:   **Auto-generated**-*ID / URI*- Unique identifier for the Legal Entity
+
 
 `Created at`{ #created-at }
-:   **Optional**-*ISO 8601*- Date of creation
+:   **Auto-generated**-*ISO 8601*- Date of creation
+
 
 `Version`{ #version }
-:   **Optional**-*Integer*- Version number of the Legal Entity
+:   **Auto-generated**-*Integer*- Version number of the Legal Entity
+
 
 `Author`{ #author }
-:   **Optional**-*ID / URI*- Identifier of the Author of the Legal Entity
+:   **Required**-*ID / URI*- Identifier of the Author of the Legal Entity
+
 
 `Name`{ #name }
-:   **Optional**-*Text*- Name of the Legal Entity
+:   **Required**-*Text*- Name of the Legal Entity
+
 
 `Description`{ #description }
-:   **Optional**-*Text*- Description of the Legal Entity
+:   **Required**-*Text*- Description of the Legal Entity
+
 
 `Logo`{ #logo }
 :   **Optional**-*Image*- Logo of the Legal Entity
@@ -91,22 +103,28 @@ has these sections:
 
 
 `ID`{ #id }
-:   **Optional**-*ID / URI*- Unique identifier for the IP Fam.
+:   **Auto-generated**-*ID / URI*- Unique identifier for the IP Fam.
+
 
 `Created at`{ #created-at }
-:   **Optional**-*ISO 8601*- Date of creation
+:   **Auto-generated**-*ISO 8601*- Date of creation
+
 
 `Version`{ #version }
-:   **Optional**-*Integer*- Version number of the IP Family
+:   **Auto-generated**-*Integer*- Version number of the IP Family
+
 
 `Author`{ #author }
-:   **Optional**-*ID / URI*- Identifier of the Author of the IP Family
+:   **Required**-*ID / URI*- Identifier of the Author of the IP Family
+
 
 `Manager`{ #manager }
-:   **Optional**-*ID / URI*- Identifier of the Legal Entity managing the IP Family
+:   **Required**-*ID / URI*- Identifier of the Legal Entity managing the IP Family
+
 
 `Name`{ #name }
-:   **Optional**-*Text*- Technical Name of the IP Family
+:   **Required**-*Text*- Technical Name of the IP Family
+
 
 `Image`{ #image }
 :   **Optional**-*Image*- Picture of the IP Family
@@ -128,25 +146,32 @@ has these sections:
 
 
 `ID`{ #id }
-:   **Optional**-*ID / URI*- Unique identifier for the IP Inst.
+:   **Auto-generated**-*ID / URI*- Unique identifier for the IP Inst.
+
 
 `Created at`{ #created-at }
-:   **Optional**-*ISO 8601*- Date of creation
+:   **Auto-generated**-*ISO 8601*- Date of creation
+
 
 `Version`{ #version }
-:   **Optional**-*Integer*- Version number of the IP Instance
+:   **Auto-generated**-*Integer*- Version number of the IP Instance
+
 
 `Author`{ #author }
-:   **Optional**-*ID / URI*- Identifier of the Author of the IP Instance
+:   **Required**-*ID / URI*- Identifier of the Author of the IP Instance
+
 
 `Operator`{ #operator }
-:   **Optional**-*ID / URI*- Identifier of the Legal Entity operating the IP Instance
+:   **Required**-*ID / URI*- Identifier of the Legal Entity operating the IP Instance
+
 
 `IP Family`{ #ip-family }
-:   **Optional**-*ID / URI*- Reference to the IP Family
+:   **Required**-*ID / URI*- Reference to the IP Family
+
 
 `Name`{ #name }
-:   **Optional**-*Text*- Name of the IP Instance
+:   **Required**-*Text*- Name of the IP Instance
+
 
 `Image`{ #image }
 :   **Optional**-*Image*- Picture of the IP Instance

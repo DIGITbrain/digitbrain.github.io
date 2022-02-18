@@ -69,21 +69,24 @@ has these sections:
         ```
 
 `Name`{ #name }
-:   **Optional**-*Text*- Short name to identify the DMA Tuple
+:   **Required**-*Text*- Short name to identify the DMA Tuple
+
     === "Example"
         ``` yaml     
         Pressure drop for the injection in hall 3
         ```
 
 `Scope`{ #scope }
-:   **Optional**-*Text*- Short description of the scope of the DMA Tuple (human readable)
+:   **Required**-*Text*- Short description of the scope of the DMA Tuple (human readable)
+
     === "Example"
         ``` yaml     
         Effectiveness of the mold closing process
         ```
 
 `IP Instance`{ #ip-instance }
-:   **Optional**-*ID / URI*- Identifier of the IP Instance the DMA Tuple is valid for (NB: Entity for IP Instance is referenced)
+:   **Required**-*ID / URI*- Identifier of the IP Instance the DMA Tuple is valid for (NB: Entity for IP Instance is referenced)
+
     === "Example"
         ``` yaml     
         ip_instance_123e4567-e89b-12d3
@@ -97,7 +100,8 @@ has these sections:
         ```
 
 `MA Pair`{ #ma-pair }
-:   **Optional**-*ID / URI*- Identifier of the MA Pair associated to the DMA Tuple
+:   **Required**-*ID / URI*- Identifier of the MA Pair associated to the DMA Tuple
+
     === "Example"
         ``` yaml     
         ma_pair_123e4567-e89b-12d3
@@ -122,11 +126,13 @@ has these sections:
 
 
 `DataAssetsMapping`{ #dataassetsmapping }
-:   **Optional**-*[DataAssetsMapping](../dataassetsmapping.md)*- Mapping the available Data assets in this DMA Tuple to available Microservices. Required if Data assets are required. Not all microservices need a Data asset.
+:   **Required**-*[DataAssetsMapping](../dataassetsmapping.md)*- Mapping required Data assets to Microservices specified in the MA Pair. Not every Microservice needs a Data asset.
+
 
 
 ### Deployments
 
 
 `Deployments`{ #deployments }
-:   **Optional**-*[Deployment](../deployment.md)*- Characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple
+:   **Required**-*[Deployment](../deployment.md)*- Characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple
+

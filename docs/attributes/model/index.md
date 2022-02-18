@@ -29,10 +29,12 @@ has these sections:
 
 
 `Name`{ #name }
-:   **Optional**-*string*- Name of the model
+:   **Required**-*string*- Name of the model
+
 
 `Version`{ #version }
-:   **Optional**-*semver*- Version of the model. If model only has revisions, use semver prerelease 0.1, 0.2, etc.
+:   **Required**-*semver*- Version of the model. If model only has revisions, use semver prerelease 0.1, 0.2, etc.
+
 
 `License`{ #license }
 :   **Optional**-*enum*- License of the model.  Type tbd in SAD group

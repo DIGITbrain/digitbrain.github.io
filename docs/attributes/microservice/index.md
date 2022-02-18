@@ -118,14 +118,16 @@ has these sections:
         ```
 
     `filePath`{ #filepath }
-:   **Optional**-*String*- full path to file including file name
+:   **Required**-*String*- full path to file including file name
+
         === "Example"
             ``` yaml     
             /data/rclone.conf
             ```
 
     `fileContent`{ #filecontent }
-:   **Optional**-*String*- file content (not binary)
+:   **Required**-*String*- file content (not binary)
+
         === "Example"
             ``` yaml     
             [s3-server]\n    access_key: 123abc

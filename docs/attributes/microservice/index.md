@@ -111,7 +111,7 @@ has these sections:
         ```
 
 `configurationData`{ #configurationdata }
-:   **Optional**-*[DataAssetsMapping](../dataassetsmapping.md)*- List of objects specifying configuration file(s) content required by the service
+:   **Optional**-*[ConfigurationData](../configurationdata.md)*- List of objects specifying configuration file(s) content required by the service
 
 `mountedSharedDirectories`{ #mountedshareddirectories }
 :   **Optional**-*String*- A note for developers of co-operating Microservices. Directories that should be shared to the host where this microservice can find required inputs / store outputs

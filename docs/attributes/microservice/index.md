@@ -140,18 +140,11 @@ has these sections:
             True
             ```
 
-`mountedInputDirectories`{ #mountedinputdirectories }
-:   **Optional**-*List(String)*- A note for developers of co-operating Microservices. A list of directories that should be shared to the host by where this microservice can find required inputs
+`mountedSharedDirectories`{ #mountedshareddirectories }
+:   **Optional**-*String*- A note for developers of co-operating Microservices. Directories that should be shared to the host where this microservice can find required inputs / store outputs
     === "Example"
         ``` yaml     
-        ["/data", "/cfg"]
-        ```
-
-`mountedOutputDirectories`{ #mountedoutputdirectories }
-:   **Optional**-*List(String)*- A note for developers of co-operating Microservices.  A list of directories that are shared on the host where this microservice will store its outputs
-    === "Example"
-        ``` yaml     
-        ["/data_out", "/results"]
+        /data and /cfg are mounted on the host for data and configuration sharing, respectively.
         ```
 
 

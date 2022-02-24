@@ -111,34 +111,7 @@ has these sections:
         ```
 
 `configurationData`{ #configurationdata }
-:   **Optional**-*List(Map)*- configuration file(s) required by the service
-    === "Example"
-        ``` yaml     
-        https://github.com/UoW-CPC/ADTGenerator/blob/main/examples/metadata_RISTRA.json#L101
-        ```
-
-    `filePath`{ #filepath }
-:   **Required**-*String*- full path to file including file name
-
-        === "Example"
-            ``` yaml     
-            /data/rclone.conf
-            ```
-
-    `fileContent`{ #filecontent }
-:   **Required**-*String*- file content (not binary)
-
-        === "Example"
-            ``` yaml     
-            [s3-server]\n    access_key: 123abc
-            ```
-
-    `mountPropagation`{ #mountpropagation }
-:   **Optional**-*boolean*- Enable mountPropagation https://kubernetes.io/docs/concepts/storage/volumes/#mount-propagation . Default: False
-        === "Example"
-            ``` yaml     
-            True
-            ```
+:   **Optional**-*[DataAssetsMapping](../dataassetsmapping.md)*- List of objects specifying configuration file(s) content required by the service
 
 `mountedSharedDirectories`{ #mountedshareddirectories }
 :   **Optional**-*String*- A note for developers of co-operating Microservices. Directories that should be shared to the host where this microservice can find required inputs / store outputs

@@ -158,25 +158,11 @@ has these sections:
         2
         ```
 
-`minimumNumberOfGPUs`{ #minimumnumberofgpus }
-:   **Optional**-*Int*- minimum required number of GPUs
-    === "Example"
-        ``` yaml     
-        1
-        ```
-
 `recommendedGPURAM`{ #recommendedgpuram }
 :   **Optional**-*Int*- recommended amount of GPU memory in GB
     === "Example"
         ``` yaml     
         6
-        ```
-
-`minimumGPURAM`{ #minimumgpuram }
-:   **Optional**-*Int*- minimum required amount of GPU memory in GB
-    === "Example"
-        ``` yaml     
-        1
         ```
 
 `gpuType`{ #gputype }
@@ -207,25 +193,11 @@ has these sections:
         16
         ```
 
-`minimumRAM`{ #minimumram }
-:   **Optional**-*String*- minimum required amount memory in GB
-    === "Example"
-        ``` yaml     
-        2
-        ```
-
 `recommendedCPUs`{ #recommendedcpus }
 :   **Optional**-*Int*- recommended number of CPU cores
     === "Example"
         ``` yaml     
         4
-        ```
-
-`minimumCPUs`{ #minimumcpus }
-:   **Optional**-*Int*- minimum required number of CPU cores
-    === "Example"
-        ``` yaml     
-        2
         ```
 
 `requiredDiskSpace`{ #requireddiskspace }
@@ -240,32 +212,17 @@ has these sections:
 
 
 `osArch`{ #osarch }
-:   **Required**-*String*- supported os architecture
-
+:   **Optional**-*String*- supported os architecture. Defaults to x86
     === "Example"
         ``` yaml     
         x86_64
         ```
 
 `osType`{ #ostype }
-:   **Optional**-*String*- supported os type
+:   **Optional**-*String*- supported os type. Defaults to Linux
     === "Example"
         ``` yaml     
         linux
-        ```
-
-`osDistribution`{ #osdistribution }
-:   **Optional**-*String*- supported os distribution
-    === "Example"
-        ``` yaml     
-        ubuntu
-        ```
-
-`osVersion`{ #osversion }
-:   **Optional**-*String*- description of supported os version
-    === "Example"
-        ``` yaml     
-        20.04
         ```
 
 

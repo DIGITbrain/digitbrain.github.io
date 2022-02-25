@@ -33,7 +33,10 @@ nav:
       - Asset Detail: attributes/index.md
       - Microservice:
         - Microservice: attributes/microservice/index.md
-        - ConfigurationData: attributes/configurationdata.md
+        - Configuration Data: attributes/configurationdata.md
+        - Data Resources: attributes/data_resources.md
+        - Parameters: attributes/parameters.md
+        - Metrics: attributes/metrics.md
       - Algorithm:
         - Algorithm: attributes/algorithm/index.md
       - Model:
@@ -51,7 +54,10 @@ nav:
       - Asset Tables: tables/index.md
       - Microservice:
         - Microservice: tables/microservice/index.md
-        - ConfigurationData: tables/configurationdata.md
+        - Configuration Data: tables/configurationdata.md
+        - Data Resources: attributes/data_resources.md
+        - Parameters: attributes/parameters.md
+        - Metrics: attributes/metrics.md
       - Algorithm:
         - Algorithm: tables/algorithm/index.md
       - Model:

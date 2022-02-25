@@ -4,6 +4,10 @@ Here you can find a **detailed listing** of the very latest metadata
 specification of each of the DIGITbrain assets. Pick one to get started:
 
 - [Microservice](microservice)
+    - [Configuration Data](configurationdata)
+    - [Data Resources](data_resources)
+    - [Parameters](parameters)
+    - [Metrics](metrics)
 - [Algorithm](algorithm)
 - [Model](model)
 - [Data](data)

@@ -5,12 +5,13 @@
 Compared to the digital twin concept, which is already increasingly used by
 manufacturing companies today, the DIGITbrain concept will go one step further
 by developing the 'Digital Product Brain' which will store data throughout the
-entire life cycle of a production line or a machine. By collecting all this data,
-it will be possible to customise and set-up machines / production assets for very
-specific manufacturing tasks whenever needed. This will enable a new manufacturing
-model, called Manufacturing-as-a-Service (MaaS), which will allow for on-demand
-production of much more specialised products, even in smaller quantities and still
-in an economically profitable way.
+entire life cycle of a production line or a machine.
+
+By collecting all this data, it will be possible to customise and set-up machines
+/ production assets for very specific manufacturing tasks whenever needed. This will
+enable a new manufacturing model, called Manufacturing-as-a-Service (MaaS), which will
+allow for on-demand production of much more specialised products, even in smaller
+quantities and still in an economically profitable way.
 
 **For full project details visit [digitbrain.eu](https://digitbrain.eu/).**
 

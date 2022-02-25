@@ -10,6 +10,8 @@ specification of each of the DIGITbrain assets. Pick one to get started:
     - [Metrics](metrics)
 - [Algorithm](algorithm)
 - [Model](model)
+    - [In-slots](in-slots)
+    - [Outputs](outputs)
 - [Data](data)
 - [MA Pair](ma_pair)
 - [DMA Tuple](dma_tuple)

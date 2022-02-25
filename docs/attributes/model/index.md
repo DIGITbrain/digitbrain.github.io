@@ -86,76 +86,10 @@ has these sections:
 
 
 `In-slots`{ #in-slots }
-:   **Optional**-*array of obj*- Values on which the model is evaluated (or parameters that might set before or during the evaluation) - Inputs and parameters together, although if needed we can still differentiate them internally in key field for each specific model.
-
-    `Key`{ #key }
-:   **Optional**-*string*- Group key (eg. type and name) of the in-slot
-
-    `Name`{ #name }
-:   **Optional**-*string*- Human-readable name of the in-slot
-
-    `Dimensions`{ #dimensions }
-:   **Optional**-*number*- Number of dimensions of the in-slot (i.e. scalar, vector field)
-
-    `Is-continuous`{ #is-continuous }
-:   **Optional**-*boolean*- continuous or discreet in-slot
-
-    `Units`{ #units }
-:   **Optional**-*obj (see subkeys below)*- Values related to the in-slot measurement units
-
-    `Units.Unit`{ #units.unit }
-:   **Optional**-*string*- Units of the in-slot (e.g Pa, m/s, etc…)
-
-    `Units.Exponent`{ #units.exponent }
-:   **Optional**-*array of number*- eg. exponents for kg (SI) {1, -2, 0, 0, 0, 0, 1}
-
-    `Units.Offset`{ #units.offset }
-:   **Optional**-*number*- scale offset if needed (e.g. K to C conversion)
-
-    `Units.Scale`{ #units.scale }
-:   **Optional**-*number*- Order of magnitude of the measurement unit scale e.g. Scale is equal to 10^-3 for values expressed in mm
-
-    `Default-value`{ #default-value }
-:   **Optional**-*number*- Default value for the in-slot
-
-    `Ranges`{ #ranges }
-:   **Optional**-*array of number*- Max and min value of the in-slot
+:   **Optional**-*[In-slots](../in-slots.md)*- Values on which the model is evaluated (or parameters that might set before or during the evaluation) - Inputs and parameters together, although if needed we can still differentiate them internally in key field for each specific model.
 
 `Outputs`{ #outputs }
-:   **Optional**-*array of obj*- Values that the model approximates
-
-    `Key`{ #key }
-:   **Optional**-*string*- Group key (eg. type and name) of the output
-
-    `Name`{ #name }
-:   **Optional**-*string*- Human-readable name of the output
-
-    `Dimensions`{ #dimensions }
-:   **Optional**-*number*- Number of dimensions of the output (i.e. scalar, vector field)
-
-    `Is-continuous`{ #is-continuous }
-:   **Optional**-*boolean*- Continuous or discreet output
-
-    `Units`{ #units }
-:   **Optional**-*obj (see subkeys below)*- Values related to the output measurement units
-
-    `Units.Unit`{ #units.unit }
-:   **Optional**-*string*- Units of the output (e.g Pa, m/s, etc…)
-
-    `Units.Exponent`{ #units.exponent }
-:   **Optional**-*array of number*- eg. exponents for kg (SI) {1, -2, 0, 0, 0, 0, 1}
-
-    `Units.Offset`{ #units.offset }
-:   **Optional**-*number*- scale offset if needed (e.g. K to C conversion)
-
-    `Units.Scale`{ #units.scale }
-:   **Optional**-*number*- Order of magnitude of the measurement unit scale e.g. Scale is equal to 10^-3 for values expressed in mm
-
-    `Default-value`{ #default-value }
-:   **Optional**-*number*- Default value for the output
-
-    `Ranges`{ #ranges }
-:   **Optional**-*array of number*- Max and min value of the output
+:   **Optional**-*[Outputs](../outputs.md)*- Values that the model approximates
 
 `CosimSolverInfo`{ #cosimsolverinfo }
 :   **Optional**-*obj*- For co-simulation Type only

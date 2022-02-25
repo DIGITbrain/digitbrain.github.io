@@ -41,6 +41,8 @@ nav:
         - Algorithm: attributes/algorithm/index.md
       - Model:
         - Model: attributes/model/index.md
+        - In-Slots: attributes/in-slots.md
+        - Outputs: attributes/outputs.md
       - Data:
         - Data: attributes/data/index.md
       - MA Pair:
@@ -55,13 +57,15 @@ nav:
       - Microservice:
         - Microservice: tables/microservice/index.md
         - Configuration Data: tables/configurationdata.md
-        - Data Resources: attributes/data_resources.md
-        - Parameters: attributes/parameters.md
-        - Metrics: attributes/metrics.md
+        - Data Resources: tables/data_resources.md
+        - Parameters: tables/parameters.md
+        - Metrics: tables/metrics.md
       - Algorithm:
         - Algorithm: tables/algorithm/index.md
       - Model:
         - Model: tables/model/index.md
+        - In-Slots: tables/in-slots.md
+        - Outputs: tables/outputs.md
       - Data:
         - Data: tables/data/index.md
       - MA Pair:

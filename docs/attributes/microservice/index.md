@@ -228,89 +228,11 @@ has these sections:
 
 
 `parameters`{ #parameters }
-:   **Optional**-*List( Parameter)*- list of Parameter objects for each possible parameters, to be specified before deployment
-
-    `name`{ #name }
-:   **Required**-*String*- short name for this parameter (should be unique across the Microservice’s parameters)
-
-        === "Example"
-            ``` yaml     
-            detection_threshold
-            ```
-
-    `type`{ #type }
-:   **Required**-*Enumeration (xsd datatypes)*- expected input type (may be used to verify the input)
-
-        === "Example"
-            ``` yaml     
-            Integer
-            ```
-
-    `mandatory`{ #mandatory }
-:   **Optional**-*Boolean*- whether this parameter is mandatory (default: false)
-        === "Example"
-            ``` yaml     
-            true
-            ```
-
-    `defaultValue`{ #defaultvalue }
-:   **Optional**-*has to match "type"*- a default value, if the parameter is required but not provided
-        === "Example"
-            ``` yaml     
-            42
-            ```
-
-    `description`{ #description }
-:   **Required**-*String*- short description of the parameter and its possible values
-
-        === "Example"
-            ``` yaml     
-            This parameter can be used to configure the included algorithm in a certain way, possible values: "A", "B", "Z"
-            ```
+:   **Optional**-*[Parameters](../parameters.md)*- list of Parameter objects for each possible parameters, to be specified before deployment
 
 
 ### Metrics
 
 
 `metrics`{ #metrics }
-:   **Optional**-*List( Metrics)*- list of Metric objects for each metric collected by the Microservice
-
-    `name`{ #name }
-:   **Required**-*String*- short name (should be unique across the Microservice's metrics)
-
-        === "Example"
-            ``` yaml     
-            meanTemperature
-            ```
-
-    `correspondingMeasurement`{ #correspondingmeasurement }
-:   **Required**-*String*- identification of the corresponding measurement, i.e. output of the Model
-
-        === "Example"
-            ``` yaml     
-            temperature1
-            ```
-
-    `function`{ #function }
-:   **Required**-*String*- short description of the mathematical approach used to derive this value
-
-        === "Example"
-            ``` yaml     
-            arithmetic mean
-            ```
-
-    `unit`{ #unit }
-:   **Required**-*String*- the unit of the metric measurement
-
-        === "Example"
-            ``` yaml     
-            degree celsius
-            ```
-
-    `description`{ #description }
-:   **Required**-*String*- short description of the metric measurement
-
-        === "Example"
-            ``` yaml     
-            This metric describes the arithmetic mean of the approximated temperatures of the fabricated part when it leaves station 4.
-            ```
+:   **Optional**-*[Metrics](../metrics.md)*- list of Metric objects for each metric collected by the Microservice

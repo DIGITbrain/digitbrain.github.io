@@ -136,22 +136,22 @@ has these sections:
         [ { application/json , text/plain , application/octet-stream , application/zip } ] 
         ```
 
-
-### Data access specification
-
-
 `DATA_STORE_TYPE`{ #data_store_type }
-:   **Optional**-*string*- The exact type of the data resource. Typically corresponds to the scheme part (scheme://) of DATA_URI.
+:   **Optional**-*string*- The exact type of the data resource. Typically (but not always) corresponds to the scheme part (scheme://) of DATA_URI.
     === "Example"
         ``` yaml     
         S3 , MYSQL , MQTT , ... (WP6: DATA_SOURCE_TYPE=LOCAL, PATH=...")
         ```
 
+
+### Data access specification
+
+
 `DATA_URI`{ #data_uri }
 :   **Optional**-*URI*- Accessibility of the data resource, including host, port information, protocol, and other fields (path is protocol dependent, can be a topic name). GUI may show host, port, path separately. Hidden at search. Format: scheme://host:port/path.  Pseudo vars: DATA_PROTOCOL, DATA_HOST, DATA_PORT, DATA_PATH, DATA_QUERY, DATA_FRAGMENT.
     === "Example"
         ``` yaml     
-        s3://amazonaws/bucket/object , kafka://host/topic#1 , ...
+        https://amazonaws/bucket/object , kafka://host/topic#1 , ...
         ```
 
 `DATA_AUTH`{ #data_auth }
@@ -172,39 +172,11 @@ has these sections:
 ### Further access clauses (extensible)
 
 
-`DATA_PROTOCOL`{ #data_protocol }
-:   **Optional**-*string*- Protocol to use in communication with the data source, only if DATA_TYPE does not imply it (e.g. S3 over HTTP). Moved from to Data access specification. Note this is not necessarily the scheme part of the URI.
+`DATA_AUX_INFO`{ #data_aux_info }
+:   **Optional**-*string*- List of key-value pais (JSON object/YAML dictionary) for additional specification of the data resource. New keys can be added on demand, a list of known keys is available.
     === "Example"
         ``` yaml     
-        HTTP, HTTPS, TCP, UDP
-        ```
-
-`DATA_MYSQL_DIALECT`{ #data_mysql_dialect }
-:   **Optional**-*string*- Protocol dialect to be used in communication with the database
-    === "Example"
-        ``` yaml     
-        mysqldialect , mariadbdialect
-        ```
-
-`DATA_MQTT_PROTOCOL_VERSION`{ #data_mqtt_protocol_version }
-:   **Optional**-*string*- MQTT protocol version must be used
-    === "Example"
-        ``` yaml     
-        3.1.1, 5.0
-        ```
-
-`DATA_KAFKA_BROKER_VERSION`{ #data_kafka_broker_version }
-:   **Optional**-*string*- Kafka broker version
-    === "Example"
-        ``` yaml     
-        2.7.0
-        ```
-
-`DATA_S3_REGION`{ #data_s3_region }
-:   **Optional**-*string*- S3 region
-    === "Example"
-        ``` yaml     
-        eu-central-1
+        { PROTOCOL: http, MYSQL_DIALECT: mariadbdialect, MQTT_PROTOCOL_VERSION: 3.1.1, KAFKA_BROKER_VERSION: 2.7.0, S3_REGION: eu-central-1 }
         ```
 
 
@@ -224,6 +196,3 @@ has these sections:
         ``` yaml     
         database schema URL
         ```
-
-`DATA_SCHEMA_ADDITIONAL_ATTRIBUTES`{ #data_schema_additional_attributes }
-:   **Optional**-*string*- Further restriction/specialization of DATA_SCHEMA, “general” schema.

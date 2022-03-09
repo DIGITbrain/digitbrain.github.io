@@ -1,6 +1,11 @@
 import pandas, json, ast, sys
 
-MS_SHEET_NAME = "Microservice"
+# Add more substructures here, with their parent. Case-sensitive
+STRUCTURES = {
+    "Microservice": "",
+    "Deployment": "DMA Tuple",
+    "DataAssetsMapping": "DMA Tuple",
+}
 
 
 def is_not_empty(value):
@@ -40,11 +45,27 @@ def validate_sheet(sheet):
         raise ValueError
 
 
+def handle_lists(sheet_name, the_json):
+    for name, parent in STRUCTURES.items():
+
+        if not sheet_name.startswith(name):
+            continue
+
+        # If the substructure has a parent (i.e anything other than a MS)
+        if parent:
+            the_json.setdefault(parent, {}).setdefault(name, []).append({})
+            return the_json[parent][name][len(the_json[parent][name]) - 1]
+
+        # Microservices
+        else:
+            the_json.setdefault(name, []).append({})
+            return the_json[name][len(the_json[name]) - 1]
+
+
 def to_json(file_name):
     workbook = pandas.read_excel(file_name, sheet_name=None)
 
     my_dict = {}
-    microservice_count = 0
 
     for sheet_name in workbook:
         # Load each sheet
@@ -57,18 +78,19 @@ def to_json(file_name):
             print(f"WARNING: Invalid sheet: {sheet_name}")
             continue
 
-        # Microservices should been appended to a list
-        if (
-            sheet_name.lower().startswith("microservice")
-            or "msid" in sheet_name.lower()
-        ):
-            my_dict.setdefault(MS_SHEET_NAME, []).append({})
-            sheet_key = my_dict[MS_SHEET_NAME][microservice_count]
-            microservice_count += 1
-
-        # All other assets are dictionaries
-        else:
+        # Most assets are dictionaries
+        if not sheet_name.startswith(tuple(STRUCTURES.keys())):
             sheet_key = my_dict.setdefault(sheet_name, {})
+
+        # MS is a list, as are all substructures
+        else:
+            try:
+                sheet_key = handle_lists(sheet_name, my_dict)
+            except AttributeError:
+                print(
+                    f"WARNING: Skipping {sheet_name} because value filled in parent sheet"
+                )
+                continue
 
         # Parent key for nested subkeys
         parent_key = ""

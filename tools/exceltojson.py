@@ -33,6 +33,13 @@ def is_optional_and_empty(value, required):
     return not value and "mandatory" not in required.lower()
 
 
+def validate_sheet(sheet):
+    if not all(
+        key in sheet for key in ("Key", "Subkey", "Values", "Type", "Condition")
+    ):
+        raise ValueError
+
+
 def to_json(file_name):
     workbook = pandas.read_excel(file_name, sheet_name=None)
 
@@ -44,6 +51,11 @@ def to_json(file_name):
         sheet = pandas.read_excel(
             file_name, sheet_name=sheet_name, skiprows=[0], usecols="B,C,D,G,H"
         )
+        try:
+            validate_sheet(sheet)
+        except ValueError:
+            print(f"WARNING: Invalid sheet: {sheet_name}")
+            continue
 
         # Microservices should been appended to a list
         if (

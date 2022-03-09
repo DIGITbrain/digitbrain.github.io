@@ -138,7 +138,7 @@ if __name__ == "__main__":
             print("Not a .xlsx file!")
             sys.exit(1)
         file = sys.argv[1]
-        path = f"{file[-15:-5]}.json"
+        path = f"{file[:-5]}.json"
 
     metadata = to_json(file)
 

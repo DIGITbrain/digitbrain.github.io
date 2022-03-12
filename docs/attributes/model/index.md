@@ -27,6 +27,10 @@ has these sections:
 `ID`{ #id }
 :   **Auto-generated**-*UUID*- Internal DigitBrain reference (automatically generated)
 
+    === "Example"
+        ``` yaml     
+        "MODID_MYMODEL"
+        ```
 
 `Name`{ #name }
 :   **Required**-*string*- Name of the model
@@ -59,7 +63,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        https://www.myrepo.com
+        "https://www.myrepo.com"
         ```
 
 `PATH`{ #path }
@@ -67,7 +71,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        input/models
+        "input/models"
         ```
 
 `FILENAME`{ #filename }
@@ -75,7 +79,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        mymodel.pb
+        "mymodel.pb"
         ```
 
 `State_depend`{ #state_depend }

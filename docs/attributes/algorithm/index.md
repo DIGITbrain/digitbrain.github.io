@@ -25,7 +25,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        algorithm_10824912410291
+        "ALGID_MYALG"
         ```
 
 `name `{ #name- }
@@ -33,7 +33,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        Object Detection Algorithm for detection of faulty weld seams
+        "Object Detection Algorithm for detection of faulty weld seams"
         ```
 
 `description`{ #description }
@@ -41,23 +41,23 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        This algorithm can be used to solve a specifc problem, and applies some fancy technologies.
+        "This algorithm can be used to solve a specifc problem, and applies some fancy technologies."
         ```
 
 `classificationSchema`{ #classificationschema }
-:   **Required**-*Enumeration { Simulation, ML, others }*- the classification of the Algorithm, to describe the specialization area
+:   **Required**-*Enumeration ["Simulation", "ML", "others"]*- the classification of the Algorithm, to describe the specialization area
 
     === "Example"
         ``` yaml     
-        ML
+        "ML"
         ```
 
 `type`{ #type }
-:   **Required**-*List( String)*- a detailed list of attributes to describe the Algorithm’s field of application
+:   **Required**-*List[String]*- a detailed list of attributes to describe the Algorithm’s field of application
 
     === "Example"
         ``` yaml     
-        {neural network, deep learning, convolutional neural network, CNN}
+        ["neural network", "deep learning", "convolutional neural network", "CNN"]
         ```
 
 `author `{ #author- }
@@ -65,7 +65,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        DFKI
+        "DFKI"
         ```
 
 `date`{ #date }
@@ -81,7 +81,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        1.0
+        "1.0"
         ```
 
 
@@ -89,17 +89,17 @@ has these sections:
 
 
 `listOfMicroservices`{ #listofmicroservices }
-:   **Required**-*List( String)*- a list of Microservice Asset IDs, which are contained in the algorithm
+:   **Required**-*List[String]*- a list of Microservice Asset IDs, which are contained in the algorithm
 
     === "Example"
         ``` yaml     
-        [microservice.microservice_id_A, microservice.microservice_id_B]
+        ["MSID_MYMS_A", "MSID_MYMS_B"]
         ```
 
 `deploymentMapping`{ #deploymentmapping }
-:   **Required**-*Map( String: String)*- a mapping specifying which microservice should run on which host. By default each microservice is assigned a respective host, but this behaviour is not always ideal (eg. when two or more Microservices may need to run on the same host)
+:   **Required**-*Map[String, String]*- a mapping specifying which microservice should run on which host. By default each microservice is assigned a respective host, but this behaviour is not always ideal (eg. when two or more Microservices may need to run on the same host)
 
     === "Example"
         ``` yaml     
-        {microservice.microservice_id_A: deployment.microservice_id_B, microservice.microservice_id_B: deployment.microservice_id_B}
+        {"MSID_MYMS_A": "HOSTID_MYHOST_A", "MSID_MYMS_B": "HOSTID_MYHOST_A"}
         ```

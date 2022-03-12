@@ -31,7 +31,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        UUID
+        "DATAID_MYDATA_A"
         ```
 
 `AUTHOR`{ #author }
@@ -67,35 +67,35 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        CNSPiezoBolt#1 (in directory: factory 1 , machine1 , piezobolts)
+        "CNSPiezoBolt#1 (in directory: factory 1 , machine1 , piezobolts)"
         ```
 
 `DATA_VERSION`{ #data_version }
 :   **Optional**-*string*- Version of this data resource entry (major.minor.patch). Defaults to 1.0.0
     === "Example"
         ``` yaml     
-        2.3.4
+        "2.3.4"
         ```
 
 `DATA_DESC`{ #data_desc }
 :   **Optional**-*string*- Human readable description of the data resource.
     === "Example"
         ``` yaml     
-        This sensor measures temperature in Celsius, sends data via ConSenses edge device via an MQTT broker
+        "This sensor measures temperature in Celsius, sends data via ConSenses edge device via an MQTT broker"
         ```
 
 `DATA_DESC_URL`{ #data_desc_url }
 :   **Optional**-*URL*- More detailed specification of data source characteristics (doc, pdf, …)
     === "Example"
         ``` yaml     
-        data-source-specification-sheet.pdf
+        "data-source-specification-sheet.pdf"
         ```
 
 `DATA_SIZE`{ #data_size }
-:   **Optional**-*integer*- Estimated/exact size of data (e.g. file size, volume size, or message size); might be used to assess HW requirements (RAM, CPU) . In bytes (k - kilo, m - mega, t - tera, p - peta)
+:   **Optional**-*integer*- Estimated/exact size of data (e.g. file size, volume size, or message size); might be used to assess HW requirements (RAM, CPU) . In bytes
     === "Example"
         ``` yaml     
-        112m
+        112
         ```
 
 
@@ -103,10 +103,10 @@ has these sections:
 
 
 `DATA_TAGS`{ #data_tags }
-:   **Optional**-*list of strings*- A list of tags freely added to help in searching/indexing (not limited to a basic set of tags, keywords)
+:   **Optional**-*List[String]*- A list of tags freely added to help in searching/indexing (not limited to a basic set of tags, keywords)
     === "Example"
         ``` yaml     
-        [camera, rgb, w640, h480, jpg]
+        ["camera", "rgb", "w640", "h480", "jpg"]
         ```
 
 
@@ -114,33 +114,33 @@ has these sections:
 
 
 `DATA_KIND`{ #data_kind }
-:   **Required**-*enum*- Type of the data resource (e.g. file/object storage, database management system, streaming broker). FILE can mean a single file or a folder.
+:   **Required**-*Enumeration ["FILE", "DATABASE", "STREAM"]*- Type of the data resource (e.g. file/object storage, database management system, streaming broker). FILE can mean a single file or a folder.
 
     === "Example"
         ``` yaml     
-        FILE , DATABASE , STREAM
+        "STREAM"
         ```
 
 `DATA_DIRECTION`{ #data_direction }
-:   **Required**-*enum*- Direction of data flow (source: data provider, sink: data consumer/storage)
+:   **Required**-*Enumeration ["SOURCE", "SINK", "BIDIRECTIONAL"]*- Direction of data flow (source: data provider, sink: data consumer/storage)
 
     === "Example"
         ``` yaml     
-        SOURCE , SINK , BIDIRECTIONAL
+        "SINK"
         ```
 
 `DATA_FORMAT`{ #data_format }
-:   **Optional**-*list of strings*- Format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files).
+:   **Optional**-*List[String]*- Format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files).
     === "Example"
         ``` yaml     
-        [ { application/json , text/plain , application/octet-stream , application/zip } ] 
+        ["application/json", "text/plain", "application/octet-stream", "application/zip"] 
         ```
 
 `DATA_STORE_TYPE`{ #data_store_type }
-:   **Optional**-*string*- The exact type of the data resource. Typically (but not always) corresponds to the scheme part (scheme://) of DATA_URI.
+:   **Optional**-*string*- The exact type of the data resource. Typically (but not always) corresponds to the scheme part (scheme://) of DATA_URI. Eg. MYSQL, MQTT, LOCAL
     === "Example"
         ``` yaml     
-        S3 , MYSQL , MQTT , ... (WP6: DATA_SOURCE_TYPE=LOCAL, PATH=...")
+        "S3"
         ```
 
 
@@ -151,14 +151,14 @@ has these sections:
 :   **Optional**-*URI*- Accessibility of the data resource, including host, port information, protocol, and other fields (path is protocol dependent, can be a topic name). GUI may show host, port, path separately. Hidden at search. Format: scheme://host:port/path.  Pseudo vars: DATA_PROTOCOL, DATA_HOST, DATA_PORT, DATA_PATH, DATA_QUERY, DATA_FRAGMENT.
     === "Example"
         ``` yaml     
-        https://amazonaws/bucket/object , kafka://host/topic#1 , ...
+        "kafka://host/topic#1"
         ```
 
 `DATA_AUTH`{ #data_auth }
-:   **Optional**-*list of enums*- One or more authentication types that can be accepted by the storage resource.
+:   **Optional**-*List[Enumeration ["none", "userpass", "accesskey_secretkey", "ssl_certificate", "tls_mutual", "access_token", "rclone_config"]]*- One or more authentication types that can be accepted by the storage resource.
     === "Example"
         ``` yaml     
-        [ { none , userpass , accesskey_secretkey , ssl_certificate , tls_mutual, access_token , rclone_config }+ ]
+        ["ssl_certificate", "access_token"]
         ```
 
 
@@ -173,10 +173,10 @@ has these sections:
 
 
 `DATA_AUX_INFO`{ #data_aux_info }
-:   **Optional**-*string*- List of key-value pais (JSON object/YAML dictionary) for additional specification of the data resource. New keys can be added on demand, a list of known keys is available.
+:   **Optional**-*Map[String, String]*- List of key-value pais (JSON object/YAML dictionary) for additional specification of the data resource. New keys can be added on demand, a list of known keys is available.
     === "Example"
         ``` yaml     
-        { PROTOCOL: http, MYSQL_DIALECT: mariadbdialect, MQTT_PROTOCOL_VERSION: 3.1.1, KAFKA_BROKER_VERSION: 2.7.0, S3_REGION: eu-central-1 }
+        {"PROTOCOL": "http", "MYSQL_DIALECT": "mariadbdialect", "MQTT_PROTOCOL_VERSION": "3.1.1", "KAFKA_BROKER_VERSION": "2.7.0", "S3_REGION": "eu-central-1"}
         ```
 
 

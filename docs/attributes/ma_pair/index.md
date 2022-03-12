@@ -24,7 +24,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        123e4567-e89b-12d3-a456-426614174000
+        "MAID_MYMA"
         ```
 
 `Created at`{ #created-at }
@@ -102,7 +102,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        model_123e4567-e89b-12d3
+        "MODID_MYMODEL"
         ```
 
 `A Asset`{ #a-asset }
@@ -110,7 +110,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        algorithm_123e4567-e89b-12d3
+        "ALGID_MYALG"
         ```
 
 `Rules`{ #rules }

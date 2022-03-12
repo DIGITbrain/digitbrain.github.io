@@ -31,7 +31,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        microservice_12312124
+        "MSID_MYMS_A"
         ```
 
 `name `{ #name- }
@@ -39,7 +39,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        Object Detection for faulty parts
+        "Object Detection for faulty parts"
         ```
 
 `author `{ #author- }
@@ -47,7 +47,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        DFKI
+        "DFKI"
         ```
 
 `date`{ #date }
@@ -63,7 +63,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        1.0
+        "1.0"
         ```
 
 `description`{ #description }
@@ -71,23 +71,23 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        This microservices solves a certain problem using very specific methods...
+        "This microservices solves a certain problem using very specific methods…"
         ```
 
 `classificationSchema`{ #classificationschema }
-:   **Required**-*Enumeration { Simulation, ML, others }*- fine-granular classification of the Microservice
+:   **Required**-*Enumeration ["Simulation", "ML", "others"]*- fine-granular classification of the Microservice
 
     === "Example"
         ``` yaml     
-        other
+        "others"
         ```
 
 `type`{ #type }
-:   **Required**-*List( String)*- detailed type of the microservice, list of keywords
+:   **Required**-*List[String]*- detailed type of the microservice, list of keywords
 
     === "Example"
         ``` yaml     
-        {neural network, deep learning, convolutional neural network, CNN}
+        ["neural network", "deep learning", "convolutional neural network", "CNN"]
         ```
 
 
@@ -95,11 +95,11 @@ has these sections:
 
 
 `deploymentFormat`{ #deploymentformat }
-:   **Required**-*Enumeration {docker-compose, kubernetes-manifest}*- identifier of the deployment environment required to deploy the Microservice's container
+:   **Required**-*Enumeration ["docker-compose", "kubernetes-manifest"]*- identifier of the deployment environment required to deploy the Microservice's container
 
     === "Example"
         ``` yaml     
-        docker-compose
+        "docker-compose"
         ```
 
 `deploymentData`{ #deploymentdata }
@@ -133,7 +133,7 @@ has these sections:
 :   **Optional**-*String*- A note for developers of co-operating Microservices. Directories that should be shared to the host where this microservice can find required inputs / store outputs
     === "Example"
         ``` yaml     
-        /data and /cfg are mounted on the host for data and configuration sharing, respectively.
+        "/data and /cfg are mounted on the host for data and configuration sharing, respectively."
         ```
 
 
@@ -158,7 +158,7 @@ has these sections:
 :   **Optional**-*String*- a description of the type of GPUs, and further specifications, to allow the execution of the Microservice
     === "Example"
         ``` yaml     
-        NVidia (compute capability >= 7.0)
+        "NVidia (compute capability >= 7.0)"
         ```
 
 `hpcRequired`{ #hpcrequired }
@@ -169,14 +169,14 @@ has these sections:
         ```
 
 `edgeType`{ #edgetype }
-:   **Optional**-*Enumeration {TPU (Google), NPU (Qualcomm), FPGA, NVIDIA Jetson AGX}*- required type of edge device to allow the execution of the Microservice
+:   **Optional**-*Enumeration ["TPU (Google)", "NPU (Qualcomm)", "FPGA", "NVIDIA Jetson AGX"]*- required type of edge device to allow the execution of the Microservice
     === "Example"
         ``` yaml     
-        NVIDIA Jetson AGX
+        "NVIDIA Jetson AGX"
         ```
 
 `recommendedRAM`{ #recommendedram }
-:   **Optional**-*String*- recommended amount of memory in GB
+:   **Optional**-*Int*- recommended amount of memory in GB
     === "Example"
         ``` yaml     
         16
@@ -204,14 +204,14 @@ has these sections:
 :   **Optional**-*String*- supported os architecture. Defaults to x86
     === "Example"
         ``` yaml     
-        x86_64
+        "x86_64"
         ```
 
 `osType`{ #ostype }
 :   **Optional**-*String*- supported os type. Defaults to Linux
     === "Example"
         ``` yaml     
-        linux
+        "linux"
         ```
 
 
@@ -226,17 +226,17 @@ has these sections:
 
 
 `model_types`{ #model_types }
-:   **Optional**-*List( ModelTypes)*- list of supported Model types
+:   **Optional**-*List[String]*- list of supported Model types
     === "Example"
         ``` yaml     
-        {SavedModel (Tensorflow)}
+        ["SavedModel (Tensorflow)"]
         ```
 
 `model_recommendedAuthTools`{ #model_recommendedauthtools }
-:   **Optional**-*List (AuthTools)*- list of recommended AuthoringTools used to generate the Model
+:   **Optional**-*List[String]*- list of recommended AuthoringTools used to generate the Model
     === "Example"
         ``` yaml     
-        {PreSTRA}
+        ["PreSTRA"]
         ```
 
 

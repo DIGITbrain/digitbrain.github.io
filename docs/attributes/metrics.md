@@ -24,7 +24,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        meanTemperature
+        "meanTemperature"
         ```
 
 `correspondingMeasurement`{ #correspondingmeasurement }
@@ -32,7 +32,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        temperature1
+        "temperature1"
         ```
 
 `function`{ #function }
@@ -40,7 +40,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        arithmetic mean
+        "arithmetic mean"
         ```
 
 `unit`{ #unit }
@@ -48,7 +48,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        degree celsius
+        "degree celsius"
         ```
 
 `description`{ #description }
@@ -56,5 +56,5 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        This metric describes the arithmetic mean of the approximated temperatures of the fabricated part when it leaves station 4.
+        "This metric describes the arithmetic mean of the approximated temperatures of the fabricated part when it leaves station 4."
         ```

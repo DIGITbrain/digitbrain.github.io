@@ -20,20 +20,18 @@ has these sections:
 
 
 `*MICROSERVICE_ID* `{ #microservice_id- }
-:   **Required**-*Map<String, UUID>*- The key(s) in this substructure are UUID string(s) corresponding to the ID(s) of the Microservice(s)making up the included Algorithm. <br> The value for this key is a mapping of Data Sources to Data Assets.
+:   **Required**-*Map[String, String]*- The key(s) in this substructure are UUID string(s) corresponding to the ID(s) of the Microservice(s)making up the included Algorithm. <br> The value for this key is a mapping of Data Sources to Data Assets.
 
     === "Example"
         ``` yaml     
-        "microservice_0db_uuid": { 
-              "datasource_89d": "data_9d8_uuid", 
-              "datasource_dlo": "data_aij_uuid" 
-             }
+        {
+              "MSID_MYMS_A": {
+                "MY_SINK": "DATAID_MYDATA_A",
+                "MY_STREAM": "DATAID_MYDATA_B"
+              }
+            }
         ```
 
     `*DATA_SOURCE_ID* `{ #data_source_id- }
-:   **Required**-*UUID*- Nested below each Microservice, these key(s) are the String identifier(s) of the Data Source(s) of each Microservice. <br> The value for each key is the UUID of the Data Asset that corresponds to it.
+:   **Required**-*String*- Nested below each Microservice, these key(s) are the String identifier(s) of the Data Source(s) of each Microservice. <br> The value for each key is the UUID of the Data Asset that corresponds to it.
 
-        === "Example"
-            ``` yaml     
-            See above
-            ```

@@ -24,15 +24,15 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        detection_threshold
+        "detection_threshold"
         ```
 
 `type`{ #type }
-:   **Required**-*Enumeration (xsd datatypes)*- expected input type (may be used to verify the input)
+:   **Required**-*Enumeration [xsd datatypes]*- expected input type (may be used to verify the input)
 
     === "Example"
         ``` yaml     
-        Integer
+        "Integer"
         ```
 
 `mandatory`{ #mandatory }
@@ -54,5 +54,5 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        This parameter can be used to configure the included algorithm in a certain way, possible values: "A", "B", "Z"
+        "This parameter can be used to configure the included algorithm in a certain way, possible values: 'A', 'B', 'Z'"
         ```

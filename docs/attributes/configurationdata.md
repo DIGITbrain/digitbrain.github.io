@@ -24,7 +24,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        /data/rclone.conf
+        "/data/rclone.conf"
         ```
 
 `fileContent`{ #filecontent }
@@ -32,7 +32,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        [s3-server]\n    access_key: 123abc
+        "[s3-server]\n    access_key: 123abc"
         ```
 
 `mountPropagation`{ #mountpropagation }

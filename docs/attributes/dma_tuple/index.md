@@ -26,7 +26,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        123e4567-e89b-12d3-a456-426614174000
+        "DMAID_MYDMA"
         ```
 
 `Created at`{ #created-at }
@@ -104,7 +104,7 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        ma_pair_123e4567-e89b-12d3
+        "MAID_MYMA"
         ```
 
 `Schedule`{ #schedule }

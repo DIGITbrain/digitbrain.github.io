@@ -107,7 +107,23 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        See https://github.com/UoW-CPC/ADTGenerator/blob/main/examples/metadata_microservice.json#L30
+        "version": "3.7",
+            "services": {
+              "ristra": {
+                "image": "dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0",
+                "entrypoint": "/bin/sh -c",
+                "command": "python3 start.py {{ MODEL_PATH }}/{{ MODEL_FILE }}",
+                "volumes": [{
+                  "type": "bind",
+                  "source": "/data",
+                  "target": "/data",
+                  "bind": {
+                     "propagation": "rshared"
+            	      }
+                }],
+                "privileged": true
+              }
+            }
         ```
 
 `configurationData`{ #configurationdata }

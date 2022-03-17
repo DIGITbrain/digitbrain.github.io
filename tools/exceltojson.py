@@ -7,6 +7,11 @@ STRUCTURES = {
     "DataAssetsMapping": "DMA Tuple",
 }
 
+# Add any key renaming that should take place after translation
+RENAMES = {
+    "DMA Tuple": "dma",
+    "MA Pair": "ma",
+}
 
 def is_not_empty(value):
     return all([value, value == value])
@@ -43,6 +48,14 @@ def validate_sheet(sheet):
         key in sheet for key in ("Key", "Subkey", "Values", "Type", "Condition")
     ):
         raise ValueError
+
+
+def rename_keys(data, rename_dict):
+    for existing, new in rename_dict.items():
+        try:
+            data[new] = data.pop(existing)
+        except KeyError:
+            pass
 
 
 def handle_lists(sheet_name, the_json):
@@ -147,6 +160,7 @@ def to_json(file_name):
                 except AttributeError:
                     sheet_key[key][0][subkey] = value
 
+    rename_keys(my_dict, RENAMES)
     return my_dict
 
 

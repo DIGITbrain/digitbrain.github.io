@@ -20,7 +20,8 @@ for sheet_name in sheets.keys():
         sheet["Comment"],
         sheet["Concept"],
     ):
-    for i, subkey in enumerate(sheet["Subkey"]):
+        if not any ([key == key, subkey == subkey, concept == concept]):
+            continue
 
         # Use a subkey if there is one, if NaN then skip this cell
         subkey = subkey if all([subkey, subkey == subkey]) else None

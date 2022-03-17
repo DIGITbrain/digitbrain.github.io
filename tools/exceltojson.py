@@ -7,6 +7,14 @@ STRUCTURES = {
     "DataAssetsMapping": "DMA Tuple",
 }
 
+# Sheets to skip
+SKIP = (
+    "Data Resources",
+    "ConfigurationData",
+    "Parameters",
+    "Metrics",
+)
+
 # Add any key renaming that should take place after translation
 RENAMES = {
     "DMA Tuple": "dma",
@@ -85,6 +93,9 @@ def to_json(file_name):
         sheet = pandas.read_excel(
             file_name, sheet_name=sheet_name, skiprows=[0], usecols="B,C,D,G,H"
         )
+        if sheet_name in SKIP:
+            continue
+
         try:
             validate_sheet(sheet)
         except ValueError:

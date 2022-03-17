@@ -1,10 +1,16 @@
 import pandas, json, ast, sys
 
-# Add more substructures here, with their parent. Case-sensitive
+# Specify any assets or substructres requiring a list format, but
+# do not specify substructures for list assets eg. Microservice or Data
+# Specify the top level parent as the value
+# **Top-level assets must go last**
 STRUCTURES = {
-    "Microservice": "",
     "Deployment": "DMA Tuple",
     "DataAssetsMapping": "DMA Tuple",
+    "In-slots": "Model",
+    "Outputs": "Model",
+    "Microservice": "",
+    "Data": "",
 }
 
 # Sheets to skip
@@ -72,12 +78,12 @@ def handle_lists(sheet_name, the_json):
         if not sheet_name.startswith(name):
             continue
 
-        # If the substructure has a parent (i.e anything other than a MS)
+        # If the substructure has a parent
         if parent:
             the_json.setdefault(parent, {}).setdefault(name, []).append({})
             return the_json[parent][name][len(the_json[parent][name]) - 1]
 
-        # Microservices
+        # Microservicesa and Data
         else:
             the_json.setdefault(name, []).append({})
             return the_json[name][len(the_json[name]) - 1]
@@ -106,7 +112,7 @@ def to_json(file_name):
         if not sheet_name.startswith(tuple(STRUCTURES.keys())):
             sheet_key = my_dict.setdefault(sheet_name, {})
 
-        # MS is a list, as are all substructures
+        # MS and Data are lists, as are all substructures
         else:
             try:
                 sheet_key = handle_lists(sheet_name, my_dict)

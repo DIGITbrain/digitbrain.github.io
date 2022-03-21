@@ -5,15 +5,15 @@ import pandas, json, ast, sys
 # Specify the top level parent as the value
 # **Top-level assets must go last**
 STRUCTURES = {
-    "Deployments": "DMA Tuple",
-    "In-slots": "Model",
-    "Outputs": "Model",
     "Microservice": "",
     "Data": "",
 }
 
 # Sheets to skip
 SKIP = (
+    "In-slots",
+    "Outputs",
+    "Deployment",
     "DataAssetsMapping",
     "Data Resources",
     "ConfigurationData",

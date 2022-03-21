@@ -5,7 +5,7 @@ import pandas, json, ast, sys
 # Specify the top level parent as the value
 # **Top-level assets must go last**
 STRUCTURES = {
-    "Deployment": "DMA Tuple",
+    "Deployments": "DMA Tuple",
     "DataAssetsMapping": "DMA Tuple",
     "In-slots": "Model",
     "Outputs": "Model",
@@ -25,6 +25,7 @@ SKIP = (
 RENAMES = {
     "DMA Tuple": "dma",
     "MA Pair": "ma",
+    "Microservice": "Microservices",
 }
 
 def is_not_empty(value):
@@ -75,7 +76,7 @@ def rename_keys(data, rename_dict):
 def handle_lists(sheet_name, the_json):
     for name, parent in STRUCTURES.items():
 
-        if not sheet_name.startswith(name):
+        if not sheet_name.startswith(name[:-1]):
             continue
 
         # If the substructure has a parent

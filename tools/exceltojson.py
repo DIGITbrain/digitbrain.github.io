@@ -6,7 +6,6 @@ import pandas, json, ast, sys
 # **Top-level assets must go last**
 STRUCTURES = {
     "Deployments": "DMA Tuple",
-    "DataAssetsMapping": "DMA Tuple",
     "In-slots": "Model",
     "Outputs": "Model",
     "Microservice": "",
@@ -15,6 +14,7 @@ STRUCTURES = {
 
 # Sheets to skip
 SKIP = (
+    "DataAssetsMapping",
     "Data Resources",
     "ConfigurationData",
     "Parameters",

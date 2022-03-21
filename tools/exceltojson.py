@@ -54,8 +54,8 @@ def is_type(value, *args):
     return any(checks)
 
 
-def is_optional_and_empty(value, required):
-    return not value and "mandatory" not in required.lower()
+def is_empty(value):
+    return not value
 
 
 def validate_sheet(sheet):
@@ -161,7 +161,7 @@ def to_json(file_name):
                     sheet_key.setdefault(key, {})
 
             # Skip optional fields without provided values
-            elif is_optional_and_empty(value, required):
+            elif is_empty(value):
                 continue
 
             # Normal behaviour - keys

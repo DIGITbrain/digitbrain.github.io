@@ -196,6 +196,6 @@ if __name__ == "__main__":
     metadata = to_json(file)
 
     # dump the JSON
-    app_json = json.dumps(metadata, indent=4)
+    app_json = json.dumps(metadata, indent=2)
     with open(path, "w") as f:
         f.write(app_json)

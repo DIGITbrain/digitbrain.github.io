@@ -36,8 +36,8 @@ has these sections:
         ```
 
 `mountPropagation`{ #mountpropagation }
-:   **Optional**-*boolean*- Enable mountPropagation https://kubernetes.io/docs/concepts/storage/volumes/#mount-propagation . Default: False
+:   **Optional**-*Enum[ "None", "HostToContainer", "Bidirectional" ]*- Enable mountPropagation https://kubernetes.io/docs/concepts/storage/volumes/#mount-propagation . Default: None
     === "Example"
         ``` yaml     
-        True
+        "Bidirectional"
         ```

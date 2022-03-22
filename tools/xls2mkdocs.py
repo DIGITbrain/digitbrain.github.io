@@ -8,22 +8,29 @@ sheets = pd.read_excel(excel, sheet_name=None)
 ASSETS = ("microservice", "algorithm", "model", "data", "ma_pair", "dma_tuple")
 
 for sheet_name in sheets.keys():
-    sheet = pd.read_excel(
-        excel, sheet_name=sheet_name, skiprows=[0], usecols="A:G"
-    )
+    sheet = pd.read_excel(excel, sheet_name=sheet_name, skiprows=[0], usecols="A:G")
 
     sheet_list = []
-    for i, subkey in enumerate(sheet["Subkey"]):
+    for (key, subkey, example, field_type, required, comment, concept) in zip(
+        sheet["Key"],
+        sheet["Subkey"],
+        sheet["Example Value"],
+        sheet["Type"],
+        sheet["Condition"],
+        sheet["Comment"],
+        sheet["Concept"],
+    ):
+        if not any ([key == key, subkey == subkey, concept == concept]):
+            continue
 
         # Use a subkey if there is one, if NaN then skip this cell
         subkey = subkey if all([subkey, subkey == subkey]) else None
-        field = subkey if subkey else sheet["Key"][i]
+        field = subkey if subkey else key
         if isinstance(field, float):
-            sheet_list.append({"concept": sheet["Concept"][i]})
+            sheet_list.append({"concept": concept})
             continue
 
         # Discard NaN in example values and comments
-        example = sheet["Example Value"][i]
         example = example if example == example else None
 
         # Replace <br> tags in examples with line breaks
@@ -32,19 +39,16 @@ for sheet_name in sheets.keys():
         except AttributeError:
             pass
 
-        comment = sheet["Comment"][i]
-        comment = (
-            comment if comment == comment else "No description available."
-        )
+        comment = comment if comment == comment else "No description available."
 
         # Store fields data
         sheet_list.append(
             {
                 "concept": None,
                 "key": field,
-                "required": sheet["Condition"][i],
+                "required": required,
                 "comment": comment,
-                "type": sheet["Type"][i],
+                "type": field_type,
                 "example": example,
                 "issubkey": subkey,
             }

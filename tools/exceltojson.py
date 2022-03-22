@@ -1,12 +1,32 @@
 import pandas, json, ast, sys
 
-# Add more substructures here, with their parent. Case-sensitive
+# Specify any assets or substructres requiring a list format, but
+# do not specify substructures for list assets eg. Microservice or Data
+# Specify the top level parent as the value
+# **Top-level assets must go last**
 STRUCTURES = {
     "Microservice": "",
-    "Deployment": "DMA Tuple",
-    "DataAssetsMapping": "DMA Tuple",
+    "Data": "",
 }
 
+# Sheets to skip
+SKIP = (
+    "In-slots",
+    "Outputs",
+    "Deployment",
+    "DataAssetsMapping",
+    "Data Resources",
+    "ConfigurationData",
+    "Parameters",
+    "Metrics",
+)
+
+# Add any key renaming that should take place after translation
+RENAMES = {
+    "DMA Tuple": "dma",
+    "MA Pair": "ma",
+    "Microservice": "Microservices",
+}
 
 def is_not_empty(value):
     return all([value, value == value])
@@ -34,8 +54,8 @@ def is_type(value, *args):
     return any(checks)
 
 
-def is_optional_and_empty(value, required):
-    return not value and "mandatory" not in required.lower()
+def is_empty(value):
+    return not value
 
 
 def validate_sheet(sheet):
@@ -45,18 +65,26 @@ def validate_sheet(sheet):
         raise ValueError
 
 
+def rename_keys(data, rename_dict):
+    for existing, new in rename_dict.items():
+        try:
+            data[new] = data.pop(existing)
+        except KeyError:
+            pass
+
+
 def handle_lists(sheet_name, the_json):
     for name, parent in STRUCTURES.items():
 
-        if not sheet_name.startswith(name):
+        if not sheet_name.startswith(name[:-1]):
             continue
 
-        # If the substructure has a parent (i.e anything other than a MS)
+        # If the substructure has a parent
         if parent:
             the_json.setdefault(parent, {}).setdefault(name, []).append({})
             return the_json[parent][name][len(the_json[parent][name]) - 1]
 
-        # Microservices
+        # Microservicesa and Data
         else:
             the_json.setdefault(name, []).append({})
             return the_json[name][len(the_json[name]) - 1]
@@ -72,6 +100,9 @@ def to_json(file_name):
         sheet = pandas.read_excel(
             file_name, sheet_name=sheet_name, skiprows=[0], usecols="B,C,D,G,H"
         )
+        if sheet_name in SKIP:
+            continue
+
         try:
             validate_sheet(sheet)
         except ValueError:
@@ -82,7 +113,7 @@ def to_json(file_name):
         if not sheet_name.startswith(tuple(STRUCTURES.keys())):
             sheet_key = my_dict.setdefault(sheet_name, {})
 
-        # MS is a list, as are all substructures
+        # MS and Data are lists, as are all substructures
         else:
             try:
                 sheet_key = handle_lists(sheet_name, my_dict)
@@ -130,7 +161,7 @@ def to_json(file_name):
                     sheet_key.setdefault(key, {})
 
             # Skip optional fields without provided values
-            elif is_optional_and_empty(value, required):
+            elif is_empty(value):
                 continue
 
             # Normal behaviour - keys
@@ -147,6 +178,7 @@ def to_json(file_name):
                 except AttributeError:
                     sheet_key[key][0][subkey] = value
 
+    rename_keys(my_dict, RENAMES)
     return my_dict
 
 
@@ -165,6 +197,6 @@ if __name__ == "__main__":
     metadata = to_json(file)
 
     # dump the JSON
-    app_json = json.dumps(metadata, indent=4)
+    app_json = json.dumps(metadata, indent=2)
     with open(path, "w") as f:
         f.write(app_json)

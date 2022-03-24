@@ -172,7 +172,10 @@ def to_json(file_name):
             # Normal behaviour - keys
             elif not subkey:
                 if key in KEYSTOJSON:
-                    value = json.loads(value)
+                    try:
+                      value = json.loads(value)
+                    except:
+                      pass
                 sheet_key[key] = value
 
             # Nesting subkeys in objects/lists of objects

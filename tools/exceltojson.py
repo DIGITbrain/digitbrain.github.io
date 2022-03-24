@@ -30,7 +30,8 @@ RENAMES = {
 
 KEYSTOJSON = [
     "deploymentData",
-    "In-slots"
+    "In-slots",
+    "Deployments"
 ]
 
 def is_not_empty(value):
@@ -175,7 +176,8 @@ def to_json(file_name):
                     try:
                       value = json.loads(value)
                     except:
-                      pass
+                      print("ERROR: invalid json for key \""+key+"\" in sheet \""+sheet_name+"\"!")
+                      sys.exit(1)
                 sheet_key[key] = value
 
             # Nesting subkeys in objects/lists of objects

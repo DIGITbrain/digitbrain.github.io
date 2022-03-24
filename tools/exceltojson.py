@@ -172,7 +172,7 @@ def to_json(file_name):
 
             # Normal behaviour - keys
             elif not subkey:
-                if key in KEYSTOJSON:
+                if key in KEYSTOJSON and isinstance(value, str):
                     try:
                       value = json.loads(value)
                     except:

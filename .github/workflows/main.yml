@@ -77,7 +77,7 @@ jobs:
           python-version: "3.8"
 
       - name: Install Mkdocs
-        run: pip install mkdocs-material
+        run: pip install jinja2==3.0.0 mkdocs-material
 
       - name: Run Mkdocs deploy
         run: mkdocs gh-deploy --force

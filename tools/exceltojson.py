@@ -28,6 +28,11 @@ RENAMES = {
     "Microservice": "Microservices",
 }
 
+KEYSTOJSON = [
+    "deploymentData",
+    "In-slots"
+]
+
 def is_not_empty(value):
     return all([value, value == value])
 
@@ -166,6 +171,8 @@ def to_json(file_name):
 
             # Normal behaviour - keys
             elif not subkey:
+                if key in KEYSTOJSON:
+                    value = json.loads(value)
                 sheet_key[key] = value
 
             # Nesting subkeys in objects/lists of objects

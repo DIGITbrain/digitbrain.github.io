@@ -42,8 +42,8 @@ jobs:
       - name: Run xls2mkdocs (generate fields listing)
         run: python tools/xls2mkdocs.py
 
-      - name: Run exceltojson (generate an empty JSON template)
-        run: python tools/exceltojson.py
+      - name: Run example2md (generate tables for examples)
+        run: python tools/example2md.py
 
       - name: Commit any changes made by xls2md/xls2mkdocs
         id: auto_commit

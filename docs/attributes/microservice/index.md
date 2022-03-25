@@ -128,6 +128,14 @@ has these sections:
 
 `configurationData`{ #configurationdata }
 :   **Optional**-*[ConfigurationData](../configurationdata.md)*- List of objects specifying configuration file(s) content required by the service
+    === "Example"
+        ``` yaml     
+        [ {
+                "filePath": "/data/rclone.conf",
+                "fileContent": "[s3-server]\n    access_key: 123abc",
+                "mountPropagation": "Bidirectional"
+            } ]
+        ```
 
 `mountedSharedDirectories`{ #mountedshareddirectories }
 :   **Optional**-*String*- A note for developers of co-operating Microservices. Directories that should be shared to the host where this microservice can find required inputs / store outputs
@@ -220,6 +228,18 @@ has these sections:
 
 `dataResource`{ #dataresource }
 :   **Optional**-*[Data Resources](../data_resources.md)*- list of Data objects for each required data resource, specified using the "DATA" fields in the linked substructure
+    === "Example"
+        ``` yaml     
+        [{
+                "DATA_RESOURCE_ID": "MY_SINK",
+                "DATA_KIND": ["FILE", "STREAM"],
+                "DATA_DIRECTION": ["SOURCE"],
+                "DATA_FORMAT": ["image/jpg"],
+                "DATA_SOURCE_TYPE": ["KAFKA"],
+                "DATA_SCHEMA": ["jpg"],
+                "DATA_AUX_INFO": {"PROTOCOL": "https", "S3_REGION": "eu-west-1"}
+            }]
+        ```
 
 
 ### Model
@@ -245,6 +265,16 @@ has these sections:
 
 `parameters`{ #parameters }
 :   **Optional**-*[Parameters](../parameters.md)*- list of Parameter objects for each possible parameters, to be specified before deployment
+    === "Example"
+        ``` yaml     
+        [{
+                "name": "detection_threshold",
+                "type": "Integer",
+                "mandatory": true,
+                "defaultValue": 42,
+                "description": "This parameter is helpful"
+            }]
+        ```
 
 
 ### Metrics
@@ -252,3 +282,13 @@ has these sections:
 
 `metrics`{ #metrics }
 :   **Optional**-*[Metrics](../metrics.md)*- list of Metric objects for each metric collected by the Microservice
+    === "Example"
+        ``` yaml     
+        [{
+                "name": "meanTemperature",
+                "correspondingMeasurement": "temperature1",
+                "function": "arithmetic mean",
+                "unit": "degree celcius",
+                "description": "The metric is good"
+            } ]
+        ```

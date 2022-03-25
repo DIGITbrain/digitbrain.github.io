@@ -90,10 +90,48 @@ has these sections:
 
 
 `In-slots`{ #in-slots }
-:   **Optional**-*[In-slots](../in-slots.md)*- Values on which the model is evaluated (or parameters that might set before or during the evaluation) - Inputs and parameters together, although if needed we can still differentiate them internally in key field for each specific model.
+:   **Optional**-*[In-slots](../in-slots.md)*- List of objects with values on which the model is evaluated (or parameters that might set before or during the evaluation) - Inputs and parameters together, although if needed we can still differentiate them internally in key field for each specific model.
+    === "Example"
+        ``` yaml     
+        [
+              { 
+                "Key": "MY_INSLO_A",
+                "Name": "ModelABin",
+                "Dimensions": 112,
+                "Is-continuous": true,
+                "Units": {
+                    "Unit": "Pa",
+                    "Exponent": [1, -2, 0],
+                    "Offset": 442,
+                    "Scale": 10^-3
+                },
+                "Default-value": 55,
+                "Ranges": [1,120]
+              }
+            ]  
+        ```
 
 `Outputs`{ #outputs }
-:   **Optional**-*[Outputs](../outputs.md)*- Values that the model approximates
+:   **Optional**-*[Outputs](../outputs.md)*- List of objects with values that the model approximates
+    === "Example"
+        ``` yaml     
+        [
+              { 
+                "Key": "MY_OUTPUT_A",
+                "Name": "ModelABout",
+                "Dimensions": 112,
+                "Is-continuous": true,
+                "Units": {
+                    "Unit": "Pa",
+                    "Exponent": [1, -2, 0],
+                    "Offset": 442,
+                    "Scale": 10^-3
+                },
+                "Default-value": 55,
+                "Ranges": [1,120]
+              }
+            ]  
+        ```
 
 `CosimSolverInfo`{ #cosimsolverinfo }
 :   **Optional**-*obj*- For co-simulation Type only

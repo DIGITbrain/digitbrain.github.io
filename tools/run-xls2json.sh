@@ -7,7 +7,8 @@ if [ -z "$1" ] ; then
   exit 1
 fi
 
-source ./env/xls2json/bin/activate
+SCRIPTDIR=`dirname "$0"`
+source $SCRIPTDIR/env/xls2json/bin/activate
 
-python exceltojson.py $1
+python $SCRIPTDIR/exceltojson.py $1
 

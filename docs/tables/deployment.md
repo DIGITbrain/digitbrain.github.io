@@ -25,3 +25,4 @@
 |             |             | cloud_config     | String                              | #cloud-config\nruncmd:\n- [ sh, -xc, \"echo 'hello world!'\" ] | cloud-init configuration for contextualisation of the VM | optional    |
 |             | edge        |                  | Map[String, String]                 |                                                                | Connection data for a bring-your-own edge                |             |
 |             |             | endpoint         | URL                                 |                                                                | accesible IP or FQDN of edge device                      | optional    |
+|             |             |                  |                                     |                                                                |                                                          |             |

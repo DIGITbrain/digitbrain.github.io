@@ -28,7 +28,7 @@ has these sections:
         "HOSTID_MYHOST_A"
         ```
 
-`name `{ #name- }
+`name`{ #name }
 :   **Required**-*String*- Short name for the node/device
 
     === "Example"
@@ -36,7 +36,7 @@ has these sections:
         "Ubuntu small"
         ```
 
-`author `{ #author- }
+`author`{ #author }
 :   **Required**-*String*- Created by
 
     === "Example"

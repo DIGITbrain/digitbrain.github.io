@@ -89,8 +89,8 @@ has these sections:
 ### Parameters
 
 
-`In-slots`{ #in-slots }
-:   **Optional**-*[In-slots](../in-slots.md)*- List of objects with values on which the model is evaluated (or parameters that might set before or during the evaluation) - Inputs and parameters together, although if needed we can still differentiate them internally in key field for each specific model.
+`Slots`{ #slots }
+:   **Optional**-*[Slots](../slots.md)*- List of objects with values on which the model is evaluated (or parameters that might set before or during the evaluation) - Inputs and parameters together, although if needed we can still differentiate them internally in key field for each specific model.
     === "Example"
         ``` yaml     
         [
@@ -111,8 +111,8 @@ has these sections:
             ]  
         ```
 
-`Outputs`{ #outputs }
-:   **Optional**-*[Outputs](../outputs.md)*- List of objects with values that the model approximates
+`Slots`{ #slots }
+:   **Optional**-*[Slots](../slots.md)*- List of objects with values that the model approximates
     === "Example"
         ``` yaml     
         [

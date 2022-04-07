@@ -41,8 +41,7 @@ nav:
         - Algorithm: attributes/algorithm/index.md
       - Model:
         - Model: attributes/model/index.md
-        - In-Slots: attributes/in-slots.md
-        - Outputs: attributes/outputs.md
+        - Slots: attributes/slots.md
       - Data:
         - Data: attributes/data/index.md
       - MA Pair:
@@ -64,8 +63,7 @@ nav:
         - Algorithm: tables/algorithm/index.md
       - Model:
         - Model: tables/model/index.md
-        - In-Slots: tables/in-slots.md
-        - Outputs: tables/outputs.md
+        - Slots: tables/slots.md
       - Data:
         - Data: tables/data/index.md
       - MA Pair:

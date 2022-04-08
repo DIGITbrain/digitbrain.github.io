@@ -132,9 +132,6 @@ has these sections:
             ]  
         ```
 
-`CosimSolverInfo`{ #cosimsolverinfo }
-:   **Optional**-*obj*- For co-simulation Type only
-
 
 ### OS Requirements
 

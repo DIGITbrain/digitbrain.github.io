@@ -15,7 +15,6 @@ has these sections:
 
 - [Description](#description)
 - [Parameters](#parameters)
-- [Dependant FMUs](#dependant-fmus)
 - [OS Requirements](#os-requirements)
 - [Hardware Requirements ](#hardware-requirements-)
 - [Publishing](#publishing)
@@ -135,13 +134,6 @@ has these sections:
 
 `CosimSolverInfo`{ #cosimsolverinfo }
 :   **Optional**-*obj*- For co-simulation Type only
-
-
-### Dependant FMUs
-
-
-`Dependencies`{ #dependencies }
-:   **Optional**-*array of URI*- Dependant FMUs for co-simulation
 
 
 ### OS Requirements

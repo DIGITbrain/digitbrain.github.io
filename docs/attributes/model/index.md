@@ -17,7 +17,6 @@ has these sections:
 - [Parameters](#parameters)
 - [OS Requirements](#os-requirements)
 - [Hardware Requirements ](#hardware-requirements-)
-- [Publishing](#publishing)
 
 
 ### Description
@@ -47,6 +46,9 @@ has these sections:
 
 `Provider_contacts`{ #provider_contacts }
 :   **Optional**-*obj*- Dictionary with keys being phone, email, address - Type takes into account co-simulation models, for which solver info is mandatory (next slide)
+
+`Marketplace_description`{ #marketplace_description }
+:   **Optional**-*string*- Model tag description Additional info about model files (e.g. versioning, scope, i.e. what is the model used for, e.g. simulation, control, etc.) - Human readable marketplace description
 
 `AuthTool`{ #authtool }
 :   **Optional**-*enum*- Authoring Tool used to create the model
@@ -175,10 +177,3 @@ has these sections:
 
 `requiredDiskSpace`{ #requireddiskspace }
 :   **Optional**-*number*- Required amount of disk space in GB
-
-
-### Publishing
-
-
-`Description`{ #description }
-:   **Optional**-*string*- Model tag description Additional info about model files (e.g. versioning, scope, i.e. what is the model used for, e.g. simulation, control, etc.) - Human readable marketplace description

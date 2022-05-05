@@ -13,41 +13,54 @@
 The metadata specification for a DIGITbrain MA Pair
 has these sections:
 
+- [Administrative Data](#administrative-data)
 - [Definition](#definition)
 
 
-### Definition
+### Administrative Data
 
 
 `ID`{ #id }
-:   **Auto-generated**-*UUID*- Unique identifier for the MA Pair
+:   **Auto-generated**-*ID*- Unique identifier of the asset.
 
     === "Example"
         ``` yaml     
         "MAID_MYMA"
         ```
 
-`Created at`{ #created-at }
-:   **Auto-generated**-*ISO 8601*- Date of creation
+`AUTHOR`{ #author }
+:   **Auto-generated**-*ID*- Unique identifier of the user who created this record
 
     === "Example"
         ``` yaml     
-        2021-05-01T00:00:00Z
+        UUID
         ```
+
+`PROVIDER`{ #provider }
+:   **Auto-generated**-*ID*- Legal entity who provides the asset (owner). It is the affiliation of the author by default.
+
+    === "Example"
+        ``` yaml     
+        UUID
+        ```
+
+`DATE`{ #date }
+:   **Auto-generated**-*DATE (ISO 8601)*- Date of asset registration.
+
+    === "Example"
+        ``` yaml     
+        2022-04-28T08:11:53+00:00
+        ```
+
+
+### Definition
+
 
 `Version`{ #version }
 :   **Optional**-*Integer*- Version number of the MA Pair
     === "Example"
         ``` yaml     
         21
-        ```
-
-`Author`{ #author }
-:   **Auto-generated**-*UUID*- Identifier of the Author of the MA Pair (NB: Entity for author is referenced)
-
-    === "Example"
-        ``` yaml     
-        person_123e4567-e89b-12d3 (auto)
         ```
 
 `Licensor`{ #licensor }

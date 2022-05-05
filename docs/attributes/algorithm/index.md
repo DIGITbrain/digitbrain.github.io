@@ -13,20 +13,49 @@
 The metadata specification for a DIGITbrain Algorithm
 has these sections:
 
+- [Administrative Data](#administrative-data)
 - [Description](#description)
 - [Algorithm](#algorithm)
 
 
-### Description
+### Administrative Data
 
 
-`id`{ #id }
-:   **Auto-generated**-*String*- a unique id to identify this asset
+`ID`{ #id }
+:   **Auto-generated**-*ID*- Unique identifier of the asset.
 
     === "Example"
         ``` yaml     
         "ALGID_MYALG"
         ```
+
+`AUTHOR`{ #author }
+:   **Auto-generated**-*ID*- Unique identifier of the user who created this record
+
+    === "Example"
+        ``` yaml     
+        UUID
+        ```
+
+`PROVIDER`{ #provider }
+:   **Auto-generated**-*ID*- Legal entity who provides the asset (owner). It is the affiliation of the author by default.
+
+    === "Example"
+        ``` yaml     
+        UUID
+        ```
+
+`DATE`{ #date }
+:   **Auto-generated**-*DATE (ISO 8601)*- Date of asset registration.
+
+    === "Example"
+        ``` yaml     
+        2022-04-28T08:11:53+00:00
+        ```
+
+
+### Description
+
 
 `name `{ #name- }
 :   **Required**-*String*- a human-readable name to ease identification and discoverability for human users
@@ -58,22 +87,6 @@ has these sections:
     === "Example"
         ``` yaml     
         ["neural network", "deep learning", "convolutional neural network", "CNN"]
-        ```
-
-`author `{ #author- }
-:   **Required**-*String*- the authoring entity
-
-    === "Example"
-        ``` yaml     
-        "DFKI"
-        ```
-
-`date`{ #date }
-:   **Auto-generated**-*Date*- the creation data
-
-    === "Example"
-        ``` yaml     
-        06.04.2021
         ```
 
 `version `{ #version- }

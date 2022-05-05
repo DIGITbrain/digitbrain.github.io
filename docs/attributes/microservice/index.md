@@ -13,6 +13,7 @@
 The metadata specification for a DIGITbrain Microservice
 has these sections:
 
+- [Administrative Data](#administrative-data)
 - [Description](#description)
 - [Service](#service)
 - [Hardware Requirements](#hardware-requirements)
@@ -23,16 +24,44 @@ has these sections:
 - [Metrics](#metrics)
 
 
-### Description
+### Administrative Data
 
 
-`id`{ #id }
-:   **Auto-generated**-*String*- unique DIGITbrain reference
+`ID`{ #id }
+:   **Auto-generated**-*ID*- Unique identifier of the asset.
 
     === "Example"
         ``` yaml     
         "MSID_MYMS_A"
         ```
+
+`AUTHOR`{ #author }
+:   **Auto-generated**-*ID*- Unique identifier of the user who created this record
+
+    === "Example"
+        ``` yaml     
+        UUID
+        ```
+
+`PROVIDER`{ #provider }
+:   **Auto-generated**-*ID*- Legal entity who provides the asset (owner). It is the affiliation of the author by default.
+
+    === "Example"
+        ``` yaml     
+        UUID
+        ```
+
+`DATE`{ #date }
+:   **Auto-generated**-*DATE (ISO 8601)*- Date of asset registration.
+
+    === "Example"
+        ``` yaml     
+        2022-04-28T08:11:53+00:00
+        ```
+
+
+### Description
+
 
 `name `{ #name- }
 :   **Required**-*String*- human readable short, yet descriptive name of the Microservice
@@ -40,22 +69,6 @@ has these sections:
     === "Example"
         ``` yaml     
         "Object Detection for faulty parts"
-        ```
-
-`author `{ #author- }
-:   **Required**-*String*- name of the authoring entity
-
-    === "Example"
-        ``` yaml     
-        "DFKI"
-        ```
-
-`date`{ #date }
-:   **Auto-generated**-*Date*- creation date
-
-    === "Example"
-        ``` yaml     
-        06.04.2021
         ```
 
 `version `{ #version- }

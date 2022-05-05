@@ -13,7 +13,7 @@
 The metadata specification for a DIGITbrain Data
 has these sections:
 
-- [Administrative data](#administrative-data)
+- [Administrative Data](#administrative-data)
 - [Description](#description)
 - [Search support](#search-support)
 - [Datakind specification](#datakind-specification)
@@ -23,11 +23,11 @@ has these sections:
 - [Data content semantics](#data-content-semantics)
 
 
-### Administrative data
+### Administrative Data
 
 
 `ID`{ #id }
-:   **Auto-generated**-*id*- Unique identifier of the data resource.
+:   **Auto-generated**-*ID*- Unique identifier of the asset.
 
     === "Example"
         ``` yaml     
@@ -35,7 +35,7 @@ has these sections:
         ```
 
 `AUTHOR`{ #author }
-:   **Auto-generated**-*id*- Unique identifier of the user who created this record
+:   **Auto-generated**-*ID*- Unique identifier of the user who created this record
 
     === "Example"
         ``` yaml     
@@ -43,7 +43,7 @@ has these sections:
         ```
 
 `PROVIDER`{ #provider }
-:   **Auto-generated**-*id*- Legal entity who provides the data resource (owner). It is the affiliation of the author by default.
+:   **Auto-generated**-*ID*- Legal entity who provides the asset (owner). It is the affiliation of the author by default.
 
     === "Example"
         ``` yaml     
@@ -51,11 +51,11 @@ has these sections:
         ```
 
 `DATE`{ #date }
-:   **Auto-generated**-*timestamp*- Date of data resource registration.
+:   **Auto-generated**-*DATE (ISO 8601)*- Date of asset registration.
 
     === "Example"
         ``` yaml     
-        10:45:13 CET 21/03/2021
+        2022-04-28T08:11:53+00:00
         ```
 
 

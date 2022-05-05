@@ -13,22 +13,51 @@
 The metadata specification for a DIGITbrain Model
 has these sections:
 
+- [Administrative Data](#administrative-data)
 - [Description](#description)
 - [Parameters](#parameters)
 - [OS Requirements](#os-requirements)
 - [Hardware Requirements ](#hardware-requirements-)
 
 
-### Description
+### Administrative Data
 
 
 `ID`{ #id }
-:   **Auto-generated**-*UUID*- Internal DigitBrain reference (automatically generated)
+:   **Auto-generated**-*ID*- Unique identifier of the asset.
 
     === "Example"
         ``` yaml     
         "MODID_MYMODEL"
         ```
+
+`AUTHOR`{ #author }
+:   **Auto-generated**-*ID*- Unique identifier of the user who created this record
+
+    === "Example"
+        ``` yaml     
+        UUID
+        ```
+
+`PROVIDER`{ #provider }
+:   **Auto-generated**-*ID*- Legal entity who provides the asset (owner). It is the affiliation of the author by default.
+
+    === "Example"
+        ``` yaml     
+        UUID
+        ```
+
+`DATE`{ #date }
+:   **Auto-generated**-*DATE (ISO 8601)*- Date of asset registration.
+
+    === "Example"
+        ``` yaml     
+        2022-04-28T08:11:53+00:00
+        ```
+
+
+### Description
+
 
 `Name`{ #name }
 :   **Required**-*string*- Name of the model
@@ -40,9 +69,6 @@ has these sections:
 
 `License`{ #license }
 :   **Optional**-*enum*- License of the model.  Type tbd in SAD group
-
-`Provider`{ #provider }
-:   **Optional**-*string*- Provider name: Institution or Person
 
 `Provider_contacts`{ #provider_contacts }
 :   **Optional**-*obj*- Dictionary with keys being phone, email, address - Type takes into account co-simulation models, for which solver info is mandatory (next slide)

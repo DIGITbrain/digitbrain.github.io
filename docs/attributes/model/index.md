@@ -47,6 +47,14 @@ has these sections:
         UUID
         ```
 
+`BUILD`{ #build }
+:   **Auto-generated**-*Integer*- Build number, incremented automatically to provide versioning for the asset
+
+    === "Example"
+        ``` yaml     
+        21
+        ```
+
 `DATE`{ #date }
 :   **Auto-generated**-*DATE (ISO 8601)*- Date of asset registration.
 
@@ -64,8 +72,11 @@ has these sections:
 
 
 `Version`{ #version }
-:   **Required**-*semver*- Version of the model. If model only has revisions, use semver prerelease 0.1, 0.2, etc.
-
+:   **Optional**-*string*- Version of the model, defined by the provider. 
+    === "Example"
+        ``` yaml     
+        "0.1"
+        ```
 
 `License`{ #license }
 :   **Optional**-*enum*- License of the model.  Type tbd in SAD group

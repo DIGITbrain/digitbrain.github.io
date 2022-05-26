@@ -51,6 +51,14 @@ has these sections:
         UUID
         ```
 
+`BUILD`{ #build }
+:   **Auto-generated**-*Integer*- Build number, incremented automatically to provide versioning for the asset
+
+    === "Example"
+        ``` yaml     
+        21
+        ```
+
 `DATE`{ #date }
 :   **Auto-generated**-*DATE (ISO 8601)*- Date of asset registration.
 
@@ -72,8 +80,7 @@ has these sections:
         ```
 
 `version `{ #version- }
-:   **Required**-*String*- version
-
+:   **Optional**-*String*- version as defined by the user
     === "Example"
         ``` yaml     
         "1.0"

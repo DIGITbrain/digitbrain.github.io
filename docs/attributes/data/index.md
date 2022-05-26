@@ -13,6 +13,7 @@
 The metadata specification for a DIGITbrain Data
 has these sections:
 
+- [Administrative Data](#administrative-data)
 - [Description](#description)
 - [Search support](#search-support)
 - [Datakind specification](#datakind-specification)
@@ -22,7 +23,7 @@ has these sections:
 - [Data content semantics](#data-content-semantics)
 
 
-### Administrative Data (common for all metadata)
+### Administrative Data
 
 
 `ID`{ #id }
@@ -49,6 +50,14 @@ has these sections:
         UUID
         ```
 
+`BUILD`{ #build }
+:   **Auto-generated**-*Integer*- Build number, incremented automatically to provide versioning for the asset
+
+    === "Example"
+        ``` yaml     
+        21
+        ```
+
 `DATE`{ #date }
 :   **Auto-generated**-*DATE (ISO 8601)*- Date of asset registration.
 
@@ -69,8 +78,8 @@ has these sections:
         "CNSPiezoBolt#1 (in directory: factory 1 , machine1 , piezobolts)"
         ```
 
-`CUSTOM_VERSION`{ #custom_version }
-:   **Optional**-*string*- Version of the data resource (not of the metadata), defined by the provider in the format of his/her choice (typically: major.minor.patch). Defaults to 1.0.0
+`VERSION`{ #version }
+:   **Optional**-*string*- Version of the data resource (not of the metadata), defined by the provider in the format of his/her choice (typically: major.minor.patch)
     === "Example"
         ``` yaml     
         "2.3.4"

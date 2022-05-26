@@ -46,6 +46,14 @@ has these sections:
         UUID
         ```
 
+`BUILD`{ #build }
+:   **Auto-generated**-*Integer*- Build number, incremented automatically to provide versioning for the asset
+
+    === "Example"
+        ``` yaml     
+        21
+        ```
+
 `DATE`{ #date }
 :   **Auto-generated**-*DATE (ISO 8601)*- Date of asset registration.
 
@@ -59,10 +67,10 @@ has these sections:
 
 
 `Version`{ #version }
-:   **Optional**-*Integer*- Version number of the DMA Tuple
+:   **Optional**-*String*- Version number of the DMA Tuple, defined by the provider
     === "Example"
         ``` yaml     
-        21
+        "0.21.0"
         ```
 
 `Licensor`{ #licensor }

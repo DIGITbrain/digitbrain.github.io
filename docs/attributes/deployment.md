@@ -103,10 +103,12 @@ has these sections:
             ```
 
     `cloud_config`{ #cloud_config }
-:   **Optional**-*String*- cloud-init configuration for contextualisation of the VM
+:   **Optional**-*Map*- cloud-init - https://cloudinit.readthedocs.io/ - configuration for contextualisation of the VM
         === "Example"
             ``` yaml     
-            #cloud-config\nruncmd:\n- [ sh, -xc, \"echo 'hello world!'\" ]
+            {
+              "runcmd": ["echo one", "echo two"]
+            }
             ```
 
 `edge`{ #edge }

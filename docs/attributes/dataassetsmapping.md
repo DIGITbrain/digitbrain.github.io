@@ -20,9 +20,13 @@ has these sections:
 
 
 `*MICROSERVICE_ID* `{ #microservice_id- }
-:   **Required**-*Map[String, String]*- The key(s) in this substructure are UUID string(s) corresponding to the ID(s) of the Microservice(s)making up the included Algorithm. <br> The value for this key is a mapping of Data Sources to Data Assets.
+:   **Required**-*Map[String, String]*- The key(s) here are UUID string(s) corresponding to the ID(s) of the Microservice(s) defined for this Algorithm. <br> The value for this key is a mapping of the logical IDs of Data Assets to the UUIDs of Data Assets.
 
 
-    `*DATA_SOURCE_ID* `{ #data_source_id- }
-:   **Required**-*String*- Nested below each Microservice, these key(s) are the String identifier(s) of the Data Source(s) of each Microservice. <br> The value for each key is the UUID of the Data Asset that corresponds to it.
+    `*DATA_ID_LOGICAL* `{ #data_id_logical- }
+:   **Required**-*String*- The key(s) here are logical IDs (string identifiers) of Data Assets that act as placeholders in the DeploymentData field of a Microservice. <br> The value for each key is the UUID of the Data Asset that should be substituted into the placeholders in the DeploymentData field.
 
+        === "Example"
+            ``` yaml     
+            "DATAID_MYDATA_A"
+            ```

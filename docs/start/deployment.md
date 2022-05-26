@@ -166,6 +166,17 @@ handle the deployment of the above infrastructure.
           endpoint: https://cloudsme-cbp.scaletools.com.ua
         ```
 
+`cloudbroker.cloud_config`
+
+:   **Required**– [cloud-init](https://cloudinit.readthedocs.io/) config
+for contextualisation of the provisioned virtual machine.
+
+    === "DIGITbrain"
+        ``` yaml     
+        cloudbroker:
+          cloud_config: {"runcmd": ["echo one", "echo two"]}
+        ```
+
 `edge.endpoint`
 
 :   **Required**– The endpoint of the bring-your-own Edge device that

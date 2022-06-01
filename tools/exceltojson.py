@@ -1,4 +1,4 @@
-import pandas, json, ast, sys
+import pandas, json, ast, sys, pathlib
 
 # Specify any assets or substructres requiring a list format, but
 # do not specify substructures for list assets eg. Microservice or Data
@@ -196,19 +196,15 @@ def to_json(file_name):
 
 if __name__ == "__main__":
     # Quick filename as arg
-    if len(sys.argv) == 1:
-        file = "metadata.xlsx"
-        path = "tools/output/output.json"
-    else:
-        if not sys.argv[1].endswith(".xlsx"):
+    subdir = "json" if sys.argv[1] == "--generate" else ""
+    files = sys.argv[2:] if subdir else sys.argv[1:]
+    for file in files:
+        if not file.endswith(".xlsx"):
             print("Not a .xlsx file!")
-            sys.exit(1)
-        file = sys.argv[1]
-        path = f"{file[:-5]}.json"
-
-    metadata = to_json(file)
-
-    # dump the JSON
-    app_json = json.dumps(metadata, indent=2)
-    with open(path, "w") as f:
-        f.write(app_json)
+            continue
+        path = pathlib.Path(file)
+        path = pathlib.Path(path.parent, subdir, f"{path.stem}.json")
+        metadata = to_json(file)
+        app_json = json.dumps(metadata, indent=2)
+        with open(path, "w") as f:
+            f.write(app_json)

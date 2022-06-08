@@ -1,0 +1,121 @@
+{
+  "Algorithm": {
+    "ID": "ALGID_MAESTRO",
+    "name ": "Co-simulation Algorithm",
+    "description": "Co-simulation experiments",
+    "classificationSchema": "Co-Simulation",
+    "type": [
+      "Co-Simulation"
+    ],
+    "version ": "1.0",
+    "listOfMicroservices": [
+      "MSID_MAESTRO"
+    ],
+    "deploymentMapping": {
+      "MSID_MAESTRO": "MAESTRO_HOST"
+    }
+  },
+  "Model": {
+    "ID": "MODID_MAESTRO",
+    "Name": "Mass-string-dampner",
+    "Version": "1.0",
+    "REPOSITORY_URI": "https://github.com/prasadtalasila/digitbrain-example/raw/main/example1/model/cosim-model.zip",
+    "PATH": "https://github.com/prasadtalasila/digitbrain-example/raw/main/example1/model/",
+    "FILENAME": "cosim-model.zip"
+  },
+  "Data": [
+    {
+      "ID": "DATAID_OUT",
+      "DATA_NAME": "output",
+      "DATA_KIND": "FILE",
+      "DATA_DIRECTION": "SINK",
+      "DATA_FORMAT": [
+        "text/plain"
+      ],
+      "DATA_STORE_TYPE": "LOCAL"
+    }
+  ],
+  "Supporting Metadata": {
+    "First name": "Prasad",
+    "Last name": "Talasila",
+    "Email": "prasad.talasila@ece.au.dk",
+    "Name": "AU",
+    "Description": "Aarhus University"
+  },
+  "Slots": {},
+  "dma": {
+    "ID": "DMAID_MAESTRO",
+    "Version": "1.0.0",
+    "Name": "Mass Spring Dampner",
+    "Scope": "Mass Spring Dampner example",
+    "IP Instance": "ID_IP_Instance",
+    "MA Pair": "MAID_MAESTRO",
+    "DataAssetsMapping": {
+      "MSID_MAESTRO": {
+        "DATA1": "DATAID_OUT"
+      }
+    },
+    "Deployments": {
+      "MAESTRO_HOST": {
+        "name": "Co-simulation-Deployment",
+        "author": "Resmi Arjun",
+        "type": "cloudbroker",
+        "cloudbroker": {
+          "deployment_id": "16b1e2d4-3a2c-406e-8c45-5637099021f0",
+          "instance_type_id": "ca727925-a5ca-4697-b2c3-8788d82457d5",
+          "key_pair_id": "4380605a-c24f-4dec-b234-32b3f72eb94c",
+          "opened_port": "1-65535",
+          "cloud_config": "#cloud-config\nruncmd:\n- [\"ipsec stop\"]",
+          "endpoint": "https://cloudsme-cbp.scaletools.com.ua"
+        }
+      }
+    }
+  },
+  "ma": {
+    "ID": "MAID_MAESTRO",
+    "Version": "1.0.0",
+    "Name": "Maestro-spring-dampner",
+    "Scope": "Mass Spring Dampner model to be evaluated by co-simulation algorithm",
+    "IP Family": "IP_Familiy_ID",
+    "M Asset": "MODID_MAESTRO",
+    "A Asset": "ALGID_MAESTRO"
+  },
+  "Microservices": [
+    {
+      "ID": "MSID_MAESTRO",
+      "name ": "Co-simulation",
+      "version ": "2.2.0",
+      "description": "Maestro microservice for co-simulation use cases",
+      "classificationSchema": "Co-simulation",
+      "type": [
+        "Co-simulation",
+        "Maestro"
+      ],
+      "deploymentFormat": "docker-compose",
+      "deploymentData": {
+        "version": "3.7",
+        "services": {
+          "maestro": {
+            "image": "prasadtalasila/maestro-openjdk13",
+            "entrypoint": "bash -c \"wget -P /home/model {{MODEL.REPOSITORY_URI}}  && /home/cosim/entrypoint.sh\"",
+            "restart": "on-failure",
+            "volumes": [
+              "/model:/home/model",
+              "/output:/home/output"
+            ]
+          }
+        }
+      },
+      "mountedSharedDirectories": "/model and /output are mounted to the host",
+      "osArch": "x86_64",
+      "model_types": [
+        "Co-simulation"
+      ],
+      "model_recommendedAuthTools": [
+        "INTO-CPS",
+        " Modelica",
+        "SysML"
+      ]
+    }
+  ]
+}

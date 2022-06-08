@@ -251,13 +251,13 @@ has these sections:
     === "Example"
         ``` yaml     
         [{
-                "DATA_RESOURCE_ID": "MY_SINK",
-                "DATA_KIND": ["FILE", "STREAM"],
-                "DATA_DIRECTION": ["SOURCE"],
-                "DATA_FORMAT": ["image/jpg"],
-                "DATA_SOURCE_TYPE": ["KAFKA"],
-                "DATA_SCHEMA": ["jpg"],
-                "DATA_AUX_INFO": {"PROTOCOL": "https", "S3_REGION": "eu-west-1"}
+                "ID": "MY_SINK",
+                "KIND": ["FILE", "STREAM"],
+                "DIRECTION": ["SOURCE"],
+                "FORMAT": ["image/jpg"],
+                "SOURCE_TYPE": ["KAFKA"],
+                "SCHEMA": ["jpg"],
+                "AUX_INFO": {"PROTOCOL": "https", "S3_REGION": "eu-west-1"}
             }]
         ```
 

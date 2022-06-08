@@ -46,7 +46,7 @@ jobs:
         run: python tools/example2md.py
 
       - name: Run excel2json (generate json from example xlsx)
-        run: python tools/excel2json.py --generate examples/*.xlsx
+        run: python tools/exceltojson.py --generate examples/*.xlsx
 
       - name: Commit any changes made by xls2md/xls2mkdocs/excel2json
         id: auto_commit

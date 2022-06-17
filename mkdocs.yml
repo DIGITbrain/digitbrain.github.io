@@ -75,9 +75,10 @@ nav:
       - Supporting Metadata: tables/supporting_metadata.md
   - Examples:
       - Examples: examples/index.md
-      - Fraunhofer: examples/Fraunhofer_RISTRA_CPU.md
-      - ITAINNOVA: examples/ITAINNOVA_CAELIA.md
-      - DFKI: examples/DFKI_ObjectDetection_external_data.md
+      - Fraunhofer: examples/Fraunhofer.md
+      - ITAINNOVA: examples/ITAINNOVA.md
+      - DFKI: examples/DFKI.md
+      - CoSimulation: examples/Cosimulation.md
 
 markdown_extensions:
   - admonition

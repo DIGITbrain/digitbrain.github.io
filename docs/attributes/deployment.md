@@ -102,6 +102,13 @@ has these sections:
             "https://cloudsme-cbp.scaletools.com.ua"
             ```
 
+    `domain_names`{ #domain_names }
+:   **Optional**-*List of UUIDs*- ID of a CloudBroker Domain Name for this instance
+        === "Example"
+            ``` yaml     
+            ["om207925-b52a-4697-b2c3-563702208h9"]
+            ```
+
     `cloud_config`{ #cloud_config }
 :   **Optional**-*Map*- cloud-init - https://cloudinit.readthedocs.io/ - configuration for contextualisation of the VM
         === "Example"

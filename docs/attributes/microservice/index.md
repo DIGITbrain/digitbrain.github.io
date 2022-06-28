@@ -252,11 +252,11 @@ has these sections:
         ``` yaml     
         [{
                 "ID": "MY_SINK",
-                "KIND": ["FILE", "STREAM"],
-                "DIRECTION": ["SOURCE"],
+                "KIND": "STREAM",
+                "DIRECTION": "SOURCE",
                 "FORMAT": ["image/jpg"],
-                "SOURCE_TYPE": ["KAFKA"],
-                "SCHEMA": ["jpg"],
+                "SOURCE_TYPE": "KAFKA",
+                "SCHEMA": ["jpeg image"],
                 "AUX_INFO": {"PROTOCOL": "https", "S3_REGION": "eu-west-1"}
             }]
         ```

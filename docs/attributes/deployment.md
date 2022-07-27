@@ -102,6 +102,13 @@ has these sections:
             "https://cloudsme-cbp.scaletools.com.ua"
             ```
 
+    `domain_name`{ #domain_name }
+:   **Optional**-*String*- Subdomain (on cbp-routing.ch) to create and attach to this instance using dynamic DNS. For the given example, the following domain will be assigned to the instance: mysubdomain.cbp-routing.ch
+        === "Example"
+            ``` yaml     
+            "mysubdomain"
+            ```
+
     `domain_names`{ #domain_names }
 :   **Optional**-*List of UUIDs*- ID of a CloudBroker Domain Name for this instance
         === "Example"

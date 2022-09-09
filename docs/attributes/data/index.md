@@ -82,7 +82,7 @@ has these sections:
 :   **Optional**-*string*- Version of the data resource (not of the metadata), defined by the provider in the format of his/her choice (typically: major.minor.patch)
     === "Example"
         ``` yaml     
-        "2.3.4"
+        "1.0.0"
         ```
 
 `DESC`{ #desc }
@@ -114,7 +114,7 @@ has these sections:
 :   **Optional**-*List[String]*- A list of tags freely added to help in searching/indexing (not limited to a basic set of tags, keywords)
     === "Example"
         ``` yaml     
-        ["camera", "rgb", "w640", "h480", "jpg"]
+        ["sensor", "celsius", "press machine"]
         ```
 
 
@@ -134,21 +134,21 @@ has these sections:
 
     === "Example"
         ``` yaml     
-        "SINK"
+        "SOURCE"
         ```
 
 `FORMAT`{ #format }
 :   **Optional**-*List[String]*- Format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files).
     === "Example"
         ``` yaml     
-        ["application/json", "text/plain", "application/octet-stream", "application/zip"] 
+        ["application/json"] 
         ```
 
 `TYPE`{ #type }
 :   **Optional**-*string*- The exact type of the data resource. Typically (but not always) corresponds to the scheme part (scheme://) of URI. E.g.: mysql, mqtt.
     === "Example"
         ``` yaml     
-        "S3"
+        "MQTT"
         ```
 
 
@@ -156,17 +156,17 @@ has these sections:
 
 
 `URI`{ #uri }
-:   **Optional**-*URI*- Accessibility of the data resource, including host, port information, protocol, and other fields (path is protocol dependent, can be a topic name). GUI may show host, port, path separately. Hidden at search. Format: scheme://host:port/path.  Pseudo vars: SCHEME, HOST, PORT, PATH, QUERY, FRAGMENT.
+:   **Optional**-*List[URI]*- Accessibility of the data resource in form of: scheme://host:port/path (passed as pseudo environment variables: SCHEME, HOST, PORT, PATH, QUERY, FRAGMENT). A list of URIs can be passed to support multiple data sources (e.g. more than one message topics, databases).
     === "Example"
         ``` yaml     
-        "kafka://host/topic#1"
+        ["kafka://host/topic#1"]
         ```
 
 `AUTH_TYPE`{ #auth_type }
-:   **Optional**-*List[Enumeration ["none", "userpass", "accesskey_secretkey", "ssl_certificate", "tls_mutual", "access_token", "rclone_config"]]*- One or more authentication types that can be accepted by the storage resource.
+:   **Optional**-*List[Enumeration ["none", "username_password", "accesskey_secretkey", "tls_client_certificate", "access_token", "rclone_config"]]*- One or more authentication types that can be accepted by the storage resource.
     === "Example"
         ``` yaml     
-        ["ssl_certificate", "access_token"]
+        ["tls_client_certificate"]
         ```
 
 
@@ -174,7 +174,11 @@ has these sections:
 
 
 `CREDENTIALS`{ #credentials }
-:   **Optional**-*OPEN*- Credentials (e.g. string/json, zip, config file). Its content (structure) depends on authentication type (e.g. token, username and password). OPEN means must not be filled here, but asked from user on startup.
+:   **Optional**-*OPEN*- DO NOT ENTER ANY CREDENTIALS HERE! This is just a placeholder, an OPEN parameter for credentials (e.g. username-password, token, config file, certificate). 
+    === "Example"
+        ``` yaml     
+        -
+        ```
 
 
 ### Further access clauses (extensible)
@@ -184,23 +188,23 @@ has these sections:
 :   **Optional**-*Map[String, String]*- List of key-value pais (JSON object/YAML dictionary) for additional specification of the data resource. New keys can be added on demand, a list of known keys is available.
     === "Example"
         ``` yaml     
-        {"PROTOCOL": "http", "MYSQL_DIALECT": "mariadbdialect", "MQTT_PROTOCOL_VERSION": "3.1.1", "KAFKA_BROKER_VERSION": "2.7.0", "S3_REGION": "eu-central-1"}
+        {"PROTOCOL": "tcp", "MQTT_PROTOCOL_VERSION": "3.1.1", "KAFKA_BROKER_VERSION": "2.7.0"}
         ```
 
 
 ### Data content semantics
 
 
-`SCHEMA`{ #schema }
-:   **Optional**-*string*- Describes message internal structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, ...
+`SCHEMA_DESC`{ #schema_desc }
+:   **Optional**-*string*- Describes message internal structures, content semantics, ontology in a human readable way. 
     === "Example"
         ``` yaml     
-        Database schema description/contents. 
+        "Messages constain raw sensor values as floats in Celsius, each is a JSON object with key name 'temperature'."
         ```
 
 `SCHEMA_URL`{ #schema_url }
-:   **Optional**-*URL*- URL to schema specification document (in some format, rdf, owl, xsd, …)
+:   **Optional**-*URL*- URL to schema specification (e.g. rdf, owl, xsd, json-ld)
     === "Example"
         ``` yaml     
-        "https://schemas.org/date.rdf"
+        "https://schemas.org/data.rdf"
         ```

@@ -29,6 +29,13 @@ nav:
           - Data Assets Mapping: start/dataassetsmapping.md
           - Deployment: start/deployment.md
       - Supporting Metadata: start/supporting_metadata.md
+  - Going Further:
+      - Going Further: adv/index.md
+      - Open Parameters: adv/params.md
+      - Exposing Microservices: adv/expose.md
+      - Dynamic Domains: adv/domains.md
+      - Enabling HTTPS: adv/https.md
+      - Edge Devices: adv/edge.md
   - Asset Detail:
       - Asset Detail: attributes/index.md
       - Microservice:

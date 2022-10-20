@@ -130,3 +130,17 @@ has these sections:
 
     `endpoint`{ #endpoint }
 :   **Optional**-*URL*- accesible IP or FQDN of edge device
+
+    `ssh_username`{ #ssh_username }
+:   **Optional**-*String*- username for SSH connection. Defaults to ubuntu
+        === "Example"
+            ``` yaml     
+            "ubuntu"
+            ```
+
+    `ssh_private_key`{ #ssh_private_key }
+:   **Optional**-*String*- private key for SSH connection.
+        === "Example"
+            ``` yaml     
+            "-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEApwn..."
+            ```

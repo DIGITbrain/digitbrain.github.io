@@ -102,6 +102,20 @@ has these sections:
         "others"
         ```
 
+`is_gui`{ #is_gui }
+:   **Optional**-*Boolean*- Denotes this microservice as exposing a graphical user interface (web). Defaults to False
+    === "Example"
+        ``` yaml     
+        True
+        ```
+
+`workload_type`{ #workload_type }
+:   **Optional**-*Enumeration ["service", "job", "undefined"]*- Specifies the workload type. service for long running microservices that must be shut-down by the user. job for batch operations that should shut-down after microservice completes succesfully. undefined for other, that must be shut-down by the user. Defaults to undefined.
+    === "Example"
+        ``` yaml     
+        "service"
+        ```
+
 `type`{ #type }
 :   **Required**-*List[String]*- detailed type of the microservice, list of keywords
 

@@ -61,24 +61,14 @@ has these sections:
             ```
 
     `exponents`{ #exponents }
-:   **Optional**-*array, 7-tuple of integer-valued exponents*- Ordered list of SI base units
-          1st entry: Length - meter (m)
-          2nd entry: Time - second (s)
-          3rd entry: Amount of substance - mole (mol)
-          4th entry: Electric current - ampere (A)
-          5th entry: Temperature - kelvin (K)
-          6th entry: Luminous intensity - candela (cd)
-          7th entry: Mass - kilogram (kg)
-Explanation: the exponents reference the above SI base units in the corresponding order to describe the unit w.r.t. the base SI units,
-the entries [1, -2, 0, 0, 0, 0, 1] thus denote m s⁻² kg, i.e., Newton
+:   **Optional**-*array, 7-tuple of integer-valued exponents*- Ordered list of SI base units<br>          1st entry: Length - meter (m)<br>          2nd entry: Time - second (s)<br>          3rd entry: Amount of substance - mole (mol)<br>          4th entry: Electric current - ampere (A)<br>          5th entry: Temperature - kelvin (K)<br>          6th entry: Luminous intensity - candela (cd)<br>          7th entry: Mass - kilogram (kg)<br><br>Explanation: the exponents reference the above SI base units in the corresponding order to describe the unit w.r.t. the base SI units, the entries [1, -2, 0, 0, 0, 0, 1] thus denote m s⁻² kg, i.e., Newton
         === "Example"
             ``` yaml     
             [1, -2, 0, 0, 0, 0, 1]
             ```
 
     `offset`{ #offset }
-:   **Optional**-*number, default value is 0*- allows to offset the values by adding a constant, e.g., Celsius is offset by 273.15 relative to Kelvin (C + 273.15 = K).
-For absolute temperatures only! For temperature *differences*, this must be omitted!
+:   **Optional**-*number, default value is 0*- allows to offset the values by adding a constant, e.g., Celsius is offset by 273.15 relative to Kelvin (C + 273.15 = K).<br>For absolute temperatures only! For temperature *differences*, this must be omitted!
 
     `scale-factor`{ #scale-factor }
 :   **Optional**-*number, default value is 1*- allows to scale the values into base units, e.g., 1e-3 to describe mm (millimeters) in terms of m (meters)
@@ -88,9 +78,7 @@ For absolute temperatures only! For temperature *differences*, this must be omit
             ```
 
 `default`{ #default }
-:   **Optional**-*number | null*- default value for in-slot, if null then the value for the in-slot needs to be set/fed at a later point in time.
-Default value must not be set for out-slots!
+:   **Optional**-*number | null*- default value for in-slot, if null then the value for the in-slot needs to be set/fed at a later point in time.<br>Default value must not be set for out-slots!
 
 `range`{ #range }
-:   **Optional**-*array | null*- valid range of values (2-tuple array minimum maximum values OR array of discrete valid scalars).
-If a valid range is not known a-priori: null / omitted
+:   **Optional**-*array | null*- valid range of values (2-tuple array minimum maximum values OR array of discrete valid scalars).<br>If a valid range is not known a-priori: null / omitted

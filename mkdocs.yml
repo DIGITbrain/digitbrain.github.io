@@ -31,6 +31,7 @@ nav:
       - Supporting Metadata: start/supporting_metadata.md
   - Going Further:
       - Going Further: adv/index.md
+      - Model & Data Parameters: adv/model_data.md
       - Open Parameters: adv/params.md
       - Exposing Microservices: adv/expose.md
       - Dynamic Domains: adv/domains.md

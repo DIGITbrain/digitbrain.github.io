@@ -5,9 +5,6 @@
 </style>
 # DataAssetsMapping Fields
 
-**This information is also available in [table format](/tables/dataassetsmapping/)**
-
-
 ## Available Fields 
 
 The metadata specification for a DIGITbrain DataAssetsMapping

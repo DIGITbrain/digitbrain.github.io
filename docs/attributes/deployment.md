@@ -5,8 +5,6 @@
 </style>
 # Deployment Fields
 
-**This information is also available in [table format](/tables/deployment/)**
-
 
 ## Available Fields 
 

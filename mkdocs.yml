@@ -29,16 +29,8 @@ nav:
           - Data Assets Mapping: start/dataassetsmapping.md
           - Deployment: start/deployment.md
       - Supporting Metadata: start/supporting_metadata.md
-  - Going Further:
-      - Going Further: adv/index.md
-      - Model & Data Parameters: adv/model_data.md
-      - Open Parameters: adv/params.md
-      - Exposing Microservices: adv/expose.md
-      - Dynamic Domains: adv/domains.md
-      - Enabling HTTPS: adv/https.md
-      - Edge Devices: adv/edge.md
-  - Asset Detail:
-      - Asset Detail: attributes/index.md
+  - Assets in Detail:
+      - Assets in Detail: attributes/index.md
       - Microservice:
           - Microservice: attributes/microservice/index.md
           - Configuration Data: attributes/configuration_data.md
@@ -50,32 +42,35 @@ nav:
       - Model:
           - Model: attributes/model/index.md
           - Slots: attributes/slots.md
+      - Behaviour:
+          - Behaviour: attributes/ma_pair/index.md
       - Data:
           - Data: attributes/data/index.md
-      - MA Pair:
-          - MA Pair: attributes/ma_pair/index.md
       - DMA Tuple:
           - DMA Tuple: attributes/dma_tuple/index.md
           - Data Assets Mapping: attributes/dataassetsmapping.md
           - Deployment: attributes/deployment.md
       - Supporting Metadata: attributes/supporting_metadata.md
-  - Asset Tables:
-      - Asset Tables: tables/index.md
+  - Going Further:
+      - Going Further: adv/index.md
+      - Model & Data Parameters: adv/model_data.md
+      - Open Parameters: adv/params.md
+      - Exposing Microservices: adv/expose.md
+      - Dynamic Domains: adv/domains.md
+      - Enabling HTTPS: adv/https.md
+      - Edge Devices: adv/edge.md
+  - Assets Overview:
+      - Asset Overview: tables/index.md
       - Microservice:
           - Microservice: tables/microservice/index.md
-          - Configuration Data: tables/configurationdata.md
-          - Data Resources: tables/data_resources.md
-          - Parameters: tables/parameters.md
-          - Metrics: tables/metrics.md
       - Algorithm:
           - Algorithm: tables/algorithm/index.md
       - Model:
           - Model: tables/model/index.md
-          - Slots: tables/slots.md
+      - Behaviour:
+          - Behaviour (M+A Pair): tables/ma_pair/index.md
       - Data:
           - Data: tables/data/index.md
-      - MA Pair:
-          - MA Pair: tables/ma_pair/index.md
       - Supporting Metadata:
           - IP Family: tables/ip_family.md
           - IP Instance: tables/ip_instance.md

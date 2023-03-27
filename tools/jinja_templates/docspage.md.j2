@@ -3,48 +3,28 @@
     display: none;
   }
 </style>
-# {{ sheet_name }} Fields
+# {{ table | replace("_", " ") | replace("Ma Pair", "Behaviour") }} Fields
 
-**This information is also available in [table format](/tables/{{ sheet_name  | lower | replace(" ", "_")}}/)**
-
-
-## Available Fields 
-
-The metadata specification for a DIGITbrain {{ sheet_name }}
-has these sections:
-
-{% for value in fields -%}
-{% if (value.concept and value.concept | length < 40) -%}
-- [{{ value.concept }}](#{{ value.concept | lower | replace(" ", "-") | replace("(", "") | replace(")", "") }})
+{% if asset %}
+**For a more condensed summary this information is available in [table view](/tables/{{ table  | lower | replace(" ", "_")}}/)**
 {% endif %}
-{%- endfor -%}
-{% for value in fields -%}
-{% if value.concept %}
 
-### {{ value.concept }}
 
-{% else %}
-{% if value.issubkey %}    {% endif -%}
-`{{ value.key }}`{ #{{ value.key | lower | replace(" ", "-") | replace("*", "") }} }
-{%- if value.issubkey -%}    
-    {%- endif -%}
-{% if value.required == "mandatory" %}
-:   **Required**-*{{ value.type }}*- {{ value.comment }}
-{% elif value.required == "auto" %}
-:   **Auto-generated**-*{{ value.type }}*- {{ value.comment }}
-{% else %}
-:   **Optional**-*{{ value.type }}*- {{ value.comment }}
-{%- endif %}
-{%- if value.example and value.issubkey %}
-        === "Example"
-            ``` yaml     
-            {{ value.example }}
-            ```
-{%- elif value.example and not value.issubkey %}
+The metadata specification for a DIGITbrain {{ table | replace("_", " ") | replace("Ma Pair", "Behaviour") }}
+has these fields:
+
+{% for key, value in fields.items() if not value.hide -%}
+
+`{{ key }}`{ #{{ key | lower | replace(" ", "-") | replace("*", "") }} }
+
+:   **{{ "Required" if key in required else "Optional" }}**-*{{ "enum [" ~ value.enum | join(", ") ~ "]" if "enum" in value else value.type }}*- {{ value.description }}
+
+{% if "example" in value %}
     === "Example"
         ``` yaml     
         {{ value.example }}
         ```
-{%- endif %}
-{% endif -%}
+
+{% endif %}
+
 {%- endfor %}

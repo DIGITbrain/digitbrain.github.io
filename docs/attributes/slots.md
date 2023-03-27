@@ -33,7 +33,13 @@ has these fields:
 
 `dimensions`{ #dimensions }
 
-:   **Optional**-*integer*- 
+:   **Optional**-*number (integer-valued) | array of integer-valued numbers, default is 1 (scalar)*- dimension of inputs to in-slot, array of dimensions for matrices / tensors
+
+
+    === "Example"
+        ``` yaml     
+        1
+        ```
 
 `is_continuous`{ #is_continuous }
 
@@ -51,9 +57,9 @@ has these fields:
 
 `default_value`{ #default_value }
 
-:   **Optional**-*integer*- 
+:   **Optional**-*number | null*- default value for in-slot, if null then the value for the in-slot needs to be set/fed at a later point in time.<br>Default value must not be set for out-slots!
 
 `ranges`{ #ranges }
 
-:   **Optional**-*integer[]*- 
+:   **Optional**-*array | null*- valid range of values (2-tuple array minimum maximum values OR array of discrete valid scalars).<br>If a valid range is not known a-priori: null / omitted
 

@@ -1,8 +1,8 @@
-default:
+default_value:
   description: default value for in-slot, if null then the value for the in-slot needs
     to be set/fed at a later point in time.<br>Default value must not be set for out-slots!
   type: number | null
-dimension:
+dimensions:
   description: dimension of inputs to in-slot, array of dimensions for matrices /
     tensors
   example: 1
@@ -43,7 +43,7 @@ offset:
     offset by 273.15 relative to Kelvin (C + 273.15 = K).<br>For absolute temperatures
     only! For temperature *differences*, this must be omitted!
   type: number, default value is 0
-range:
+ranges:
   description: 'valid range of values (2-tuple array minimum maximum values OR array
     of discrete valid scalars).<br>If a valid range is not known a-priori: null /
     omitted'

@@ -1,0 +1,85 @@
+author:
+  example: UUID
+build:
+  example: '21'
+classification_schema:
+  example: '"others"'
+configuration_data:
+  example: "[ {\n                \"filePath\": \"/data/rclone.conf\",\n                \"fileContent\":
+    \"[s3-server]\\n    access_key: 123abc\",\n                \"mountPropagation\":
+    \"Bidirectional\"\n            } ]"
+  type: '[ConfigurationData](../configurationdata.md)'
+data_resource:
+  example: "[{\n                \"ID\": \"MY_SINK\",\n                \"KIND\": \"STREAM\",\n
+    \               \"DIRECTION\": \"SOURCE\",\n                \"FORMAT\": [\"image/jpg\"],\n
+    \               \"SOURCE_TYPE\": \"KAFKA\",\n                \"SCHEMA\": [\"jpeg
+    image\"],\n                \"AUX_INFO\": {\"PROTOCOL\": \"https\", \"S3_REGION\":
+    \"eu-west-1\"}\n            }]"
+  type: '[Data Resources](../data_resources.md)'
+date:
+  example: '2022-04-28T08:11:53+00:00'
+deployment_data:
+  example: "\"version\": \"3.7\",\n            \"services\": {\n              \"ristra\":
+    {\n                \"image\": \"dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0\",\n
+    \               \"entrypoint\": \"/bin/sh -c\",\n                \"command\":
+    \"python3 start.py {{ MODEL.PATH }}/{{ MODEL.FILE }}\",\n                \"volumes\":
+    [{\n                  \"type\": \"bind\",\n                  \"source\": \"/data\",\n
+    \                 \"target\": \"/data\",\n                  \"bind\": {\n                     \"propagation\":
+    \"rshared\"\n            \t      }\n                }],\n                \"privileged\":
+    true\n              }\n            }"
+deployment_format:
+  example: '"docker-compose"'
+description:
+  example: '"This microservices solves a certain problem using very specific methods…"'
+edge_type:
+  example: '"NVIDIA Jetson AGX"'
+gpu_type:
+  example: '"NVidia (compute capability >= 7.0)"'
+hpc_required:
+  example: 'true'
+id:
+  example: '"MSID_MYMS_A"'
+is_gui:
+  example: 'True'
+metrics:
+  example: "[{\n                \"name\": \"meanTemperature\",\n                \"correspondingMeasurement\":
+    \"temperature1\",\n                \"function\": \"arithmetic mean\",\n                \"unit\":
+    \"degree celcius\",\n                \"description\": \"The metric is good\"\n
+    \           } ]"
+  type: '[Metrics](../metrics.md)'
+model_recommended_auth_tools:
+  example: '["PreSTRA"]'
+model_types:
+  example: '["SavedModel (Tensorflow)"]'
+mounted_shared_directories:
+  example: '"/data and /cfg are mounted on the host for data and configuration sharing,
+    respectively."'
+name:
+  example: '"Object Detection for faulty parts"'
+os_arch:
+  example: '"x86_64"'
+os_type:
+  example: '"linux"'
+parameters:
+  example: "[{\n                \"name\": \"detection_threshold\",\n                \"type\":
+    \"Integer\",\n                \"mandatory\": true,\n                \"defaultValue\":
+    42,\n                \"description\": \"This parameter is helpful\"\n            }]"
+  type: '[Parameters](../parameters.md)'
+provider:
+  example: UUID
+recommended_cp_us:
+  example: 4
+recommended_gpuram:
+  example: 6
+recommended_number_of_gp_us:
+  example: 2
+recommended_ram:
+  example: '16'
+required_disk_space:
+  example: '42'
+type:
+  example: '["neural network", "deep learning", "convolutional neural network", "CNN"]'
+version:
+  example: '"1.0"'
+workload_type:
+  example: '"service"'

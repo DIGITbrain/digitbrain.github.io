@@ -1,0 +1,34 @@
+a_asset:
+  example: '"ALGID_MYALG"'
+author:
+  example: UUID
+build:
+  example: '21'
+date:
+  example: '2022-04-28T08:11:53+00:00'
+derivation:
+  example: ma_pair_123e4567-e89b-12d3 (auto)
+frequency:
+  example: 12
+id:
+  example: '"MAID_MYMA"'
+ip_family:
+  example: ip_family_123e4567-e89b-12d3
+licensor:
+  example: legal_entity_123e4567-e89b-12d3 (auto)
+m_asset:
+  example: '"MODID_MYMODEL"'
+name:
+  example: Pressure drop
+namespace:
+  example: namespace_123e4567-e89b-12d3
+payload:
+  example: '{‘minPressure’: 90, ‘maxPressure’: 120}'
+provider:
+  example: UUID
+rules:
+  example: rules_123e4567-e89b-12d3
+scope:
+  example: Effectiveness of the mold closing process
+version:
+  example: '"0.21.0"'

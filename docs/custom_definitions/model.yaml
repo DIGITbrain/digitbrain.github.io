@@ -1,0 +1,34 @@
+author:
+  example: UUID
+build:
+  example: '21'
+date:
+  example: '2022-04-28T08:11:53+00:00'
+filename:
+  example: '"mymodel.pb"'
+id:
+  example: '"MODID_MYMODEL"'
+in_slots:
+  example: "[\n              { \n                \"Key\": \"MY_INSLO_A\",\n                \"Name\":
+    \"ModelABin\",\n                \"Dimensions\": 112,\n                \"Is-continuous\":
+    true,\n                \"Units\": {\n                    \"Unit\": \"Pa\",\n                    \"Exponent\":
+    [1, -2, 0],\n                    \"Offset\": 442,\n                    \"Scale\":
+    10^-3\n                },\n                \"Default-value\": 55,\n                \"Ranges\":
+    [1,120]\n              }\n            ]  "
+  type: '[Slots](../slots.md)'
+out_slots:
+  example: "[\n              { \n                \"Key\": \"MY_OUTPUT_A\",\n                \"Name\":
+    \"ModelABout\",\n                \"Dimensions\": 112,\n                \"Is-continuous\":
+    true,\n                \"Units\": {\n                    \"Unit\": \"Pa\",\n                    \"Exponent\":
+    [1, -2, 0],\n                    \"Offset\": 442,\n                    \"Scale\":
+    10^-3\n                },\n                \"Default-value\": 55,\n                \"Ranges\":
+    [1,120]\n              }\n            ]  "
+  type: '[Slots](../slots.md)'
+path:
+  example: '"input/models"'
+provider:
+  example: UUID
+repository_uri:
+  example: '"https://www.myrepo.com"'
+version:
+  example: '"0.1"'

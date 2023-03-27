@@ -1,0 +1,45 @@
+auth_type:
+  example: '["tls_client_certificate"]'
+author:
+  example: UUID
+aux_info:
+  example: '{"PROTOCOL": "tcp", "MQTT_PROTOCOL_VERSION": "3.1.1", "KAFKA_BROKER_VERSION":
+    "2.7.0"}'
+build:
+  example: '21'
+credentials:
+  example: '-'
+date:
+  example: '2022-04-28T08:11:53+00:00'
+desc:
+  example: '"This sensor measures temperature in Celsius, sends data via ConSenses
+    edge device via an MQTT broker"'
+desc_url:
+  example: '"https://some-host/docs/data-source-specification-sheet.pdf"'
+direction:
+  example: '"SOURCE"'
+format:
+  example: '["application/json"] '
+id:
+  example: '"DATAID_MYDATA_A"'
+kind:
+  example: '"STREAM"'
+name:
+  example: '"CNSPiezoBolt#1 (in directory: factory 1 , machine1 , piezobolts)"'
+provider:
+  example: UUID
+schema_desc:
+  example: '"Messages constain raw sensor values as floats in Celsius, each is a JSON
+    object with key name ''temperature''."'
+schema_url:
+  example: '"https://schemas.org/data.rdf"'
+size:
+  example: 112
+tags:
+  example: '["sensor", "celsius", "press machine"]'
+type:
+  example: '"MQTT"'
+uri:
+  example: '["kafka://host/topic#1"]'
+version:
+  example: '"1.0.0"'

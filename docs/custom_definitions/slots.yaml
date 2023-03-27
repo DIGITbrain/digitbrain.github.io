@@ -1,0 +1,58 @@
+default:
+  description: default value for in-slot, if null then the value for the in-slot needs
+    to be set/fed at a later point in time.<br>Default value must not be set for out-slots!
+  type: number | null
+dimension:
+  description: dimension of inputs to in-slot, array of dimensions for matrices /
+    tensors
+  example: 1
+  type: number (integer-valued) | array of integer-valued numbers, default is 1 (scalar)
+dimension_names:
+  description: 'optional list of concise names of each tensor dimension to indicate
+    expected contents, e.g., "dimension_names": ["batch", "channels", "width", "height"]'
+  type: array of strings matching length of dimension | null
+exponents:
+  description: 'Ordered list of SI base units<br>          1st entry: Length - meter
+    (m)<br>          2nd entry: Time - second (s)<br>          3rd entry: Amount of
+    substance - mole (mol)<br>          4th entry: Electric current - ampere (A)<br>          5th
+    entry: Temperature - kelvin (K)<br>          6th entry: Luminous intensity - candela
+    (cd)<br>          7th entry: Mass - kilogram (kg)<br><br>Explanation: the exponents
+    reference the above SI base units in the corresponding order to describe the unit
+    w.r.t. the base SI units, the entries [1, -2, 0, 0, 0, 0, 1] thus denote m s⁻²
+    kg, i.e., Newton'
+  example: '[1, -2, 0, 0, 0, 0, 1]'
+  type: array, 7-tuple of integer-valued exponents
+is_continuous:
+  description: flag to indicate whether slot values are integer or real numbers
+  example: 'true'
+  type: bool, default is true (real)
+key:
+  description: unique (within a Model) machine-readable identifier matching [a-zA-Z_][a-zA-Z_0-9]*
+  example: force_1
+  type: string
+name:
+  description: Human-readable identifier
+  example: Force at Boundary Condition 1
+  type: string
+name_of_unit:
+  description: human readable unit symbol, here N for Newton
+  example: N
+  type: string
+offset:
+  description: allows to offset the values by adding a constant, e.g., Celsius is
+    offset by 273.15 relative to Kelvin (C + 273.15 = K).<br>For absolute temperatures
+    only! For temperature *differences*, this must be omitted!
+  type: number, default value is 0
+range:
+  description: 'valid range of values (2-tuple array minimum maximum values OR array
+    of discrete valid scalars).<br>If a valid range is not known a-priori: null /
+    omitted'
+  type: array | null
+scale_factor:
+  description: allows to scale the values into base units, e.g., 1e-3 to describe
+    mm (millimeters) in terms of m (meters)
+  example: 1
+  type: number, default value is 1
+units:
+  description: Values related to the slot measurement units
+  type: obj (see subkeys below)

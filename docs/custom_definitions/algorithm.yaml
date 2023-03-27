@@ -1,0 +1,25 @@
+author:
+  example: UUID
+build:
+  example: '21'
+classification_schema:
+  example: '"ML"'
+date:
+  example: '2022-04-28T08:11:53+00:00'
+deployment_mapping:
+  example: '{"MSID_MYMS_A": "HOSTID_MYHOST_A", "MSID_MYMS_B": "HOSTID_MYHOST_A"}'
+description:
+  example: '"This algorithm can be used to solve a specifc problem, and applies some
+    fancy technologies."'
+id:
+  example: '"ALGID_MYALG"'
+list_of_microservices:
+  example: '["MSID_MYMS_A", "MSID_MYMS_B"]'
+name:
+  example: '"Object Detection Algorithm for detection of faulty weld seams"'
+provider:
+  example: UUID
+type:
+  example: '["neural network", "deep learning", "convolutional neural network", "CNN"]'
+version:
+  example: '"1.0"'

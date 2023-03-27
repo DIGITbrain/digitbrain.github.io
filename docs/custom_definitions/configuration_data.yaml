@@ -1,0 +1,13 @@
+file_content:
+  description: file content (not binary)
+  example: '"[s3-server]\n    access_key: 123abc"'
+  type: String
+file_path:
+  description: full path to file including file name
+  example: '"/data/rclone.conf"'
+  type: String
+mount_propagation:
+  description: 'Enable mountPropagation https://kubernetes.io/docs/concepts/storage/volumes/#mount-propagation
+    . Default: None'
+  example: '"Bidirectional"'
+  type: Enum[ "None", "HostToContainer", "Bidirectional" ]

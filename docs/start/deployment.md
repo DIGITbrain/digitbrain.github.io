@@ -23,13 +23,11 @@ Where bring-your-own edges are used, DIGITbrain currently supports the following
 - Common Linux Distributions
 - Minimum 1 CPU, 1GB RAM and 5GB free disk space
 
-## Metadata describing Deployment
+## Describing Deployments
 
-For a closer look at this metadata, use the following resources:
+For a closer look at the fields available for Deployments, use the following resources:
 
-- [Attribute Listing](/attributes/deployment) for an itemised listing of fields
-- [Metadata Table](/tables/deployment) for a table-formatted overview
-- The **Further Reading** section below
+- [Deployments in Detail](/attributes/deployment) for an itemised listing of fields
 
 ## Further reading...
 

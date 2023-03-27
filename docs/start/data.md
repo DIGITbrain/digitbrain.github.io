@@ -34,14 +34,9 @@ On-premises Data resources must be accessible for Algorithms running in a cloud,
 - corresponding ports open for the domain towards the compute cloud of the Algorithms
 
 
-## Metadata describing Data
+## Describing Data
 
-For a closer look at this metadata, use the following resources:
+For a closer look at the fields available for Data, use the following resources:
 
-- [Attribute Listing](/attributes/data) for an itemised listing of fields
-- [Metadata Table](/tables/data) for a table-formatted overview
-- Feel free to extend this list as desired
-
-## Further reading...
-
-This space is for any other required documentation on this asset.
+- [Data in Detail](/attributes/data) for an itemised listing of fields
+- [Data Overview](/tables/data) for a table-formatted overview

@@ -8,12 +8,12 @@ A model in DIGITbrain is an asset that contains the knowledge related to a speci
 
 Models must be accessible from Algorithms for evaluation, thus they must be located in the specific DIGITbrain Model repository.
 
-## Metadata describing Models
+## Describing Models
 
-For a closer look at this metadata, use the following resources:
+For a closer look at the fields available for Models, use the following resources:
 
-- [Attribute Listing](/attributes/model) for an itemised listing of fields
-- [Metadata Table](/tables/model) for a table-formatted overview
+- [Models in Detail](/attributes/model) for an itemised listing of fields
+- [Models Overview](/tables/model) for a table-formatted overview
 
 ## Further reading...
 

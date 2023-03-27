@@ -15,36 +15,38 @@ quantities and still in an economically profitable way.
 
 **For full project details visit [digitbrain.eu](https://digitbrain.eu/).**
 
-## This documentation
+## Using this documentation
 
 The primary aim of this documentation is to serve as a point of reference for
 providers and consumers of the different assets in DIGITbrain. These include
 **Microservices**, **Algorithms**, **Model** and **Data**, as well as
-**MA Pairs** and **DMA Tuples**.
+**Behaviours** and **DMA Tuples**.
 
-The various metadata fields presented across this site are all automatically
-updated based on the main DIGITbrain Metadata Specification stored under the
-[DIGITbrain GitHub](https://github.com/DIGITbrain/digitbrain.github.io). They
-are up-to-date with the very latest development version. For the latest stable
-version, check the [GitHub Releases](https://github.com/DIGITbrain/digitbrain.github.io/releases)
-page. Both versions are available as *.xlsx* Excel files, and can be used by
-experiment partners who need to provide metadata values describing their applications.
+### Assets
 
-### Asset metadata
+Please navigate using the available navigation bars. Information on the
+fields available on each asset is available in [detail](attributes)
+or as an [overview](tables). 
 
-Please navigate using the available navigation bars. Metadata information
-is available in both a table and list views. The Asset Overview pages may contain
-extra helpful information for getting started.
+**If you're new to DIGITbrain, refer to [Getting Started](start).**
 
-### Example metadata
+### Examples
 
-Several examples are already running on the DIGITbrain platform. A complete metadata
+Several examples are already running on the DIGITbrain platform. A complete
 specification has been provided for each of these examples and it is hoped that these
-can serve as a guide for users looking to describe their own applications for use in
+can serve as a guide for users looking to describe their own assets for use in
 the DIGITbrain platform.
 
-**Completed Excel workbooks can be downloaded from the [DIGITbrain GitHub Repository](https://github.com/DIGITbrain/digitbrain.github.io/tree/main/examples).**
+**See these [examples here](examples/). Note that some field names may appear differently.**
 
-**The same information can also be found in this documentation, under [examples](examples/).**
+## Technical Information
 
-<p style="text-align: center;"><sup><sub>If you experience any issues using this site, or have any comments, please let us know by creating an <a href="https://github.com/DIGITbrain/digitbrain.github.io/issues/new">issue on GitHub</a>.</sub></sup></p>
+Much of the information presented across this site is automatically
+updated based on the schemas defined in the Asset Metadata Registry, which stores
+information about the different assets that are created on the platform. It is
+up-to-date with the very latest production version.
+
+This documentation is served from 
+[a GitHub repository](https://github.com/DIGITbrain/digitbrain.github.io). 
+
+<p style="text-align: center;"><sub>If you experience any issues using this site, please let us know by creating an <a href="https://github.com/DIGITbrain/digitbrain.github.io/issues/new">issue on GitHub</a>.</sub></p>

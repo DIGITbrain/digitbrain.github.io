@@ -21,13 +21,12 @@ free public and paid private repositories, or the DIGITbrain platform
 itself offers private repositories on a private registry.
 Contact an administrator for access to the DIGITbrain private registry.
 
-## Metadata describing Microservices
+## Describing Microservices
 
-For a closer look at this metadata, use the following resources:
+For a closer look at the fields available for Microservices, use the following resources:
 
-- [Attribute Listing](/attributes/microservice) for an itemised listing of fields
-- [Metadata Table](/tables/microservice) for a table-formatted overview
-- Feel free to extend this list as desired
+- [Microservices in Detail](/attributes/microservice) for an itemised listing of fields
+- [Microservices Overview](/tables/microservice) for a table-formatted overview
 
 ## Further reading...
 

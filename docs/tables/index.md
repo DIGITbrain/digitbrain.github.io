@@ -1,9 +1,10 @@
-# DIGITbrain Metadata (Overview)
+# DIGITbrain Assets (Overview)
 
-Here you can find a **tabular overview** of the very latest metadata
-specification, picked direct from the Asset Metadata Registry!
+Here you can find a **tabular overview** of the very latest
+specification for each of the DIGITbrain assets, generated directly
+from the Asset Metadata Registry!
 
-For full detail, most users will prefer the [detailed view](/attributes)
+For full detail, most users will prefer the [detailed view](/attributes).
 
 - [Microservice](microservice)
 - [Algorithm](algorithm)

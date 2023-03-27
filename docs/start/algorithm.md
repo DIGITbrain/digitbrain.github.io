@@ -26,14 +26,9 @@ To integrate an Algorithm within the DIGITbrain Solution, the following steps ne
 - **Packaging:** the authored Microservice is packaged following the Asset guidelines of the DIGITbrain Solution (i.e., Docker containers).
 - **Publishing:** definition and provision of metadata description for Microservices together with their publication in the DIGITbrain Asset Metadata Registry. Additionally, the different Microservices need to be linked to an Algorithm, defining its metadata, and publishing it as a new Algorithm Asset to the DIGITbrain Asset Metadata Registry using the respective Publishing Interface.
 
-## Metadata describing Algorithms
+## Describing Algorithms
 
-For a closer look at this metadata, use the following resources:
+For a closer look at the fields available for Algorithms, use the following resources:
 
-- [Attribute Listing](/attributes/algorithm) for an itemised listing of fields
-- [Metadata Table](/tables/algorithm) for a table-formatted overview
-- Feel free to extend this list as desired
-
-## Further reading...
-
-This space is for any other required documentation on this asset.
+- [Algorithms in Detail](/attributes/algorithm) for an itemised listing of fields
+- [Algorithms Overview](/tables/algorithm) for a table-formatted overview

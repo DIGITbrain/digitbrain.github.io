@@ -17,12 +17,11 @@ Data Sources ([Input Data](/attributes/microservice#inputdata) and/or
 at least one of the Microservices that makes up the Algorithm in the DMA Tuple.
 The Data Assets must already be published on the DIGITbrain platform.
 
-## Metadata describing Deployment
+## Understanding Data Assets Mapping
 
-For a closer look at this metadata, use the following resources:
+For a closer look at Data Assets Mapping, use the following resources:
 
-- [Attribute Listing](/attributes/dataassetmapping) for an itemised listing of fields
-- [Metadata Table](/tables/dataassetsmapping) for a table-formatted overview
+- [Data Assets Mappings in Detail](/attributes/dataassetmapping) for an itemised listing of fields
 
 ## An example
 

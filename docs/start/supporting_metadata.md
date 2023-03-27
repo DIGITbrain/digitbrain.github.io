@@ -8,13 +8,12 @@ Here is an introduction to Supporting Metadata.
 
 Information on any requirements imposed on this asset.
 
-## Metadata describing Supporting Metadata
+## Describing Supporting Metadata
 
-For a closer look at this metadata, use the following resources:
+For a closer look at Supporting Metadata, use the following resources:
 
-- [Attribute Listing](/attributes/supporting_metadata) for an itemised listing of fields
-- [Metadata Table](/tables/supporting_metadata) for a table-formatted overview
-- Feel free to extend this list as desired
+- [IP Families](/tables/ip_family) for an overview of an IP Family
+- [IP Instances](/tables/ip_instance) for an overview of an IP Instance
 
 ## Further reading...
 

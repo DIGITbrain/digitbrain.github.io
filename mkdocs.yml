@@ -90,7 +90,8 @@ markdown_extensions:
   - admonition
   - attr_list
   - def_list
-  - swaggermarkdown
+  - swaggermarkdown:
+      file: tools/swagger.json
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid

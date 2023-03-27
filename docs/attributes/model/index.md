@@ -99,12 +99,12 @@ has these fields:
 
 `inslots`{ #inslots }
 
-:   **Optional**-*string*- List of objects with values on which the model is evaluated (or parameters that might set before or during the evaluation) - Inputs and parameters together, although if needed we can still differentiate them internally in key field for each specific model.
+:   **Optional**-*string[]*- List of objects with values on which the model is evaluated (or parameters that might set before or during the evaluation) - Inputs and parameters together, although if needed we can still differentiate them internally in key field for each specific model.
 
 
 `outslots`{ #outslots }
 
-:   **Optional**-*string*- List of objects with values that the model approximates
+:   **Optional**-*string[]*- List of objects with values that the model approximates
 
 
 `os_arch`{ #os_arch }

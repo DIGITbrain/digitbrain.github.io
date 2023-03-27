@@ -58,7 +58,7 @@ has these fields:
 
 `tags`{ #tags }
 
-:   **Optional**-*string*- A list of tags freely added to help in searching/indexing (not limited to a basic set of tags, keywords)
+:   **Optional**-*string[]*- A list of tags freely added to help in searching/indexing (not limited to a basic set of tags, keywords)
 
 
 
@@ -91,7 +91,7 @@ has these fields:
 
 `format`{ #format }
 
-:   **Optional**-*string*- Format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files).
+:   **Optional**-*string[]*- Format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files).
 
 
 
@@ -124,7 +124,7 @@ has these fields:
 
 `auth_type`{ #auth_type }
 
-:   **Required**-*string*- One or more authentication types that can be accepted by the storage resource.
+:   **Required**-*string[]*- One or more authentication types that can be accepted by the storage resource.
 
 
 

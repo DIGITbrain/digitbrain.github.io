@@ -48,7 +48,7 @@ has these fields:
 
 `type`{ #type }
 
-:   **Required**-*string*- a detailed list of attributes to describe the Algorithm’s field of application
+:   **Required**-*string[]*- a detailed list of attributes to describe the Algorithm’s field of application
 
 
 
@@ -70,7 +70,7 @@ has these fields:
 
 `list_of_microservices`{ #list_of_microservices }
 
-:   **Required**-*string*- a list of Microservice Asset IDs, which are contained in the algorithm
+:   **Required**-*string[]*- a list of Microservice Asset IDs, which are contained in the algorithm
 
 
 

@@ -55,7 +55,7 @@ has these fields:
 
 `type`{ #type }
 
-:   **Required**-*string*- detailed type of the microservice, list of keywords
+:   **Required**-*string[]*- detailed type of the microservice, list of keywords
 
 
     === "Example"
@@ -101,7 +101,7 @@ has these fields:
 
 `configuration_data`{ #configuration_data }
 
-:   **Optional**-*[ConfigurationData](../configurationdata.md)*- List of objects specifying configuration file(s) content required by the service
+:   **Optional**-*[ConfigurationData](../configurationdata.md)[]*- List of objects specifying configuration file(s) content required by the service
 
 
     === "Example"
@@ -215,7 +215,7 @@ has these fields:
 
 `data_resource`{ #data_resource }
 
-:   **Optional**-*[Data Resources](../data_resources.md)*- list of Data objects for each required data resource, specified using the "DATA" fields in the linked substructure
+:   **Optional**-*[Data Resources](../data_resources.md)[]*- list of Data objects for each required data resource, specified using the "DATA" fields in the linked substructure
 
 
 
@@ -234,7 +234,7 @@ has these fields:
 
 `model_types`{ #model_types }
 
-:   **Optional**-*string*- list of supported Model types
+:   **Optional**-*string[]*- list of supported Model types
 
 
 
@@ -245,7 +245,7 @@ has these fields:
 
 `model_recommended_auth_tools`{ #model_recommended_auth_tools }
 
-:   **Optional**-*string*- list of recommended AuthoringTools used to generate the Model
+:   **Optional**-*string[]*- list of recommended AuthoringTools used to generate the Model
 
 
 
@@ -256,7 +256,7 @@ has these fields:
 
 `parameters`{ #parameters }
 
-:   **Optional**-*[Parameters](../parameters.md)*- list of Parameter objects for each possible parameters, to be specified before deployment
+:   **Optional**-*[Parameters](../parameters.md)[]*- list of Parameter objects for each possible parameters, to be specified before deployment
 
 
 
@@ -273,7 +273,7 @@ has these fields:
 
 `metrics`{ #metrics }
 
-:   **Optional**-*[Metrics](../metrics.md)*- list of Metric objects for each metric collected by the Microservice
+:   **Optional**-*[Metrics](../metrics.md)[]*- list of Metric objects for each metric collected by the Microservice
 
 
 

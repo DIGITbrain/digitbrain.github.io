@@ -120,7 +120,7 @@ This is a Foreign Key to `algorithm.id`.<fk table='algorithm' column='id'/>
 
 `rules`{ #rules }
 
-:   **Optional**-*string*- References to recommended Rules to be verified per Evaluation of the MA Pair
+:   **Optional**-*string[]*- References to recommended Rules to be verified per Evaluation of the MA Pair
 
 
 

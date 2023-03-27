@@ -55,12 +55,16 @@ def fetch_api_detail(url, key=None):
         raise ValueError(f"ERR: JSON does not contain {key}: {response}.") from None
 
 
-def update_fields_with_user_defs(fields, user_defs):
+def update_fields_with_user_defs(table, fields, user_defs):
     if not fields:  # For tables not in AMDR, rely on user definitions
         return user_defs
+    
+    table = table.lower().replace(' ', '_')
+    msg = "field does not have an example value."
 
     for field, defs in fields.items():
         if field not in user_defs:
+            print(f"::notice file=docs/custom_definitons/{table}.yaml::{field} {msg}")
             continue
         defs.update(user_defs[field])
 
@@ -108,7 +112,7 @@ for table in AMDR_TABLES + DA_TABLES:
             errors.append(f"ERR: Expecting user definitions for {table}, none found.")
             continue
 
-    fields = update_fields_with_user_defs(fields, user_defs)
+    fields = update_fields_with_user_defs(table, fields, user_defs)
 
     pages_to_write.append(
         {
@@ -147,7 +151,7 @@ for udt, fields in udts.items():
     except Exception:
         pass
 
-    fields = update_fields_with_user_defs(fields, user_defs)
+    fields = update_fields_with_user_defs(udt, fields, user_defs)
 
     pages_to_write.append(
         {

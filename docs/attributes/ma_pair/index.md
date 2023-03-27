@@ -95,8 +95,8 @@ has these fields:
 :   **Required**-*string*- Identifier of the Model Asset associated to the MA Pair (NB: The corresponding model file is indicated in Model metadata (first tab) as Model_URI and the corresponding zip file needs to be served to the Algorithm to evaluate the Model by the Microservice (MODEL_FILENAME))
 
 
-Note:
-This is a Foreign Key to `microservice.id`.<fk table='microservice' column='id'/>
+    Note:
+    This is a Foreign Key to `microservice.id`.<fk table='microservice' column='id'/>
 
 
     === "Example"
@@ -109,8 +109,8 @@ This is a Foreign Key to `microservice.id`.<fk table='microservice' column='id'/
 :   **Required**-*string*- Identifiers of the Algorithm Asset associated to the MA Pair
 
 
-Note:
-This is a Foreign Key to `algorithm.id`.<fk table='algorithm' column='id'/>
+    Note:
+    This is a Foreign Key to `algorithm.id`.<fk table='algorithm' column='id'/>
 
 
     === "Example"

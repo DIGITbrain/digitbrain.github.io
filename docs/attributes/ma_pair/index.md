@@ -10,7 +10,7 @@
 
 
 
-The metadata specification for a DIGITbrain Behaviour
+The specification for Behaviour
 has these fields:
 
 `version`{ #version }

@@ -8,7 +8,7 @@
 
 
 
-The metadata specification for a DIGITbrain Metrics
+The specification for Metrics
 has these fields:
 
 `name`{ #name }

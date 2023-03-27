@@ -8,7 +8,7 @@
 
 
 
-The metadata specification for a DIGITbrain Dma Tuple
+The specification for Dma Tuple
 has these fields:
 
 `author`{ #author }

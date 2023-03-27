@@ -8,7 +8,7 @@
 
 
 
-The metadata specification for a DIGITbrain Data Resource
+The specification for Data Resource
 has these fields:
 
 `kind`{ #kind }

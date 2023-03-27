@@ -8,7 +8,7 @@
 
 
 
-The metadata specification for a DIGITbrain Configuration Data
+The specification for Configuration Data
 has these fields:
 
 `file_path`{ #file_path }

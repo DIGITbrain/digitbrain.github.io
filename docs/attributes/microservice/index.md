@@ -10,7 +10,7 @@
 
 
 
-The metadata specification for a DIGITbrain Microservice
+The specification for Microservice
 has these fields:
 
 `name`{ #name }

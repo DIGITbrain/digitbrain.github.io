@@ -10,7 +10,7 @@
 
 
 
-The metadata specification for a DIGITbrain Algorithm
+The specification for Algorithm
 has these fields:
 
 `name`{ #name }

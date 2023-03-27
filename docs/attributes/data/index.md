@@ -10,7 +10,7 @@
 
 
 
-The metadata specification for a DIGITbrain Data
+The specification for Data
 has these fields:
 
 `name`{ #name }

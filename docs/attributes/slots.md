@@ -8,7 +8,7 @@
 
 
 
-The metadata specification for a DIGITbrain Slots
+The specification for Slots
 has these fields:
 
 `key`{ #key }

@@ -8,7 +8,7 @@
 
 
 
-The metadata specification for a DIGITbrain Units
+The specification for Units
 has these fields:
 
 `unit`{ #unit }

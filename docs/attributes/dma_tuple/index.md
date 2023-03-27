@@ -3,151 +3,38 @@
     display: none;
   }
 </style>
-# DMA Tuple Fields
-
-**This information is also available in [table format](/tables/dma_tuple/)**
+# Dma Tuple Fields
 
 
-## Available Fields 
-
-The metadata specification for a DIGITbrain DMA Tuple
-has these sections:
-
-- [Administrative Data](#administrative-data)
-- [Definition](#definition)
-- [Data Assets Mapping](#data-assets-mapping)
-- [Deployments](#deployments)
 
 
-### Administrative Data
+The metadata specification for a DIGITbrain Dma Tuple
+has these fields:
 
+`author`{ #author }
 
-`ID`{ #id }
-:   **Auto-generated**-*ID*- Unique identifier of the asset.
+:   **Required**-**- Unique identifier of the user who created this record
 
-    === "Example"
-        ``` yaml     
-        "DMAID_MYDMA"
-        ```
-
-`AUTHOR`{ #author }
-:   **Auto-generated**-*ID*- Unique identifier of the user who created this record
 
     === "Example"
         ``` yaml     
         UUID
         ```
 
-`PROVIDER`{ #provider }
-:   **Auto-generated**-*ID*- Legal entity who provides the asset (owner). It is the affiliation of the author by default.
+`build`{ #build }
 
-    === "Example"
-        ``` yaml     
-        UUID
-        ```
+:   **Required**-**- Build number, incremented automatically to provide versioning for the asset
 
-`BUILD`{ #build }
-:   **Auto-generated**-*Integer*- Build number, incremented automatically to provide versioning for the asset
 
     === "Example"
         ``` yaml     
         21
         ```
 
-`DATE`{ #date }
-:   **Auto-generated**-*DATE (ISO 8601)*- Date of asset registration.
+`data_assets_mapping`{ #data_assets_mapping }
 
-    === "Example"
-        ``` yaml     
-        2022-04-28T08:11:53+00:00
-        ```
+:   **Optional**-*[DataAssetsMapping](../dataassetsmapping.md)*- Mapping required Data assets to Microservices specified in the MA Pair. Not every Microservice needs a Data asset.
 
-
-### Definition
-
-
-`Version`{ #version }
-:   **Optional**-*String*- Version number of the DMA Tuple, defined by the provider
-    === "Example"
-        ``` yaml     
-        "0.21.0"
-        ```
-
-`Licensor`{ #licensor }
-:   **Auto-generated**-*ID / URI*- Identifier of the Legal Entity licensing the the MA Pair (NB: Entity for Licensor is referenced)
-
-    === "Example"
-        ``` yaml     
-        legal_entity_123e4567-e89b-12d3 (auto)
-        ```
-
-`Derivation`{ #derivation }
-:   **Auto-generated**-*IDs / URIs*- In case of derivation, references to parent / child (optional)
-
-    === "Example"
-        ``` yaml     
-        dma_tuple_123e4567-e89b-12d3 (auto)
-        ```
-
-`Name`{ #name }
-:   **Required**-*Text*- Short name to identify the DMA Tuple
-
-    === "Example"
-        ``` yaml     
-        Pressure drop for the injection in hall 3
-        ```
-
-`Scope`{ #scope }
-:   **Required**-*Text*- Short description of the scope of the DMA Tuple (human readable)
-
-    === "Example"
-        ``` yaml     
-        Effectiveness of the mold closing process
-        ```
-
-`IP Instance`{ #ip-instance }
-:   **Required**-*ID / URI*- Identifier of the IP Instance the DMA Tuple is valid for (NB: Entity for IP Instance is referenced)
-
-    === "Example"
-        ``` yaml     
-        ip_instance_123e4567-e89b-12d3
-        ```
-
-`Namespace`{ #namespace }
-:   **Optional**-*ID / URI?*- Context to interpret the associated information (optional?)
-    === "Example"
-        ``` yaml     
-        namespace_123e4567-e89b-12d3
-        ```
-
-`MA Pair`{ #ma-pair }
-:   **Required**-*ID / URI*- Identifier of the MA Pair associated to the DMA Tuple
-
-    === "Example"
-        ``` yaml     
-        "MAID_MYMA"
-        ```
-
-`Schedule`{ #schedule }
-:   **Optional**-*Dates*- Days and hours the DMA Tuple will be active (optional)
-    === "Example"
-        ``` yaml     
-        R90/2021-05-01T00:00:00Z/PT48H
-        ```
-
-`Payload`{ #payload }
-:   **Optional**-*String*- User-defined key-value pairs: JSON string with additional information (optional)
-    === "Example"
-        ``` yaml     
-        {‘injectionMold’: ‘Circuit Case’}
-        ```
-
-
-### Data Assets Mapping
-
-
-`DataAssetsMapping`{ #dataassetsmapping }
-:   **Required**-*[DataAssetsMapping](../dataassetsmapping.md)*- Mapping required Data assets to Microservices specified in the MA Pair. Not every Microservice needs a Data asset.
 
     === "Example"
         ``` yaml     
@@ -159,12 +46,20 @@ has these sections:
             }
         ```
 
+`date`{ #date }
 
-### Deployments
+:   **Required**-**- Date of asset registration.
 
 
-`Deployments`{ #deployments }
-:   **Required**-*[Deployment](../deployment.md)*- Mapping of characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple
+    === "Example"
+        ``` yaml     
+        2022-04-28T08:11:53+00:00
+        ```
+
+`deployments`{ #deployments }
+
+:   **Optional**-*[Deployment](../deployment.md)*- Mapping of characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple
+
 
     === "Example"
         ``` yaml     
@@ -183,3 +78,124 @@ has these sections:
              }
             }
         ```
+
+`derivation`{ #derivation }
+
+:   **Required**-**- In case of derivation, references to parent / child (optional)
+
+
+    === "Example"
+        ``` yaml     
+        dma_tuple_123e4567-e89b-12d3 (auto)
+        ```
+
+`id`{ #id }
+
+:   **Required**-**- Unique identifier of the asset.
+
+
+    === "Example"
+        ``` yaml     
+        "DMAID_MYDMA"
+        ```
+
+`ip_instance`{ #ip_instance }
+
+:   **Optional**-**- Identifier of the IP Instance the DMA Tuple is valid for (NB: Entity for IP Instance is referenced)
+
+
+    === "Example"
+        ``` yaml     
+        ip_instance_123e4567-e89b-12d3
+        ```
+
+`licensor`{ #licensor }
+
+:   **Required**-**- Identifier of the Legal Entity licensing the the MA Pair (NB: Entity for Licensor is referenced)
+
+
+    === "Example"
+        ``` yaml     
+        legal_entity_123e4567-e89b-12d3 (auto)
+        ```
+
+`ma_pair`{ #ma_pair }
+
+:   **Optional**-**- Identifier of the MA Pair associated to the DMA Tuple
+
+
+    === "Example"
+        ``` yaml     
+        "MAID_MYMA"
+        ```
+
+`name`{ #name }
+
+:   **Required**-**- Short name to identify the DMA Tuple
+
+
+    === "Example"
+        ``` yaml     
+        Pressure drop for the injection in hall 3
+        ```
+
+`namespace`{ #namespace }
+
+:   **Optional**-**- Context to interpret the associated information (optional?)
+
+
+    === "Example"
+        ``` yaml     
+        namespace_123e4567-e89b-12d3
+        ```
+
+`payload`{ #payload }
+
+:   **Optional**-**- User-defined key-value pairs: JSON string with additional information (optional)
+
+
+    === "Example"
+        ``` yaml     
+        {‘injectionMold’: ‘Circuit Case’}
+        ```
+
+`provider`{ #provider }
+
+:   **Required**-**- Legal entity who provides the asset (owner). It is the affiliation of the author by default.
+
+
+    === "Example"
+        ``` yaml     
+        UUID
+        ```
+
+`schedule`{ #schedule }
+
+:   **Optional**-**- Days and hours the DMA Tuple will be active (optional)
+
+
+    === "Example"
+        ``` yaml     
+        R90/2021-05-01T00:00:00Z/PT48H
+        ```
+
+`scope`{ #scope }
+
+:   **Required**-**- Short description of the scope of the DMA Tuple (human readable)
+
+
+    === "Example"
+        ``` yaml     
+        Effectiveness of the mold closing process
+        ```
+
+`version`{ #version }
+
+:   **Optional**-**- Version number of the DMA Tuple, defined by the provider
+
+
+    === "Example"
+        ``` yaml     
+        "0.21.0"
+        ```
+

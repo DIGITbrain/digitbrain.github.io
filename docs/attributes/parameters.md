@@ -5,8 +5,6 @@
 </style>
 # Parameters Fields
 
-**This information is also available in [table format](/tables/parameters/)**
-
 
 ## Available Fields 
 

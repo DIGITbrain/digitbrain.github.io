@@ -5,206 +5,169 @@
 </style>
 # Data Fields
 
-**This information is also available in [table format](/tables/data/)**
+
+**For a more condensed summary this information is available in [table view](/tables/data/)**
 
 
-## Available Fields 
 
 The metadata specification for a DIGITbrain Data
-has these sections:
+has these fields:
 
-- [Administrative Data](#administrative-data)
-- [Description](#description)
-- [Search support](#search-support)
-- [Datakind specification](#datakind-specification)
-- [Data access specification](#data-access-specification)
-- [Open parameters](#open-parameters)
-- [Further access clauses (extensible)](#further-access-clauses-extensible)
-- [Data content semantics](#data-content-semantics)
+`name`{ #name }
 
-
-### Administrative Data
-
-
-`ID`{ #id }
-:   **Auto-generated**-*ID*- Unique identifier of the asset.
-
-    === "Example"
-        ``` yaml     
-        "DATAID_MYDATA_A"
-        ```
-
-`AUTHOR`{ #author }
-:   **Auto-generated**-*ID*- Unique identifier of the user who created this record
-
-    === "Example"
-        ``` yaml     
-        UUID
-        ```
-
-`PROVIDER`{ #provider }
-:   **Auto-generated**-*ID*- Legal entity who provides the asset (owner). It is the affiliation of the author by default.
-
-    === "Example"
-        ``` yaml     
-        UUID
-        ```
-
-`BUILD`{ #build }
-:   **Auto-generated**-*Integer*- Build number, incremented automatically to provide versioning for the asset
-
-    === "Example"
-        ``` yaml     
-        21
-        ```
-
-`DATE`{ #date }
-:   **Auto-generated**-*DATE (ISO 8601)*- Date of asset registration.
-
-    === "Example"
-        ``` yaml     
-        2022-04-28T08:11:53+00:00
-        ```
-
-
-### Description
-
-
-`NAME`{ #name }
 :   **Required**-*string*- Name of the data resource.
+
+
 
     === "Example"
         ``` yaml     
         "CNSPiezoBolt#1 (in directory: factory 1 , machine1 , piezobolts)"
         ```
 
-`VERSION`{ #version }
+`version`{ #version }
+
 :   **Optional**-*string*- Version of the data resource (not of the metadata), defined by the provider in the format of his/her choice (typically: major.minor.patch)
+
+
+
     === "Example"
         ``` yaml     
         "1.0.0"
         ```
 
-`DESC`{ #desc }
+`description`{ #description }
+
 :   **Optional**-*string*- Human readable description of the data resource characteristics, contents.
-    === "Example"
-        ``` yaml     
-        "This sensor measures temperature in Celsius, sends data via ConSenses edge device via an MQTT broker"
-        ```
 
-`DESC_URL`{ #desc_url }
-:   **Optional**-*URL*- More detailed specification of data source characteristics (doc, pdf, …)
-    === "Example"
-        ``` yaml     
-        "https://some-host/docs/data-source-specification-sheet.pdf"
-        ```
 
-`SIZE`{ #size }
+`description_url`{ #description_url }
+
+:   **Optional**-*string*- More detailed specification of data source characteristics (doc, pdf, …)
+
+
+`size`{ #size }
+
 :   **Optional**-*integer*- Estimated/exact size of data (e.g. file size, volume size, or message size); might be used to assess HW requirements (RAM, CPU). In bytes.
+
+
+
     === "Example"
         ``` yaml     
         112
         ```
 
+`tags`{ #tags }
 
-### Search support
+:   **Optional**-*string*- A list of tags freely added to help in searching/indexing (not limited to a basic set of tags, keywords)
 
 
-`TAGS`{ #tags }
-:   **Optional**-*List[String]*- A list of tags freely added to help in searching/indexing (not limited to a basic set of tags, keywords)
+
     === "Example"
         ``` yaml     
         ["sensor", "celsius", "press machine"]
         ```
 
+`kind`{ #kind }
 
-### Datakind specification
+:   **Required**-*enum [FILE, DATABASE, STREAM]*- Main category of the data resource (e.g. file/object storage, database management system, streaming broker). FILE can mean a single file or a folder.
 
 
-`KIND`{ #kind }
-:   **Required**-*Enumeration ["FILE", "DATABASE", "STREAM"]*- Main category of the data resource (e.g. file/object storage, database management system, streaming broker). FILE can mean a single file or a folder.
 
     === "Example"
         ``` yaml     
         "STREAM"
         ```
 
-`DIRECTION`{ #direction }
-:   **Required**-*Enumeration ["SOURCE", "SINK", "BIDIRECTIONAL"]*- Direction of data flow (source: data provider, sink: data consumer/storage)
+`direction`{ #direction }
+
+:   **Required**-*enum [SOURCE, SINK, BIDIRECTIONAL]*- Direction of data flow (source: data provider, sink: data consumer/storage)
+
+
 
     === "Example"
         ``` yaml     
         "SOURCE"
         ```
 
-`FORMAT`{ #format }
-:   **Optional**-*List[String]*- Format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files).
+`format`{ #format }
+
+:   **Optional**-*string*- Format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files).
+
+
+
     === "Example"
         ``` yaml     
         ["application/json"] 
         ```
 
-`TYPE`{ #type }
-:   **Optional**-*string*- The exact type of the data resource. Typically (but not always) corresponds to the scheme part (scheme://) of URI. E.g.: mysql, mqtt.
+`type`{ #type }
+
+:   **Required**-*string*- The exact type of the data resource. Typically (but not always) corresponds to the scheme part (scheme://) of URI. E.g.: mysql, mqtt.
+
+
+
     === "Example"
         ``` yaml     
         "MQTT"
         ```
 
+`uri`{ #uri }
 
-### Data access specification
+:   **Required**-*string*- Accessibility of the data resource, including host, port information, protocol, and other fields (path is protocol dependent, can be a topic name). GUI may show host, port, path separately. Hidden at search. Format: scheme://host:port/path.  Pseudo vars: SCHEME, HOST, PORT, PATH, QUERY, FRAGMENT.
 
 
-`URI`{ #uri }
-:   **Optional**-*List[URI]*- Accessibility of the data resource in form of: scheme://host:port/path (passed as pseudo environment variables: SCHEME, HOST, PORT, PATH, QUERY, FRAGMENT). A list of URIs can be passed to support multiple data sources (e.g. more than one message topics, databases).
+
     === "Example"
         ``` yaml     
         ["kafka://host/topic#1"]
         ```
 
-`AUTH_TYPE`{ #auth_type }
-:   **Optional**-*List[Enumeration ["none", "username_password", "accesskey_secretkey", "tls_client_certificate", "access_token", "rclone_config"]]*- One or more authentication types that can be accepted by the storage resource.
+`auth_type`{ #auth_type }
+
+:   **Required**-*string*- One or more authentication types that can be accepted by the storage resource.
+
+
+
     === "Example"
         ``` yaml     
         ["tls_client_certificate"]
         ```
 
+`credentials`{ #credentials }
 
-### Open parameters
+:   **Optional**-*string*- Credentials (e.g. string/json, zip, config file). Its content (structure) depends on authentication type (e.g. token, username and password). OPEN means must not be filled here, but asked from user on startup.
 
 
-`CREDENTIALS`{ #credentials }
-:   **Optional**-*OPEN*- DO NOT ENTER ANY CREDENTIALS HERE! This is just a placeholder, an OPEN parameter for credentials (e.g. username-password, token, config file, certificate). 
+
     === "Example"
         ``` yaml     
         -
         ```
 
+`aux_info`{ #aux_info }
 
-### Further access clauses (extensible)
+:   **Optional**-*string*- List of key-value pais (JSON object/YAML dictionary) for additional specification of the data resource. New keys can be added on demand, a list of known keys is available.
 
 
-`AUX_INFO`{ #aux_info }
-:   **Optional**-*Map[String, String]*- List of key-value pais (JSON object/YAML dictionary) for additional specification of the data resource. New keys can be added on demand, a list of known keys is available.
+
     === "Example"
         ``` yaml     
         {"PROTOCOL": "tcp", "MQTT_PROTOCOL_VERSION": "3.1.1", "KAFKA_BROKER_VERSION": "2.7.0"}
         ```
 
+`schema`{ #schema }
 
-### Data content semantics
+:   **Optional**-*string*- Describes message internal structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, ...
 
 
-`SCHEMA_DESC`{ #schema_desc }
-:   **Optional**-*string*- Describes message internal structures, content semantics, ontology in a human readable way. 
-    === "Example"
-        ``` yaml     
-        "Messages constain raw sensor values as floats in Celsius, each is a JSON object with key name 'temperature'."
-        ```
+`schema_url`{ #schema_url }
 
-`SCHEMA_URL`{ #schema_url }
-:   **Optional**-*URL*- URL to schema specification (e.g. rdf, owl, xsd, json-ld)
+:   **Optional**-*string*- URL to schema specification document (in some format, rdf, owl, xsd, …)
+
+
+
     === "Example"
         ``` yaml     
         "https://schemas.org/data.rdf"
         ```
+

@@ -5,139 +5,78 @@
 </style>
 # Microservice Fields
 
-**This information is also available in [table format](/tables/microservice/)**
+
+**For a more condensed summary this information is available in [table view](/tables/microservice/)**
 
 
-## Available Fields 
 
 The metadata specification for a DIGITbrain Microservice
-has these sections:
+has these fields:
 
-- [Administrative Data](#administrative-data)
-- [Description](#description)
-- [Service](#service)
-- [Hardware Requirements](#hardware-requirements)
-- [OS Requirements](#os-requirements)
-- [Data Resources](#data-resources)
-- [Model](#model)
-- [Parameters](#parameters)
-- [Metrics](#metrics)
+`name`{ #name }
 
+:   **Required**-*string*- human readable short, yet descriptive name of the Microservice.
 
-### Administrative Data
-
-
-`ID`{ #id }
-:   **Auto-generated**-*ID*- Unique identifier of the asset.
-
-    === "Example"
-        ``` yaml     
-        "MSID_MYMS_A"
-        ```
-
-`AUTHOR`{ #author }
-:   **Auto-generated**-*ID*- Unique identifier of the user who created this record
-
-    === "Example"
-        ``` yaml     
-        UUID
-        ```
-
-`PROVIDER`{ #provider }
-:   **Auto-generated**-*ID*- Legal entity who provides the asset (owner). It is the affiliation of the author by default.
-
-    === "Example"
-        ``` yaml     
-        UUID
-        ```
-
-`BUILD`{ #build }
-:   **Auto-generated**-*Integer*- Build number, incremented automatically to provide versioning for the asset
-
-    === "Example"
-        ``` yaml     
-        21
-        ```
-
-`DATE`{ #date }
-:   **Auto-generated**-*DATE (ISO 8601)*- Date of asset registration.
-
-    === "Example"
-        ``` yaml     
-        2022-04-28T08:11:53+00:00
-        ```
-
-
-### Description
-
-
-`name `{ #name- }
-:   **Required**-*String*- human readable short, yet descriptive name of the Microservice
 
     === "Example"
         ``` yaml     
         "Object Detection for faulty parts"
         ```
 
-`version `{ #version- }
-:   **Optional**-*String*- version as defined by the user
+`version`{ #version }
+
+:   **Optional**-*string*- version as defined by the user.
+
+
     === "Example"
         ``` yaml     
         "1.0"
         ```
 
 `description`{ #description }
-:   **Required**-*String*- human readable short description of the Microservice's capabilities
+
+:   **Required**-*string*- human readable short description of the Microservice's capabilities.
+
 
     === "Example"
         ``` yaml     
         "This microservices solves a certain problem using very specific methods…"
         ```
 
-`classificationSchema`{ #classificationschema }
-:   **Required**-*Enumeration ["Simulation", "ML", "others"]*- fine-granular classification of the Microservice
+`classification_schema`{ #classification_schema }
+
+:   **Required**-*enum [Simulation, ML, others]*- fine-granular classification of the Microservice
+
 
     === "Example"
         ``` yaml     
         "others"
         ```
 
-`is_gui`{ #is_gui }
-:   **Optional**-*Boolean*- Denotes this microservice as exposing a graphical user interface (web). Defaults to False
-    === "Example"
-        ``` yaml     
-        True
-        ```
-
-`workload_type`{ #workload_type }
-:   **Optional**-*Enumeration ["service", "job", "undefined"]*- Specifies the workload type. service for long running microservices that must be shut-down by the user. job for batch operations that should shut-down after microservice completes succesfully. undefined for other, that must be shut-down by the user. Defaults to undefined.
-    === "Example"
-        ``` yaml     
-        "service"
-        ```
-
 `type`{ #type }
-:   **Required**-*List[String]*- detailed type of the microservice, list of keywords
+
+:   **Required**-*string*- detailed type of the microservice, list of keywords
+
 
     === "Example"
         ``` yaml     
         ["neural network", "deep learning", "convolutional neural network", "CNN"]
         ```
 
+`deployment_format`{ #deployment_format }
 
-### Service
+:   **Required**-*enum [docker-compose, kubernetes-manifest]*- identifier of the deployment environment required to deploy the Microservice's container
 
-
-`deploymentFormat`{ #deploymentformat }
-:   **Required**-*Enumeration ["docker-compose", "kubernetes-manifest"]*- identifier of the deployment environment required to deploy the Microservice's container
 
     === "Example"
         ``` yaml     
         "docker-compose"
         ```
 
-`deploymentData`{ #deploymentdata }
-:   **Required**-*JSON*- JSON of docker-compose or kubernetes manifest required to run the container
+`deployment_data`{ #deployment_data }
+
+:   **Required**-*string*- JSON of docker-compose or kubernetes manifest required to run the container
+
 
     === "Example"
         ``` yaml     
@@ -146,7 +85,7 @@ has these sections:
               "ristra": {
                 "image": "dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0",
                 "entrypoint": "/bin/sh -c",
-                "command": "python3 start.py {{ MODEL_PATH }}/{{ MODEL_FILE }}",
+                "command": "python3 start.py {{ MODEL.PATH }}/{{ MODEL.FILE }}",
                 "volumes": [{
                   "type": "bind",
                   "source": "/data",
@@ -160,8 +99,11 @@ has these sections:
             }
         ```
 
-`configurationData`{ #configurationdata }
+`configuration_data`{ #configuration_data }
+
 :   **Optional**-*[ConfigurationData](../configurationdata.md)*- List of objects specifying configuration file(s) content required by the service
+
+
     === "Example"
         ``` yaml     
         [ {
@@ -171,97 +113,112 @@ has these sections:
             } ]
         ```
 
-`mountedSharedDirectories`{ #mountedshareddirectories }
-:   **Optional**-*String*- A note for developers of co-operating Microservices. Directories that should be shared to the host where this microservice can find required inputs / store outputs
+`mounted_shared_directories`{ #mounted_shared_directories }
+
+:   **Optional**-*string*- A note for developers of co-operating Microservices. Directories that should be shared to the host where this microservice can find required inputs / store outputs
+
+
     === "Example"
         ``` yaml     
         "/data and /cfg are mounted on the host for data and configuration sharing, respectively."
         ```
 
+`recommended_number_of_gpus`{ #recommended_number_of_gpus }
 
-### Hardware Requirements
+:   **Optional**-*integer*- recommended number of GPUs
+
+`recommended_gpu_ram`{ #recommended_gpu_ram }
+
+:   **Optional**-*integer*- recommended amount of GPU memory in GB
+
+`gpu_type`{ #gpu_type }
+
+:   **Optional**-*string*- a description of the type of GPUs, and further specifications, to allow the execution of the Microservice
 
 
-`recommendedNumberOfGPUs`{ #recommendednumberofgpus }
-:   **Optional**-*Int*- recommended number of GPUs
-    === "Example"
-        ``` yaml     
-        2
-        ```
 
-`recommendedGPURAM`{ #recommendedgpuram }
-:   **Optional**-*Int*- recommended amount of GPU memory in GB
-    === "Example"
-        ``` yaml     
-        6
-        ```
-
-`gpuType`{ #gputype }
-:   **Optional**-*String*- a description of the type of GPUs, and further specifications, to allow the execution of the Microservice
     === "Example"
         ``` yaml     
         "NVidia (compute capability >= 7.0)"
         ```
 
-`hpcRequired`{ #hpcrequired }
-:   **Optional**-*Bool*- whether this Microservice requires an HPC environment to be executed efficiently
+`hpc_required`{ #hpc_required }
+
+:   **Optional**-*boolean*- whether this Microservice requires an HPC environment to be executed efficiently
+
+
+
     === "Example"
         ``` yaml     
         true
         ```
 
-`edgeType`{ #edgetype }
-:   **Optional**-*Enumeration ["TPU (Google)", "NPU (Qualcomm)", "FPGA", "NVIDIA Jetson AGX"]*- required type of edge device to allow the execution of the Microservice
+`edge_type`{ #edge_type }
+
+:   **Optional**-*enum [TPU (Google), NPU (Qualcomm), FPGA, NVIDIA Jetson AGX]*- required type of edge device to allow the execution of the Microservice
+
+
+
     === "Example"
         ``` yaml     
         "NVIDIA Jetson AGX"
         ```
 
-`recommendedRAM`{ #recommendedram }
-:   **Optional**-*Int*- recommended amount of memory in GB
+`recommended_ram`{ #recommended_ram }
+
+:   **Optional**-*integer*- recommended amount of memory in GB
+
+
+
     === "Example"
         ``` yaml     
         16
         ```
 
-`recommendedCPUs`{ #recommendedcpus }
-:   **Optional**-*Int*- recommended number of CPU cores
-    === "Example"
-        ``` yaml     
-        4
-        ```
+`recommended_cpus`{ #recommended_cpus }
 
-`requiredDiskSpace`{ #requireddiskspace }
-:   **Optional**-*Int*- required amount of disk space in GB
+:   **Optional**-*integer*- recommended number of CPU cores
+
+
+`required_disk_space`{ #required_disk_space }
+
+:   **Optional**-*integer*- required amount of disk space in GB
+
+
+
     === "Example"
         ``` yaml     
         42
         ```
 
+`os_arch`{ #os_arch }
 
-### OS Requirements
+:   **Optional**-*string*- supported os architecture. Defaults to x86
 
 
-`osArch`{ #osarch }
-:   **Optional**-*String*- supported os architecture. Defaults to x86
+
     === "Example"
         ``` yaml     
         "x86_64"
         ```
 
-`osType`{ #ostype }
-:   **Optional**-*String*- supported os type. Defaults to Linux
+`os_type`{ #os_type }
+
+:   **Optional**-*string*- supported os type. Defaults to Linux
+
+
+
     === "Example"
         ``` yaml     
         "linux"
         ```
 
+`data_resource`{ #data_resource }
 
-### Data Resources
-
-
-`dataResource`{ #dataresource }
 :   **Optional**-*[Data Resources](../data_resources.md)*- list of Data objects for each required data resource, specified using the "DATA" fields in the linked substructure
+
+
+
     === "Example"
         ``` yaml     
         [{
@@ -275,30 +232,34 @@ has these sections:
             }]
         ```
 
-
-### Model
-
-
 `model_types`{ #model_types }
-:   **Optional**-*List[String]*- list of supported Model types
+
+:   **Optional**-*string*- list of supported Model types
+
+
+
     === "Example"
         ``` yaml     
         ["SavedModel (Tensorflow)"]
         ```
 
-`model_recommendedAuthTools`{ #model_recommendedauthtools }
-:   **Optional**-*List[String]*- list of recommended AuthoringTools used to generate the Model
+`model_recommended_auth_tools`{ #model_recommended_auth_tools }
+
+:   **Optional**-*string*- list of recommended AuthoringTools used to generate the Model
+
+
+
     === "Example"
         ``` yaml     
         ["PreSTRA"]
         ```
 
-
-### Parameters
-
-
 `parameters`{ #parameters }
+
 :   **Optional**-*[Parameters](../parameters.md)*- list of Parameter objects for each possible parameters, to be specified before deployment
+
+
+
     === "Example"
         ``` yaml     
         [{
@@ -310,12 +271,12 @@ has these sections:
             }]
         ```
 
-
-### Metrics
-
-
 `metrics`{ #metrics }
+
 :   **Optional**-*[Metrics](../metrics.md)*- list of Metric objects for each metric collected by the Microservice
+
+
+
     === "Example"
         ``` yaml     
         [{
@@ -326,3 +287,4 @@ has these sections:
                 "description": "The metric is good"
             } ]
         ```
+

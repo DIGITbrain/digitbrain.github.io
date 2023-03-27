@@ -5,30 +5,26 @@
 </style>
 # Metrics Fields
 
-**This information is also available in [table format](/tables/metrics/)**
 
 
-## Available Fields 
 
 The metadata specification for a DIGITbrain Metrics
-has these sections:
-
-- [Metrics](#metrics)
-
-
-### Metrics
-
+has these fields:
 
 `name`{ #name }
-:   **Required**-*String*- short name (should be unique across the Microservice's metrics)
+
+:   **Optional**-*String*- short name (should be unique across the Microservice's metrics)
+
 
     === "Example"
         ``` yaml     
         "meanTemperature"
         ```
 
-`correspondingMeasurement`{ #correspondingmeasurement }
-:   **Required**-*String*- identification of the corresponding measurement, i.e. output of the Model
+`corresponding_measurement`{ #corresponding_measurement }
+
+:   **Optional**-*String*- identification of the corresponding measurement, i.e. output of the Model
+
 
     === "Example"
         ``` yaml     
@@ -36,7 +32,9 @@ has these sections:
         ```
 
 `function`{ #function }
-:   **Required**-*String*- short description of the mathematical approach used to derive this value
+
+:   **Optional**-*String*- short description of the mathematical approach used to derive this value
+
 
     === "Example"
         ``` yaml     
@@ -44,7 +42,9 @@ has these sections:
         ```
 
 `unit`{ #unit }
-:   **Required**-*String*- the unit of the metric measurement
+
+:   **Optional**-*String*- the unit of the metric measurement
+
 
     === "Example"
         ``` yaml     
@@ -52,9 +52,12 @@ has these sections:
         ```
 
 `description`{ #description }
-:   **Required**-*String*- short description of the metric measurement
+
+:   **Optional**-*String*- short description of the metric measurement
+
 
     === "Example"
         ``` yaml     
         "This metric describes the arithmetic mean of the approximated temperatures of the fabricated part when it leaves station 4."
         ```
+

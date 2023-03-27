@@ -5,8 +5,6 @@
 </style>
 # Supporting Metadata Fields
 
-**This information is also available in [table format](/tables/supporting_metadata/)**
-
 
 ## Available Fields 
 

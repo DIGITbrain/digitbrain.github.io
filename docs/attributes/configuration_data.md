@@ -3,41 +3,41 @@
     display: none;
   }
 </style>
-# ConfigurationData Fields
-
-**This information is also available in [table format](/tables/configurationdata/)**
+# Configuration Data Fields
 
 
-## Available Fields 
-
-The metadata specification for a DIGITbrain ConfigurationData
-has these sections:
-
-- [ConfigurationData](#configurationdata)
 
 
-### ConfigurationData
+The metadata specification for a DIGITbrain Configuration Data
+has these fields:
 
+`file_path`{ #file_path }
 
-`filePath`{ #filepath }
-:   **Required**-*String*- full path to file including file name
+:   **Optional**-*String*- full path to file including file name
+
 
     === "Example"
         ``` yaml     
         "/data/rclone.conf"
         ```
 
-`fileContent`{ #filecontent }
-:   **Required**-*String*- file content (not binary)
+`file_content`{ #file_content }
+
+:   **Optional**-*String*- file content (not binary)
+
 
     === "Example"
         ``` yaml     
         "[s3-server]\n    access_key: 123abc"
         ```
 
-`mountPropagation`{ #mountpropagation }
+`mount_propagation`{ #mount_propagation }
+
 :   **Optional**-*Enum[ "None", "HostToContainer", "Bidirectional" ]*- Enable mountPropagation https://kubernetes.io/docs/concepts/storage/volumes/#mount-propagation . Default: None
+
+
     === "Example"
         ``` yaml     
         "Bidirectional"
         ```
+

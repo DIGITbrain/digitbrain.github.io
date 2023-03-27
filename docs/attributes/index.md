@@ -1,4 +1,4 @@
-# DIGITbrain Metadata (Detail View)
+# DIGITbrain Metadata
 
 Here you can find a **detailed listing** of the very latest metadata
 specification of each of the DIGITbrain assets. Pick one to get started:

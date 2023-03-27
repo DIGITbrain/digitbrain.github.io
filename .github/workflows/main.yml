@@ -26,10 +26,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: "3.8"
 
@@ -52,7 +52,7 @@ jobs:
 
       - name: Commit any changes made by xls2md/xls2mkdocs/excel2json
         id: auto_commit
-        uses: stefanzweifel/git-auto-commit-action@v4.12.0
+        uses: stefanzweifel/git-auto-commit-action@v4.16.0
         with:
           commit_message: ${{ ((github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && 'docs:fetch latest openapi spec [AUTO]') || github.event.head_commit.message }} [AUTO]
           file_pattern: docs/*/*.md docs/*/*/*.md examples/json/*.json tools/swagger.json
@@ -68,16 +68,16 @@ jobs:
     steps:
       - name: Checkout repository using auto-commit
         if: needs.generate.outputs.changed == 'true'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ needs.generate.outputs.commit }}
 
       - name: Checkout repository normally
         if: needs.generate.outputs.changed == 'false'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: "3.8"
 

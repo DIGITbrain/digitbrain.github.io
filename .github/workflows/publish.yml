@@ -16,7 +16,6 @@ jobs:
 
     steps:
       - name: Checkout repository normally
-        if: needs.generate.outputs.changed == 'false'
         uses: actions/checkout@v3
 
       - name: Set up Python

@@ -1,19 +1,15 @@
-# DIGITbrain Metadata (Table View)
+# DIGITbrain Metadata (Overview)
 
-Here you can find a **tabular view** of the very latest metadata
-specification of each of the DIGITbrain assets. Pick one to get started:
+Here you can find a **tabular overview** of the very latest metadata
+specification, picked direct from the Asset Metadata Registry!
+
+For full detail, most users will prefer the [detailed view](/attributes)
 
 - [Microservice](microservice)
-    - [Configuration Data](configurationdata)
-    - [Data Resources](data_resources)
-    - [Parameters](parameters)
-    - [Metrics](metrics)
 - [Algorithm](algorithm)
 - [Model](model)
-    - [Slots](slots)
 - [Data](data)
 - [MA Pair](ma_pair)
-- [DMA Tuple](dma_tuple)
-    - [Deployment](deployment)
-    - [Data Assets Mapping](dataassetsmapping)
-- [Supporting Metadata](supporting_metadata)
+- Supporting Metadata
+    - [IP Family](ip_family)
+    - [IP Instance](ip_instance)

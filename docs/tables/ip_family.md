@@ -6,11 +6,10 @@
 </style>
 
 
-**This page has been auto-generated based on an OpenAPI Specification<br>**
-**Most users will prefer [this view](/attributes/ma_pair/) which may include examples and additional info**
+**This page has been auto-generated based on an OpenAPI Specification**
 
 
-:swg-def: ma_pair
+:swg-def: ip_family
     properties:
       id:
         hide: true

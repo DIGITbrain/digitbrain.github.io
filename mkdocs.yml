@@ -9,6 +9,7 @@ theme:
     primary: teal
     accent: cyan
   features:
+    - content.code.copy
     - navigation.expand
     - navigation.indexes
     - navigation.instant

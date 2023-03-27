@@ -34,10 +34,8 @@ schema:
     Data Dictionary, …
   example: '["jpg"]'
   type: List[DATA_SCHEMA]
-type:
+source_type:
   description: supported exact type of the data resource. Typically corresponds to
     the scheme part (protocol://) of DATA_URI
   example: '["MYSQL", "KAFKA"]'
   type: List[DATA_SOURCE_TYPE]
-source_type:
-  hide: True

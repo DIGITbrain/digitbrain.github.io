@@ -1,6 +1,9 @@
 default_value:
-  description: default value for in-slot, if null then the value for the in-slot needs
-    to be set/fed at a later point in time.<br>Default value must not be set for out-slots!
+  description: |
+    default value for in-slot, if null then the value for the in-slot needs
+    to be set/fed at a later point in time.
+
+    Default value must not be set for out-slots!
   type: number | null
 dimensions:
   description: dimension of inputs to in-slot, array of dimensions for matrices /

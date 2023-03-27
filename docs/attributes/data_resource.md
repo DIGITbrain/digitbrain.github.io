@@ -41,6 +41,16 @@ has these fields:
         ["application/zip", "image/jpg"]
         ```
 
+`source_type`{ #source_type }
+
+:   **Optional**-*List[DATA_SOURCE_TYPE]*- supported exact type of the data resource. Typically corresponds to the scheme part (protocol://) of DATA_URI
+
+
+    === "Example"
+        ``` yaml     
+        ["MYSQL", "KAFKA"]
+        ```
+
 `auth_type`{ #auth_type }
 
 :   **Optional**-*List[DATA_AUTH_TYPE]*- supported authentication type

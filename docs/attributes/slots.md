@@ -57,7 +57,11 @@ has these fields:
 
 `default_value`{ #default_value }
 
-:   **Optional**-*number | null*- default value for in-slot, if null then the value for the in-slot needs to be set/fed at a later point in time.<br>Default value must not be set for out-slots!
+:   **Optional**-*number | null*- default value for in-slot, if null then the value for the in-slot needs
+    to be set/fed at a later point in time.
+
+    Default value must not be set for out-slots!
+
 
 `ranges`{ #ranges }
 

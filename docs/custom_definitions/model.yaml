@@ -8,7 +8,7 @@ filename:
   example: '"mymodel.pb"'
 id:
   example: '"MODID_MYMODEL"'
-in_slots:
+inslots:
   example: "[\n              { \n                \"Key\": \"MY_INSLO_A\",\n                \"Name\":
     \"ModelABin\",\n                \"Dimensions\": 112,\n                \"Is-continuous\":
     true,\n                \"Units\": {\n                    \"Unit\": \"Pa\",\n                    \"Exponent\":
@@ -16,7 +16,7 @@ in_slots:
     10^-3\n                },\n                \"Default-value\": 55,\n                \"Ranges\":
     [1,120]\n              }\n            ]  "
   type: '[Slots](../slots.md)'
-out_slots:
+outslots:
   example: "[\n              { \n                \"Key\": \"MY_OUTPUT_A\",\n                \"Name\":
     \"ModelABout\",\n                \"Dimensions\": 112,\n                \"Is-continuous\":
     true,\n                \"Units\": {\n                    \"Unit\": \"Pa\",\n                    \"Exponent\":

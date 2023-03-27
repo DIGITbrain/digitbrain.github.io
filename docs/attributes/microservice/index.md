@@ -80,23 +80,20 @@ has these fields:
 
     === "Example"
         ``` yaml     
-        "version": "3.7",
-            "services": {
-              "ristra": {
-                "image": "dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0",
-                "entrypoint": "/bin/sh -c",
-                "command": "python3 start.py {{ MODEL.PATH }}/{{ MODEL.FILE }}",
-                "volumes": [{
-                  "type": "bind",
-                  "source": "/data",
-                  "target": "/data",
-                  "bind": {
-                     "propagation": "rshared"
-            	      }
-                }],
-                "privileged": true
-              }
-            }
+        version: '3.7'
+        services:
+          ristra:
+            image: dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0
+            entrypoint: "/bin/sh -c"
+            command: python3 start.py {{ MODEL.PATH }}/{{ MODEL.FILE }}
+            volumes:
+            - type: bind
+              source: "/data"
+              target: "/data"
+              bind:
+                propagation: rshared
+            privileged: true
+
         ```
 
 `configuration_data`{ #configuration_data }
@@ -106,11 +103,12 @@ has these fields:
 
     === "Example"
         ``` yaml     
-        [ {
-                "filePath": "/data/rclone.conf",
-                "fileContent": "[s3-server]\n    access_key: 123abc",
-                "mountPropagation": "Bidirectional"
-            } ]
+        file_path: /data/rclone.conf
+        file_content: |
+          [s3-server]
+          access_key: 123abc
+        mount_propagation: Bidirectional
+
         ```
 
 `mounted_shared_directories`{ #mounted_shared_directories }
@@ -221,15 +219,16 @@ has these fields:
 
     === "Example"
         ``` yaml     
-        [{
-                "ID": "MY_SINK",
-                "KIND": "STREAM",
-                "DIRECTION": "SOURCE",
-                "FORMAT": ["image/jpg"],
-                "SOURCE_TYPE": "KAFKA",
-                "SCHEMA": ["jpeg image"],
-                "AUX_INFO": {"PROTOCOL": "https", "S3_REGION": "eu-west-1"}
-            }]
+        kind: [FILE, STREAM]
+        direction: [SOURCE]
+        format: [application/zip, image/jpg]
+        source_type: [MYSQL, KAFKA]
+        auth_type: [userpass]
+        schema: [jpg]
+        aux_info:
+          PROTOCOL: http
+          MYSQL_DIALECT: mariadbdialect
+
         ```
 
 `model_types`{ #model_types }
@@ -256,19 +255,19 @@ has these fields:
 
 `parameters`{ #parameters }
 
-:   **Optional**-*[Parameters](../parameters.md)[]*- list of Parameter objects for each possible parameters, to be specified before deployment
+:   **Optional**-*string[]*- list of Parameter objects for each possible parameters, to be specified before deployment
 
 
 
     === "Example"
         ``` yaml     
-        [{
-                "name": "detection_threshold",
-                "type": "Integer",
-                "mandatory": true,
-                "defaultValue": 42,
-                "description": "This parameter is helpful"
-            }]
+        parameters:
+        - name: detection_threshold
+          type: Integer
+          mandatory: true
+          defaultValue: 42
+          description: This parameter is helpful
+
         ```
 
 `metrics`{ #metrics }
@@ -279,12 +278,12 @@ has these fields:
 
     === "Example"
         ``` yaml     
-        [{
-                "name": "meanTemperature",
-                "correspondingMeasurement": "temperature1",
-                "function": "arithmetic mean",
-                "unit": "degree celcius",
-                "description": "The metric is good"
-            } ]
+        metrics:
+        - name: meanTemperature
+          correspondingMeasurement: temperature1
+          function: arithmetic mean
+          unit: degree celcius
+          description: The metric is good
+
         ```
 

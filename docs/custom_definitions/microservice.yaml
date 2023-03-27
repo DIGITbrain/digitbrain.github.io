@@ -5,28 +5,43 @@ build:
 classification_schema:
   example: '"others"'
 configuration_data:
-  example: "[ {\n                \"filePath\": \"/data/rclone.conf\",\n                \"fileContent\":
-    \"[s3-server]\\n    access_key: 123abc\",\n                \"mountPropagation\":
-    \"Bidirectional\"\n            } ]"
+  example: |
+    file_path: /data/rclone.conf
+    file_content: |
+      [s3-server]
+      access_key: 123abc
+    mount_propagation: Bidirectional
   type: '[ConfigurationData](../configurationdata.md)'
 data_resource:
-  example: "[{\n                \"ID\": \"MY_SINK\",\n                \"KIND\": \"STREAM\",\n
-    \               \"DIRECTION\": \"SOURCE\",\n                \"FORMAT\": [\"image/jpg\"],\n
-    \               \"SOURCE_TYPE\": \"KAFKA\",\n                \"SCHEMA\": [\"jpeg
-    image\"],\n                \"AUX_INFO\": {\"PROTOCOL\": \"https\", \"S3_REGION\":
-    \"eu-west-1\"}\n            }]"
+  example: |
+    kind: [FILE, STREAM]
+    direction: [SOURCE]
+    format: [application/zip, image/jpg]
+    source_type: [MYSQL, KAFKA]
+    auth_type: [userpass]
+    schema: [jpg]
+    aux_info:
+      PROTOCOL: http
+      MYSQL_DIALECT: mariadbdialect
   type: '[Data Resources](../data_resources.md)'
 date:
   example: '2022-04-28T08:11:53+00:00'
 deployment_data:
-  example: "\"version\": \"3.7\",\n            \"services\": {\n              \"ristra\":
-    {\n                \"image\": \"dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0\",\n
-    \               \"entrypoint\": \"/bin/sh -c\",\n                \"command\":
-    \"python3 start.py {{ MODEL.PATH }}/{{ MODEL.FILE }}\",\n                \"volumes\":
-    [{\n                  \"type\": \"bind\",\n                  \"source\": \"/data\",\n
-    \                 \"target\": \"/data\",\n                  \"bind\": {\n                     \"propagation\":
-    \"rshared\"\n            \t      }\n                }],\n                \"privileged\":
-    true\n              }\n            }"
+  example: |
+    version: '3.7'
+    services:
+      ristra:
+        image: dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0
+        entrypoint: "/bin/sh -c"
+        command: python3 start.py {{ MODEL.PATH }}/{{ MODEL.FILE }}
+        volumes:
+        - type: bind
+          source: "/data"
+          target: "/data"
+          bind:
+            propagation: rshared
+        privileged: true
+
 deployment_format:
   example: '"docker-compose"'
 description:
@@ -42,10 +57,13 @@ id:
 is_gui:
   example: 'True'
 metrics:
-  example: "[{\n                \"name\": \"meanTemperature\",\n                \"correspondingMeasurement\":
-    \"temperature1\",\n                \"function\": \"arithmetic mean\",\n                \"unit\":
-    \"degree celcius\",\n                \"description\": \"The metric is good\"\n
-    \           } ]"
+  example: |
+    metrics:
+    - name: meanTemperature
+      correspondingMeasurement: temperature1
+      function: arithmetic mean
+      unit: degree celcius
+      description: The metric is good
   type: '[Metrics](../metrics.md)'
 model_recommended_auth_tools:
   example: '["PreSTRA"]'
@@ -61,10 +79,13 @@ os_arch:
 os_type:
   example: '"linux"'
 parameters:
-  example: "[{\n                \"name\": \"detection_threshold\",\n                \"type\":
-    \"Integer\",\n                \"mandatory\": true,\n                \"defaultValue\":
-    42,\n                \"description\": \"This parameter is helpful\"\n            }]"
-  type: '[Parameters](../parameters.md)'
+  example: |
+    parameters:
+    - name: detection_threshold
+      type: Integer
+      mandatory: true
+      defaultValue: 42
+      description: This parameter is helpful
 provider:
   example: UUID
 recommended_cp_us:

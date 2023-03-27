@@ -5,8 +5,6 @@ assets to realise more complex applications with more advanced
 functionality. The topics below may not apply to every use case,
 so pick and choose based on your application requirements.
 
-> This section is currently under construction. Please contact your
-> support person for more detail where documentation does not yet exist.
 
 - [Model & Data Parameters](model_data)
 - [Open Parameters](params)

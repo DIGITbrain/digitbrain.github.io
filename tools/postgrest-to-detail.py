@@ -55,18 +55,32 @@ def fetch_api_detail(url, key=None):
         raise ValueError(f"ERR: JSON does not contain {key}: {response}.") from None
 
 
+def notify_missing_info(table, field, field_def):
+    notice = f"::notice file=docs/custom_definitons/{table}.yaml::{field}"
+    if table not in DA_TABLES and "example" not in field_def:
+        msg = "is missing an example value."
+        print(f"{notice} {msg}")
+
+    if table not in DA_TABLES and table not in AMDR_TABLES:
+        if "description" not in field_def:
+            msg = "is missing a description."
+            print(f"{notice} {msg}")
+
+
 def update_fields_with_user_defs(table, fields, user_defs):
     if not fields:  # For tables not in AMDR, rely on user definitions
         return user_defs
-    
-    table = table.lower().replace(' ', '_')
-    msg = "field does not have an example value."
+
+    table = table.lower().replace(" ", "_")
+    msg = "does not have a custom definition so may be missing info."
 
     for field, defs in fields.items():
         if field not in user_defs:
             print(f"::notice file=docs/custom_definitons/{table}.yaml::{field} {msg}")
             continue
+
         defs.update(user_defs[field])
+        notify_missing_info(table, field, fields[field])
 
     # Don't document auto-filled fields
     return {field: defs for field, defs in fields.items() if field not in AUTO_FIELDS}

@@ -52,14 +52,6 @@ nav:
           - Data Assets Mapping: attributes/dataassetsmapping.md
           - Deployment: attributes/deployment.md
       - Supporting Metadata: attributes/supporting_metadata.md
-  - Going Further:
-      - Going Further: adv/index.md
-      - Model & Data Parameters: adv/model_data.md
-      - Open Parameters: adv/params.md
-      - Exposing Microservices: adv/expose.md
-      - Dynamic Domains: adv/domains.md
-      - Enabling HTTPS: adv/https.md
-      - Edge Devices: adv/edge.md
   - Assets Overview:
       - Asset Overview: tables/index.md
       - Microservice:
@@ -75,6 +67,14 @@ nav:
       - Supporting Metadata:
           - IP Family: tables/ip_family.md
           - IP Instance: tables/ip_instance.md
+  - Going Further:
+      - Going Further: adv/index.md
+      - Model & Data Parameters: adv/model_data.md
+      - Open Parameters: adv/params.md
+      - Exposing Microservices: adv/expose.md
+      - Dynamic Domains: adv/domains.md
+      - Enabling HTTPS: adv/https.md
+      - Edge Devices: adv/edge.md
   - Examples:
       - Examples: examples/index.md
       - Fraunhofer: examples/Fraunhofer.md

@@ -41,8 +41,8 @@ nav:
       - Asset Detail: attributes/index.md
       - Microservice:
           - Microservice: attributes/microservice/index.md
-          - Configuration Data: attributes/configurationdata.md
-          - Data Resources: attributes/data_resources.md
+          - Configuration Data: attributes/configuration_data.md
+          - Data Resources: attributes/data_resource.md
           - Parameters: attributes/parameters.md
           - Metrics: attributes/metrics.md
       - Algorithm:
@@ -76,11 +76,9 @@ nav:
           - Data: tables/data/index.md
       - MA Pair:
           - MA Pair: tables/ma_pair/index.md
-      - DMA Tuple:
-          - DMA Tuple: tables/dma_tuple/index.md
-          - Data Assets Mapping: tables/dataassetsmapping.md
-          - Deployment: tables/deployment.md
-      - Supporting Metadata: tables/supporting_metadata.md
+      - Supporting Metadata:
+          - IP Family: tables/ip_family.md
+          - IP Instance: tables/ip_instance.md
   - Examples:
       - Examples: examples/index.md
       - Fraunhofer: examples/Fraunhofer.md
@@ -92,6 +90,7 @@ markdown_extensions:
   - admonition
   - attr_list
   - def_list
+  - swaggermarkdown
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid

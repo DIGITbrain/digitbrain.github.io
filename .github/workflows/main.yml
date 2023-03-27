@@ -14,7 +14,7 @@ on:
 
 jobs:
   generate:
-    name: Generate docs from Excel
+    name: Generate docs from AMDR and Excel
     runs-on: ubuntu-latest
 
     # Define outputs for the auto-commit step
@@ -34,13 +34,13 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install wheel pandas openpyxl tabulate jinja2
+          pip install -r tools/requirements.txt
 
-      - name: Run xls2md (generate Markdown tables)
-        run: python tools/xls2md.py
+      - name: Pull latest OpenAPI spec
+        run: curl -L https://dbs-api.emgora.eu/v1/emgamr/api/ -o tools/swagger.json || echo "::warning::Failed to grab latest OpenAPI Specification!!"
 
-      - name: Run xls2mkdocs (generate fields listing)
-        run: python tools/xls2mkdocs.py
+      - name: Run postgrest-to-detail (generate fields listing)
+        run: python tools/postgrest-to-detail.py
 
       - name: Run example2md (generate tables for examples)
         run: python tools/example2md.py
@@ -80,7 +80,7 @@ jobs:
           python-version: "3.8"
 
       - name: Install Mkdocs
-        run: pip install mkdocs-material
+        run: pip install mkdocs-material==9.1.4 swagger-markdown==0.9.16
 
       - name: Run Mkdocs deploy
         run: mkdocs gh-deploy --force

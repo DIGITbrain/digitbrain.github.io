@@ -22,7 +22,7 @@ has these fields:
 {% if "example" in value %}
     === "Example"
         ``` yaml     
-        {{ value.example }}
+        {{ value.example | string | indent(8, False) }}
         ```
 
 {% endif %}

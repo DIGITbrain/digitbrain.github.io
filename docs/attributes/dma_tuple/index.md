@@ -39,11 +39,11 @@ has these fields:
     === "Example"
         ``` yaml     
         {
-              "MSID_MYMS_A": {
-                "MY_SINK": "DATAID_MYDATA_A",
-                "MY_STREAM": "DATAID_MYDATA_B"
-              }
-            }
+                      "MSID_MYMS_A": {
+                        "MY_SINK": "DATAID_MYDATA_A",
+                        "MY_STREAM": "DATAID_MYDATA_B"
+                      }
+                    }
         ```
 
 `date`{ #date }
@@ -64,19 +64,19 @@ has these fields:
     === "Example"
         ``` yaml     
         {
-             "A_RISTRA_HOST": {
-               "name": "RISTRA_CPU_Deployment",
-               "author": "Maxim Redkin",
-               "type": "cloudbroker",
-               "cloudbroker": {
-                 "deployment_id": "16b1e2d4-3a2c-406e-8c45-5637099021f0",
-                 "instance_type_id": "ca727925-a5ca-4697-b2c3-8788d82457d5",
-                 "key_pair_id": "22873697-c9ec-4685-bddc-760436662bce",
-                 "opened_port": "2379,4500,30010,8285,30012,443,10250,30888,30000,6443,22,500,8472,30012,4500,500",
-                 "endpoint": "https://cloudsme-cbp.scaletools.com.ua"
-              }
-             }
-            }
+                     "A_RISTRA_HOST": {
+                       "name": "RISTRA_CPU_Deployment",
+                       "author": "Maxim Redkin",
+                       "type": "cloudbroker",
+                       "cloudbroker": {
+                         "deployment_id": "16b1e2d4-3a2c-406e-8c45-5637099021f0",
+                         "instance_type_id": "ca727925-a5ca-4697-b2c3-8788d82457d5",
+                         "key_pair_id": "22873697-c9ec-4685-bddc-760436662bce",
+                         "opened_port": "2379,4500,30010,8285,30012,443,10250,30888,30000,6443,22,500,8472,30012,4500,500",
+                         "endpoint": "https://cloudsme-cbp.scaletools.com.ua"
+                      }
+                     }
+                    }
         ```
 
 `derivation`{ #derivation }

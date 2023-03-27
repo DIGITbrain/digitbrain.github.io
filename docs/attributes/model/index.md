@@ -106,21 +106,21 @@ has these fields:
     === "Example"
         ``` yaml     
         [
-              { 
-                "Key": "MY_INSLO_A",
-                "Name": "ModelABin",
-                "Dimensions": 112,
-                "Is-continuous": true,
-                "Units": {
-                    "Unit": "Pa",
-                    "Exponent": [1, -2, 0],
-                    "Offset": 442,
-                    "Scale": 10^-3
-                },
-                "Default-value": 55,
-                "Ranges": [1,120]
-              }
-            ]  
+                      { 
+                        "Key": "MY_INSLO_A",
+                        "Name": "ModelABin",
+                        "Dimensions": 112,
+                        "Is-continuous": true,
+                        "Units": {
+                            "Unit": "Pa",
+                            "Exponent": [1, -2, 0],
+                            "Offset": 442,
+                            "Scale": 10^-3
+                        },
+                        "Default-value": 55,
+                        "Ranges": [1,120]
+                      }
+                    ]  
         ```
 
 `outslots`{ #outslots }
@@ -132,21 +132,21 @@ has these fields:
     === "Example"
         ``` yaml     
         [
-              { 
-                "Key": "MY_OUTPUT_A",
-                "Name": "ModelABout",
-                "Dimensions": 112,
-                "Is-continuous": true,
-                "Units": {
-                    "Unit": "Pa",
-                    "Exponent": [1, -2, 0],
-                    "Offset": 442,
-                    "Scale": 10^-3
-                },
-                "Default-value": 55,
-                "Ranges": [1,120]
-              }
-            ]  
+                      { 
+                        "Key": "MY_OUTPUT_A",
+                        "Name": "ModelABout",
+                        "Dimensions": 112,
+                        "Is-continuous": true,
+                        "Units": {
+                            "Unit": "Pa",
+                            "Exponent": [1, -2, 0],
+                            "Offset": 442,
+                            "Scale": 10^-3
+                        },
+                        "Default-value": 55,
+                        "Ranges": [1,120]
+                      }
+                    ]  
         ```
 
 `os_arch`{ #os_arch }

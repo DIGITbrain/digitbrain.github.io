@@ -36,6 +36,7 @@ jobs:
     name: Generate docs from AMDR and Excel
     runs-on: ubuntu-latest
     if: github.event_name != 'pull_request'
+    needs: lint
 
     steps:
       - name: Checkout repository

@@ -25,6 +25,7 @@ AMDR_TABLES = (
     "ma_pair",
 )
 DA_TABLES = ("dma_tuple",)  # Need the comma for a tuple
+DA_UDTS = ("deployment",)
 
 AUTO_FIELDS = (
     "id",
@@ -104,7 +105,7 @@ def get_user_definitions(table):
 ## Asset Stuff
 definitions = fetch_api_detail(API_BASE_URL, "definitions")
 
-for table in AMDR_TABLES + DA_TABLES:
+for table in AMDR_TABLES + DA_TABLES + DA_UDTS:
     fields = {}
     user_defs = {}
     try:

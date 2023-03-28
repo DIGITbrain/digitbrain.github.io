@@ -1,69 +1,115 @@
-author:
-  description: Created by
-  example: '"Jay"'
-  type: String
-cloud_config:
-  description: cloud-init - https://cloudinit.readthedocs.io/ - configuration for
-    contextualisation of the VM
-  example: "{\n              \"runcmd\": [\"echo one\", \"echo two\"]\n            }"
-  type: Map
-cloudbroker:
-  description: Configuration data for a CloudBroker instance
-  type: Map[String, String]
-date:
-  description: Created on
-  example: 18.08.2022
-  type: Date
+type:
+  required: true
+  description: |
+    DIGITbrain supports cloud infrastructure deployed via the
+    CloudBroker platform, or bring-your-own Linux-based Edge devices. This should
+    be specified in this field. The other metadata in this section should be
+    completed according to the type (e.g. CloudBroker-specific metadata is not required
+    if `type: edge`)
+  example: cloudbroker
+  type: Enumeration ["cloudbroker", "edge"]
+
+Cloudbroker:
+  header: true
+
 deployment_id:
-  description: ID of CloudBroker Deployment
-  example: '"16b1e2d4-3a2c-406e-8c45-5637099021f0"'
-  type: UUID
-domain_name:
-  description: 'Subdomain (on cbp-routing.ch) to create and attach to this instance
-    using dynamic DNS. For the given example, the following domain will be assigned
-    to the instance: mysubdomain.cbp-routing.ch'
-  example: '"mysubdomain"'
-  type: String
-domain_names:
-  description: ID of a CloudBroker Domain Name for this instance
-  example: '["om207925-b52a-4697-b2c3-563702208h9"]'
-  type: List of UUIDs
-edge:
-  description: Connection data for a bring-your-own edge
-  type: Map[String, String]
-endpoint:
-  description: accesible IP or FQDN of edge device
-  example: '"https://cloudsme-cbp.scaletools.com.ua"'
-  type: URL
-id:
-  description: DIGITbrain reference
-  example: '"HOSTID_MYHOST_A"'
-  type: UUID
+  description: |
+    A CloudBroker deployment ties together software,
+    resource and region. Indicative IDs are given below, but any LTS
+    Debian-based Linux distribution should be supported. It is recommended
+    to use the MiCADO-Optimised deployment.
+  example:
+    MiCADO-Optimised: 1860cb3f-4f23-417f-a1f1-3705158cd3b3
+    Ubuntu 20.04: 16b1e2d4-3a2c-406e-8c45-5637099021f0
+    Ubuntu 18.04: 5a081b54-8992-4ff7-8a21-74e425062507
+    Custom: |
+      # Find a deployment_id by inspecting the URL
+      https://<cloudbroker-endpoint>/deployments/<deployment-id>
+  type: string (UUID)
+  required: true
+
 instance_type_id:
-  description: ID of CloudBroker InstanceType
-  example: '"ca727925-a5ca-4697-b2c3-8788d82457d5"'
-  type: UUID
+  description: |
+    The CloudBroker instance type defines the CPU and RAM
+    that will be available on the infrastructure. Indicative IDs are given
+    below. The minimum requirements are a 2 vCPU/2GB RAM
+  example:
+    2 vCPU | 4GB RAM: ca727925-a5ca-4697-b2c3-8788d82457d5
+    4 vCPU | 8GB RAM: ffb42759-fb52-4401-9c75-889ea0ed9602
+    8 vCPU | 16GB RAM: 664330f3-42b1-4f52-a675-fd182a21ef51
+    Custom: |
+      # Find an instance_type_id by inspecting the URL
+      https://<cloudbroker-endpoint>/instance_types/<instance-type-id>
+  type: string (UUID)
+  required: true
+
 key_pair_id:
   description: ID of CloudBroker Key Pair
-  example: '"ap207925-a5ca-4697-b2c3-5637099021f0"'
-  type: UUID
-name:
-  description: Short name for the node/device
-  example: '"Ubuntu small"'
-  type: String
+  example: |
+    # Find a key_pair_id by inspecting the URL
+    https://<cloudbroker-endpoint>/key_pairs/<key-pair-id>
+  type: string (UUID)
+
 opened_port:
-  description: Ports to open at cloud side
-  example: '"80,443,8080,30010"'
-  type: String (comma separated integers)
+  description: |
+    A comma-separated string listing port numbers,
+    which will be opened on the instance (both TCP and UDP protocols
+    will be affected). 
+    
+    **Note 51820 must be included in this list
+    to ensure containers can communicate**
+  example:
+    Minimal: 51820
+    SSH, HTTP, HTTPS: 51820,22,80,443
+  required: true
+  type: string (comma separated integers)
+
+cloud_config:
+  description: |
+    [cloud-init](https://cloudinit.readthedocs.io/) config for
+    contextualisation of the provisioned virtual machine.
+  example: |
+    {"runcmd": ["echo 'task one'", "echo 'task two'"]}
+  type: string (JSON)
+
+endpoint:
+  description: |
+    The endpoint of the CloudBroker platform that will
+    handle the deployment of the above infrastructure.
+  example: 
+    Default: https://cloudsme-cbp.scaletools.com.ua
+  type: string (URL)
+  required: true
+
+domain_name:
+  description: |
+    Subdomain (on cbp-routing.ch) to create and attach
+    to this instance using dynamic DNS. For the given
+    example, the domain `my-subdomain.cbp-routing.ch`
+    will be assigned to the instance. **Only letters,
+    numbers and hyphens are allowed**.
+  example: my-subdomain
+  type: string
+
+Edge:
+  header: true
+
+endpoint : # Using a nbsp here to distinguish from endpoint above
+  description: The endpoint of the bring-your-own Edge device that provides this Deployment.
+  required: true
+  example: 192.168.1.1
+  type: string
+
 ssh_private_key:
   description: private key for SSH connection.
-  example: '"-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEApwn..."'
+  example: |
+    -----BEGIN RSA PRIVATE KEY-----
+    MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
+    KUpRKfFLfRYC9AIKjbJTWit+CqvjWYzvQwECAwEAAQJAIJLixBy2qpFoS4DSmoEm
+    ...
   type: String
+
 ssh_username:
   description: username for SSH connection. Defaults to ubuntu
-  example: '"ubuntu"'
+  example: ubuntu
   type: String
-type:
-  description: computing centre
-  example: '"cloudbroker"'
-  type: Enumeration ["cloudbroker", "edge"]

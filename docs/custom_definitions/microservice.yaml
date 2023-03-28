@@ -11,7 +11,7 @@ configuration_data:
       [s3-server]
       access_key: 123abc
     mount_propagation: Bidirectional
-  type: '[ConfigurationData](../configurationdata.md)'
+  type: '[ConfigurationData](../configuration_data.md)'
 data_resource:
   example: |
     kind: [FILE, STREAM]
@@ -23,24 +23,44 @@ data_resource:
     aux_info:
       PROTOCOL: http
       MYSQL_DIALECT: mariadbdialect
-  type: '[Data Resources](../data_resources.md)'
+  type: '[Data Resource](../data_resource.md)'
 date:
   example: '2022-04-28T08:11:53+00:00'
+
 deployment_data:
-  example: |
-    version: '3.7'
-    services:
-      ristra:
-        image: dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0
-        entrypoint: "/bin/sh -c"
-        command: python3 start.py {{ MODEL.PATH }}/{{ MODEL.FILE }}
-        volumes:
-        - type: bind
-          source: "/data"
-          target: "/data"
-          bind:
-            propagation: rshared
-        privileged: true
+  description: |
+    DIGITbrain supports Microservices in containers. The platform aims
+    to support any OCI-compliant container images, as mentioned in
+    [pre-requisites](/start/microservice/#pre-requisites). Containers are 
+    generally described in a variety of formats and the platform aims to
+    support the most common kinds.
+    
+    We currently support the description of **one container** in either the *Docker-Compose*
+    format or **one Pod or Deployment** in the *Kubernetes manifest* format.
+    
+    If you normally run your container with *docker run* we suggest using the online, open-source
+    [Composerize](https://www.composerize.com/) tool, which can translate the command to a
+    Docker-Compose file.
+  type: string (YAML)
+  example:
+    Docker-Compose: |
+      services:
+        reverseproxy:
+          image: nginx:latest
+          ports:
+            - '8080:8080'
+          restart: always
+    Kubernetes Manifest: |
+      apiVersion: v1
+      kind: Pod
+      metadata:
+        name: reverseproxy
+      spec:
+        containers:
+          - name: reverseproxy
+            image: nginx:latest
+            ports:
+              - containerPort: 8080
 
 deployment_format:
   example: '"docker-compose"'

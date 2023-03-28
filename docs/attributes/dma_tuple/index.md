@@ -12,147 +12,9 @@ The specification for Dma Tuple
 has these fields:
 
 
-`author`{ #author }
-
-:   **Required**-**<br>
-    Unique identifier of the user who created this record
-
-
-    === "Example"
-        ``` yaml     
-        UUID
-        ```
-
-
-`build`{ #build }
-
-:   **Required**-**<br>
-    Build number, incremented automatically to provide versioning for the asset
-
-
-    === "Example"
-        ``` yaml     
-        21
-        ```
-
-
-`data_assets_mapping`{ #data-assets-mapping }
-
-:   **Optional**-*[DataAssetsMapping](../dataassetsmapping.md)*<br>
-    Mapping required Data assets to Microservices specified in the MA Pair. Not every Microservice needs a Data asset.
-
-
-    === "Example"
-        ``` yaml     
-        {
-                      "MSID_MYMS_A": {
-                        "MY_SINK": "DATAID_MYDATA_A",
-                        "MY_STREAM": "DATAID_MYDATA_B"
-                      }
-                    }
-        ```
-
-
-`date`{ #date }
-
-:   **Required**-**<br>
-    Date of asset registration.
-
-
-    === "Example"
-        ``` yaml     
-        2022-04-28T08:11:53+00:00
-        ```
-
-
-`deployments`{ #deployments }
-
-:   **Optional**-*[Deployment](../deployment.md)*<br>
-    Mapping of characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple
-
-
-    === "Example"
-        ``` yaml     
-        {
-                     "A_RISTRA_HOST": {
-                       "name": "RISTRA_CPU_Deployment",
-                       "author": "Maxim Redkin",
-                       "type": "cloudbroker",
-                       "cloudbroker": {
-                         "deployment_id": "16b1e2d4-3a2c-406e-8c45-5637099021f0",
-                         "instance_type_id": "ca727925-a5ca-4697-b2c3-8788d82457d5",
-                         "key_pair_id": "22873697-c9ec-4685-bddc-760436662bce",
-                         "opened_port": "2379,4500,30010,8285,30012,443,10250,30888,30000,6443,22,500,8472,30012,4500,500",
-                         "endpoint": "https://cloudsme-cbp.scaletools.com.ua"
-                      }
-                     }
-                    }
-        ```
-
-
-`derivation`{ #derivation }
-
-:   **Required**-**<br>
-    In case of derivation, references to parent / child (optional)
-
-
-    === "Example"
-        ``` yaml     
-        dma_tuple_123e4567-e89b-12d3 (auto)
-        ```
-
-
-`id`{ #id }
-
-:   **Required**-**<br>
-    Unique identifier of the asset.
-
-
-    === "Example"
-        ``` yaml     
-        "DMAID_MYDMA"
-        ```
-
-
-`ip_instance`{ #ip-instance }
-
-:   **Optional**-**<br>
-    Identifier of the IP Instance the DMA Tuple is valid for (NB: Entity for IP Instance is referenced)
-
-
-    === "Example"
-        ``` yaml     
-        ip_instance_123e4567-e89b-12d3
-        ```
-
-
-`licensor`{ #licensor }
-
-:   **Required**-**<br>
-    Identifier of the Legal Entity licensing the the MA Pair (NB: Entity for Licensor is referenced)
-
-
-    === "Example"
-        ``` yaml     
-        legal_entity_123e4567-e89b-12d3 (auto)
-        ```
-
-
-`ma_pair`{ #ma-pair }
-
-:   **Optional**-**<br>
-    Identifier of the MA Pair associated to the DMA Tuple
-
-
-    === "Example"
-        ``` yaml     
-        "MAID_MYMA"
-        ```
-
-
 `name`{ #name }
 
-:   **Required**-**<br>
+:   **Required**-*string*<br>
     Short name to identify the DMA Tuple
 
 
@@ -162,57 +24,9 @@ has these fields:
         ```
 
 
-`namespace`{ #namespace }
-
-:   **Optional**-**<br>
-    Context to interpret the associated information (optional?)
-
-
-    === "Example"
-        ``` yaml     
-        namespace_123e4567-e89b-12d3
-        ```
-
-
-`payload`{ #payload }
-
-:   **Optional**-**<br>
-    User-defined key-value pairs: JSON string with additional information (optional)
-
-
-    === "Example"
-        ``` yaml     
-        {‘injectionMold’: ‘Circuit Case’}
-        ```
-
-
-`provider`{ #provider }
-
-:   **Required**-**<br>
-    Legal entity who provides the asset (owner). It is the affiliation of the author by default.
-
-
-    === "Example"
-        ``` yaml     
-        UUID
-        ```
-
-
-`schedule`{ #schedule }
-
-:   **Optional**-**<br>
-    Days and hours the DMA Tuple will be active (optional)
-
-
-    === "Example"
-        ``` yaml     
-        R90/2021-05-01T00:00:00Z/PT48H
-        ```
-
-
 `scope`{ #scope }
 
-:   **Required**-**<br>
+:   **Required**-*string*<br>
     Short description of the scope of the DMA Tuple (human readable)
 
 
@@ -224,12 +38,97 @@ has these fields:
 
 `version`{ #version }
 
-:   **Optional**-**<br>
+:   **Required**-*string*<br>
     Version number of the DMA Tuple, defined by the provider
 
 
     === "Example"
         ``` yaml     
-        "0.21.0"
+        0.21.0
+        ```
+
+
+`ip_instance`{ #ip-instance }
+
+:   **Required**-*string*<br>
+    Identifier of the IP Instance the DMA Tuple is valid for (NB: Entity for IP Instance is referenced)
+
+
+    === "Example"
+        ``` yaml     
+        ip_instance_123e4567-e89b-12d3
+        ```
+
+
+`provider`{ #provider }
+
+:   **Required**-*string*<br>
+    Legal entity who provides the asset (owner). It is the affiliation of the author by default.
+
+
+    === "Example"
+        ``` yaml     
+        cabd945f-4085-4e34-becd-45ec5a851a9b
+        ```
+
+
+`ma_pair`{ #ma-pair }
+
+:   **Required**-*string*<br>
+    Identifier of the Behaviour (MA Pair) associated to the DMA Tuple
+
+
+    === "Example"
+        ``` yaml     
+        MAID_MYMA
+        ```
+
+
+`deployments`{ #deployments }
+
+:   **Required**-*[Deployment](../deployment.md)*<br>
+    Mapping of characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple
+
+
+`data_assets_mapping`{ #data-assets-mapping }
+
+:   **Optional**-*[DataAssetsMapping](../dataassetsmapping.md)*<br>
+    Mapping required Data assets to Microservices specified in the MA Pair. Not every Microservice needs a Data asset.
+
+
+`namespace`{ #namespace }
+
+:   **Optional**-*string*<br>
+    Context to interpret the associated information
+
+
+    === "Example"
+        ``` yaml     
+        namespace_123e4567-e89b-12d3
+        ```
+
+
+`payload`{ #payload }
+
+:   **Optional**-*string (JSON)*<br>
+    User-defined key-value pairs with additional information
+
+
+    === "Example"
+        ``` yaml     
+        {"injectionMold": "Circuit Case"}
+
+        ```
+
+
+`schedule`{ #schedule }
+
+:   **Optional**-*string*<br>
+    Days and hours the DMA Tuple will be active
+
+
+    === "Example"
+        ``` yaml     
+        R90/2021-05-01T00:00:00Z/PT48H
         ```
 

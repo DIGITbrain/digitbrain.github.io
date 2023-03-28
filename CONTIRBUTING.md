@@ -52,7 +52,7 @@ Links to these three sections are below:
 
 ### Asset Overview (table format)
 
-This section is generated using a plugin called [`swagger-markdown`]https://github.com/batiste/swagger-markdown).
+This section is generated using a plugin called [`swagger-markdown`](https://github.com/batiste/swagger-markdown).
 A daily GitHub Action keeps the OpenAPI Specification of the Asset Metadata Registry up-to-date
 at [tools/swagger.json](https://github.com/DIGITbrain/digitbrain.github.io/blob/main/tools/swagger.json),
 and when MkDocs publishes the site, definitions are automatically rendered as tables.
@@ -71,22 +71,31 @@ To document other (future) assets or substructures, follow these steps:
 
 #### For substructures in the AMR (UDTs)
 
-Substructures in the AMR `udt_list` will have pages automatically generated for them. Simply
-[run the script](#generating-asset-detail) and add the entry (normally `attributes/<substructure_name>.md`)
-to the [navigation](#modifying-the-navigation).
+- Substructures in the AMR `udt_list` will have pages automatically generated for them
+- Just [run the script](#generating-asset-detail)
+- And add the entry (normally `attributes/<substructure_name>.md`) to the [navigation](#modifying-the-navigation)
 
 #### For assets in the AMR
 
-- Add the Asset name to [AMDR_TABLES](https://github.com/DIGITbrain/digitbrain.github.io/blob/bad026a265034608b90cd875482479e0c1430638/tools/postgrest-to-detail.py#L20) in `postgrest-to-detail.py`.
-- Then [run the script](#generating-asset-detail) and add the entry (normally `attributes/<asset_name>.md`) to the [navigation](#modifying-the-navigation).
+- Add the Asset name to [AMDR_TABLES](https://github.com/DIGITbrain/digitbrain.github.io/blob/bad026a265034608b90cd875482479e0c1430638/tools/postgrest-to-detail.py#L20) in `postgrest-to-detail.py`
+- Then [run the script](#generating-asset-detail) and add the entry (normally `attributes/<asset_name>.md`) to the [navigation](#modifying-the-navigation)
 
 #### For assets/substructures not in the AMR
 
-- First add the Asset name to [DA_TABLES (assets)](https://github.com/DIGITbrain/digitbrain.github.io/blob/bad026a265034608b90cd875482479e0c1430638/tools/postgrest-to-detail.py#L27) or [DA_UDTS (substructures)](https://github.com/DIGITbrain/digitbrain.github.io/blob/bad026a265034608b90cd875482479e0c1430638/tools/postgrest-to-detail.py#L28).
-- Then create a [Custom Definitions](#customising-details) file at [`custom_definitions/<name>.yaml`](https://github.com/DIGITbrain/digitbrain.github.io/tree/main/docs/custom_definitions).
-- Finally [run the script](#generating-asset-detail) and add the entry to the [navigation](#modifying-the-navigation).
+- First add the Asset name to [DA_TABLES (assets)](https://github.com/DIGITbrain/digitbrain.github.io/blob/bad026a265034608b90cd875482479e0c1430638/tools/postgrest-to-detail.py#L27) or [DA_UDTS (substructures)](https://github.com/DIGITbrain/digitbrain.github.io/blob/bad026a265034608b90cd875482479e0c1430638/tools/postgrest-to-detail.py#L28)
+- Then create a [Custom Definitions](#customising-details) file at [`custom_definitions/<name>.yaml`](https://github.com/DIGITbrain/digitbrain.github.io/tree/main/docs/custom_definitions)
+- Finally [run the script](#generating-asset-detail) and add the entry to the [navigation](#modifying-the-navigation)
 
 ## Further Info
+
+### Modifying the Navigation
+
+Re-ordering or otherwise modifying the navigation of the site is possible by editing
+the [`nav`](https://github.com/DIGITbrain/digitbrain.github.io/blob/bad026a265034608b90cd875482479e0c1430638/mkdocs.yml#L19)
+key in `mkdocs.yml`. You can add new assets or substructures to the
+[Assets Overview (tables)](https://github.com/DIGITbrain/digitbrain.github.io/blob/bad026a265034608b90cd875482479e0c1430638/mkdocs.yml#L55)
+or [Assets in Detail](https://github.com/DIGITbrain/digitbrain.github.io/blob/bad026a265034608b90cd875482479e0c1430638/mkdocs.yml#L33)
+sections of the file, just point to the location of the newly generated `.md` file.
 
 ### Customising Details
 
@@ -133,13 +142,3 @@ Notes:
 - When example is a map, multiple examples are created in a [tabbed](https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/) code block
 - Headers at ### level can be created with `header: true` in this case, the key is the header text
 - Types can be overwritten
-
-
-### Modifying the Navigation
-
-Re-ordering or otherwise modifying the navigation of the site is possible by editing
-the [`nav`](https://github.com/DIGITbrain/digitbrain.github.io/blob/bad026a265034608b90cd875482479e0c1430638/mkdocs.yml#L19)
-key in `mkdocs.yml`. You can add new assets or substructures to the
-[Assets Overview (tables)](https://github.com/DIGITbrain/digitbrain.github.io/blob/bad026a265034608b90cd875482479e0c1430638/mkdocs.yml#L55)
-or [Assets in Detail](https://github.com/DIGITbrain/digitbrain.github.io/blob/bad026a265034608b90cd875482479e0c1430638/mkdocs.yml#L33)
-sections of the file, just point to the location of the newly generated `.md` file.

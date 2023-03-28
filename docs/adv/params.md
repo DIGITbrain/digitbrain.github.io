@@ -10,22 +10,34 @@ Microservice bound to it. Keep the `name` of your parameter in mind, to
 refer to later.
 
 Use the `open_parameter(PARAMETER_NAME)` syntax to refer to these parameters,
-for example in a Microservice's [deploymentData](/attributes/microservice/#service). 
+for example in a Microservice's [deploymentData](/attributes/microservice/#deployment-data). 
 
-=== "Example"
+=== "Defining Parameters"
 
     ``` yaml     
-        "version": "3.7",
-        "services": {
-            "ristra": {
-                "image": "dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0",
-                "entrypoint": "/bin/sh -c",
-                "environment": {
-                  "MINIO_ROOT_USER": "open_parameter(MINIO_ROOT_USER)",
-                  "MINIO_ROOT_PASS": "open_parameter(MINIO_ROOT_PASS)"
-                }
-            }
-        }
+    parameters:
+    - name: MINIO_ROOT_USER
+      type: String
+      mandatory: true
+      defaultValue: admin
+      description: MinIO username
+    - name: MINIO_ROOT_PASS
+      type: String
+      mandatory: true
+      description: MinIO password
+    ```
+
+=== "Referencing Parameters"
+
+    ``` yaml     
+    version: '3.7'
+    services:
+    ristra:
+        image: dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0
+        entrypoint: /bin/sh -c
+        environment:
+        MINIO_ROOT_USER: open_parameter(MINIO_ROOT_USER)
+        MINIO_ROOT_PASS: open_parameter(MINIO_ROOT_PASS)
     ```
 
 **This feature is in beta. Please contact your support**

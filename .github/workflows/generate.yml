@@ -3,6 +3,11 @@
 name: Generate docs
 
 on:
+  # Triggers on PRs to main
+  pull_request:
+    branches:
+      - main
+
   # Triggers the workflow on push events for main and any fix/* feat/* branches
   push:
     branches:
@@ -15,9 +20,22 @@ on:
   workflow_dispatch:
 
 jobs:
+  lint:
+    name: Lint custom definition overwrite YAMLs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Lint custom_definitions/*
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          config_file: tools/yamllint.conf
+          file_or_dir: docs/custom_definitions
+      
   generate:
     name: Generate docs from AMDR and Excel
     runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
 
     steps:
       - name: Checkout repository

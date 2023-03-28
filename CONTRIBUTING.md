@@ -142,3 +142,4 @@ Notes:
 - When example is a map, multiple examples are created in a [tabbed](https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/) code block
 - Headers at ### level can be created with `header: true` in this case, the key is the header text
 - Types can be overwritten
+- This order of fields will only be preserved for structures **NOT** in the AMR

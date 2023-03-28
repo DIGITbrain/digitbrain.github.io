@@ -81,31 +81,54 @@ has these fields:
 
 `deployment_data`{ #deployment_data }
 
-:   **Required**-*string*<br>
-    JSON of docker-compose or kubernetes manifest required to run the container
+:   **Required**-*string (YAML)*<br>
+    DIGITbrain supports Microservices in containers. The platform aims
+    to support any OCI-compliant container images, as mentioned in
+    [pre-requisites](/start/microservice/#pre-requisites). Containers are 
+    generally described in a variety of formats and the platform aims to
+    support the most common kinds.
+
+    We currently support the description of **one container** in either the *Docker-Compose*
+    format or **one Pod or Deployment** in the *Kubernetes manifest* format.
+
+    If you normally run your container with *docker run* we suggest using the online, open-source
+    [Composerize](https://www.composerize.com/) tool, which can translate the command to a
+    Docker-Compose file.
 
 
-    === "Example"
+
+
+    === "Docker-Compose"
         ``` yaml     
-        version: '3.7'
         services:
-          ristra:
-            image: dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0
-            entrypoint: "/bin/sh -c"
-            command: python3 start.py {{ MODEL.PATH }}/{{ MODEL.FILE }}
-            volumes:
-            - type: bind
-              source: "/data"
-              target: "/data"
-              bind:
-                propagation: rshared
-            privileged: true
+          reverseproxy:
+            image: nginx:latest
+            ports:
+              - '8080:8080'
+            restart: always
 
         ```
 
+
+    === "Kubernetes Manifest"
+        ``` yaml     
+        apiVersion: v1
+        kind: Pod
+        metadata:
+          name: reverseproxy
+        spec:
+          containers:
+            - name: reverseproxy
+              image: nginx:latest
+              ports:
+                - containerPort: 8080
+
+        ```
+
+
 `configuration_data`{ #configuration_data }
 
-:   **Optional**-*[ConfigurationData](../configurationdata.md)[]*<br>
+:   **Optional**-*[ConfigurationData](../configuration_data.md)[]*<br>
     List of objects specifying configuration file(s) content required by the service
 
 
@@ -232,7 +255,7 @@ has these fields:
 
 `data_resource`{ #data_resource }
 
-:   **Optional**-*[Data Resources](../data_resources.md)[]*<br>
+:   **Optional**-*[Data Resource](../data_resource.md)[]*<br>
     list of Data objects for each required data resource, specified using the "DATA" fields in the linked substructure
 
 

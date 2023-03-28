@@ -51,16 +51,11 @@ nav:
       - Supporting Metadata: attributes/supporting_metadata.md
   - Assets Overview:
       - Asset Overview: tables/index.md
-      - Microservice:
-          - Microservice: tables/microservice/index.md
-      - Algorithm:
-          - Algorithm: tables/algorithm/index.md
-      - Model:
-          - Model: tables/model/index.md
-      - Behaviour:
-          - Behaviour (M+A Pair): tables/ma_pair/index.md
-      - Data:
-          - Data: tables/data/index.md
+      - Microservice: tables/microservice.md
+      - Algorithm: tables/algorithm.md
+      - Model: tables/model.md
+      - Behaviour (M+A Pair): tables/ma_pair.md
+      - Data: tables/data.md
       - Supporting Metadata:
           - IP Family: tables/ip_family.md
           - IP Instance: tables/ip_instance.md

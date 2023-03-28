@@ -73,7 +73,7 @@ has these fields:
         Effectiveness of the mold closing process
         ```
 
-`ip_family`{ #ip_family }
+`ip_family`{ #ip-family }
 
 :   **Required**-*string*<br>
     Identifier of the IP Family the MA Pair is valid for
@@ -97,7 +97,7 @@ has these fields:
         namespace_123e4567-e89b-12d3
         ```
 
-`m_asset`{ #m_asset }
+`m_asset`{ #m-asset }
 
 :   **Required**-*string*<br>
     Identifier of the Model Asset associated to the MA Pair (NB: The corresponding model file is indicated in Model metadata (first tab) as Model_URI and the corresponding zip file needs to be served to the Algorithm to evaluate the Model by the Microservice (MODEL_FILENAME))
@@ -112,7 +112,7 @@ has these fields:
         "MODID_MYMODEL"
         ```
 
-`a_asset`{ #a_asset }
+`a_asset`{ #a-asset }
 
 :   **Required**-*string*<br>
     Identifiers of the Algorithm Asset associated to the MA Pair

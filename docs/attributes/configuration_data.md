@@ -11,7 +11,7 @@
 The specification for Configuration Data
 has these fields:
 
-`file_path`{ #file_path }
+`file_path`{ #file-path }
 
 :   **Optional**-*String*<br>
     full path to file including file name
@@ -22,7 +22,7 @@ has these fields:
         "/data/rclone.conf"
         ```
 
-`file_content`{ #file_content }
+`file_content`{ #file-content }
 
 :   **Optional**-*String*<br>
     file content (not binary)
@@ -33,7 +33,7 @@ has these fields:
         "[s3-server]\n    access_key: 123abc"
         ```
 
-`mount_propagation`{ #mount_propagation }
+`mount_propagation`{ #mount-propagation }
 
 :   **Optional**-*Enum[ "None", "HostToContainer", "Bidirectional" ]*<br>
     Enable mountPropagation https://kubernetes.io/docs/concepts/storage/volumes/#mount-propagation . Default: None

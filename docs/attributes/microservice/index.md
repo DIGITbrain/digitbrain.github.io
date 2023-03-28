@@ -46,7 +46,7 @@ has these fields:
         "This microservices solves a certain problem using very specific methods…"
         ```
 
-`classification_schema`{ #classification_schema }
+`classification_schema`{ #classification-schema }
 
 :   **Required**-*enum [Simulation, ML, others]*<br>
     fine-granular classification of the Microservice
@@ -68,7 +68,7 @@ has these fields:
         ["neural network", "deep learning", "convolutional neural network", "CNN"]
         ```
 
-`deployment_format`{ #deployment_format }
+`deployment_format`{ #deployment-format }
 
 :   **Required**-*enum [docker-compose, kubernetes-manifest]*<br>
     identifier of the deployment environment required to deploy the Microservice's container
@@ -79,7 +79,7 @@ has these fields:
         "docker-compose"
         ```
 
-`deployment_data`{ #deployment_data }
+`deployment_data`{ #deployment-data }
 
 :   **Required**-*string (YAML)*<br>
     DIGITbrain supports Microservices in containers. The platform aims
@@ -126,7 +126,7 @@ has these fields:
         ```
 
 
-`configuration_data`{ #configuration_data }
+`configuration_data`{ #configuration-data }
 
 :   **Optional**-*[ConfigurationData](../configuration_data.md)[]*<br>
     List of objects specifying configuration file(s) content required by the service
@@ -142,7 +142,7 @@ has these fields:
 
         ```
 
-`mounted_shared_directories`{ #mounted_shared_directories }
+`mounted_shared_directories`{ #mounted-shared-directories }
 
 :   **Optional**-*string*<br>
     A note for developers of co-operating Microservices. Directories that should be shared to the host where this microservice can find required inputs / store outputs
@@ -153,17 +153,17 @@ has these fields:
         "/data and /cfg are mounted on the host for data and configuration sharing, respectively."
         ```
 
-`recommended_number_of_gpus`{ #recommended_number_of_gpus }
+`recommended_number_of_gpus`{ #recommended-number-of-gpus }
 
 :   **Optional**-*integer*<br>
     recommended number of GPUs
 
-`recommended_gpu_ram`{ #recommended_gpu_ram }
+`recommended_gpu_ram`{ #recommended-gpu-ram }
 
 :   **Optional**-*integer*<br>
     recommended amount of GPU memory in GB
 
-`gpu_type`{ #gpu_type }
+`gpu_type`{ #gpu-type }
 
 :   **Optional**-*string*<br>
     a description of the type of GPUs, and further specifications, to allow the execution of the Microservice
@@ -175,7 +175,7 @@ has these fields:
         "NVidia (compute capability >= 7.0)"
         ```
 
-`hpc_required`{ #hpc_required }
+`hpc_required`{ #hpc-required }
 
 :   **Optional**-*boolean*<br>
     whether this Microservice requires an HPC environment to be executed efficiently
@@ -187,7 +187,7 @@ has these fields:
         true
         ```
 
-`edge_type`{ #edge_type }
+`edge_type`{ #edge-type }
 
 :   **Optional**-*enum [TPU (Google), NPU (Qualcomm), FPGA, NVIDIA Jetson AGX]*<br>
     required type of edge device to allow the execution of the Microservice
@@ -199,7 +199,7 @@ has these fields:
         "NVIDIA Jetson AGX"
         ```
 
-`recommended_ram`{ #recommended_ram }
+`recommended_ram`{ #recommended-ram }
 
 :   **Optional**-*integer*<br>
     recommended amount of memory in GB
@@ -211,13 +211,13 @@ has these fields:
         16
         ```
 
-`recommended_cpus`{ #recommended_cpus }
+`recommended_cpus`{ #recommended-cpus }
 
 :   **Optional**-*integer*<br>
     recommended number of CPU cores
 
 
-`required_disk_space`{ #required_disk_space }
+`required_disk_space`{ #required-disk-space }
 
 :   **Optional**-*integer*<br>
     required amount of disk space in GB
@@ -229,7 +229,7 @@ has these fields:
         42
         ```
 
-`os_arch`{ #os_arch }
+`os_arch`{ #os-arch }
 
 :   **Optional**-*string*<br>
     supported os architecture. Defaults to x86
@@ -241,7 +241,7 @@ has these fields:
         "x86_64"
         ```
 
-`os_type`{ #os_type }
+`os_type`{ #os-type }
 
 :   **Optional**-*string*<br>
     supported os type. Defaults to Linux
@@ -253,7 +253,7 @@ has these fields:
         "linux"
         ```
 
-`data_resource`{ #data_resource }
+`data_resource`{ #data-resource }
 
 :   **Optional**-*[Data Resource](../data_resource.md)[]*<br>
     list of Data objects for each required data resource, specified using the "DATA" fields in the linked substructure
@@ -274,7 +274,7 @@ has these fields:
 
         ```
 
-`model_types`{ #model_types }
+`model_types`{ #model-types }
 
 :   **Optional**-*string[]*<br>
     list of supported Model types
@@ -286,7 +286,7 @@ has these fields:
         ["SavedModel (Tensorflow)"]
         ```
 
-`model_recommended_auth_tools`{ #model_recommended_auth_tools }
+`model_recommended_auth_tools`{ #model-recommended-auth-tools }
 
 :   **Optional**-*string[]*<br>
     list of recommended AuthoringTools used to generate the Model

@@ -44,7 +44,7 @@ has these fields:
         1
         ```
 
-`is_continuous`{ #is_continuous }
+`is_continuous`{ #is-continuous }
 
 :   **Optional**-*bool, default is true (real)*<br>
     flag to indicate whether slot values are integer or real numbers
@@ -68,7 +68,7 @@ has these fields:
 :   **Optional**-*obj (see subkeys below)*<br>
     Values related to the slot measurement units
 
-`default_value`{ #default_value }
+`default_value`{ #default-value }
 
 :   **Optional**-*number | null*<br>
     default value for in-slot, if null then the value for the in-slot needs

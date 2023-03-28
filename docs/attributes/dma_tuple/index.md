@@ -33,7 +33,7 @@ has these fields:
         21
         ```
 
-`data_assets_mapping`{ #data_assets_mapping }
+`data_assets_mapping`{ #data-assets-mapping }
 
 :   **Optional**-*[DataAssetsMapping](../dataassetsmapping.md)*<br>
     Mapping required Data assets to Microservices specified in the MA Pair. Not every Microservice needs a Data asset.
@@ -106,7 +106,7 @@ has these fields:
         "DMAID_MYDMA"
         ```
 
-`ip_instance`{ #ip_instance }
+`ip_instance`{ #ip-instance }
 
 :   **Optional**-**<br>
     Identifier of the IP Instance the DMA Tuple is valid for (NB: Entity for IP Instance is referenced)
@@ -128,7 +128,7 @@ has these fields:
         legal_entity_123e4567-e89b-12d3 (auto)
         ```
 
-`ma_pair`{ #ma_pair }
+`ma_pair`{ #ma-pair }
 
 :   **Optional**-**<br>
     Identifier of the MA Pair associated to the DMA Tuple

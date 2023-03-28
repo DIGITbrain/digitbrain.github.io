@@ -37,19 +37,19 @@ has these fields:
     License of the model.  Type tbd in SAD group
 
 
-`provider_contacts`{ #provider_contacts }
+`provider_contacts`{ #provider-contacts }
 
 :   **Optional**-*string*<br>
     Dictionary with keys being phone, email, address - Type takes into account co-simulation models, for which solver info is mandatory (next slide)
 
 
-`marketplace_description`{ #marketplace_description }
+`marketplace_description`{ #marketplace-description }
 
 :   **Optional**-*string*<br>
     Model tag description Additional info about model files (e.g. versioning, scope, i.e. what is the model used for, e.g. simulation, control, etc.) - Human readable marketplace description
 
 
-`auth_tool`{ #auth_tool }
+`auth_tool`{ #auth-tool }
 
 :   **Optional**-*string*<br>
     Authoring Tool used to create the model
@@ -67,7 +67,7 @@ has these fields:
     Error of the model’s prediction
 
 
-`repository_uri`{ #repository_uri }
+`repository_uri`{ #repository-uri }
 
 :   **Required**-*string*<br>
     Where the model file is stored (usually the DigitBrain certified external model repository). The path and model filename are not provided via this field.
@@ -103,7 +103,7 @@ has these fields:
         "mymodel.pb"
         ```
 
-`state_depend`{ #state_depend }
+`state_depend`{ #state-depend }
 
 :   **Optional**-*boolean*<br>
     stateful -> 1, stateless -> 0
@@ -163,73 +163,73 @@ has these fields:
                     ]  
         ```
 
-`os_arch`{ #os_arch }
+`os_arch`{ #os-arch }
 
 :   **Optional**-*string*<br>
     OS architecture type (e.g. x86_64)
 
 
-`os_type`{ #os_type }
+`os_type`{ #os-type }
 
 :   **Optional**-*string*<br>
     OS type (e.g. Windows, Linux)
 
 
-`os_distribution`{ #os_distribution }
+`os_distribution`{ #os-distribution }
 
 :   **Optional**-*string*<br>
     OS distributun (e.g. Ubuntu, Fedora)
 
 
-`recommended_number_of_gpu_cores`{ #recommended_number_of_gpu_cores }
+`recommended_number_of_gpu_cores`{ #recommended-number-of-gpu-cores }
 
 :   **Optional**-*integer*<br>
     Recommended number of GPU cores
 
 
-`minimum_number_of_gpu_cores`{ #minimum_number_of_gpu_cores }
+`minimum_number_of_gpu_cores`{ #minimum-number-of-gpu-cores }
 
 :   **Optional**-*integer*<br>
     Minimum required number of GPU cores
 
 
-`recommended_gpu_ram`{ #recommended_gpu_ram }
+`recommended_gpu_ram`{ #recommended-gpu-ram }
 
 :   **Optional**-*integer*<br>
     Recommended GPU memory
 
 
-`minimum_gpu_ram`{ #minimum_gpu_ram }
+`minimum_gpu_ram`{ #minimum-gpu-ram }
 
 :   **Optional**-*integer*<br>
     Minimum required GPU memory
 
 
-`recommended_ram`{ #recommended_ram }
+`recommended_ram`{ #recommended-ram }
 
 :   **Optional**-*integer*<br>
     Recommended Memory
 
 
-`minimum_ram`{ #minimum_ram }
+`minimum_ram`{ #minimum-ram }
 
 :   **Optional**-*integer*<br>
     Minimum required memory
 
 
-`recommended_cpus`{ #recommended_cpus }
+`recommended_cpus`{ #recommended-cpus }
 
 :   **Optional**-*integer*<br>
     Recommended number of CPU cores
 
 
-`minimum_cpus`{ #minimum_cpus }
+`minimum_cpus`{ #minimum-cpus }
 
 :   **Optional**-*integer*<br>
     Minimum required number of CPU cores
 
 
-`required_disk_space`{ #required_disk_space }
+`required_disk_space`{ #required-disk-space }
 
 :   **Optional**-*integer*<br>
     Required amount of disk space in GB

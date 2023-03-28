@@ -22,7 +22,7 @@ has these fields:
         "meanTemperature"
         ```
 
-`corresponding_measurement`{ #corresponding_measurement }
+`corresponding_measurement`{ #corresponding-measurement }
 
 :   **Optional**-*String*<br>
     identification of the corresponding measurement, i.e. output of the Model

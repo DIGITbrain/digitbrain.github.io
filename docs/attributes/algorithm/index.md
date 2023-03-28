@@ -37,7 +37,7 @@ has these fields:
         "This algorithm can be used to solve a specifc problem, and applies some fancy technologies."
         ```
 
-`classification_schema`{ #classification_schema }
+`classification_schema`{ #classification-schema }
 
 :   **Required**-*enum [Simulation, ML, others]*<br>
     the classification of the Algorithm, to describe the specialization area
@@ -73,7 +73,7 @@ has these fields:
         "1.0"
         ```
 
-`list_of_microservices`{ #list_of_microservices }
+`list_of_microservices`{ #list-of-microservices }
 
 :   **Required**-*string[]*<br>
     a list of Microservice Asset IDs, which are contained in the algorithm
@@ -85,7 +85,7 @@ has these fields:
         ["MSID_MYMS_A", "MSID_MYMS_B"]
         ```
 
-`deployment_mapping`{ #deployment_mapping }
+`deployment_mapping`{ #deployment-mapping }
 
 :   **Required**-*string*<br>
     a mapping specifying which microservice should run on which host. By default each microservice is assigned a respective host, but this behaviour is not always ideal (eg. when two or more Microservices may need to run on the same host)

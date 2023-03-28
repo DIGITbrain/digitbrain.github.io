@@ -43,7 +43,7 @@ has these fields:
     Human readable description of the data resource characteristics, contents.
 
 
-`description_url`{ #description_url }
+`description_url`{ #description-url }
 
 :   **Optional**-*string*<br>
     More detailed specification of data source characteristics (doc, pdf, …)
@@ -133,7 +133,7 @@ has these fields:
         ["kafka://host/topic#1"]
         ```
 
-`auth_type`{ #auth_type }
+`auth_type`{ #auth-type }
 
 :   **Required**-*string[]*<br>
     One or more authentication types that can be accepted by the storage resource.
@@ -157,7 +157,7 @@ has these fields:
         -
         ```
 
-`aux_info`{ #aux_info }
+`aux_info`{ #aux-info }
 
 :   **Optional**-*string*<br>
     List of key-value pais (JSON object/YAML dictionary) for additional specification of the data resource. New keys can be added on demand, a list of known keys is available.
@@ -175,7 +175,7 @@ has these fields:
     Describes message internal structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, ...
 
 
-`schema_url`{ #schema_url }
+`schema_url`{ #schema-url }
 
 :   **Optional**-*string*<br>
     URL to schema specification document (in some format, rdf, owl, xsd, …)

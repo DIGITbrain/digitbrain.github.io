@@ -44,7 +44,7 @@ has these fields:
         ["application/zip", "image/jpg"]
         ```
 
-`source_type`{ #source_type }
+`source_type`{ #source-type }
 
 :   **Optional**-*List[DATA_SOURCE_TYPE]*<br>
     supported exact type of the data resource. Typically corresponds to the scheme part (protocol://) of DATA_URI
@@ -55,7 +55,7 @@ has these fields:
         ["MYSQL", "KAFKA"]
         ```
 
-`auth_type`{ #auth_type }
+`auth_type`{ #auth-type }
 
 :   **Optional**-*List[DATA_AUTH_TYPE]*<br>
     supported authentication type
@@ -77,7 +77,7 @@ has these fields:
         ["jpg"]
         ```
 
-`aux_info`{ #aux_info }
+`aux_info`{ #aux-info }
 
 :   **Optional**-*Map[String, String]*<br>
     List of key-value pairs (JSON object/YAML dictionary) supported by the data resource. New keys can be added on demand, a list of known keys is available.

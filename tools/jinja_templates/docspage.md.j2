@@ -17,7 +17,7 @@ has these fields:
 
 `{{ key }}`{ #{{ key | lower | replace("_", "-") | replace("*", "") }} }
 
-:   **{{ "Required" if key in required else "Optional" }}**-*{{ "enum [" ~ value.enum | join(", ") ~ "]" if "enum" in value else value.type }}{{ "[]" if value.format == "ARRAY" else "" }}*<br>
+:   **{{ "Required" if (key in required or (value.required is defined and value.required == True)) else "Optional" }}**-*{{ "enum [" ~ value.enum | join(", ") ~ "]" if "enum" in value else value.type }}{{ "[]" if value.format == "ARRAY" else "" }}*<br>
     {{ (value.description | indent(4, False)) if value.description is defined else ""}}
 
 {% if value.example is defined and value.example is mapping %}

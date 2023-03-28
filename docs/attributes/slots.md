@@ -50,10 +50,18 @@ has these fields:
     flag to indicate whether slot values are integer or real numbers
 
 
-    === "Example"
+
+    === "Real Numbers"
         ``` yaml     
-        true
+        True
         ```
+
+
+    === "Integers"
+        ``` yaml     
+        False
+        ```
+
 
 `units`{ #units }
 

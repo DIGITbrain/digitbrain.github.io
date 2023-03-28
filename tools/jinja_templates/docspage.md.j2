@@ -20,7 +20,15 @@ has these fields:
 :   **{{ "Required" if key in required else "Optional" }}**-*{{ "enum [" ~ value.enum | join(", ") ~ "]" if "enum" in value else value.type }}{{ "[]" if value.format == "ARRAY" else "" }}*<br>
     {{ (value.description | indent(4, False)) if value.description is defined else ""}}
 
-{% if "example" in value %}
+{% if value.example is defined and value.example is mapping %}
+{% for key, example in value.example.items() %}
+    === "{{ key }}"
+        ``` yaml     
+        {{ example | string | indent(8, False) }}
+        ```
+
+{% endfor %}
+{% elif value.example is defined %}
     === "Example"
         ``` yaml     
         {{ value.example | string | indent(8, False) }}

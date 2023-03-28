@@ -27,7 +27,9 @@ exponents:
   type: array, 7-tuple of integer-valued exponents
 is_continuous:
   description: flag to indicate whether slot values are integer or real numbers
-  example: 'true'
+  example:
+    Real Numbers: true
+    Integers: false
   type: bool, default is true (real)
 key:
   description: unique (within a Model) machine-readable identifier matching [a-zA-Z_][a-zA-Z_0-9]*

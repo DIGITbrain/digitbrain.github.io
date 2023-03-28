@@ -38,27 +38,23 @@ to define a complete URI.
 === "Model"
 
     ``` yaml     
-    "version": "3.7",
-    "services": {
-        "ristra": {
-            "image": "dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0",
-            "entrypoint": "/bin/sh -c",
-            "command": "wget {{ MODEL.repository_uri }}",
-        }
-    }
+    version: '3.7'
+    services:
+    ristra:
+        image: dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0
+        entrypoint: /bin/sh -c
+        command: wget {{ MODEL.repository_uri }}
     ```
 
 === "Data"
 
     ``` yaml     
-    "version": "3.7",
-    "services": {
-        "ristra": {
-            "image": "dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0",
-            "entrypoint": "/bin/sh -c",
-            "command": "wget {{ SINK_A.uri }}",
-        }
-    }
+    version: '3.7'
+    services:
+    ristra:
+        image: dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0
+        entrypoint: /bin/sh -c
+        command: wget {{ SINK_A.uri }}
     ```
 ### PATH and FILENAME
 

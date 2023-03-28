@@ -12,7 +12,7 @@ The processes of publishing a Behaviour relies on previously published and reuse
 
 ## Pre-requisites
 
-The IP Family (i.e. Industrial-Product Family), the Model Asset, and the Algorithm Asset to be referenced by the MA Pair would need to be published beforehand, in order to facilitate the creation and publishing of the MA Pair.
+The IP Family (i.e. Industrial-Product Family), the Model Asset, and the Algorithm Asset to be referenced by the MA Pair would need to be published beforehand, in order to facilitate the creation and publishing of the Behaviour.
 
 ## Describing Behaviours
 

@@ -24,6 +24,7 @@ nav:
       - Algorithm: start/algorithm.md
       - Model: start/model.md
       - Data: start/data.md
+      - Behaviour: start/ma_pair.md
       - DMA Tuple: start/dma_tuple.md
       - Supporting Metadata: start/supporting_metadata.md
   - Assets in Detail:

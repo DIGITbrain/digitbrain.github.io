@@ -11,6 +11,7 @@
 The specification for Dma Tuple
 has these fields:
 
+
 `author`{ #author }
 
 :   **Required**-**<br>
@@ -22,6 +23,7 @@ has these fields:
         UUID
         ```
 
+
 `build`{ #build }
 
 :   **Required**-**<br>
@@ -32,6 +34,7 @@ has these fields:
         ``` yaml     
         21
         ```
+
 
 `data_assets_mapping`{ #data-assets-mapping }
 
@@ -49,6 +52,7 @@ has these fields:
                     }
         ```
 
+
 `date`{ #date }
 
 :   **Required**-**<br>
@@ -59,6 +63,7 @@ has these fields:
         ``` yaml     
         2022-04-28T08:11:53+00:00
         ```
+
 
 `deployments`{ #deployments }
 
@@ -84,6 +89,7 @@ has these fields:
                     }
         ```
 
+
 `derivation`{ #derivation }
 
 :   **Required**-**<br>
@@ -94,6 +100,7 @@ has these fields:
         ``` yaml     
         dma_tuple_123e4567-e89b-12d3 (auto)
         ```
+
 
 `id`{ #id }
 
@@ -106,6 +113,7 @@ has these fields:
         "DMAID_MYDMA"
         ```
 
+
 `ip_instance`{ #ip-instance }
 
 :   **Optional**-**<br>
@@ -116,6 +124,7 @@ has these fields:
         ``` yaml     
         ip_instance_123e4567-e89b-12d3
         ```
+
 
 `licensor`{ #licensor }
 
@@ -128,6 +137,7 @@ has these fields:
         legal_entity_123e4567-e89b-12d3 (auto)
         ```
 
+
 `ma_pair`{ #ma-pair }
 
 :   **Optional**-**<br>
@@ -138,6 +148,7 @@ has these fields:
         ``` yaml     
         "MAID_MYMA"
         ```
+
 
 `name`{ #name }
 
@@ -150,6 +161,7 @@ has these fields:
         Pressure drop for the injection in hall 3
         ```
 
+
 `namespace`{ #namespace }
 
 :   **Optional**-**<br>
@@ -160,6 +172,7 @@ has these fields:
         ``` yaml     
         namespace_123e4567-e89b-12d3
         ```
+
 
 `payload`{ #payload }
 
@@ -172,6 +185,7 @@ has these fields:
         {‘injectionMold’: ‘Circuit Case’}
         ```
 
+
 `provider`{ #provider }
 
 :   **Required**-**<br>
@@ -182,6 +196,7 @@ has these fields:
         ``` yaml     
         UUID
         ```
+
 
 `schedule`{ #schedule }
 
@@ -194,6 +209,7 @@ has these fields:
         R90/2021-05-01T00:00:00Z/PT48H
         ```
 
+
 `scope`{ #scope }
 
 :   **Required**-**<br>
@@ -204,6 +220,7 @@ has these fields:
         ``` yaml     
         Effectiveness of the mold closing process
         ```
+
 
 `version`{ #version }
 

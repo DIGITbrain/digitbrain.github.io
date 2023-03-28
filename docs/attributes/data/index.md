@@ -13,6 +13,7 @@
 The specification for Data
 has these fields:
 
+
 `name`{ #name }
 
 :   **Required**-*string*<br>
@@ -24,6 +25,7 @@ has these fields:
         ``` yaml     
         "CNSPiezoBolt#1 (in directory: factory 1 , machine1 , piezobolts)"
         ```
+
 
 `version`{ #version }
 
@@ -37,16 +39,19 @@ has these fields:
         "1.0.0"
         ```
 
+
 `description`{ #description }
 
 :   **Optional**-*string*<br>
     Human readable description of the data resource characteristics, contents.
 
 
+
 `description_url`{ #description-url }
 
 :   **Optional**-*string*<br>
     More detailed specification of data source characteristics (doc, pdf, …)
+
 
 
 `size`{ #size }
@@ -61,6 +66,7 @@ has these fields:
         112
         ```
 
+
 `tags`{ #tags }
 
 :   **Optional**-*string[]*<br>
@@ -72,6 +78,7 @@ has these fields:
         ``` yaml     
         ["sensor", "celsius", "press machine"]
         ```
+
 
 `kind`{ #kind }
 
@@ -85,6 +92,7 @@ has these fields:
         "STREAM"
         ```
 
+
 `direction`{ #direction }
 
 :   **Required**-*enum [SOURCE, SINK, BIDIRECTIONAL]*<br>
@@ -96,6 +104,7 @@ has these fields:
         ``` yaml     
         "SOURCE"
         ```
+
 
 `format`{ #format }
 
@@ -109,6 +118,7 @@ has these fields:
         ["application/json"] 
         ```
 
+
 `type`{ #type }
 
 :   **Required**-*string*<br>
@@ -120,6 +130,7 @@ has these fields:
         ``` yaml     
         "MQTT"
         ```
+
 
 `uri`{ #uri }
 
@@ -133,6 +144,7 @@ has these fields:
         ["kafka://host/topic#1"]
         ```
 
+
 `auth_type`{ #auth-type }
 
 :   **Required**-*string[]*<br>
@@ -144,6 +156,7 @@ has these fields:
         ``` yaml     
         ["tls_client_certificate"]
         ```
+
 
 `credentials`{ #credentials }
 
@@ -157,6 +170,7 @@ has these fields:
         -
         ```
 
+
 `aux_info`{ #aux-info }
 
 :   **Optional**-*string*<br>
@@ -169,10 +183,12 @@ has these fields:
         {"PROTOCOL": "tcp", "MQTT_PROTOCOL_VERSION": "3.1.1", "KAFKA_BROKER_VERSION": "2.7.0"}
         ```
 
+
 `schema`{ #schema }
 
 :   **Optional**-*string*<br>
     Describes message internal structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, ...
+
 
 
 `schema_url`{ #schema-url }

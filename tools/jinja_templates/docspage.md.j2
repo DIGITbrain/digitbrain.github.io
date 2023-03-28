@@ -14,7 +14,9 @@ The specification for {{ table | replace("_", " ") | replace("Ma Pair", "Behavio
 has these fields:
 
 {% for key, value in fields.items() if not value.hide -%}
-
+{% if value.header is defined and value.header == True -%}
+### {{ key }}
+{% else %}
 `{{ key }}`{ #{{ key | lower | replace("_", "-") | replace("*", "") }} }
 
 :   **{{ "Required" if (key in required or (value.required is defined and value.required == True)) else "Optional" }}**-*{{ "enum [" ~ value.enum | join(", ") ~ "]" if "enum" in value else value.type }}{{ "[]" if value.format == "ARRAY" else "" }}*<br>
@@ -35,5 +37,5 @@ has these fields:
         ```
 
 {% endif %}
-
+{%- endif %}
 {%- endfor %}

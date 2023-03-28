@@ -11,20 +11,24 @@
 The specification for Units
 has these fields:
 
+
 `unit`{ #unit }
 
 :   **Optional**-*string*<br>
     
+
 
 `exponent`{ #exponent }
 
 :   **Optional**-*integer[]*<br>
     
 
+
 `offset`{ #offset }
 
 :   **Optional**-*integer*<br>
     
+
 
 `scale`{ #scale }
 

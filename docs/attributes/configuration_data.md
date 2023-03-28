@@ -11,6 +11,7 @@
 The specification for Configuration Data
 has these fields:
 
+
 `file_path`{ #file-path }
 
 :   **Optional**-*String*<br>
@@ -22,6 +23,7 @@ has these fields:
         "/data/rclone.conf"
         ```
 
+
 `file_content`{ #file-content }
 
 :   **Optional**-*String*<br>
@@ -32,6 +34,7 @@ has these fields:
         ``` yaml     
         "[s3-server]\n    access_key: 123abc"
         ```
+
 
 `mount_propagation`{ #mount-propagation }
 

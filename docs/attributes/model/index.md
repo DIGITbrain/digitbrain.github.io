@@ -13,10 +13,12 @@
 The specification for Model
 has these fields:
 
+
 `name`{ #name }
 
 :   **Required**-*string*<br>
     Name of the model
+
 
 
 `version`{ #version }
@@ -31,10 +33,12 @@ has these fields:
         "0.1"
         ```
 
+
 `license`{ #license }
 
 :   **Optional**-*string*<br>
     License of the model.  Type tbd in SAD group
+
 
 
 `provider_contacts`{ #provider-contacts }
@@ -43,10 +47,12 @@ has these fields:
     Dictionary with keys being phone, email, address - Type takes into account co-simulation models, for which solver info is mandatory (next slide)
 
 
+
 `marketplace_description`{ #marketplace-description }
 
 :   **Optional**-*string*<br>
     Model tag description Additional info about model files (e.g. versioning, scope, i.e. what is the model used for, e.g. simulation, control, etc.) - Human readable marketplace description
+
 
 
 `auth_tool`{ #auth-tool }
@@ -55,16 +61,19 @@ has these fields:
     Authoring Tool used to create the model
 
 
+
 `type`{ #type }
 
 :   **Optional**-*string*<br>
     ML, LCA, 3D FEM and CFD, System simulation, discrete event simulation, co-simulation (it couples a model with specific algorithms) - The original term Path was proposed to be changed (SAD)
 
 
+
 `fidelity`{ #fidelity }
 
 :   **Optional**-*integer*<br>
     Error of the model’s prediction
+
 
 
 `repository_uri`{ #repository-uri }
@@ -79,6 +88,7 @@ has these fields:
         "https://www.myrepo.com"
         ```
 
+
 `path`{ #path }
 
 :   **Required**-*string*<br>
@@ -90,6 +100,7 @@ has these fields:
         ``` yaml     
         "input/models"
         ```
+
 
 `filename`{ #filename }
 
@@ -103,10 +114,12 @@ has these fields:
         "mymodel.pb"
         ```
 
+
 `state_depend`{ #state-depend }
 
 :   **Optional**-*boolean*<br>
     stateful -> 1, stateless -> 0
+
 
 
 `inslots`{ #inslots }
@@ -136,6 +149,7 @@ has these fields:
                     ]  
         ```
 
+
 `outslots`{ #outslots }
 
 :   **Optional**-*[Slots](../slots.md)[]*<br>
@@ -163,10 +177,12 @@ has these fields:
                     ]  
         ```
 
+
 `os_arch`{ #os-arch }
 
 :   **Optional**-*string*<br>
     OS architecture type (e.g. x86_64)
+
 
 
 `os_type`{ #os-type }
@@ -175,10 +191,12 @@ has these fields:
     OS type (e.g. Windows, Linux)
 
 
+
 `os_distribution`{ #os-distribution }
 
 :   **Optional**-*string*<br>
     OS distributun (e.g. Ubuntu, Fedora)
+
 
 
 `recommended_number_of_gpu_cores`{ #recommended-number-of-gpu-cores }
@@ -187,10 +205,12 @@ has these fields:
     Recommended number of GPU cores
 
 
+
 `minimum_number_of_gpu_cores`{ #minimum-number-of-gpu-cores }
 
 :   **Optional**-*integer*<br>
     Minimum required number of GPU cores
+
 
 
 `recommended_gpu_ram`{ #recommended-gpu-ram }
@@ -199,10 +219,12 @@ has these fields:
     Recommended GPU memory
 
 
+
 `minimum_gpu_ram`{ #minimum-gpu-ram }
 
 :   **Optional**-*integer*<br>
     Minimum required GPU memory
+
 
 
 `recommended_ram`{ #recommended-ram }
@@ -211,10 +233,12 @@ has these fields:
     Recommended Memory
 
 
+
 `minimum_ram`{ #minimum-ram }
 
 :   **Optional**-*integer*<br>
     Minimum required memory
+
 
 
 `recommended_cpus`{ #recommended-cpus }
@@ -223,10 +247,12 @@ has these fields:
     Recommended number of CPU cores
 
 
+
 `minimum_cpus`{ #minimum-cpus }
 
 :   **Optional**-*integer*<br>
     Minimum required number of CPU cores
+
 
 
 `required_disk_space`{ #required-disk-space }

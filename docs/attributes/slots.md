@@ -11,6 +11,7 @@
 The specification for Slots
 has these fields:
 
+
 `key`{ #key }
 
 :   **Optional**-*string*<br>
@@ -21,6 +22,7 @@ has these fields:
         ``` yaml     
         force_1
         ```
+
 
 `name`{ #name }
 
@@ -33,6 +35,7 @@ has these fields:
         Force at Boundary Condition 1
         ```
 
+
 `dimensions`{ #dimensions }
 
 :   **Optional**-*number (integer-valued) | array of integer-valued numbers, default is 1 (scalar)*<br>
@@ -43,6 +46,7 @@ has these fields:
         ``` yaml     
         1
         ```
+
 
 `is_continuous`{ #is-continuous }
 
@@ -63,10 +67,12 @@ has these fields:
         ```
 
 
+
 `units`{ #units }
 
 :   **Optional**-*obj (see subkeys below)*<br>
     Values related to the slot measurement units
+
 
 `default_value`{ #default-value }
 
@@ -75,6 +81,7 @@ has these fields:
     to be set/fed at a later point in time.
 
     Default value must not be set for out-slots!
+
 
 
 `ranges`{ #ranges }

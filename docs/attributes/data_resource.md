@@ -11,6 +11,7 @@
 The specification for Data Resource
 has these fields:
 
+
 `kind`{ #kind }
 
 :   **Optional**-*List[DATA_KIND]*<br>
@@ -21,6 +22,7 @@ has these fields:
         ``` yaml     
         ["FILE", "STREAM"]
         ```
+
 
 `direction`{ #direction }
 
@@ -33,6 +35,7 @@ has these fields:
         ["SOURCE", "BIDIRECTIONAL"]
         ```
 
+
 `format`{ #format }
 
 :   **Optional**-*List[DATA_FORMAT]*<br>
@@ -43,6 +46,7 @@ has these fields:
         ``` yaml     
         ["application/zip", "image/jpg"]
         ```
+
 
 `source_type`{ #source-type }
 
@@ -55,6 +59,7 @@ has these fields:
         ["MYSQL", "KAFKA"]
         ```
 
+
 `auth_type`{ #auth-type }
 
 :   **Optional**-*List[DATA_AUTH_TYPE]*<br>
@@ -66,6 +71,7 @@ has these fields:
         ["tls_mutual", "userpass"]
         ```
 
+
 `schema`{ #schema }
 
 :   **Optional**-*List[DATA_SCHEMA]*<br>
@@ -76,6 +82,7 @@ has these fields:
         ``` yaml     
         ["jpg"]
         ```
+
 
 `aux_info`{ #aux-info }
 

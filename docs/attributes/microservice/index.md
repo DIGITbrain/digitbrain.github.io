@@ -13,6 +13,7 @@
 The specification for Microservice
 has these fields:
 
+
 `name`{ #name }
 
 :   **Required**-*string*<br>
@@ -23,6 +24,7 @@ has these fields:
         ``` yaml     
         "Object Detection for faulty parts"
         ```
+
 
 `version`{ #version }
 
@@ -35,6 +37,7 @@ has these fields:
         "1.0"
         ```
 
+
 `description`{ #description }
 
 :   **Required**-*string*<br>
@@ -45,6 +48,7 @@ has these fields:
         ``` yaml     
         "This microservices solves a certain problem using very specific methods…"
         ```
+
 
 `classification_schema`{ #classification-schema }
 
@@ -57,6 +61,7 @@ has these fields:
         "others"
         ```
 
+
 `type`{ #type }
 
 :   **Required**-*string[]*<br>
@@ -68,6 +73,7 @@ has these fields:
         ["neural network", "deep learning", "convolutional neural network", "CNN"]
         ```
 
+
 `deployment_format`{ #deployment-format }
 
 :   **Required**-*enum [docker-compose, kubernetes-manifest]*<br>
@@ -78,6 +84,7 @@ has these fields:
         ``` yaml     
         "docker-compose"
         ```
+
 
 `deployment_data`{ #deployment-data }
 
@@ -126,6 +133,7 @@ has these fields:
         ```
 
 
+
 `configuration_data`{ #configuration-data }
 
 :   **Optional**-*[ConfigurationData](../configuration_data.md)[]*<br>
@@ -142,6 +150,7 @@ has these fields:
 
         ```
 
+
 `mounted_shared_directories`{ #mounted-shared-directories }
 
 :   **Optional**-*string*<br>
@@ -153,15 +162,18 @@ has these fields:
         "/data and /cfg are mounted on the host for data and configuration sharing, respectively."
         ```
 
+
 `recommended_number_of_gpus`{ #recommended-number-of-gpus }
 
 :   **Optional**-*integer*<br>
     recommended number of GPUs
 
+
 `recommended_gpu_ram`{ #recommended-gpu-ram }
 
 :   **Optional**-*integer*<br>
     recommended amount of GPU memory in GB
+
 
 `gpu_type`{ #gpu-type }
 
@@ -175,6 +187,7 @@ has these fields:
         "NVidia (compute capability >= 7.0)"
         ```
 
+
 `hpc_required`{ #hpc-required }
 
 :   **Optional**-*boolean*<br>
@@ -186,6 +199,7 @@ has these fields:
         ``` yaml     
         true
         ```
+
 
 `edge_type`{ #edge-type }
 
@@ -199,6 +213,7 @@ has these fields:
         "NVIDIA Jetson AGX"
         ```
 
+
 `recommended_ram`{ #recommended-ram }
 
 :   **Optional**-*integer*<br>
@@ -211,10 +226,12 @@ has these fields:
         16
         ```
 
+
 `recommended_cpus`{ #recommended-cpus }
 
 :   **Optional**-*integer*<br>
     recommended number of CPU cores
+
 
 
 `required_disk_space`{ #required-disk-space }
@@ -229,6 +246,7 @@ has these fields:
         42
         ```
 
+
 `os_arch`{ #os-arch }
 
 :   **Optional**-*string*<br>
@@ -241,6 +259,7 @@ has these fields:
         "x86_64"
         ```
 
+
 `os_type`{ #os-type }
 
 :   **Optional**-*string*<br>
@@ -252,6 +271,7 @@ has these fields:
         ``` yaml     
         "linux"
         ```
+
 
 `data_resource`{ #data-resource }
 
@@ -274,6 +294,7 @@ has these fields:
 
         ```
 
+
 `model_types`{ #model-types }
 
 :   **Optional**-*string[]*<br>
@@ -286,6 +307,7 @@ has these fields:
         ["SavedModel (Tensorflow)"]
         ```
 
+
 `model_recommended_auth_tools`{ #model-recommended-auth-tools }
 
 :   **Optional**-*string[]*<br>
@@ -297,6 +319,7 @@ has these fields:
         ``` yaml     
         ["PreSTRA"]
         ```
+
 
 `parameters`{ #parameters }
 
@@ -315,6 +338,7 @@ has these fields:
           description: This parameter is helpful
 
         ```
+
 
 `metrics`{ #metrics }
 

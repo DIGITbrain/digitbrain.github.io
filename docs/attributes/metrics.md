@@ -11,6 +11,7 @@
 The specification for Metrics
 has these fields:
 
+
 `name`{ #name }
 
 :   **Optional**-*String*<br>
@@ -21,6 +22,7 @@ has these fields:
         ``` yaml     
         "meanTemperature"
         ```
+
 
 `corresponding_measurement`{ #corresponding-measurement }
 
@@ -33,6 +35,7 @@ has these fields:
         "temperature1"
         ```
 
+
 `function`{ #function }
 
 :   **Optional**-*String*<br>
@@ -44,6 +47,7 @@ has these fields:
         "arithmetic mean"
         ```
 
+
 `unit`{ #unit }
 
 :   **Optional**-*String*<br>
@@ -54,6 +58,7 @@ has these fields:
         ``` yaml     
         "degree celsius"
         ```
+
 
 `description`{ #description }
 

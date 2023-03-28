@@ -13,6 +13,7 @@
 The specification for Behaviour
 has these fields:
 
+
 `version`{ #version }
 
 :   **Optional**-*string*<br>
@@ -24,6 +25,7 @@ has these fields:
         ``` yaml     
         "0.21.0"
         ```
+
 
 `licensor`{ #licensor }
 
@@ -37,6 +39,7 @@ has these fields:
         legal_entity_123e4567-e89b-12d3 (auto)
         ```
 
+
 `derivation`{ #derivation }
 
 :   **Required**-*string*<br>
@@ -48,6 +51,7 @@ has these fields:
         ``` yaml     
         ma_pair_123e4567-e89b-12d3 (auto)
         ```
+
 
 `name`{ #name }
 
@@ -61,6 +65,7 @@ has these fields:
         Pressure drop
         ```
 
+
 `scope`{ #scope }
 
 :   **Required**-*string*<br>
@@ -72,6 +77,7 @@ has these fields:
         ``` yaml     
         Effectiveness of the mold closing process
         ```
+
 
 `ip_family`{ #ip-family }
 
@@ -85,6 +91,7 @@ has these fields:
         ip_family_123e4567-e89b-12d3
         ```
 
+
 `namespace`{ #namespace }
 
 :   **Optional**-*string*<br>
@@ -96,6 +103,7 @@ has these fields:
         ``` yaml     
         namespace_123e4567-e89b-12d3
         ```
+
 
 `m_asset`{ #m-asset }
 
@@ -112,6 +120,7 @@ has these fields:
         "MODID_MYMODEL"
         ```
 
+
 `a_asset`{ #a-asset }
 
 :   **Required**-*string*<br>
@@ -127,6 +136,7 @@ has these fields:
         "ALGID_MYALG"
         ```
 
+
 `rules`{ #rules }
 
 :   **Optional**-*string[]*<br>
@@ -139,6 +149,7 @@ has these fields:
         rules_123e4567-e89b-12d3
         ```
 
+
 `frequency`{ #frequency }
 
 :   **Optional**-*integer*<br>
@@ -150,6 +161,7 @@ has these fields:
         ``` yaml     
         12
         ```
+
 
 `payload`{ #payload }
 

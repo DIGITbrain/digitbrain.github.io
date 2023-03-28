@@ -13,6 +13,7 @@
 The specification for Algorithm
 has these fields:
 
+
 `name`{ #name }
 
 :   **Required**-*string*<br>
@@ -24,6 +25,7 @@ has these fields:
         ``` yaml     
         "Object Detection Algorithm for detection of faulty weld seams"
         ```
+
 
 `description`{ #description }
 
@@ -37,6 +39,7 @@ has these fields:
         "This algorithm can be used to solve a specifc problem, and applies some fancy technologies."
         ```
 
+
 `classification_schema`{ #classification-schema }
 
 :   **Required**-*enum [Simulation, ML, others]*<br>
@@ -48,6 +51,7 @@ has these fields:
         ``` yaml     
         "ML"
         ```
+
 
 `type`{ #type }
 
@@ -61,6 +65,7 @@ has these fields:
         ["neural network", "deep learning", "convolutional neural network", "CNN"]
         ```
 
+
 `version`{ #version }
 
 :   **Optional**-*string*<br>
@@ -73,6 +78,7 @@ has these fields:
         "1.0"
         ```
 
+
 `list_of_microservices`{ #list-of-microservices }
 
 :   **Required**-*string[]*<br>
@@ -84,6 +90,7 @@ has these fields:
         ``` yaml     
         ["MSID_MYMS_A", "MSID_MYMS_B"]
         ```
+
 
 `deployment_mapping`{ #deployment-mapping }
 

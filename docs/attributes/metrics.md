@@ -13,7 +13,8 @@ has these fields:
 
 `name`{ #name }
 
-:   **Optional**-*String*- short name (should be unique across the Microservice's metrics)
+:   **Optional**-*String*<br>
+    short name (should be unique across the Microservice's metrics)
 
 
     === "Example"
@@ -23,7 +24,8 @@ has these fields:
 
 `corresponding_measurement`{ #corresponding_measurement }
 
-:   **Optional**-*String*- identification of the corresponding measurement, i.e. output of the Model
+:   **Optional**-*String*<br>
+    identification of the corresponding measurement, i.e. output of the Model
 
 
     === "Example"
@@ -33,7 +35,8 @@ has these fields:
 
 `function`{ #function }
 
-:   **Optional**-*String*- short description of the mathematical approach used to derive this value
+:   **Optional**-*String*<br>
+    short description of the mathematical approach used to derive this value
 
 
     === "Example"
@@ -43,7 +46,8 @@ has these fields:
 
 `unit`{ #unit }
 
-:   **Optional**-*String*- the unit of the metric measurement
+:   **Optional**-*String*<br>
+    the unit of the metric measurement
 
 
     === "Example"
@@ -53,7 +57,8 @@ has these fields:
 
 `description`{ #description }
 
-:   **Optional**-*String*- short description of the metric measurement
+:   **Optional**-*String*<br>
+    short description of the metric measurement
 
 
     === "Example"

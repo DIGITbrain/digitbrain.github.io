@@ -13,7 +13,8 @@ has these fields:
 
 `file_path`{ #file_path }
 
-:   **Optional**-*String*- full path to file including file name
+:   **Optional**-*String*<br>
+    full path to file including file name
 
 
     === "Example"
@@ -23,7 +24,8 @@ has these fields:
 
 `file_content`{ #file_content }
 
-:   **Optional**-*String*- file content (not binary)
+:   **Optional**-*String*<br>
+    file content (not binary)
 
 
     === "Example"
@@ -33,7 +35,8 @@ has these fields:
 
 `mount_propagation`{ #mount_propagation }
 
-:   **Optional**-*Enum[ "None", "HostToContainer", "Bidirectional" ]*- Enable mountPropagation https://kubernetes.io/docs/concepts/storage/volumes/#mount-propagation . Default: None
+:   **Optional**-*Enum[ "None", "HostToContainer", "Bidirectional" ]*<br>
+    Enable mountPropagation https://kubernetes.io/docs/concepts/storage/volumes/#mount-propagation . Default: None
 
 
     === "Example"

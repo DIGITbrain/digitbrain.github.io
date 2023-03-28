@@ -15,7 +15,8 @@ has these fields:
 
 `name`{ #name }
 
-:   **Required**-*string*- human readable short, yet descriptive name of the Microservice.
+:   **Required**-*string*<br>
+    human readable short, yet descriptive name of the Microservice.
 
 
     === "Example"
@@ -25,7 +26,8 @@ has these fields:
 
 `version`{ #version }
 
-:   **Optional**-*string*- version as defined by the user.
+:   **Optional**-*string*<br>
+    version as defined by the user.
 
 
     === "Example"
@@ -35,7 +37,8 @@ has these fields:
 
 `description`{ #description }
 
-:   **Required**-*string*- human readable short description of the Microservice's capabilities.
+:   **Required**-*string*<br>
+    human readable short description of the Microservice's capabilities.
 
 
     === "Example"
@@ -45,7 +48,8 @@ has these fields:
 
 `classification_schema`{ #classification_schema }
 
-:   **Required**-*enum [Simulation, ML, others]*- fine-granular classification of the Microservice
+:   **Required**-*enum [Simulation, ML, others]*<br>
+    fine-granular classification of the Microservice
 
 
     === "Example"
@@ -55,7 +59,8 @@ has these fields:
 
 `type`{ #type }
 
-:   **Required**-*string[]*- detailed type of the microservice, list of keywords
+:   **Required**-*string[]*<br>
+    detailed type of the microservice, list of keywords
 
 
     === "Example"
@@ -65,7 +70,8 @@ has these fields:
 
 `deployment_format`{ #deployment_format }
 
-:   **Required**-*enum [docker-compose, kubernetes-manifest]*- identifier of the deployment environment required to deploy the Microservice's container
+:   **Required**-*enum [docker-compose, kubernetes-manifest]*<br>
+    identifier of the deployment environment required to deploy the Microservice's container
 
 
     === "Example"
@@ -75,7 +81,8 @@ has these fields:
 
 `deployment_data`{ #deployment_data }
 
-:   **Required**-*string*- JSON of docker-compose or kubernetes manifest required to run the container
+:   **Required**-*string*<br>
+    JSON of docker-compose or kubernetes manifest required to run the container
 
 
     === "Example"
@@ -98,7 +105,8 @@ has these fields:
 
 `configuration_data`{ #configuration_data }
 
-:   **Optional**-*[ConfigurationData](../configurationdata.md)[]*- List of objects specifying configuration file(s) content required by the service
+:   **Optional**-*[ConfigurationData](../configurationdata.md)[]*<br>
+    List of objects specifying configuration file(s) content required by the service
 
 
     === "Example"
@@ -113,7 +121,8 @@ has these fields:
 
 `mounted_shared_directories`{ #mounted_shared_directories }
 
-:   **Optional**-*string*- A note for developers of co-operating Microservices. Directories that should be shared to the host where this microservice can find required inputs / store outputs
+:   **Optional**-*string*<br>
+    A note for developers of co-operating Microservices. Directories that should be shared to the host where this microservice can find required inputs / store outputs
 
 
     === "Example"
@@ -123,15 +132,18 @@ has these fields:
 
 `recommended_number_of_gpus`{ #recommended_number_of_gpus }
 
-:   **Optional**-*integer*- recommended number of GPUs
+:   **Optional**-*integer*<br>
+    recommended number of GPUs
 
 `recommended_gpu_ram`{ #recommended_gpu_ram }
 
-:   **Optional**-*integer*- recommended amount of GPU memory in GB
+:   **Optional**-*integer*<br>
+    recommended amount of GPU memory in GB
 
 `gpu_type`{ #gpu_type }
 
-:   **Optional**-*string*- a description of the type of GPUs, and further specifications, to allow the execution of the Microservice
+:   **Optional**-*string*<br>
+    a description of the type of GPUs, and further specifications, to allow the execution of the Microservice
 
 
 
@@ -142,7 +154,8 @@ has these fields:
 
 `hpc_required`{ #hpc_required }
 
-:   **Optional**-*boolean*- whether this Microservice requires an HPC environment to be executed efficiently
+:   **Optional**-*boolean*<br>
+    whether this Microservice requires an HPC environment to be executed efficiently
 
 
 
@@ -153,7 +166,8 @@ has these fields:
 
 `edge_type`{ #edge_type }
 
-:   **Optional**-*enum [TPU (Google), NPU (Qualcomm), FPGA, NVIDIA Jetson AGX]*- required type of edge device to allow the execution of the Microservice
+:   **Optional**-*enum [TPU (Google), NPU (Qualcomm), FPGA, NVIDIA Jetson AGX]*<br>
+    required type of edge device to allow the execution of the Microservice
 
 
 
@@ -164,7 +178,8 @@ has these fields:
 
 `recommended_ram`{ #recommended_ram }
 
-:   **Optional**-*integer*- recommended amount of memory in GB
+:   **Optional**-*integer*<br>
+    recommended amount of memory in GB
 
 
 
@@ -175,12 +190,14 @@ has these fields:
 
 `recommended_cpus`{ #recommended_cpus }
 
-:   **Optional**-*integer*- recommended number of CPU cores
+:   **Optional**-*integer*<br>
+    recommended number of CPU cores
 
 
 `required_disk_space`{ #required_disk_space }
 
-:   **Optional**-*integer*- required amount of disk space in GB
+:   **Optional**-*integer*<br>
+    required amount of disk space in GB
 
 
 
@@ -191,7 +208,8 @@ has these fields:
 
 `os_arch`{ #os_arch }
 
-:   **Optional**-*string*- supported os architecture. Defaults to x86
+:   **Optional**-*string*<br>
+    supported os architecture. Defaults to x86
 
 
 
@@ -202,7 +220,8 @@ has these fields:
 
 `os_type`{ #os_type }
 
-:   **Optional**-*string*- supported os type. Defaults to Linux
+:   **Optional**-*string*<br>
+    supported os type. Defaults to Linux
 
 
 
@@ -213,7 +232,8 @@ has these fields:
 
 `data_resource`{ #data_resource }
 
-:   **Optional**-*[Data Resources](../data_resources.md)[]*- list of Data objects for each required data resource, specified using the "DATA" fields in the linked substructure
+:   **Optional**-*[Data Resources](../data_resources.md)[]*<br>
+    list of Data objects for each required data resource, specified using the "DATA" fields in the linked substructure
 
 
 
@@ -233,7 +253,8 @@ has these fields:
 
 `model_types`{ #model_types }
 
-:   **Optional**-*string[]*- list of supported Model types
+:   **Optional**-*string[]*<br>
+    list of supported Model types
 
 
 
@@ -244,7 +265,8 @@ has these fields:
 
 `model_recommended_auth_tools`{ #model_recommended_auth_tools }
 
-:   **Optional**-*string[]*- list of recommended AuthoringTools used to generate the Model
+:   **Optional**-*string[]*<br>
+    list of recommended AuthoringTools used to generate the Model
 
 
 
@@ -255,7 +277,8 @@ has these fields:
 
 `parameters`{ #parameters }
 
-:   **Optional**-*string[]*- list of Parameter objects for each possible parameters, to be specified before deployment
+:   **Optional**-*string[]*<br>
+    list of Parameter objects for each possible parameters, to be specified before deployment
 
 
 
@@ -272,7 +295,8 @@ has these fields:
 
 `metrics`{ #metrics }
 
-:   **Optional**-*[Metrics](../metrics.md)[]*- list of Metric objects for each metric collected by the Microservice
+:   **Optional**-*[Metrics](../metrics.md)[]*<br>
+    list of Metric objects for each metric collected by the Microservice
 
 
 

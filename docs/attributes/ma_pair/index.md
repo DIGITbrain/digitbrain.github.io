@@ -15,7 +15,8 @@ has these fields:
 
 `version`{ #version }
 
-:   **Optional**-*string*- Version number of the MA Pair, defined by the provider
+:   **Optional**-*string*<br>
+    Version number of the MA Pair, defined by the provider
 
 
 
@@ -26,7 +27,8 @@ has these fields:
 
 `licensor`{ #licensor }
 
-:   **Required**-*string*- Identifier of the Legal Entity licensing the MA Pair (NB: Entity for Licensor is referenced)
+:   **Required**-*string*<br>
+    Identifier of the Legal Entity licensing the MA Pair (NB: Entity for Licensor is referenced)
 
 
 
@@ -37,7 +39,8 @@ has these fields:
 
 `derivation`{ #derivation }
 
-:   **Required**-*string*- In case of derivation, references to parent / child (optional)
+:   **Required**-*string*<br>
+    In case of derivation, references to parent / child (optional)
 
 
 
@@ -48,7 +51,8 @@ has these fields:
 
 `name`{ #name }
 
-:   **Required**-*string*- Short name to identify the MA Pair
+:   **Required**-*string*<br>
+    Short name to identify the MA Pair
 
 
 
@@ -59,7 +63,8 @@ has these fields:
 
 `scope`{ #scope }
 
-:   **Required**-*string*- Short description of the scope of the MA Pair (human readable)
+:   **Required**-*string*<br>
+    Short description of the scope of the MA Pair (human readable)
 
 
 
@@ -70,7 +75,8 @@ has these fields:
 
 `ip_family`{ #ip_family }
 
-:   **Required**-*string*- Identifier of the IP Family the MA Pair is valid for
+:   **Required**-*string*<br>
+    Identifier of the IP Family the MA Pair is valid for
 
 
 
@@ -81,7 +87,8 @@ has these fields:
 
 `namespace`{ #namespace }
 
-:   **Optional**-*string*- Context to interpret the associated information (optional?)
+:   **Optional**-*string*<br>
+    Context to interpret the associated information (optional?)
 
 
 
@@ -92,7 +99,8 @@ has these fields:
 
 `m_asset`{ #m_asset }
 
-:   **Required**-*string*- Identifier of the Model Asset associated to the MA Pair (NB: The corresponding model file is indicated in Model metadata (first tab) as Model_URI and the corresponding zip file needs to be served to the Algorithm to evaluate the Model by the Microservice (MODEL_FILENAME))
+:   **Required**-*string*<br>
+    Identifier of the Model Asset associated to the MA Pair (NB: The corresponding model file is indicated in Model metadata (first tab) as Model_URI and the corresponding zip file needs to be served to the Algorithm to evaluate the Model by the Microservice (MODEL_FILENAME))
 
 
     Note:
@@ -106,7 +114,8 @@ has these fields:
 
 `a_asset`{ #a_asset }
 
-:   **Required**-*string*- Identifiers of the Algorithm Asset associated to the MA Pair
+:   **Required**-*string*<br>
+    Identifiers of the Algorithm Asset associated to the MA Pair
 
 
     Note:
@@ -120,7 +129,8 @@ has these fields:
 
 `rules`{ #rules }
 
-:   **Optional**-*string[]*- References to recommended Rules to be verified per Evaluation of the MA Pair
+:   **Optional**-*string[]*<br>
+    References to recommended Rules to be verified per Evaluation of the MA Pair
 
 
 
@@ -131,7 +141,8 @@ has these fields:
 
 `frequency`{ #frequency }
 
-:   **Optional**-*integer*- Recommended number of evaluations conducted per hour for the MA Pair (optional)
+:   **Optional**-*integer*<br>
+    Recommended number of evaluations conducted per hour for the MA Pair (optional)
 
 
 
@@ -142,7 +153,8 @@ has these fields:
 
 `payload`{ #payload }
 
-:   **Optional**-*string*- User-defined key-value pairs: JSON string with additional information (optional)
+:   **Optional**-*string*<br>
+    User-defined key-value pairs: JSON string with additional information (optional)
 
 
 

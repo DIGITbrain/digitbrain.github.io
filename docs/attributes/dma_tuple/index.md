@@ -13,7 +13,8 @@ has these fields:
 
 `author`{ #author }
 
-:   **Required**-**- Unique identifier of the user who created this record
+:   **Required**-**<br>
+    Unique identifier of the user who created this record
 
 
     === "Example"
@@ -23,7 +24,8 @@ has these fields:
 
 `build`{ #build }
 
-:   **Required**-**- Build number, incremented automatically to provide versioning for the asset
+:   **Required**-**<br>
+    Build number, incremented automatically to provide versioning for the asset
 
 
     === "Example"
@@ -33,7 +35,8 @@ has these fields:
 
 `data_assets_mapping`{ #data_assets_mapping }
 
-:   **Optional**-*[DataAssetsMapping](../dataassetsmapping.md)*- Mapping required Data assets to Microservices specified in the MA Pair. Not every Microservice needs a Data asset.
+:   **Optional**-*[DataAssetsMapping](../dataassetsmapping.md)*<br>
+    Mapping required Data assets to Microservices specified in the MA Pair. Not every Microservice needs a Data asset.
 
 
     === "Example"
@@ -48,7 +51,8 @@ has these fields:
 
 `date`{ #date }
 
-:   **Required**-**- Date of asset registration.
+:   **Required**-**<br>
+    Date of asset registration.
 
 
     === "Example"
@@ -58,7 +62,8 @@ has these fields:
 
 `deployments`{ #deployments }
 
-:   **Optional**-*[Deployment](../deployment.md)*- Mapping of characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple
+:   **Optional**-*[Deployment](../deployment.md)*<br>
+    Mapping of characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple
 
 
     === "Example"
@@ -81,7 +86,8 @@ has these fields:
 
 `derivation`{ #derivation }
 
-:   **Required**-**- In case of derivation, references to parent / child (optional)
+:   **Required**-**<br>
+    In case of derivation, references to parent / child (optional)
 
 
     === "Example"
@@ -91,7 +97,8 @@ has these fields:
 
 `id`{ #id }
 
-:   **Required**-**- Unique identifier of the asset.
+:   **Required**-**<br>
+    Unique identifier of the asset.
 
 
     === "Example"
@@ -101,7 +108,8 @@ has these fields:
 
 `ip_instance`{ #ip_instance }
 
-:   **Optional**-**- Identifier of the IP Instance the DMA Tuple is valid for (NB: Entity for IP Instance is referenced)
+:   **Optional**-**<br>
+    Identifier of the IP Instance the DMA Tuple is valid for (NB: Entity for IP Instance is referenced)
 
 
     === "Example"
@@ -111,7 +119,8 @@ has these fields:
 
 `licensor`{ #licensor }
 
-:   **Required**-**- Identifier of the Legal Entity licensing the the MA Pair (NB: Entity for Licensor is referenced)
+:   **Required**-**<br>
+    Identifier of the Legal Entity licensing the the MA Pair (NB: Entity for Licensor is referenced)
 
 
     === "Example"
@@ -121,7 +130,8 @@ has these fields:
 
 `ma_pair`{ #ma_pair }
 
-:   **Optional**-**- Identifier of the MA Pair associated to the DMA Tuple
+:   **Optional**-**<br>
+    Identifier of the MA Pair associated to the DMA Tuple
 
 
     === "Example"
@@ -131,7 +141,8 @@ has these fields:
 
 `name`{ #name }
 
-:   **Required**-**- Short name to identify the DMA Tuple
+:   **Required**-**<br>
+    Short name to identify the DMA Tuple
 
 
     === "Example"
@@ -141,7 +152,8 @@ has these fields:
 
 `namespace`{ #namespace }
 
-:   **Optional**-**- Context to interpret the associated information (optional?)
+:   **Optional**-**<br>
+    Context to interpret the associated information (optional?)
 
 
     === "Example"
@@ -151,7 +163,8 @@ has these fields:
 
 `payload`{ #payload }
 
-:   **Optional**-**- User-defined key-value pairs: JSON string with additional information (optional)
+:   **Optional**-**<br>
+    User-defined key-value pairs: JSON string with additional information (optional)
 
 
     === "Example"
@@ -161,7 +174,8 @@ has these fields:
 
 `provider`{ #provider }
 
-:   **Required**-**- Legal entity who provides the asset (owner). It is the affiliation of the author by default.
+:   **Required**-**<br>
+    Legal entity who provides the asset (owner). It is the affiliation of the author by default.
 
 
     === "Example"
@@ -171,7 +185,8 @@ has these fields:
 
 `schedule`{ #schedule }
 
-:   **Optional**-**- Days and hours the DMA Tuple will be active (optional)
+:   **Optional**-**<br>
+    Days and hours the DMA Tuple will be active (optional)
 
 
     === "Example"
@@ -181,7 +196,8 @@ has these fields:
 
 `scope`{ #scope }
 
-:   **Required**-**- Short description of the scope of the DMA Tuple (human readable)
+:   **Required**-**<br>
+    Short description of the scope of the DMA Tuple (human readable)
 
 
     === "Example"
@@ -191,7 +207,8 @@ has these fields:
 
 `version`{ #version }
 
-:   **Optional**-**- Version number of the DMA Tuple, defined by the provider
+:   **Optional**-**<br>
+    Version number of the DMA Tuple, defined by the provider
 
 
     === "Example"

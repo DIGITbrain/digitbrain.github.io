@@ -13,7 +13,8 @@ has these fields:
 
 `key`{ #key }
 
-:   **Optional**-*string*- unique (within a Model) machine-readable identifier matching [a-zA-Z_][a-zA-Z_0-9]*
+:   **Optional**-*string*<br>
+    unique (within a Model) machine-readable identifier matching [a-zA-Z_][a-zA-Z_0-9]*
 
 
     === "Example"
@@ -23,7 +24,8 @@ has these fields:
 
 `name`{ #name }
 
-:   **Optional**-*string*- Human-readable identifier
+:   **Optional**-*string*<br>
+    Human-readable identifier
 
 
     === "Example"
@@ -33,7 +35,8 @@ has these fields:
 
 `dimensions`{ #dimensions }
 
-:   **Optional**-*number (integer-valued) | array of integer-valued numbers, default is 1 (scalar)*- dimension of inputs to in-slot, array of dimensions for matrices / tensors
+:   **Optional**-*number (integer-valued) | array of integer-valued numbers, default is 1 (scalar)*<br>
+    dimension of inputs to in-slot, array of dimensions for matrices / tensors
 
 
     === "Example"
@@ -43,7 +46,8 @@ has these fields:
 
 `is_continuous`{ #is_continuous }
 
-:   **Optional**-*bool, default is true (real)*- flag to indicate whether slot values are integer or real numbers
+:   **Optional**-*bool, default is true (real)*<br>
+    flag to indicate whether slot values are integer or real numbers
 
 
     === "Example"
@@ -53,11 +57,13 @@ has these fields:
 
 `units`{ #units }
 
-:   **Optional**-*obj (see subkeys below)*- Values related to the slot measurement units
+:   **Optional**-*obj (see subkeys below)*<br>
+    Values related to the slot measurement units
 
 `default_value`{ #default_value }
 
-:   **Optional**-*number | null*- default value for in-slot, if null then the value for the in-slot needs
+:   **Optional**-*number | null*<br>
+    default value for in-slot, if null then the value for the in-slot needs
     to be set/fed at a later point in time.
 
     Default value must not be set for out-slots!
@@ -65,5 +71,6 @@ has these fields:
 
 `ranges`{ #ranges }
 
-:   **Optional**-*array | null*- valid range of values (2-tuple array minimum maximum values OR array of discrete valid scalars).<br>If a valid range is not known a-priori: null / omitted
+:   **Optional**-*array | null*<br>
+    valid range of values (2-tuple array minimum maximum values OR array of discrete valid scalars).<br>If a valid range is not known a-priori: null / omitted
 

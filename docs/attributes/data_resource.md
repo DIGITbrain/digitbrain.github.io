@@ -13,7 +13,8 @@ has these fields:
 
 `kind`{ #kind }
 
-:   **Optional**-*List[DATA_KIND]*- supported types of the data resource (e.g. file/object storage, database management system, streaming broker). FILE can mean a single file or a folder.
+:   **Optional**-*List[DATA_KIND]*<br>
+    supported types of the data resource (e.g. file/object storage, database management system, streaming broker). FILE can mean a single file or a folder.
 
 
     === "Example"
@@ -23,7 +24,8 @@ has these fields:
 
 `direction`{ #direction }
 
-:   **Optional**-*List[DATA_DIRECTION]*- supported direction of data flow (source: data provider, sink: data consumer/storage)
+:   **Optional**-*List[DATA_DIRECTION]*<br>
+    supported direction of data flow (source: data provider, sink: data consumer/storage)
 
 
     === "Example"
@@ -33,7 +35,8 @@ has these fields:
 
 `format`{ #format }
 
-:   **Optional**-*List[DATA_FORMAT]*- supported format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files).
+:   **Optional**-*List[DATA_FORMAT]*<br>
+    supported format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files).
 
 
     === "Example"
@@ -43,7 +46,8 @@ has these fields:
 
 `source_type`{ #source_type }
 
-:   **Optional**-*List[DATA_SOURCE_TYPE]*- supported exact type of the data resource. Typically corresponds to the scheme part (protocol://) of DATA_URI
+:   **Optional**-*List[DATA_SOURCE_TYPE]*<br>
+    supported exact type of the data resource. Typically corresponds to the scheme part (protocol://) of DATA_URI
 
 
     === "Example"
@@ -53,7 +57,8 @@ has these fields:
 
 `auth_type`{ #auth_type }
 
-:   **Optional**-*List[DATA_AUTH_TYPE]*- supported authentication type
+:   **Optional**-*List[DATA_AUTH_TYPE]*<br>
+    supported authentication type
 
 
     === "Example"
@@ -63,7 +68,8 @@ has these fields:
 
 `schema`{ #schema }
 
-:   **Optional**-*List[DATA_SCHEMA]*- supported internal message structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, …
+:   **Optional**-*List[DATA_SCHEMA]*<br>
+    supported internal message structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, …
 
 
     === "Example"
@@ -73,7 +79,8 @@ has these fields:
 
 `aux_info`{ #aux_info }
 
-:   **Optional**-*Map[String, String]*- List of key-value pairs (JSON object/YAML dictionary) supported by the data resource. New keys can be added on demand, a list of known keys is available.
+:   **Optional**-*Map[String, String]*<br>
+    List of key-value pairs (JSON object/YAML dictionary) supported by the data resource. New keys can be added on demand, a list of known keys is available.
 
 
     === "Example"

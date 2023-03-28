@@ -13,17 +13,21 @@ has these fields:
 
 `unit`{ #unit }
 
-:   **Optional**-*string*- 
+:   **Optional**-*string*<br>
+    
 
 `exponent`{ #exponent }
 
-:   **Optional**-*integer[]*- 
+:   **Optional**-*integer[]*<br>
+    
 
 `offset`{ #offset }
 
-:   **Optional**-*integer*- 
+:   **Optional**-*integer*<br>
+    
 
 `scale`{ #scale }
 
-:   **Optional**-*integer*- 
+:   **Optional**-*integer*<br>
+    
 

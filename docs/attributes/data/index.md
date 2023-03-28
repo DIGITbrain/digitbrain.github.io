@@ -15,7 +15,8 @@ has these fields:
 
 `name`{ #name }
 
-:   **Required**-*string*- Name of the data resource.
+:   **Required**-*string*<br>
+    Name of the data resource.
 
 
 
@@ -26,7 +27,8 @@ has these fields:
 
 `version`{ #version }
 
-:   **Optional**-*string*- Version of the data resource (not of the metadata), defined by the provider in the format of his/her choice (typically: major.minor.patch)
+:   **Optional**-*string*<br>
+    Version of the data resource (not of the metadata), defined by the provider in the format of his/her choice (typically: major.minor.patch)
 
 
 
@@ -37,17 +39,20 @@ has these fields:
 
 `description`{ #description }
 
-:   **Optional**-*string*- Human readable description of the data resource characteristics, contents.
+:   **Optional**-*string*<br>
+    Human readable description of the data resource characteristics, contents.
 
 
 `description_url`{ #description_url }
 
-:   **Optional**-*string*- More detailed specification of data source characteristics (doc, pdf, …)
+:   **Optional**-*string*<br>
+    More detailed specification of data source characteristics (doc, pdf, …)
 
 
 `size`{ #size }
 
-:   **Optional**-*integer*- Estimated/exact size of data (e.g. file size, volume size, or message size); might be used to assess HW requirements (RAM, CPU). In bytes.
+:   **Optional**-*integer*<br>
+    Estimated/exact size of data (e.g. file size, volume size, or message size); might be used to assess HW requirements (RAM, CPU). In bytes.
 
 
 
@@ -58,7 +63,8 @@ has these fields:
 
 `tags`{ #tags }
 
-:   **Optional**-*string[]*- A list of tags freely added to help in searching/indexing (not limited to a basic set of tags, keywords)
+:   **Optional**-*string[]*<br>
+    A list of tags freely added to help in searching/indexing (not limited to a basic set of tags, keywords)
 
 
 
@@ -69,7 +75,8 @@ has these fields:
 
 `kind`{ #kind }
 
-:   **Required**-*enum [FILE, DATABASE, STREAM]*- Main category of the data resource (e.g. file/object storage, database management system, streaming broker). FILE can mean a single file or a folder.
+:   **Required**-*enum [FILE, DATABASE, STREAM]*<br>
+    Main category of the data resource (e.g. file/object storage, database management system, streaming broker). FILE can mean a single file or a folder.
 
 
 
@@ -80,7 +87,8 @@ has these fields:
 
 `direction`{ #direction }
 
-:   **Required**-*enum [SOURCE, SINK, BIDIRECTIONAL]*- Direction of data flow (source: data provider, sink: data consumer/storage)
+:   **Required**-*enum [SOURCE, SINK, BIDIRECTIONAL]*<br>
+    Direction of data flow (source: data provider, sink: data consumer/storage)
 
 
 
@@ -91,7 +99,8 @@ has these fields:
 
 `format`{ #format }
 
-:   **Optional**-*string[]*- Format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files).
+:   **Optional**-*string[]*<br>
+    Format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files).
 
 
 
@@ -102,7 +111,8 @@ has these fields:
 
 `type`{ #type }
 
-:   **Required**-*string*- The exact type of the data resource. Typically (but not always) corresponds to the scheme part (scheme://) of URI. E.g.: mysql, mqtt.
+:   **Required**-*string*<br>
+    The exact type of the data resource. Typically (but not always) corresponds to the scheme part (scheme://) of URI. E.g.: mysql, mqtt.
 
 
 
@@ -113,7 +123,8 @@ has these fields:
 
 `uri`{ #uri }
 
-:   **Required**-*string*- Accessibility of the data resource, including host, port information, protocol, and other fields (path is protocol dependent, can be a topic name). GUI may show host, port, path separately. Hidden at search. Format: scheme://host:port/path.  Pseudo vars: SCHEME, HOST, PORT, PATH, QUERY, FRAGMENT.
+:   **Required**-*string*<br>
+    Accessibility of the data resource, including host, port information, protocol, and other fields (path is protocol dependent, can be a topic name). GUI may show host, port, path separately. Hidden at search. Format: scheme://host:port/path.  Pseudo vars: SCHEME, HOST, PORT, PATH, QUERY, FRAGMENT.
 
 
 
@@ -124,7 +135,8 @@ has these fields:
 
 `auth_type`{ #auth_type }
 
-:   **Required**-*string[]*- One or more authentication types that can be accepted by the storage resource.
+:   **Required**-*string[]*<br>
+    One or more authentication types that can be accepted by the storage resource.
 
 
 
@@ -135,7 +147,8 @@ has these fields:
 
 `credentials`{ #credentials }
 
-:   **Optional**-*string*- Credentials (e.g. string/json, zip, config file). Its content (structure) depends on authentication type (e.g. token, username and password). OPEN means must not be filled here, but asked from user on startup.
+:   **Optional**-*string*<br>
+    Credentials (e.g. string/json, zip, config file). Its content (structure) depends on authentication type (e.g. token, username and password). OPEN means must not be filled here, but asked from user on startup.
 
 
 
@@ -146,7 +159,8 @@ has these fields:
 
 `aux_info`{ #aux_info }
 
-:   **Optional**-*string*- List of key-value pais (JSON object/YAML dictionary) for additional specification of the data resource. New keys can be added on demand, a list of known keys is available.
+:   **Optional**-*string*<br>
+    List of key-value pais (JSON object/YAML dictionary) for additional specification of the data resource. New keys can be added on demand, a list of known keys is available.
 
 
 
@@ -157,12 +171,14 @@ has these fields:
 
 `schema`{ #schema }
 
-:   **Optional**-*string*- Describes message internal structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, ...
+:   **Optional**-*string*<br>
+    Describes message internal structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, ...
 
 
 `schema_url`{ #schema_url }
 
-:   **Optional**-*string*- URL to schema specification document (in some format, rdf, owl, xsd, …)
+:   **Optional**-*string*<br>
+    URL to schema specification document (in some format, rdf, owl, xsd, …)
 
 
 

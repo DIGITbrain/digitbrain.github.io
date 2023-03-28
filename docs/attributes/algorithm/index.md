@@ -15,7 +15,8 @@ has these fields:
 
 `name`{ #name }
 
-:   **Required**-*string*- a human-readable name to ease identification and discoverability for human users
+:   **Required**-*string*<br>
+    a human-readable name to ease identification and discoverability for human users
 
 
 
@@ -26,7 +27,8 @@ has these fields:
 
 `description`{ #description }
 
-:   **Required**-*string*- a short, human-readable description of the Algorithm to aid a human user in analysing the Algorithm’s capabilities and its applicability to a certain problem
+:   **Required**-*string*<br>
+    a short, human-readable description of the Algorithm to aid a human user in analysing the Algorithm’s capabilities and its applicability to a certain problem
 
 
 
@@ -37,7 +39,8 @@ has these fields:
 
 `classification_schema`{ #classification_schema }
 
-:   **Required**-*enum [Simulation, ML, others]*- the classification of the Algorithm, to describe the specialization area
+:   **Required**-*enum [Simulation, ML, others]*<br>
+    the classification of the Algorithm, to describe the specialization area
 
 
 
@@ -48,7 +51,8 @@ has these fields:
 
 `type`{ #type }
 
-:   **Required**-*string[]*- a detailed list of attributes to describe the Algorithm’s field of application
+:   **Required**-*string[]*<br>
+    a detailed list of attributes to describe the Algorithm’s field of application
 
 
 
@@ -59,7 +63,8 @@ has these fields:
 
 `version`{ #version }
 
-:   **Optional**-*string*- the version, as defined by the provider
+:   **Optional**-*string*<br>
+    the version, as defined by the provider
 
 
 
@@ -70,7 +75,8 @@ has these fields:
 
 `list_of_microservices`{ #list_of_microservices }
 
-:   **Required**-*string[]*- a list of Microservice Asset IDs, which are contained in the algorithm
+:   **Required**-*string[]*<br>
+    a list of Microservice Asset IDs, which are contained in the algorithm
 
 
 
@@ -81,7 +87,8 @@ has these fields:
 
 `deployment_mapping`{ #deployment_mapping }
 
-:   **Required**-*string*- a mapping specifying which microservice should run on which host. By default each microservice is assigned a respective host, but this behaviour is not always ideal (eg. when two or more Microservices may need to run on the same host)
+:   **Required**-*string*<br>
+    a mapping specifying which microservice should run on which host. By default each microservice is assigned a respective host, but this behaviour is not always ideal (eg. when two or more Microservices may need to run on the same host)
 
 
 

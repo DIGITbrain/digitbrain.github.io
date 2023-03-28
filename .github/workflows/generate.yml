@@ -60,15 +60,9 @@ jobs:
       - name: Run postgrest-to-detail (generate fields listing)
         run: python tools/postgrest-to-detail.py
 
-      - name: Run example2md (generate tables for examples)
-        run: python tools/example2md.py
-
-      - name: Run excel2json (generate json from example xlsx)
-        run: python tools/exceltojson.py --generate examples/*.xlsx
-
-      - name: Commit any changes made by xls2md/xls2mkdocs/excel2json
+      - name: Commit any changes made
         id: auto_commit
         uses: stefanzweifel/git-auto-commit-action@v4.16.0
         with:
           commit_message: ${{ ((github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && 'docs:fetch latest openapi spec [AUTO]') || github.event.head_commit.message }} [AUTO]
-          file_pattern: docs/*/*.md docs/*/*/*.md examples/json/*.json tools/swagger.json
+          file_pattern: docs/attributes/*.md docs/attributes/*/*.md tools/swagger.json

@@ -106,6 +106,7 @@ parameters:
       mandatory: true
       defaultValue: 42
       description: This parameter is helpful
+  type: '[Parameters](../parameters.md)'
 provider:
   example: UUID
 recommended_cp_us:

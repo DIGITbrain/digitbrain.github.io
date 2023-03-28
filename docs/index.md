@@ -47,6 +47,8 @@ information about the different assets that are created on the platform. It is
 up-to-date with the very latest production version.
 
 This documentation is served from 
-[a GitHub repository](https://github.com/DIGITbrain/digitbrain.github.io). 
+[a GitHub repository](https://github.com/DIGITbrain/digitbrain.github.io).
+
+Learn about contributing to this documentation by reading our [contributor's guide](https://github.com/DIGITbrain/digitbrain.github.io/blob/main/CONTRIBUTING.md).
 
 <p style="text-align: center;"><sub>If you experience any issues using this site, please let us know by creating an <a href="https://github.com/DIGITbrain/digitbrain.github.io/issues/new">issue on GitHub</a>.</sub></p>

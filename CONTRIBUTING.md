@@ -143,3 +143,13 @@ Notes:
 - Headers at ### level can be created with `header: true` in this case, the key is the header text
 - Types can be overwritten
 - This order of fields will only be preserved for structures **NOT** in the AMR
+
+## Maintainer Notes
+
+- A release will trigger the GitHub workflow to publish the site
+- Pull requests will only trigger the linting action
+- Commits to main will trigger the generate action, which may auto-commit
+  - The auto-commit message will re-use the message of the latest
+    commit in the series of pushed/merged commits
+- Examples are no longer generated from Excel sheets
+  - We should probably re-think how we present these

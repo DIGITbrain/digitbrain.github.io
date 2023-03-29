@@ -17,9 +17,11 @@ has these fields:
 :   **Required**-*Enumeration ["cloudbroker", "edge"]*<br>
     DIGITbrain supports cloud infrastructure deployed via the
     CloudBroker platform, or bring-your-own Linux-based Edge devices. This should
-    be specified in this field. The other metadata in this section should be
-    completed according to the type (e.g. CloudBroker-specific metadata is not required
-    if `type: edge`)
+    be specified in this field.
+    !!! note
+        The other metadata in this section should be
+        completed according to the type (e.g. CloudBroker-specific metadata is not required
+        if `type: edge`)
 
 
 
@@ -126,8 +128,9 @@ has these fields:
     which will be opened on the instance (both TCP and UDP protocols
     will be affected). 
 
-    **Note 51820 must be included in this list
-    to ensure containers can communicate**
+    !!! danger
+        Port 51820 must be included in this list
+        to ensure containers can communicate
 
 
 
@@ -182,8 +185,11 @@ has these fields:
     Subdomain (on cbp-routing.ch) to create and attach
     to this instance using dynamic DNS. For the given
     example, the domain `my-subdomain.cbp-routing.ch`
-    will be assigned to the instance. **Only letters,
-    numbers and hyphens are allowed**.
+    will be assigned to the instance. 
+
+    !!! warning
+        Only letters, numbers and hyphens are
+        allowed in domain names.
 
 
 

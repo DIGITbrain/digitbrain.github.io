@@ -98,9 +98,10 @@ has these fields:
     We currently support the description of **one container** in either the *Docker-Compose*
     format or **one Pod or Deployment** in the *Kubernetes manifest* format.
 
-    If you normally run your container with *docker run* we suggest using the online, open-source
-    [Composerize](https://www.composerize.com/) tool, which can translate the command to a
-    Docker-Compose file.
+    !!! tip
+        If you normally run your container with *docker run* we suggest using the online, open-source
+        [Composerize](https://www.composerize.com/) tool, which can translate the command to a
+        Docker-Compose file.
 
 
 

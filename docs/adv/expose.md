@@ -1,6 +1,6 @@
-# Expose a microservice
+# Expose a Microservice
 
-By default, microservices are not exposed in, or out of
+By default, Microservices are not exposed in, or out of
 the cluster where your application is running. You can
 expose a microservice internally, so other microservices
 may communicate with it. And you can expose a microservice
@@ -26,7 +26,10 @@ See examples below:
             ports:
             - '80:8080'
     ```
-    Exposes a service running on port 8080 inside the container at `mymicros:80` 
+    !!! success
+        This example exposes a service running on port
+        8080 inside the container.<br>Other Microservices in the cluster
+        can reach it at <big>mymicros:80</big>
 
 === "Kubernetes"
 
@@ -51,13 +54,16 @@ See examples below:
       name: mymicros-svc
     spec:
       ports:
-      - name: '80'
+      - name: http
         port: 80
         targetPort: 8080
       selector:
         app: mymicros    
     ```
-    Exposes a service running on port 8080 inside the container at `mymicros-svc:80` 
+    !!! success
+        This example exposes a service running on port
+        8080 inside the container.<br>Other Microservices in the cluster
+        can reach it at <big>mymicros-svc:80</big>
 
 ## Externally
 
@@ -65,6 +71,11 @@ When microservices should be available publicly, ensure
 their [deploymentData](/attributes/microservice/#service)
 correctly exposes them. You can access them via the IP
 of the node they are running on. See examples below:
+
+!!! warning
+    Don't forget to add the `published` or `hostPort` to
+    [opened ports](/attributes/deployment/#opened-port)
+    on the node where your Microservice will run!
 
 === "Docker-Compose"
 
@@ -82,7 +93,12 @@ of the node they are running on. See examples below:
         protocol: tcp
         mode: host
     ```
-    Exposes a service running on port 8080 inside the container at `<NODE_IP>:80` 
+
+    !!! success
+        This example exposes a service running on port
+        8080 inside the container.<br>It can be reached publicly
+        at <big>192.168.10.20:80</big>, where 192.168.10.20 is the
+        public IP address of the node hosting the Microservice.
 
 === "Kubernetes"
 
@@ -107,4 +123,8 @@ of the node they are running on. See examples below:
               hostPort: 80
         <truncated>
     ```
-    Exposes a service running on port 8080 inside the container at `<NODE_IP>:80` 
+    !!! success
+        This example exposes a service running on port
+        8080 inside the container.<br>It can be reached publicly
+        at <big>192.168.10.20:80</big>, where 192.168.10.20 is the
+        public IP address of the node hosting the Microservice.

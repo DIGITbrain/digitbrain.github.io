@@ -19,16 +19,20 @@ Resource is important, so keep it in mind. Later, a publisher of a DMA Tuple tha
 will match each Data Resource you define with a concrete Data asset, so be sure to provide sufficient detail
 when defining your Data Resource.
 
-You can refer to parameters of a given Data Resource, for example in your Docker-Compose, by using
-its `ID`. For example, with a Data Resource with `ID` **SINK_A**, use `SINK_A.PARAMETER`.
-See below for full examples.
+!!! example
+    You can refer to parameters of a given Data Resource, for example in your Docker-Compose, by using
+    its `ID`. For example, with a Data Resource with `ID` **SINK_A**, use `SINK_A.PARAMETER`.
+    See below for full examples.
 
 ## Examples with URI Fields
 
 The `repository_uri`, `uri`, `path`, and `filename` are some special fields available on
 both Model and Data assets. This section describes how to use them as parameters, for
-example in [deploymentData](/attributes/microservice/#deployment-data). You can refer to
-user-defined fields on the Model and Data assets with the same `{{ }}` notation.
+example in [deploymentData](/attributes/microservice/#deployment-data).
+
+!!! tip
+    You can refer to [user-defined fields on Data assets](/attributes/data/#aux-info)
+    with the same `{{ }}` notation used below.
 
 ### URI
 
@@ -76,19 +80,17 @@ Models support the `path` and `filename` fields for more granularity.
 
 For even finer grain use cases with Model and Data parameters, several automatic fields are
 generated from the `uri_repository` and `uri` fields, respectively.
-Given an example `"https://user:pass@example.com:1234/path/to/service?key=value#something"`, these are: 
 
-- `SCHEME`: https
-- `USERNAME`: user
-- `PASSWORD`: pass
-- `HOST`: example.com
-- `PORT`: 1234
-- `PATH`: path/to/service
-- `QUERY`: key=value
-- `FRAGMENT`: something
+!!! example
+    See the table below for fields generated for a `uri` or `repository_uri` of:<br>
+    <big>**https://user:pass@example.com:1234/path/to/service?key=value#something**</big> 
 
-If a same-named field is defined manually by a user, it will not be overwritten.
-If a field cannot be determined from the `uri`, it will be blank.
+    | Value             ||             Newly Generated Fields            || Value           |
+    | ----------------- |:---------------------:| |:---------------------:| ---------------:|
+    | https             | <big>`SCHEME`</big>   | | <big>`PORT`</big>     | 1234            |
+    | user              | <big>`USERNAME`</big> | | <big>`PATH`</big>     | path/to/service |
+    | pass              | <big>`PASSWORD`</big> | | <big>`QUERY`</big>    | key=value       |
+    | example.com       | <big>`HOST`</big>     | | <big>`FRAGMENT`</big> | something       |
 
 === "Model"
 
@@ -119,6 +121,10 @@ If a field cannot be determined from the `uri`, it will be blank.
         PASS: '{{ SINK_A.PASSWORD }}'
         URL: '{{ SINK_A.SCHEME }}//{{ SINK_A.HOST }}:{{ SINK_A.PORT }}'
     ```
+
+!!! note
+    If a same-named field is defined manually by a user, it will not be overwritten.<br>
+    If a field cannot be determined from the `uri`, it will be blank.
 
 **This feature is in beta. Please contact your support**
 **person if you need further support**

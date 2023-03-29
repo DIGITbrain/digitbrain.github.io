@@ -15,4 +15,4 @@ on port 80, you can reach the service at:
 > <big>http://<subdomain\>.cbp-routing.ch</big>
 
 See the relevant field
-[here](/attributes/deployment/#domain_name).
+[here](/attributes/deployment/#domain-name).

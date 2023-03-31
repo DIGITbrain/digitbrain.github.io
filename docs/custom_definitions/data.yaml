@@ -2,15 +2,18 @@ auth_type:
   example: '["tls_client_certificate"]'
 author:
   example: UUID
+  hide: true
 aux_info:
   example: '{"PROTOCOL": "tcp", "MQTT_PROTOCOL_VERSION": "3.1.1", "KAFKA_BROKER_VERSION":
     "2.7.0"}'
 build:
   example: '21'
+  hide: true
 credentials:
   example: '-'
 date:
   example: '2022-04-28T08:11:53+00:00'
+  hide: true
 desc:
   example: '"This sensor measures temperature in Celsius, sends data via ConSenses
     edge device via an MQTT broker"'
@@ -22,12 +25,14 @@ format:
   example: '["application/json"] '
 id:
   example: '"DATAID_MYDATA_A"'
+  hide: true
 kind:
   example: '"STREAM"'
 name:
   example: '"CNSPiezoBolt#1 (in directory: factory 1 , machine1 , piezobolts)"'
 provider:
   example: UUID
+  hide: true
 schema_desc:
   example: '"Messages constain raw sensor values as floats in Celsius, each is a JSON
     object with key name ''temperature''."'

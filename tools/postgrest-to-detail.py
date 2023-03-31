@@ -27,14 +27,6 @@ AMDR_TABLES = (
 DA_TABLES = ("dma_tuple",)  # Need the comma for a tuple
 DA_UDTS = ("deployment",)
 
-AUTO_FIELDS = (
-    "id",
-    "author",
-    "provider",
-    "build",
-    "date",
-)
-
 
 ## General
 errors = []
@@ -83,8 +75,7 @@ def update_fields_with_user_defs(table, fields, user_defs):
         defs.update(user_defs[field])
         notify_missing_info(table, field, fields[field])
 
-    # Don't document auto-filled fields
-    return {field: defs for field, defs in fields.items() if field not in AUTO_FIELDS}
+    return fields
 
 
 def get_user_definitions(table):

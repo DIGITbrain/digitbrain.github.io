@@ -2,16 +2,20 @@ a_asset:
   example: '"ALGID_MYALG"'
 author:
   example: UUID
+  hide: true
 build:
   example: '21'
+  hide: true
 date:
   example: '2022-04-28T08:11:53+00:00'
+  hide: true
 derivation:
   example: ma_pair_123e4567-e89b-12d3 (auto)
 frequency:
   example: 12
 id:
   example: '"MAID_MYMA"'
+  hide: true
 ip_family:
   example: ip_family_123e4567-e89b-12d3
 licensor:
@@ -26,6 +30,7 @@ payload:
   example: '{‘minPressure’: 90, ‘maxPressure’: 120}'
 provider:
   example: UUID
+  hide: true
 rules:
   example: rules_123e4567-e89b-12d3
 scope:

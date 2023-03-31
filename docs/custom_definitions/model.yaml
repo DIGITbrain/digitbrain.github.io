@@ -1,13 +1,17 @@
 author:
   example: UUID
+  hide: true
 build:
   example: '21'
+  hide: true
 date:
   example: '2022-04-28T08:11:53+00:00'
+  hide: true
 filename:
   example: '"mymodel.pb"'
 id:
   example: '"MODID_MYMODEL"'
+  hide: true
 inslots:
   example: "[\n              { \n                \"Key\": \"MY_INSLO_A\",\n                \"Name\":
     \"ModelABin\",\n                \"Dimensions\": 112,\n                \"Is-continuous\":
@@ -28,6 +32,7 @@ path:
   example: '"input/models"'
 provider:
   example: UUID
+  hide: true
 repository_uri:
   example: '"https://www.myrepo.com"'
 version:

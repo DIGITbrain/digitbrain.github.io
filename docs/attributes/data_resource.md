@@ -12,6 +12,18 @@ The specification for Data Resource
 has these fields:
 
 
+`id`{ #id }
+
+:   **Optional**-*String*<br>
+    human-readable identifier, unique within a Microservice
+
+
+    === "Example"
+        ``` yaml     
+        "MY_SINK"
+        ```
+
+
 `kind`{ #kind }
 
 :   **Optional**-*List[DATA_KIND]*<br>

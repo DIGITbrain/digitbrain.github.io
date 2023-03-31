@@ -1,7 +1,9 @@
 author:
   example: UUID
+  hide: true
 build:
   example: '21'
+  hide: true
 classification_schema:
   example: '"others"'
 configuration_data:
@@ -26,6 +28,7 @@ data_resource:
   type: '[Data Resource](../data_resource.md)'
 date:
   example: '2022-04-28T08:11:53+00:00'
+  hide: true
 
 deployment_data:
   description: |
@@ -75,6 +78,7 @@ hpc_required:
   example: 'true'
 id:
   example: '"MSID_MYMS_A"'
+  hide: true
 is_gui:
   example: 'True'
 metrics:
@@ -110,6 +114,7 @@ parameters:
   type: '[Parameters](../parameters.md)'
 provider:
   example: UUID
+  hide: true
 recommended_cp_us:
   example: 4
 recommended_gpuram:

@@ -40,6 +40,7 @@ nav:
       - Model:
           - Model: attributes/model/index.md
           - Slots: attributes/slots.md
+          - Units: attributes/units.md
       - Behaviour:
           - Behaviour (M + A): attributes/ma_pair/index.md
       - Data:

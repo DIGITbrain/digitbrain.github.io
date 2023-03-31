@@ -70,17 +70,19 @@ has these fields:
 
 `units`{ #units }
 
-:   **Optional**-*obj (see subkeys below)*<br>
+:   **Optional**-*[Units](units.md)*<br>
     Values related to the slot measurement units
 
 
 `default_value`{ #default-value }
 
 :   **Optional**-*number | null*<br>
-    default value for in-slot, if null then the value for the in-slot needs
-    to be set/fed at a later point in time.
+    default value for in-slot, if null then the value for the in-slot
+    needs to be set/fed at a later point in time.
 
-    Default value must not be set for out-slots!
+    !!! warning
+        
+        Default value must not be set for out-slots!
 
 
 

@@ -3,19 +3,19 @@
     display: none;
   }
 </style>
-# Dma Tuple Fields
+# Process Fields
 
 
 
 
-The specification for Dma Tuple
+The specification for Process
 has these fields:
 
 
 `name`{ #name }
 
 :   **Required**-*string*<br>
-    Short name to identify the DMA Tuple
+    Short name to identify the Process
 
 
     === "Example"
@@ -27,7 +27,7 @@ has these fields:
 `scope`{ #scope }
 
 :   **Required**-*string*<br>
-    Short description of the scope of the DMA Tuple (human readable)
+    Short description of the scope of the Process (human readable)
 
 
     === "Example"
@@ -39,7 +39,7 @@ has these fields:
 `version`{ #version }
 
 :   **Required**-*string*<br>
-    Version number of the DMA Tuple, defined by the provider
+    Version number of the Process, defined by the provider
 
 
     === "Example"
@@ -51,7 +51,7 @@ has these fields:
 `ip_instance`{ #ip-instance }
 
 :   **Required**-*string*<br>
-    Identifier of the IP Instance the DMA Tuple is valid for (NB: Entity for IP Instance is referenced)
+    Identifier of the IP Instance the Process is valid for (NB: Entity for IP Instance is referenced)
 
 
     === "Example"
@@ -75,7 +75,7 @@ has these fields:
 `ma_pair`{ #ma-pair }
 
 :   **Required**-*string*<br>
-    Identifier of the Behaviour (MA Pair) associated to the DMA Tuple
+    Identifier of the Behaviour (MA Pair) associated to the Process
 
 
     === "Example"
@@ -87,13 +87,13 @@ has these fields:
 `deployments`{ #deployments }
 
 :   **Required**-*[Deployment](../deployment.md)*<br>
-    Mapping of characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the DMA Tuple
+    Mapping of characteristics of the Deployment (i.e. Cloud or Edge infrastructure) for every Microservice associated to the Process
 
 
 `data_assets_mapping`{ #data-assets-mapping }
 
 :   **Optional**-*[DataAssetsMapping](../dataassetsmapping.md)*<br>
-    Mapping required Data assets to Microservices specified in the MA Pair. Not every Microservice needs a Data asset.
+    Mapping required Data assets to Microservices specified in the Behaviour (MA Pair). Not every Microservice needs a Data asset.
 
 
 `namespace`{ #namespace }
@@ -124,7 +124,7 @@ has these fields:
 `schedule`{ #schedule }
 
 :   **Optional**-*string*<br>
-    Days and hours the DMA Tuple will be active
+    Days and hours the Process will be active
 
 
     === "Example"

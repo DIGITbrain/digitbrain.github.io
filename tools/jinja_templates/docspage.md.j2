@@ -3,14 +3,14 @@
     display: none;
   }
 </style>
-# {{ table | replace("_", " ") | replace("Ma Pair", "Behaviour") }} Fields
+# {{ table | replace("_", " ") | replace("Ma Pair", "Behaviour") | replace("Dma Tuple", "Process") }} Fields
 
 {% if asset %}
 **For a more condensed summary this information is available in [table view](/tables/{{ table  | lower | replace(" ", "_")}}/)**
 {% endif %}
 
 
-The specification for {{ table | replace("_", " ") | replace("Ma Pair", "Behaviour") }}
+The specification for {{ table | replace("_", " ") | replace("Ma Pair", "Behaviour") | replace("Dma Tuple", "Process") }}
 has these fields:
 
 {% for key, value in fields.items() if not value.hide -%}

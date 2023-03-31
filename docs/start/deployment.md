@@ -9,7 +9,7 @@ configuration details required by that infrastructure type.
 
 ## Pre-requisites
 
-For most DMA Tuples in DIGITbrain, a common set of Deployments will be suitable.
+For most Processes in DIGITbrain, a common set of Deployments will be suitable.
 Required IDs that describe that common set are available in the documentation
 that follows below.
 

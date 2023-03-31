@@ -8,5 +8,5 @@ specification for each of the DIGITbrain assets. Pick one to get started:
 - [Model](model)
 - [Behaviour](ma_pair)
 - [Data](data)
-- [DMA Tuple](dma_tuple)
+- [Process](dma_tuple)
 - [Supporting Metadata](supporting_metadata)

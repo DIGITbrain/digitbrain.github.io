@@ -25,7 +25,7 @@ nav:
       - Model: start/model.md
       - Data: start/data.md
       - Behaviour: start/ma_pair.md
-      - DMA Tuple: start/dma_tuple.md
+      - Process: start/dma_tuple.md
       - Supporting Metadata: start/supporting_metadata.md
   - Assets in Detail:
       - Assets in Detail: attributes/index.md
@@ -41,11 +41,11 @@ nav:
           - Model: attributes/model/index.md
           - Slots: attributes/slots.md
       - Behaviour:
-          - Behaviour: attributes/ma_pair/index.md
+          - Behaviour (M + A): attributes/ma_pair/index.md
       - Data:
           - Data: attributes/data/index.md
-      - DMA Tuple:
-          - DMA Tuple: attributes/dma_tuple/index.md
+      - Process:
+          - Process (D + MA): attributes/dma_tuple/index.md
           - Data Assets Mapping: attributes/dataassetsmapping.md
           - Deployment: attributes/deployment.md
       - Supporting Metadata: attributes/supporting_metadata.md

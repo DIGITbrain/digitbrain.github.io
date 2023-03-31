@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Data Assets Mapping substructure in a DMA Tuple will map Data assets 
+The Data Assets Mapping substructure in a Process will map Data assets 
 with Data Sources that have been specified for each Microservice that makes up
 an Algorithm. Data Sources describe what type/kind of data the Microservice
 expects (see the [Input Data](/attributes/microservice#inputdata) and
@@ -14,7 +14,7 @@ assets.
 
 Data Sources ([Input Data](/attributes/microservice#inputdata) and/or
 [Output Data](/attributes/microservice#outputdata)) fields should be specified on
-at least one of the Microservices that makes up the Algorithm in the DMA Tuple.
+at least one of the Microservices that makes up the Algorithm in the Process.
 The Data Assets must already be published on the DIGITbrain platform.
 
 ## Understanding Data Assets Mapping
@@ -84,7 +84,7 @@ See the below JSON for an example of how **Microservice**, **Data** and
 === "DataAssetsMapping"
 
     ``` json
-    "DMA Tuple": {
+    "Process": {
       "id": "dma_tuple_ggg_uuid",
       "DataAssetsMapping": {
         "microservice_aaa": {

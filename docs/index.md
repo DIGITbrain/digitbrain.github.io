@@ -20,7 +20,7 @@ quantities and still in an economically profitable way.
 The primary aim of this documentation is to serve as a point of reference for
 providers and consumers of the different assets in DIGITbrain. These include
 **Microservices**, **Algorithms**, **Model** and **Data**, as well as
-**Behaviours** and **DMA Tuples**.
+**Behaviours** and **Processes**.
 
 ### Assets
 

@@ -5,7 +5,7 @@
 *Data sources* are individual entities or assets in DIGITbrain that serve data for computations made by Algorithms 
 whose results are persisted in the same or another **Data resource** called a *Data sink*.
 
-When composing **DMA Tuples**, the *DMA Composer* chooses one or more **Data** resources, specifying exactly where the **Algorithm** should consume the data from and
+When composing **Processes**, the *DMA Composer* chooses one or more **Data** resources, specifying exactly where the **Algorithm** should consume the data from and
 where to store its outputs. Such decoupling makes possible that the same Data resource can potentially be processed by different Algorithms (different analytics on  same IPI data) or the same Algorithm can be applied on a different Data resource (same analytics but on different IPI data).
 Note that **Model** that is though another parameter of DMA tuples are not considered as "Data resource" in this context.
 

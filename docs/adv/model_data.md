@@ -5,17 +5,17 @@ platform, and provides further info on how to refer to Model and Data in a Micro
 
 ## Model Parameters
 
-Only a single instance of a Model can be bound in a DMA Tuple. You can refer to its parameters,
+Only a single instance of a Model can be bound in a Process. You can refer to its parameters,
 for example in your Docker-Compose [deploymentData](/attributes/microservice/#deployment-data), as
 `MODEL.PARAMETER`. See below for full examples.
 
 ## Data Parameters
 
-Since multiple instances of Data can be bound in a DMA Tuple, the process is not as simple as in the
+Since multiple instances of Data can be bound in a Process, the process is not as simple as in the
 case of a model.
 
 First, define one or more [dataResource](/attributes/microservice/#data-resource)s. The `ID` of the Data
-Resource is important, so keep it in mind. Later, a publisher of a DMA Tuple that uses your Microservice
+Resource is important, so keep it in mind. Later, a publisher of a Process that uses your Microservice
 will match each Data Resource you define with a concrete Data asset, so be sure to provide sufficient detail
 when defining your Data Resource.
 

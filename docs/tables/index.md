@@ -10,7 +10,7 @@ For full detail, most users will prefer the [detailed view](/attributes).
 - [Algorithm](algorithm)
 - [Model](model)
 - [Data](data)
-- [MA Pair](ma_pair)
+- [Behaviour](ma_pair)
 - Supporting Metadata
     - [IP Family](ip_family)
     - [IP Instance](ip_instance)

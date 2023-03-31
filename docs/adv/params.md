@@ -1,10 +1,10 @@
 # Open Parameters
 
 When some input to your application is sensitive, or if
-there is some customisation that can be applied as the DMA Tuple
+there is some customisation that can be applied as the Process
 is started, DIGITbrain supports *open parameters*. Define these
 as a Microservice's [Parameters](/attributes/microservice/#parameters)
-and the Digital Agora will generate a web form when a DMA Tuple starts,
+and the Digital Agora will generate a web form when a Process starts,
 requesting that the user provides a value for each parameter of each
 Microservice bound to it. Keep the `name` of your parameter in mind, to
 refer to later.

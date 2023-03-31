@@ -29,14 +29,14 @@ held to the highest standards and best practices in software development.
 It is well maintained by the open-source community.
 
 KubeEdge extends the _cluster_ of cloud instances that make up the underlying
-infrastructure for a DMA Tuple, by _joining_ one or more edge devices to it. Once
+infrastructure for a Process, by _joining_ one or more edge devices to it. Once
 this cluster is extended, Algorithms can be bound to specific edge devices to bring
 compute closer to the data.
 
 ### KubeEdge on your Device
 
-Joining an edge device to a DMA Tuple's cluster can only occur once a
-DMA Tuple is started. When a DMA Tuple is started, one [MiCADO](https://micado-scale.eu/)
+Joining an edge device to a Process's cluster can only occur once a
+Process is started. When a Process is started, one [MiCADO](https://micado-scale.eu/)
 cloud instance is dynamically provisoned to begin creating the cluster. This
 MiCADO instance will connect to any identified edge devices to join them
 to the cluster. The workflow steps are as follows:

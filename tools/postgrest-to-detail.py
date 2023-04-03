@@ -49,7 +49,8 @@ def fetch_api_detail(url, key=None):
 
 
 def notify_missing_info(table, field, field_def):
-    notice = f"::notice file=docs/custom_definitons/{table}.yaml::{field}"
+    if not field_def.get("notify", True):
+        return
     if table not in DA_TABLES and "example" not in field_def:
         msg = "is missing an example value."
         print(f"{notice} {msg}")

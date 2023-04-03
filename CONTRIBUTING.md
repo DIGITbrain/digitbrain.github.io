@@ -115,6 +115,8 @@ Let's look at a truncated copy of `deployment.yaml` to see how we can create or 
 ```yaml
 id:
   hide: true
+  notify: false
+
 type:
   required: true
   description: |
@@ -139,6 +141,7 @@ deployment_id:
 Notes:
 - Top-level keys are the names of fields for this asset or substructure
 - Fields can be hidden with `hide: true` (e.g. for fields auto-filled by the DA)
+- Warnings generated when a field has no custom definition are disabled with `notify: false`
 - Optionality is by default `optional` but can be overwritten with `required: true`
 - Description supports multi-line YAML
 - When example is a string, a single example is created in a code block
@@ -149,6 +152,8 @@ Notes:
 
 ## Maintainer Notes
 
+- The latest OpenAPI spec is fetched nightly by a GitHub action
+  - Annotations on the action will warn when new fields are being added
 - A release will trigger the GitHub workflow to publish the site
 - Pull requests will only trigger the linting action
 - Commits to main will trigger the generate action, which may auto-commit

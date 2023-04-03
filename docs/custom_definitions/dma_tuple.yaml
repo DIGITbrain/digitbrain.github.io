@@ -4,7 +4,7 @@ name:
   description: Short name to identify the Process
   example: Pressure drop for the injection in hall 3
 
-scope:
+description:
   type: string
   required: true
   description: Short description of the scope of the Process (human readable)
@@ -22,13 +22,6 @@ ip_instance:
   description: 'Identifier of the IP Instance the Process is valid for (NB: Entity
     for IP Instance is referenced)'
   example: ip_instance_123e4567-e89b-12d3
-
-provider:
-  type: string
-  required: true
-  description: Legal entity who provides the asset (owner). It is the affiliation
-    of the author by default.
-  example: cabd945f-4085-4e34-becd-45ec5a851a9b
 
 ma_pair:
   type: string

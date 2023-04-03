@@ -24,7 +24,7 @@ has these fields:
         ```
 
 
-`scope`{ #scope }
+`description`{ #description }
 
 :   **Required**-*string*<br>
     Short description of the scope of the Process (human readable)
@@ -57,18 +57,6 @@ has these fields:
     === "Example"
         ``` yaml     
         ip_instance_123e4567-e89b-12d3
-        ```
-
-
-`provider`{ #provider }
-
-:   **Required**-*string*<br>
-    Legal entity who provides the asset (owner). It is the affiliation of the author by default.
-
-
-    === "Example"
-        ``` yaml     
-        cabd945f-4085-4e34-becd-45ec5a851a9b
         ```
 
 

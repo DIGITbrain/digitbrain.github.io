@@ -14,10 +14,10 @@ credentials:
 date:
   example: '2022-04-28T08:11:53+00:00'
   hide: true
-desc:
+description:
   example: '"This sensor measures temperature in Celsius, sends data via ConSenses
     edge device via an MQTT broker"'
-desc_url:
+description_url:
   example: '"https://some-host/docs/data-source-specification-sheet.pdf"'
 direction:
   example: '"SOURCE"'
@@ -33,7 +33,7 @@ name:
 provider:
   example: UUID
   hide: true
-schema_desc:
+schema:
   example: '"Messages constain raw sensor values as floats in Celsius, each is a JSON
     object with key name ''temperature''."'
 schema_url:

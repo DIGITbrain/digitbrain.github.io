@@ -170,10 +170,22 @@ has these fields:
     recommended number of GPUs
 
 
+    === "Example"
+        ``` yaml     
+        2
+        ```
+
+
 `recommended_gpu_ram`{ #recommended-gpu-ram }
 
 :   **Optional**-*integer*<br>
     recommended amount of GPU memory in GB
+
+
+    === "Example"
+        ``` yaml     
+        6
+        ```
 
 
 `gpu_type`{ #gpu-type }
@@ -233,6 +245,12 @@ has these fields:
 :   **Optional**-*integer*<br>
     recommended number of CPU cores
 
+
+
+    === "Example"
+        ``` yaml     
+        4
+        ```
 
 
 `required_disk_space`{ #required-disk-space }

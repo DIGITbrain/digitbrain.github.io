@@ -47,11 +47,23 @@ has these fields:
 
 
 
+    === "Example"
+        ``` yaml     
+        "This sensor measures temperature in Celsius, sends data via ConSenses edge device via an MQTT broker"
+        ```
+
+
 `description_url`{ #description-url }
 
 :   **Optional**-*string*<br>
     More detailed specification of data source characteristics (doc, pdf, …)
 
+
+
+    === "Example"
+        ``` yaml     
+        "https://some-host/docs/data-source-specification-sheet.pdf"
+        ```
 
 
 `size`{ #size }
@@ -189,6 +201,12 @@ has these fields:
 :   **Optional**-*string*<br>
     Describes message internal structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, ...
 
+
+
+    === "Example"
+        ``` yaml     
+        "Messages constain raw sensor values as floats in Celsius, each is a JSON object with key name 'temperature'."
+        ```
 
 
 `schema_url`{ #schema-url }

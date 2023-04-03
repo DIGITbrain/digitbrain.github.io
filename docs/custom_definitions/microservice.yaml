@@ -115,11 +115,11 @@ parameters:
 provider:
   example: UUID
   hide: true
-recommended_cp_us:
+recommended_cpus:
   example: 4
-recommended_gpuram:
+recommended_gpu_ram:
   example: 6
-recommended_number_of_gp_us:
+recommended_number_of_gpus:
   example: 2
 recommended_ram:
   example: '16'

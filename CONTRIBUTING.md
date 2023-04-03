@@ -145,7 +145,7 @@ Notes:
 - Fields can be hidden with `hide: true` (e.g. for fields auto-filled by the DA)
 - Warnings generated when a field has no custom definition are disabled with `notify: false`
 - Optionality is by default `optional` but can be overwritten with `required: true`
-- Description supports multi-line YAML and [annotations](https://squidfunk.github.io/mkdocs-material/reference/annotations/#annotations)
+- Description supports multi-line YAML and [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#admonitions)
 - When example is a string, a single example is created in a code block
 - When example is a map, multiple examples are created in a [tabbed](https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/) code block
 - Headers at ### level can be created with `header: true` in this case, the key is the header text

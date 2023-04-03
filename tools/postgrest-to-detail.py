@@ -73,7 +73,7 @@ def update_fields_with_user_defs(table, fields, user_defs):
             continue
 
         defs.update(user_defs[field])
-        notify_missing_info(table, field, fields[field])
+        notify_missing_info(table, field, defs)
 
     return fields
 

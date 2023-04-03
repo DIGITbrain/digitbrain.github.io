@@ -113,6 +113,8 @@ You can also use these files to create detail listings for assets or substructur
 Let's look at a truncated copy of `deployment.yaml` to see how we can create or overwrite a listing:
 
 ```yaml
+id:
+  hide: true
 type:
   required: true
   description: |
@@ -136,6 +138,7 @@ deployment_id:
 
 Notes:
 - Top-level keys are the names of fields for this asset or substructure
+- Fields can be hidden with `hide: true` (e.g. for fields auto-filled by the DA)
 - Optionality is by default `optional` but can be overwritten with `required: true`
 - Description supports multi-line YAML
 - When example is a string, a single example is created in a code block

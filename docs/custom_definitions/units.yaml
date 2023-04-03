@@ -21,6 +21,7 @@ exponent:
         corresponding order to describe the unit w.r.t. the base SI units,
         the entries [1, -2, 0, 0, 0, 0, 1] thus denote m s⁻² kg, i.e., Newton
   type: number[]
+  notify: false
 
 offset:
   description: |
@@ -31,6 +32,7 @@ offset:
         For absolute temperatures only! For temperature
         *differences*, this must be omitted!
   type: number
+  notify: false
 
 scale:
   description: |

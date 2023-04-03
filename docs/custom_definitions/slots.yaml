@@ -7,6 +7,7 @@ default_value:
         
         Default value must not be set for out-slots!
   type: number | null
+  notify: false
 dimensions:
   description: dimension of inputs to in-slot, array of dimensions for matrices /
     tensors
@@ -35,6 +36,8 @@ ranges:
     of discrete valid scalars).<br>If a valid range is not known a-priori: null /
     omitted'
   type: array | null
+  notify: false
 units:
   description: Values related to the slot measurement units
   type: "[Units](units.md)"
+  notify: false

@@ -49,6 +49,7 @@ def fetch_api_detail(url, key=None):
 
 
 def notify_missing_info(table, field, field_def):
+    notice = f"::warning file=docs/custom_definitons/{table}.yaml::{field}"
     if not field_def.get("notify", True):
         return
     if table not in DA_TABLES and "example" not in field_def:
@@ -70,7 +71,7 @@ def update_fields_with_user_defs(table, fields, user_defs):
 
     for field, defs in fields.items():
         if field not in user_defs:
-            print(f"::notice file=docs/custom_definitons/{table}.yaml::{field} {msg}")
+            print(f"::warning file=docs/custom_definitons/{table}.yaml::{field} {msg}")
             continue
 
         defs.update(user_defs[field])

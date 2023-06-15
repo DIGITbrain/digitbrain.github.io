@@ -45,6 +45,12 @@ has these fields:
 
 
 
+    === "Example"
+        ``` yaml     
+        [1, -2, 0, 0, 0, 0, 1]
+        ```
+
+
 `offset`{ #offset }
 
 :   **Optional**-*number*<br>

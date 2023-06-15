@@ -377,3 +377,29 @@ has these fields:
 
         ```
 
+
+`is_gui`{ #is-gui }
+
+:   **Optional**-*boolean*<br>
+    (boolean) indicates that this microservice exposes a graphical user interface (web). Defaults to False.
+
+
+
+    === "Example"
+        ``` yaml     
+        True
+        ```
+
+
+`workload_type`{ #workload-type }
+
+:   **Optional**-*enum [service, job, undefined]*<br>
+    (enum["service", "job", "undefined"]) specifies the workload type. service for long running microservices that must be shut-down by the user. job for batch operations that should shut-down after microservice completes succesfully. undefined for other, that must be shut-down by the user. Defaults to undefined.
+
+
+
+    === "Example"
+        ``` yaml     
+        "service"
+        ```
+

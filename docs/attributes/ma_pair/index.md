@@ -27,22 +27,9 @@ has these fields:
         ```
 
 
-`licensor`{ #licensor }
-
-:   **Required**-*string*<br>
-    Identifier of the Legal Entity licensing the MA Pair (NB: Entity for Licensor is referenced)
-
-
-
-    === "Example"
-        ``` yaml     
-        legal_entity_123e4567-e89b-12d3 (auto)
-        ```
-
-
 `derivation`{ #derivation }
 
-:   **Required**-*string*<br>
+:   **Optional**-*string*<br>
     In case of derivation, references to parent / child (optional)
 
 
@@ -66,17 +53,11 @@ has these fields:
         ```
 
 
-`scope`{ #scope }
+`description`{ #description }
 
 :   **Required**-*string*<br>
     Short description of the scope of the MA Pair (human readable)
 
-
-
-    === "Example"
-        ``` yaml     
-        Effectiveness of the mold closing process
-        ```
 
 
 `ip_family`{ #ip-family }

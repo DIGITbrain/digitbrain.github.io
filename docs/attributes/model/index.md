@@ -48,11 +48,17 @@ has these fields:
 
 
 
-`marketplace_description`{ #marketplace-description }
+`description`{ #description }
 
 :   **Optional**-*string*<br>
     Model tag description Additional info about model files (e.g. versioning, scope, i.e. what is the model used for, e.g. simulation, control, etc.) - Human readable marketplace description
 
+
+
+    === "Example"
+        ``` yaml     
+        This is a brilliant model for doing complex things.
+        ```
 
 
 `auth_tool`{ #auth-tool }

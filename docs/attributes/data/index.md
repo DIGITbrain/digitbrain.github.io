@@ -146,7 +146,7 @@ has these fields:
 
 `uri`{ #uri }
 
-:   **Required**-*string*<br>
+:   **Optional**-*string*<br>
     Accessibility of the data resource, including host, port information, protocol, and other fields (path is protocol dependent, can be a topic name). GUI may show host, port, path separately. Hidden at search. Format: scheme://host:port/path.  Pseudo vars: SCHEME, HOST, PORT, PATH, QUERY, FRAGMENT.
 
 

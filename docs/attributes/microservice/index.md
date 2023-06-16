@@ -342,7 +342,7 @@ has these fields:
 
 `parameters`{ #parameters }
 
-:   **Optional**-*[Parameters](../parameters.md)[]*<br>
+:   **Required**-*[Parameters](../parameters.md)[]*<br>
     list of Parameter objects for each possible parameters, to be specified before deployment
 
 

@@ -93,7 +93,7 @@ has these fields:
 
 
     Note:
-    This is a Foreign Key to `microservice.id`.<fk table='microservice' column='id'/>
+    This is a Foreign Key to `model.id`.<fk table='model' column='id'/>
 
 
     === "Example"

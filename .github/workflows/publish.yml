@@ -24,7 +24,7 @@ jobs:
           python-version: "3.8"
 
       - name: Install Mkdocs
-        run: pip install mkdocs-material==9.1.4 swagger-markdown==0.9.16
+        run: pip install "Markdown<=3.2.1" mkdocs-material==9.1.4 swagger-markdown==0.9.16
 
       - name: Run Mkdocs deploy
         run: mkdocs gh-deploy --force

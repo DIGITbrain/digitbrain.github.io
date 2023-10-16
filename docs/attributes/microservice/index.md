@@ -98,6 +98,12 @@ has these fields:
     We currently support the description of **one container** in either the *Docker-Compose*
     format or **one Pod or Deployment** in the *Kubernetes manifest* format.
 
+    !!! warning
+        Compose files are translated to Kubernetes by the official Kubernetes [Kompose](https://kompose.io/)
+        project. Be aware that Kubernetes does not support the same set of functionalities as Compose.
+        [This matrix](https://kompose.io/conversion/) shows the Compose properties that are supported
+        when translating to Kubernetes.
+
     !!! tip
         If you normally run your container with *docker run* we suggest using the online, open-source
         [Composerize](https://www.composerize.com/) tool, which can translate the command to a

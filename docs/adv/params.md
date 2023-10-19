@@ -1,21 +1,43 @@
+---
+hide:
+  - toc
+---
+
 # Open Parameters
 
-When some input to your application is sensitive, or if
+This section primarily concerns publishers of [Microservices](/attributes/microservice) on the
+platform, and provides further info on how to refer to open parameters in a Microservice configuration.
+
+When some input to your Microservice is sensitive, or if
 there is some customisation that can be applied as the Process
-is started, DIGITbrain supports *open parameters*. Define these
+is started, DIGITbrain supports *open parameters*.
+
+Define these
 as a Microservice's [Parameters](/attributes/microservice/#parameters)
 and the Digital Agora will generate a web form when a Process starts,
-requesting that the user provides a value for each parameter of each
-Microservice bound to it. Keep the `name` of your parameter in mind, to
-refer to later.
+requesting that the user provide a value for each parameter of each
+Microservice bound to the Process. 
 
-Use the `open_parameter(PARAMETER_NAME)` syntax to refer to these parameters,
-for example in a Microservice's [deploymentData](/attributes/microservice/#deployment-data). 
+!!! tip
+    When defining open parameters, keep the `name` of the parameter in mind, to refer to it later
+
+You may be familiar with the Docker-Compose [approach to variable substitution](https://docs.docker.com/compose/environment-variables/set-environment-variables/#substitute-with-an-env-file)
+from a `.env` file. We support the same `${   }` braced syntax as Docker-Compose, but instead
+of the `.env` file, the available environment variables are defined by [Model & Data](model_data.md), and
+Open Parameters.
+
+For open parameters, use the `${PARAMETER_NAME}` syntax to refer to them,
+for example in a Microservice's Docker-Compose.
 
 === "Defining Parameters"
 
     ``` yaml     
     parameters:
+    - name: MINIO_URL
+      type: String
+      mandatory: true
+      defaultValue: https://minio.example.com
+      description: MinIO url
     - name: MINIO_ROOT_USER
       type: String
       mandatory: true
@@ -34,11 +56,8 @@ for example in a Microservice's [deploymentData](/attributes/microservice/#deplo
     services:
     ristra:
         image: dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0
-        entrypoint: /bin/sh -c
+        entrypoint: python -m connect ${MINIO_URL} --user $MINIOUSER --pass $MINIOPASS
         environment:
-        MINIO_ROOT_USER: open_parameter(MINIO_ROOT_USER)
-        MINIO_ROOT_PASS: open_parameter(MINIO_ROOT_PASS)
+          MINIOUSER: ${MINIO_ROOT_USER}
+          MINIOPASS: ${MINIO_ROOT_PASS}
     ```
-
-**This feature is in beta. Please contact your support**
-**person if you require further support with it**

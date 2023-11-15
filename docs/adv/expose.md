@@ -6,6 +6,11 @@ expose a microservice internally, so other microservices
 may communicate with it. And you can expose a microservice
 externally, so that it can be accessed publicly.
 
+If you are familiar with Docker, this will be familiar.
+The `expose` property allows communication between
+containers, while the `ports` property exposes a service
+on the host.
+
 ## Internally
 
 When microservices should communicate internally, ensure
@@ -16,20 +21,19 @@ See examples below:
 
 === "Docker-Compose"
 
-    Use the **shorthand** form of the `ports` property.
+    Use the [`expose` property](https://docs.docker.com/compose/compose-file/compose-file-v3/#expose)
 
     ```yaml
     version: '3.9'
     services:
         mymicros:
             image: digitbrain/codeigniter-php5
-            ports:
-            - '80:8080'
+            expose: 8080
     ```
     !!! success
-        This example exposes a service running on port
-        8080 inside the container.<br>Other Microservices in the cluster
-        can reach it at <big>mymicros:80</big>
+        This example exposes the service running on port
+        8080 inside this container.<br>Other Microservices in the cluster
+        can reach it at <big>mymicros:8080</big>
 
 === "Kubernetes"
 
@@ -55,15 +59,15 @@ See examples below:
     spec:
       ports:
       - name: http
-        port: 80
+        port: 8080
         targetPort: 8080
       selector:
         app: mymicros    
     ```
     !!! success
-        This example exposes a service running on port
-        8080 inside the container.<br>Other Microservices in the cluster
-        can reach it at <big>mymicros-svc:80</big>
+        This example exposes the service running on port
+        8080 inside this container.<br>Other Microservices in the cluster
+        can reach it at <big>mymicros-svc:8080</big>
 
 ## Externally
 
@@ -79,19 +83,36 @@ of the node they are running on. See examples below:
 
 === "Docker-Compose"
 
-    Use the **longhand** form of `ports` and specify
-    `mode: host`.
+    Use the [`ports` property](https://docs.docker.com/compose/compose-file/compose-file-v3/#ports).
 
     ```yaml
-    version: '3.9'
     services:
-    mymicros:
-      image: digitbrain/codeigniter-php5
-      ports:
-      - target: '8080'
-        published: '80'
-        protocol: tcp
-        mode: host
+      mymicros:
+        image: digitbrain/codeigniter-php5
+        ports:
+        - "80:8080"
+    ```
+
+    !!! success
+        This example exposes a service running on port
+        8080 inside the container.<br>It can be reached publicly
+        at <big>192.168.10.20:80</big>, where 192.168.10.20 is the
+        public IP address of the node hosting the Microservice.
+
+=== "Docker-Compose (long-syntax)"
+
+    Use the [`ports` property](https://docs.docker.com/compose/compose-file/compose-file-v3/#ports)
+    with long-syntax and `host` if you need to specify the protocol.
+
+    ```yaml
+    services:
+      mymicros:
+        image: digitbrain/codeigniter-php5
+        ports:
+        - target: 8080
+          published: 80
+          protocol: tcp
+          mode: host
     ```
 
     !!! success

@@ -30,6 +30,7 @@ See examples below:
             image: digitbrain/codeigniter-php5
             expose: 8080
     ```
+    
     !!! success
         This example exposes the service running on port
         8080 inside this container.<br>Other Microservices in the cluster
@@ -64,6 +65,7 @@ See examples below:
       selector:
         app: mymicros    
     ```
+    
     !!! success
         This example exposes the service running on port
         8080 inside this container.<br>Other Microservices in the cluster
@@ -144,6 +146,7 @@ of the node they are running on. See examples below:
               hostPort: 80
         <truncated>
     ```
+    
     !!! success
         This example exposes a service running on port
         8080 inside the container.<br>It can be reached publicly

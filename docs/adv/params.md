@@ -29,6 +29,11 @@ Open Parameters.
 For open parameters, use the `${PARAMETER_NAME}` syntax to refer to them,
 for example in a Microservice's Docker-Compose.
 
+In Compose, you can still use regular environment variable shell substition within the
+`args` or `entrypoint` fields of the Compose, as in the example below. Please note that
+as per [Compose documentation](https://docs.docker.com/compose/compose-file/compose-file-v2/#variable-substitution)
+a single dollar-sign `$` must be escaped, by using double dollar-signs `$$`.
+
 === "Defining Parameters"
 
     ``` yaml     
@@ -56,8 +61,13 @@ for example in a Microservice's Docker-Compose.
     services:
     ristra:
         image: dbs-container-repo.emgora.eu/db-ristra-cli-cpu:1.0.0
-        entrypoint: python -m connect ${MINIO_URL} --user $MINIOUSER --pass $MINIOPASS
+        entrypoint: python -m connect ${MINIO_URL} --user $$MINIOUSER --pass $$MINIOPASS
         environment:
           MINIOUSER: ${MINIO_ROOT_USER}
           MINIOPASS: ${MINIO_ROOT_PASS}
     ```
+
+    !!! warning
+        Note that due to a bug in external tooling, environment variables with underscores
+        in their names are not supported for shell substitution. If you need environment
+        variable shell substitution, please use environment variables named without underscores.

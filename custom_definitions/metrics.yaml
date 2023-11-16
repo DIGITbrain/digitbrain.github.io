@@ -1,0 +1,23 @@
+corresponding_measurement:
+  description: identification of the corresponding measurement, i.e. output of the
+    Model
+  example: '"temperature1"'
+  type: String
+description:
+  description: short description of the metric measurement
+  example: '"This metric describes the arithmetic mean of the approximated temperatures
+    of the fabricated part when it leaves station 4."'
+  type: String
+function:
+  description: short description of the mathematical approach used to derive this
+    value
+  example: '"arithmetic mean"'
+  type: String
+name:
+  description: short name (should be unique across the Microservice's metrics)
+  example: '"meanTemperature"'
+  type: String
+unit:
+  description: the unit of the metric measurement
+  example: '"degree celsius"'
+  type: String

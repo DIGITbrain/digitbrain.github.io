@@ -1,0 +1,72 @@
+affiliation:
+  description: Legal Entity the Person is affiliated with
+  type: ID / URI
+author:
+  description: Identifier of the Author of the IP Instance
+  type: ID / URI
+capacity:
+  description: Capacity of the IP Family
+  type: Text
+created_at:
+  description: Date of creation
+  type: ISO 8601
+cv:
+  description: Short description of the Person
+  type: Text
+description:
+  description: Description of the IP Instance
+  type: Text
+email:
+  description: Email address of the Person
+  type: Email
+first_name:
+  description: First name of the Person
+  type: Text
+id:
+  description: Unique identifier for the IP Inst.
+  type: ID / URI
+image:
+  description: Picture of the IP Instance
+  type: Image
+ip_family:
+  description: Reference to the IP Family
+  type: ID / URI
+ip_man.:
+  description: Identifier of the IP Manufacturer (Legal Entity)
+  type: ID / URI
+last_name:
+  description: Last name of the Person
+  type: Text
+location:
+  description: Physical location of the IP Instance
+  type: ID / URI?
+logo:
+  description: Logo of the Legal Entity
+  type: Image
+manager:
+  description: Identifier of the Legal Entity managing the IP Family
+  type: ID / URI
+model_no.:
+  description: Number defined by the IP Man.
+  type: Text
+name:
+  description: Name of the IP Instance
+  type: Text
+operator:
+  description: Identifier of the Legal Entity operating the IP Instance
+  type: ID / URI
+phone:
+  description: Phone Number of the Legal Entity
+  type: String
+serial_no.:
+  description: Number defined by the IP Man.
+  type: Text
+url:
+  description: Website of the Legal Entity
+  type: URL
+vat_id_no.:
+  description: VAT ID Number of the Legal Entity
+  type: String
+version:
+  description: Version number of the IP Instance
+  type: Integer

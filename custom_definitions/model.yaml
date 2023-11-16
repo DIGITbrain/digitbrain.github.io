@@ -1,0 +1,79 @@
+author:
+  example: UUID
+  hide: true
+build:
+  example: '21'
+  hide: true
+date:
+  example: '2022-04-28T08:11:53+00:00'
+  hide: true
+description:
+  example: This is a brilliant model for doing complex things.
+filename:
+  example: '"mymodel.pb"'
+id:
+  example: '"MODID_MYMODEL"'
+  hide: true
+inslots:
+  example: "[\n              { \n                \"Key\": \"MY_INSLO_A\",\n                \"Name\":
+    \"ModelABin\",\n                \"Dimensions\": 112,\n                \"Is-continuous\":
+    true,\n                \"Units\": {\n                    \"Unit\": \"Pa\",\n                    \"Exponent\":
+    [1, -2, 0],\n                    \"Offset\": 442,\n                    \"Scale\":
+    10^-3\n                },\n                \"Default-value\": 55,\n                \"Ranges\":
+    [1,120]\n              }\n            ]  "
+  type: '[Slots](../slots.md)'
+outslots:
+  example: "[\n              { \n                \"Key\": \"MY_OUTPUT_A\",\n                \"Name\":
+    \"ModelABout\",\n                \"Dimensions\": 112,\n                \"Is-continuous\":
+    true,\n                \"Units\": {\n                    \"Unit\": \"Pa\",\n                    \"Exponent\":
+    [1, -2, 0],\n                    \"Offset\": 442,\n                    \"Scale\":
+    10^-3\n                },\n                \"Default-value\": 55,\n                \"Ranges\":
+    [1,120]\n              }\n            ]  "
+  type: '[Slots](../slots.md)'
+path:
+  example: '"input/models"'
+provider:
+  example: UUID
+  hide: true
+repository_uri:
+  example: '"https://www.myrepo.com"'
+version:
+  example: '"0.1"'
+name:
+  notify: false
+license:
+  notify: false
+provider_contacts:
+  notify: false
+auth_tool:
+  notify: false
+type:
+  notify: false
+fidelity:
+  notify: false
+state_depend:
+  notify: false
+os_arch:
+  notify: false
+os_type:
+  notify: false
+os_distribution:
+  notify: false
+recommended_number_of_gpu_cores:
+  notify: false
+minimum_number_of_gpu_cores:
+  notify: false
+recommended_gpu_ram:
+  notify: false
+minimum_gpu_ram:
+  notify: false
+recommended_ram:
+  notify: false
+minimum_ram:
+  notify: false
+recommended_cpus:
+  notify: false
+minimum_cpus:
+  notify: false
+required_disk_space:
+  notify: false

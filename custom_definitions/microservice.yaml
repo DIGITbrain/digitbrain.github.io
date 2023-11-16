@@ -1,0 +1,139 @@
+author:
+  example: UUID
+  hide: true
+build:
+  example: '21'
+  hide: true
+classification_schema:
+  example: '"others"'
+configuration_data:
+  example: |
+    file_path: /data/rclone.conf
+    file_content: |
+      [s3-server]
+      access_key: 123abc
+    mount_propagation: Bidirectional
+  type: '[ConfigurationData](../configuration_data.md)'
+data_resource:
+  example: |
+    kind: [FILE, STREAM]
+    direction: [SOURCE]
+    format: [application/zip, image/jpg]
+    source_type: [MYSQL, KAFKA]
+    auth_type: [userpass]
+    schema: [jpg]
+    aux_info:
+      PROTOCOL: http
+      MYSQL_DIALECT: mariadbdialect
+  type: '[Data Resource](../data_resource.md)'
+date:
+  example: '2022-04-28T08:11:53+00:00'
+  hide: true
+
+deployment_data:
+  description: |
+    DIGITbrain supports Microservices in containers. The platform aims
+    to support any OCI-compliant container images, as mentioned in
+    [pre-requisites](/start/microservice/#pre-requisites). Containers are 
+    generally described in a variety of formats and the platform aims to
+    support the most common kinds.
+    
+    We currently support the description of **one container** in either the *Docker-Compose*
+    format or **one Pod or Deployment** in the *Kubernetes manifest* format.
+
+    !!! warning
+        Compose files are translated to Kubernetes by the official Kubernetes [Kompose](https://kompose.io/)
+        project. Be aware that Kubernetes does not support the same set of functionalities as Compose.
+        [This matrix](https://kompose.io/conversion/) shows the Compose properties that are supported
+        when translating to Kubernetes.
+    
+    !!! tip
+        If you normally run your container with *docker run* we suggest using the online, open-source
+        [Composerize](https://www.composerize.com/) tool, which can translate the command to a
+        Docker-Compose file.
+  type: string (YAML)
+  example:
+    Docker-Compose: |
+      services:
+        reverseproxy:
+          image: nginx:latest
+          ports:
+            - '8080:8080'
+          restart: always
+    Kubernetes Manifest: |
+      apiVersion: v1
+      kind: Pod
+      metadata:
+        name: reverseproxy
+      spec:
+        containers:
+          - name: reverseproxy
+            image: nginx:latest
+            ports:
+              - containerPort: 8080
+
+deployment_format:
+  example: '"docker-compose"'
+description:
+  example: '"This microservices solves a certain problem using very specific methods…"'
+edge_type:
+  example: '"NVIDIA Jetson AGX"'
+gpu_type:
+  example: '"NVidia (compute capability >= 7.0)"'
+hpc_required:
+  example: 'true'
+id:
+  example: '"MSID_MYMS_A"'
+  hide: true
+is_gui:
+  example: 'True'
+metrics:
+  example: |
+    metrics:
+    - name: meanTemperature
+      correspondingMeasurement: temperature1
+      function: arithmetic mean
+      unit: degree celcius
+      description: The metric is good
+  type: '[Metrics](../metrics.md)'
+model_recommended_auth_tools:
+  example: '["PreSTRA"]'
+model_types:
+  example: '["SavedModel (Tensorflow)"]'
+mounted_shared_directories:
+  example: '"/data and /cfg are mounted on the host for data and configuration sharing,
+    respectively."'
+name:
+  example: '"Object Detection for faulty parts"'
+os_arch:
+  example: '"x86_64"'
+os_type:
+  example: '"linux"'
+parameters:
+  example: |
+    parameters:
+    - name: detection_threshold
+      type: Integer
+      mandatory: true
+      defaultValue: 42
+      description: This parameter is helpful
+  type: '[Parameters](../parameters.md)'
+provider:
+  example: UUID
+  hide: true
+recommended_cpus:
+  example: 4
+recommended_gpu_ram:
+  example: 6
+recommended_number_of_gpus:
+  example: 2
+recommended_ram:
+  example: '16'
+required_disk_space:
+  example: '42'
+type:
+  example: '["neural network", "deep learning", "convolutional neural network", "CNN"]'
+version:
+  example: '"1.0"'
+workload_type:
+  example: '"service"'

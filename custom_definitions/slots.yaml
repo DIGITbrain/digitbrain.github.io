@@ -1,0 +1,43 @@
+default_value:
+  description: |
+    default value for in-slot, if null then the value for the in-slot
+    needs to be set/fed at a later point in time.
+    
+    !!! warning
+        
+        Default value must not be set for out-slots!
+  type: number | null
+  notify: false
+dimensions:
+  description: dimension of inputs to in-slot, array of dimensions for matrices /
+    tensors
+  example: 1
+  type: number (integer-valued) | array of integer-valued numbers, default is 1 (scalar)
+dimension_names:
+  description: 'optional list of concise names of each tensor dimension to indicate
+    expected contents, e.g., "dimension_names": ["batch", "channels", "width", "height"]'
+  type: array of strings matching length of dimension | null
+is_continuous:
+  description: flag to indicate whether slot values are integer or real numbers
+  example:
+    Real Numbers: true
+    Integers: false
+  type: bool, default is true (real)
+key:
+  description: unique (within a Model) machine-readable identifier matching [a-zA-Z_][a-zA-Z_0-9]*
+  example: force_1
+  type: string
+name:
+  description: Human-readable identifier
+  example: Force at Boundary Condition 1
+  type: string
+ranges:
+  description: 'valid range of values (2-tuple array minimum maximum values OR array
+    of discrete valid scalars).<br>If a valid range is not known a-priori: null /
+    omitted'
+  type: array | null
+  notify: false
+units:
+  description: Values related to the slot measurement units
+  type: "[Units](units.md)"
+  notify: false

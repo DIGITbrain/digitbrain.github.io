@@ -1,0 +1,22 @@
+default_value:
+  description: a default value, if the parameter is required but not provided
+  example: '42'
+  type: has to match "type"
+description:
+  description: short description of the parameter and its possible values
+  example: '"This parameter can be used to configure the included algorithm in a certain
+    way, possible values: ''A'', ''B'', ''Z''"'
+  type: String
+mandatory:
+  description: 'whether this parameter is mandatory (default: false)'
+  example: 'true'
+  type: Boolean
+name:
+  description: short name for this parameter (should be unique across the Microservice’s
+    parameters)
+  example: '"detection_threshold"'
+  type: String
+type:
+  description: expected input type (may be used to verify the input)
+  example: '"Integer"'
+  type: Enumeration [xsd datatypes]

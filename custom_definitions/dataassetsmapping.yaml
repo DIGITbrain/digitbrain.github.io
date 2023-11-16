@@ -1,0 +1,12 @@
+'*_data_id_logical*':
+  description: The key(s) here are logical IDs (string identifiers) of Data Assets
+    that act as placeholders in the DeploymentData field of a Microservice. <br> The
+    value for each key is the UUID of the Data Asset that should be substituted into
+    the placeholders in the DeploymentData field.
+  example: '"DATAID_MYDATA_A"'
+  type: String
+'*_microservice_id*':
+  description: The key(s) here are UUID string(s) corresponding to the ID(s) of the
+    Microservice(s) defined for this Algorithm. <br> The value for this key is a mapping
+    of the logical IDs of Data Assets to the UUIDs of Data Assets.
+  type: Map[String, String]
